@@ -7,7 +7,7 @@
   "authors": ["Jeryn99"],
   "contact": {},
   "license": "All Rights Reserved",
-  "icon": "icon.png",
+  "icon": "audreys_additions.png",
   "environment": "*",
   "entrypoints": {
     "main": [

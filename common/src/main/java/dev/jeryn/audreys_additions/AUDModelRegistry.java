@@ -41,8 +41,7 @@ public class AUDModelRegistry {
     }
 
     public static void setupModelInstances(EntityModelSet entityModels) {
-        System.out.println("YES I AM HERE, YES YOU WILL OBEY ME");
-        ConsoleModelCollection.getInstance().registerModel(new PertweeConsole(entityModels.bakeLayer(PERTWEE_CONSOLE)));
+
     }
 
     @ExpectPlatform

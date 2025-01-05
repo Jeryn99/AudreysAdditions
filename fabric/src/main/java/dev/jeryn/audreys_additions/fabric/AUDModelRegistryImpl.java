@@ -17,29 +17,6 @@ public class AUDModelRegistryImpl {
 
     public static ModelLayerLocation register(ModelLayerLocation location, Supplier<LayerDefinition> definition) {
         EntityModelLayerRegistry.registerModelLayer(location, definition::get);
-
-        JsonObject model = BedrockModelUtil.toJsonModel(definition.get(), location.getModel().getPath());
-
-        // Define the export folder
-        Path exportFolder = Paths.get("export_models/"+location.getLayer());
-
-        // Ensure the folder exists
-        try {
-            Files.createDirectories(exportFolder);
-        } catch (IOException e) {
-            throw new RuntimeException("Failed to create export_models directory", e);
-        }
-
-        // Define the file path for the model
-        Path modelFile = exportFolder.resolve(location.getModel().getPath().replaceAll("_ext", "").replaceAll("int", "door") + ".json");
-
-        // Write the model to the file
-        try (BufferedWriter writer = Files.newBufferedWriter(modelFile)) {
-            writer.write(model.toString());
-        } catch (IOException e) {
-            throw new RuntimeException("Failed to write model to file", e);
-        }
-
         return location;
     }
 }
