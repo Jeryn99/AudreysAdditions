@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "audreys_additions",
+  "version": "${version}",
+  "name": "audreys_additions",
+  "description": "Adds more Shells to the mod Tardis Refined!",
+  "authors": ["Jeryn99"],
+  "contact": {},
+  "license": "All Rights Reserved",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.jeryn.audreys_additions.fabric.ExtraShellsFabric"
+    ],
+    "client": [
+      "dev.jeryn.audreys_additions.fabric.ExtraShellsClientFabric"
+    ]
+  },
+  "injected_interfaces": {
+
+  },
+  "mixins": [
+    "audreys_additions.mixins.json",
+    "audreys_additions-common.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.24",
+    "minecraft": ">=1.20.1"
+  }
+}

@@ -1,0 +1,133 @@
+plugins {
+    id "com.github.johnrengelman.shadow" version "7.1.2"
+    id "me.shedaniel.unified-publishing" version "0.1.+"
+}
+architectury {
+    platformSetupLoomIde()
+    forge()
+}
+
+loom {
+    runs {
+        data {
+            data()
+            programArgs "--all", "--mod", "audreys_additions"
+            programArgs "--output", project(":forge").file("src/generated/resources").absolutePath
+            programArgs "--existing", project(":common").file("src/main/resources/").absolutePath
+        }
+    }
+
+}
+
+
+configurations {
+    common
+    shadowCommon // Don't use shadow from the shadow plugin because we don't want IDEA to index this.
+    compileClasspath.extendsFrom common
+    runtimeClasspath.extendsFrom common
+    developmentForge.extendsFrom common
+}
+
+unifiedPublishing {
+    project {
+        displayName = "[Forge] - Audreys Additions - $rootProject.minecraft_version - v$project.version"
+        releaseType = "release"
+        changelog = new File("${rootProject.projectDir}/changelog.md").text
+        gameVersions = ["1.20.1"]
+        mainPublication tasks.remapJar
+        gameLoaders = ["forge"]
+        relations {
+            depends {
+                curseforge = "tardis-refined"
+                modrinth = "tardis-refined"
+            }
+        }
+
+        var CURSE_API_KEY = project.findProperty("curseforge") ?: System.getenv("curseforge") ?: ""
+        if (CURSE_API_KEY != "") {
+            curseforge {
+                token = CURSE_API_KEY
+                id = "937305"
+                gameVersions.addAll "Java 17", "1.20.1"
+            }
+        }
+
+        var MODRINTH_TOKEN = project.findProperty("modrinth") ?: System.getenv("modrinth") ?: ""
+        if (MODRINTH_TOKEN != "") {
+            modrinth {
+                token = MODRINTH_TOKEN
+                id = "JPwgh9iH"
+                version = "mc$rootProject.minecraft_version-v$project.version"
+            }
+        }
+    }
+}
+
+
+dependencies {
+    forge "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+
+    modImplementation "dev.jeryn:neoforgetr:2.1.3a"
+
+    common(project(path: ":common", configuration: "namedElements")) { transitive false }
+    shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
+}
+
+processResources {
+    inputs.property "version", project.version
+
+    filesMatching("META-INF/mods.toml") {
+        expand "version": project.version
+    }
+}
+
+shadowJar {
+    exclude "fabric.mod.json"
+    exclude "architectury.common.json"
+
+    configurations = [project.configurations.shadowCommon]
+    archiveClassifier.set("dev-shadow")
+}
+
+remapJar {
+    inputFile.set shadowJar.archiveFile
+    dependsOn shadowJar
+}
+
+jar {
+    archiveClassifier.set("dev")
+}
+
+sourcesJar {
+    def commonSources = project(":common").sourcesJar
+    dependsOn commonSources
+    duplicatesStrategy 'exclude'
+    from commonSources.archiveFile.map { zipTree(it) }
+}
+
+components.java {
+    withVariantsFromConfiguration(project.configurations.shadowRuntimeElements) {
+        skip()
+    }
+}
+
+publishing {
+    publications {
+        mavenForge(MavenPublication) {
+            artifactId = rootProject.archives_base_name + "-" + project.name
+            from components.java
+        }
+    }
+
+    // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
+    repositories {
+        maven {
+            url = "https://maven.craig.software/repository/whocraft/"
+            credentials {
+                username = project.findProperty("MAVEN_REPO_USERNAME") ?: System.getenv("MAVEN_REPO_USERNAME") ?: ""
+                password = project.findProperty("MAVEN_REPO_PASSWORD") ?: System.getenv("MAVEN_REPO_PASSWORD") ?: ""
+            }
+        }
+
+    }
+}
