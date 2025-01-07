@@ -11,7 +11,7 @@ public class PertweeConsoleTheme extends ConsoleThemeDetails {
     @Override
     public ControlSpecification[] getControlSpecification() {
         return new ControlSpecification[] {
-                new ControlSpecification(TRControlRegistry.THROTTLE, new Vector3f(0.14f, 0.52f, -0.61f), EntityDimensions.scalable(0.06f, 0.06f)),
+                new ControlSpecification(TRControlRegistry.THROTTLE, new Vector3f(0.14f, 0.52f , -0.61f), EntityDimensions.scalable(0.06f, 0.06f)),
                 new ControlSpecification(TRControlRegistry.READOUT, new Vector3f(0.52f, 0.50f, -0.42f), EntityDimensions.scalable(0.13f, 0.13f)),
                 new ControlSpecification(TRControlRegistry.READOUT, new Vector3f(0.60f, 0.50f, -0.28f), EntityDimensions.scalable(0.13f, 0.13f)),
                 new ControlSpecification(TRControlRegistry.RANDOM, new Vector3f(-0.11f, 0.50f, -0.64f), EntityDimensions.scalable(0.06f, 0.13f)),

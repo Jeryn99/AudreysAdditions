@@ -88,7 +88,7 @@
         }
       },
       "texture_definition": {
-        "emissive": false,
+        "emissive": true,
         "texture": "audreys_additions:textures/blockentity/console/pertwee/pertwee.png"
       }
     }
