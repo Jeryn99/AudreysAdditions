@@ -48,6 +48,19 @@ public class AudConsolePatternProvider extends ConsolePatternProvider {
     @Override
     protected void addPatterns() {
         addPatternToDatagen(AudConsoleRegistry.PERTWEE.getId(), createWithDefaultSound("pertwee", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/pertwee/pertwee.png"), true)));
+
+        addPatternToDatagen(AudConsoleRegistry.NEWBERY.getId(), createWithDefaultSound("newbery", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/newbery/default.png"), false)));
+        addPatternToDatagen(AudConsoleRegistry.NEWBERY.getId(), createWithDefaultSound("newbery_acacia", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/newbery/newbery_acacia.png"), false)));
+        addPatternToDatagen(AudConsoleRegistry.NEWBERY.getId(), createWithDefaultSound("newbery_bamboo", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/newbery/newbery_bamboo.png"), false)));
+        addPatternToDatagen(AudConsoleRegistry.NEWBERY.getId(), createWithDefaultSound("newbery_birch", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/newbery/newbery_birch.png"), false)));
+        addPatternToDatagen(AudConsoleRegistry.NEWBERY.getId(), createWithDefaultSound("newbery_cherry", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/newbery/newbery_cherry.png"), false)));
+        addPatternToDatagen(AudConsoleRegistry.NEWBERY.getId(), createWithDefaultSound("newbery_crimson", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/newbery/newbery_crimson.png"), false)));
+        addPatternToDatagen(AudConsoleRegistry.NEWBERY.getId(), createWithDefaultSound("newbery_darkoak", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/newbery/newbery_darkoak.png"), false)));
+        addPatternToDatagen(AudConsoleRegistry.NEWBERY.getId(), createWithDefaultSound("newbery_jungle", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/newbery/newbery_jungle.png"), false)));
+        addPatternToDatagen(AudConsoleRegistry.NEWBERY.getId(), createWithDefaultSound("newbery_oak", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/newbery/newbery_oak.png"), false)));
+        addPatternToDatagen(AudConsoleRegistry.NEWBERY.getId(), createWithDefaultSound("newbery_pale", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/newbery/newbery_pale.png"), false)));
+        addPatternToDatagen(AudConsoleRegistry.NEWBERY.getId(), createWithDefaultSound("newbery_spruce", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/newbery/newbery_spruce.png"), false)));
+        addPatternToDatagen(AudConsoleRegistry.NEWBERY.getId(), createWithDefaultSound("newbery_warped", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/newbery/newbery_warped.png"), false)));
     }
 
     @Override

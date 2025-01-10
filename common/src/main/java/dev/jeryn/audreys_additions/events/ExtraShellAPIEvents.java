@@ -2,6 +2,7 @@ package dev.jeryn.audreys_additions.events;
 
 
 import dev.jeryn.audreys_additions.AUDModelRegistry;
+import dev.jeryn.audreys_additions.client.models.console.NewberyConsoleModel;
 import dev.jeryn.audreys_additions.client.models.console.PertweeConsoleModel;
 import dev.jeryn.audreys_additions.registry.AudConsoleRegistry;
 import net.fabricmc.api.EnvType;
@@ -10,6 +11,7 @@ import whocraft.tardis_refined.api.event.TardisClientEvents;
 import whocraft.tardis_refined.client.model.blockentity.console.ConsoleModelEntry;
 import whocraft.tardis_refined.common.util.Platform;
 
+import static dev.jeryn.audreys_additions.AUDModelRegistry.NEWBERY_CONSOLE;
 import static dev.jeryn.audreys_additions.AUDModelRegistry.PERTWEE_CONSOLE;
 
 public class ExtraShellAPIEvents {
@@ -26,6 +28,7 @@ public class ExtraShellAPIEvents {
         TardisClientEvents.SHELLENTRY_MODELS_SETUP.register(AUDModelRegistry::setupModelInstances);
 
         TardisClientEvents.CONSOLE_MODELS_SETUP.register((consoleModelCollection, entityModelSet) -> consoleModelCollection.registerModel(AudConsoleRegistry.PERTWEE.getId(), new ConsoleModelEntry(new PertweeConsoleModel(entityModelSet.bakeLayer(PERTWEE_CONSOLE)))));
+        TardisClientEvents.CONSOLE_MODELS_SETUP.register((consoleModelCollection, entityModelSet) -> consoleModelCollection.registerModel(AudConsoleRegistry.NEWBERY.getId(), new ConsoleModelEntry(new NewberyConsoleModel(entityModelSet.bakeLayer(NEWBERY_CONSOLE)))));
     }
 
 }
