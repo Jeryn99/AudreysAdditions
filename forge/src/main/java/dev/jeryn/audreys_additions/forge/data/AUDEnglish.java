@@ -15,6 +15,7 @@ public class AUDEnglish extends LanguageProvider {
     @Override
     protected void addTranslations() {
         addShell(AudShellRegistry.POLICEBOX_2018.get(), "Police Box - 2018");
+        addShell(AudShellRegistry.POLICEBOX_2010.get(), "Police Box - 2010");
     }
 
     public void addShell(ShellTheme theme, String name) {
