@@ -138,7 +138,6 @@
 				},
 				{
 					"name": "portal",
-					"parent": "parent",
 					"pivot": [0, -1.5, 8],
 					"cubes": [
 						{

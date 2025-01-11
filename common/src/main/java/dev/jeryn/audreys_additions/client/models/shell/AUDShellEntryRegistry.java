@@ -9,5 +9,7 @@ public class AUDShellEntryRegistry {
     public static void init() {
         ShellModelCollection.registerShellEntry(AudShellRegistry.POLICEBOX_2018.get(), AUDModelRegistry.policeBox18, AUDModelRegistry.policeBox18Door);
         ShellModelCollection.registerShellEntry(AudShellRegistry.POLICEBOX_2010.get(), AUDModelRegistry.policeBox10, AUDModelRegistry.policeBox10Door);
+        ShellModelCollection.registerShellEntry(AudShellRegistry.POLICEBOX_1976.get(), AUDModelRegistry.policeBox76, AUDModelRegistry.policeBox76Door);
+        ShellModelCollection.registerShellEntry(AudShellRegistry.POLICEBOX_1996.get(), AUDModelRegistry.policeBox96, AUDModelRegistry.policeBox96Door);
     }
 }

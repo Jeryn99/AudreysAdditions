@@ -20,7 +20,8 @@ public class AUDPatterns extends ShellPatternProvider {
     protected void addPatterns() {
         quickAdd(AudShellRegistry.POLICEBOX_2018.getId(), "default", true);
         quickAdd(AudShellRegistry.POLICEBOX_2010.getId(), "default", true);
-
+        quickAdd(AudShellRegistry.POLICEBOX_1976.getId(), "default", true);
+        quickAdd(AudShellRegistry.POLICEBOX_1996.getId(), "default", true);
     }
 
     public void quickAdd(ResourceLocation themeId, String patternName, boolean hasEmissiveTexture) {
@@ -58,7 +59,7 @@ public class AUDPatterns extends ShellPatternProvider {
 
     @Override
     public String getName() {
-        return "ExtraShells Patterns";
+        return AudreysAdditions.MODID + " Patterns";
     }
 
 

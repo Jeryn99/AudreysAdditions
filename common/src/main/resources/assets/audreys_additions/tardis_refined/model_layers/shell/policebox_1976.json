@@ -348,8 +348,11 @@
 					]
 				},
 				{
+					"name": "fade_value",
+					"pivot": [0, 0, 0]
+				},
+				{
 					"name": "portal",
-					"parent": "parent",
 					"pivot": [0, 0, 0],
 					"cubes": [
 						{
@@ -365,10 +368,6 @@
 							}
 						}
 					]
-				},
-				{
-					"name": "fade_value",
-					"pivot": [0, 0, 0]
 				}
 			]
 		}

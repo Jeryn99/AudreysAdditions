@@ -12,6 +12,8 @@ public class AudShellRegistry {
 
     public static final RegistrySupplier<ShellTheme> POLICEBOX_2018 = registerShellTheme("policebox_2018");
     public static final RegistrySupplier<ShellTheme> POLICEBOX_2010 = registerShellTheme("policebox_2010");
+    public static final RegistrySupplier<ShellTheme> POLICEBOX_1976 = registerShellTheme("policebox_1976");
+    public static final RegistrySupplier<ShellTheme> POLICEBOX_1996 = registerShellTheme("policebox_1996");
 
 
     private static RegistrySupplier<ShellTheme> registerShellTheme(String id) {
