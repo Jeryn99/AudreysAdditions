@@ -1,10 +1,7 @@
 package dev.jeryn.audreys_additions.forge;
 
 import dev.jeryn.audreys_additions.AudreysAdditions;
-import dev.jeryn.audreys_additions.forge.data.AUDEnglish;
-import dev.jeryn.audreys_additions.forge.data.AUDPatterns;
-import dev.jeryn.audreys_additions.forge.data.AUDSoundProvider;
-import dev.jeryn.audreys_additions.forge.data.AudConsolePatternProvider;
+import dev.jeryn.audreys_additions.forge.data.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,6 +22,7 @@ public class AudreysAdditionsForge {
         generator.addProvider(e.includeServer(), new AudConsolePatternProvider(generator));
         generator.addProvider(e.includeServer(), new AUDPatterns(generator));
         generator.addProvider(e.includeClient(), new AUDEnglish(generator));
+        generator.addProvider(e.includeClient(), new AudDesktopProvider(generator, false));
         generator.addProvider(e.includeClient(), new AUDSoundProvider(generator.getPackOutput(), e.getExistingFileHelper()));
     }
 
