@@ -16,8 +16,8 @@ public class AUDModelRegistry {
 
 
     // Models
-    public static PoliceBoxModel policeBox18, policeBox10;
-    public static DualInteriorDoorModel policeBox18Door, policeBox10Door;
+    public static PoliceBoxModel policeBox18, policeBox10, policeBox76, policeBox96;
+    public static DualInteriorDoorModel policeBox18Door, policeBox10Door, policeBox76Door, policeBox96Door;
 
     // Model Layers
     public static ModelLayerLocation POLICEBOX_2018 = shell("policebox_2018");
@@ -26,6 +26,11 @@ public class AUDModelRegistry {
     public static ModelLayerLocation POLICEBOX_2010 = shell("policebox_2010");
     public static ModelLayerLocation POLICEBOX_2010_DOOR = interiorDoor("policebox_2010_door");
 
+    public static ModelLayerLocation POLICEBOX_1976 = shell("policebox_1976");
+    public static ModelLayerLocation POLICEBOX_1976_DOOR = interiorDoor("policebox_1976_door");
+
+    public static ModelLayerLocation POLICEBOX_1996 = shell("policebox_1996");
+    public static ModelLayerLocation POLICEBOX_1996_DOOR = interiorDoor("policebox_1996_door");
 
     public static ModelLayerLocation PERTWEE_CONSOLE = console("pertwee");
     public static ModelLayerLocation NEWBERY_CONSOLE = console("newbery");
@@ -54,6 +59,19 @@ public class AUDModelRegistry {
     }
 
     public static void setupModelInstances(EntityModelSet entityModels) {
+
+        // Police Box - 1976
+        policeBox76 = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_1976), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
+
+        });
+        policeBox76Door = new DualInteriorDoorModel(entityModels.bakeLayer(POLICEBOX_1976_DOOR), -275.0F, false, true);
+
+        // Police Box - 1996
+        policeBox96 = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_1996), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
+
+        });
+        policeBox96Door = new DualInteriorDoorModel(entityModels.bakeLayer(POLICEBOX_1996_DOOR), -275.0F, false, true);
+
 
         // Police Box - 2018
         policeBox18 = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_2018), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
