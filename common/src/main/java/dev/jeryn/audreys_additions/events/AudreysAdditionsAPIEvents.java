@@ -4,7 +4,7 @@ package dev.jeryn.audreys_additions.events;
 import dev.jeryn.audreys_additions.AUDModelRegistry;
 import dev.jeryn.audreys_additions.client.models.console.NewberyConsoleModel;
 import dev.jeryn.audreys_additions.client.models.console.PertweeConsoleModel;
-import dev.jeryn.audreys_additions.registry.AudConsoleRegistry;
+import dev.jeryn.audreys_additions.common.registry.AudConsoleRegistry;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import whocraft.tardis_refined.api.event.TardisClientEvents;
@@ -14,7 +14,7 @@ import whocraft.tardis_refined.common.util.Platform;
 import static dev.jeryn.audreys_additions.AUDModelRegistry.NEWBERY_CONSOLE;
 import static dev.jeryn.audreys_additions.AUDModelRegistry.PERTWEE_CONSOLE;
 
-public class ExtraShellAPIEvents {
+public class AudreysAdditionsAPIEvents {
 
     public static void init(){
         if(Platform.isClient()) {

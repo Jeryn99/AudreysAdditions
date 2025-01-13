@@ -1,7 +1,7 @@
 package dev.jeryn.audreys_additions.client.models.shell;
 
 import dev.jeryn.audreys_additions.AUDModelRegistry;
-import dev.jeryn.audreys_additions.registry.AudShellRegistry;
+import dev.jeryn.audreys_additions.common.registry.AudShellRegistry;
 import whocraft.tardis_refined.client.model.blockentity.shell.ShellModelCollection;
 
 public class AUDShellEntryRegistry {

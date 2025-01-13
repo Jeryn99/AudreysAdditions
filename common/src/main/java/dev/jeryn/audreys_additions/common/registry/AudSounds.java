@@ -1,4 +1,4 @@
-package dev.jeryn.audreys_additions.registry;
+package dev.jeryn.audreys_additions.common.registry;
 
 import dev.jeryn.audreys_additions.AudreysAdditions;
 import net.minecraft.core.registries.Registries;
@@ -7,7 +7,7 @@ import net.minecraft.sounds.SoundEvent;
 import whocraft.tardis_refined.registry.DeferredRegistry;
 import whocraft.tardis_refined.registry.RegistrySupplier;
 
-public class AUDSounds {
+public class AudSounds {
 
     public static final DeferredRegistry<SoundEvent> SOUNDS = DeferredRegistry.create(AudreysAdditions.MODID, Registries.SOUND_EVENT);
 

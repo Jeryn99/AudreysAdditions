@@ -1,7 +1,7 @@
 package dev.jeryn.audreys_additions.forge.data;
 
 import dev.jeryn.audreys_additions.AudreysAdditions;
-import dev.jeryn.audreys_additions.registry.AudConsoleRegistry;
+import dev.jeryn.audreys_additions.common.registry.AudConsoleRegistry;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import whocraft.tardis_refined.common.data.ConsolePatternProvider;
