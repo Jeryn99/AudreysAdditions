@@ -1,4 +1,5 @@
-package dev.jeryn.audreys_additions.registry;
+package dev.jeryn.audreys_additions.common.registry;
+
 
 import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.console.theme.NewberyConsoleTheme;

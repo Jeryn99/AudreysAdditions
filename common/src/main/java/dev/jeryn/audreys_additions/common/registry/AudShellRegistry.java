@@ -1,4 +1,4 @@
-package dev.jeryn.audreys_additions.registry;
+package dev.jeryn.audreys_additions.common.registry;
 
 import dev.jeryn.audreys_additions.AudreysAdditions;
 import net.minecraft.resources.ResourceLocation;

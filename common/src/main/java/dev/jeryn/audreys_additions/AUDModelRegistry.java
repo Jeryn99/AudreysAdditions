@@ -35,6 +35,8 @@ public class AUDModelRegistry {
     public static ModelLayerLocation PERTWEE_CONSOLE = console("pertwee");
     public static ModelLayerLocation NEWBERY_CONSOLE = console("newbery");
 
+    public static ModelLayerLocation KNOSSOS_THRONE = furniture("knossos_throne");
+
 
     private static ModelLayerLocation interiorDoor(String name) {
         return createLocation(name, "door");
@@ -46,6 +48,10 @@ public class AUDModelRegistry {
 
     private static ModelLayerLocation shell(String name) {
         return createLocation(name, "shell");
+    }
+
+    private static ModelLayerLocation furniture(String name) {
+        return createLocation(name, "furniture");
     }
 
 
