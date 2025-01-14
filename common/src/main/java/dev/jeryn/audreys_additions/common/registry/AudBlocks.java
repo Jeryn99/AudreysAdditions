@@ -2,6 +2,7 @@ package dev.jeryn.audreys_additions.common.registry;
 
 import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.blocks.ChairBlock;
+import dev.jeryn.audreys_additions.blocks.MonitorBlock;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -18,7 +19,8 @@ public class AudBlocks {
 
     public static final DeferredRegistry<Block> BLOCKS = DeferredRegistry.create(AudreysAdditions.MODID, Registries.BLOCK);
 
-    public static final RegistrySupplier<Block> KNOSSOS_THRONE = register("knossos_throne", () -> new ChairBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistrySupplier<Block> KNOSSOS_THRONE = register("knossos_throne", () -> new ChairBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
+    public static final RegistrySupplier<Block> LIMINTON_MONITOR = register("liminton_monitor", () -> new MonitorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
 
 
     /**

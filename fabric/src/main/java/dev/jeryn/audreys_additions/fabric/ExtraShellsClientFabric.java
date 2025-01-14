@@ -1,6 +1,7 @@
 package dev.jeryn.audreys_additions.fabric;
 
 import dev.jeryn.audreys_additions.AUDModelRegistry;
+import dev.jeryn.audreys_additions.ClientUtil;
 import dev.jeryn.audreys_additions.client.models.renderers.RenderChairBlockEntity;
 import dev.jeryn.audreys_additions.common.registry.AudBlockEntities;
 import dev.jeryn.audreys_additions.common.registry.AudEntities;
@@ -13,7 +14,7 @@ public class ExtraShellsClientFabric implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         AUDModelRegistry.init();
-
+        ClientUtil.init();
         EntityRendererRegistry.register(AudEntities.CHAIR.get(), NoopRenderer::new);
         BlockEntityRendererRegistry.register(AudBlockEntities.KNOSSOS_THRONE.get(), RenderChairBlockEntity::new);
     }

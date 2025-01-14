@@ -2,6 +2,7 @@ package dev.jeryn.audreys_additions.forge;
 
 import dev.jeryn.audreys_additions.AUDModelRegistry;
 import dev.jeryn.audreys_additions.AudreysAdditions;
+import dev.jeryn.audreys_additions.ClientUtil;
 import dev.jeryn.audreys_additions.client.models.renderers.RenderChairBlockEntity;
 import dev.jeryn.audreys_additions.common.registry.AudBlockEntities;
 import dev.jeryn.audreys_additions.common.registry.AudEntities;
@@ -20,7 +21,7 @@ public class ClientModBus {
     public static void event(EntityRenderersEvent.RegisterLayerDefinitions event) {
         AUDModelRegistry.init();
         AUDModelRegistryImpl.register(event);
-
+        ClientUtil.init();
         EntityRenderers.register(AudEntities.CHAIR.get(), NoopRenderer::new);
         BlockEntityRenderers.register(AudBlockEntities.KNOSSOS_THRONE.get(), RenderChairBlockEntity::new);
 

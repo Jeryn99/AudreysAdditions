@@ -17,7 +17,6 @@ import whocraft.tardis_refined.client.model.GenericModel;
 
 public class RenderChairBlockEntity implements BlockEntityRenderer<ChairBlockEntity>, BlockEntityRendererProvider<ChairBlockEntity> {
 
-    private static final ResourceLocation TEXTURE = new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/knossos_throne.png");
     private final GenericModel chair;
 
     public RenderChairBlockEntity(Context context) {
@@ -32,7 +31,8 @@ public class RenderChairBlockEntity implements BlockEntityRenderer<ChairBlockEnt
         BlockState blockstate = blockEntity.getBlockState();
         poseStack.mulPose(Axis.ZP.rotationDegrees(180));
         poseStack.mulPose(Axis.YP.rotationDegrees(blockstate.getValue(ChairBlock.ROTATION).floatValue() * 22.5F));
-        chair.renderToBuffer(poseStack, bufferSource.getBuffer(RenderType.entityTranslucent(TEXTURE)), packedLight, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
+        ResourceLocation texture = new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/knossos_throne/"+ blockEntity.getCurrentVariant() +".png");
+        chair.renderToBuffer(poseStack, bufferSource.getBuffer(RenderType.entityTranslucent(texture)), packedLight, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
         poseStack.popPose();
     }
 

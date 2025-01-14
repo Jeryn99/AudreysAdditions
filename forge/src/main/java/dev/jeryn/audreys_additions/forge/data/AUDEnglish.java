@@ -1,6 +1,7 @@
 package dev.jeryn.audreys_additions.forge.data;
 
 import dev.jeryn.audreys_additions.AudreysAdditions;
+import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import dev.jeryn.audreys_additions.common.registry.AudShellRegistry;
 import net.minecraft.ChatFormatting;
 import net.minecraft.data.DataGenerator;
@@ -19,6 +20,9 @@ public class AUDEnglish extends LanguageProvider {
         addShell(AudShellRegistry.POLICEBOX_2010.get(), ChatFormatting.BLUE + "Police Box (2010)");
         addShell(AudShellRegistry.POLICEBOX_1976.get(), ChatFormatting.BLUE + "Police Box (1976)");
         addShell(AudShellRegistry.POLICEBOX_1996.get(), ChatFormatting.BLUE + "Police Box (1996)");
+
+        add(AudBlocks.KNOSSOS_THRONE.get(), "Knossos Throne");
+        add(AudBlocks.LIMINTON_MONITOR.get(), "Liminton Monitor");
     }
 
     public void addShell(ShellTheme theme, String name) {
