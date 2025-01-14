@@ -17,17 +17,17 @@ import whocraft.tardis_refined.client.model.blockentity.console.ConsoleUnit;
 import whocraft.tardis_refined.common.block.console.GlobalConsoleBlock;
 import whocraft.tardis_refined.common.blockentity.console.GlobalConsoleBlockEntity;
 
-public class PertweeConsoleModel extends HierarchicalModel implements ConsoleUnit {
+public class MasterConsoleModel extends HierarchicalModel implements ConsoleUnit {
 
-    public static final AnimationDefinition IDLE = Frame.loadAnimation(new ResourceLocation(AudreysAdditions.MODID, "frame/console/pertwee/idle.json"));
-    public static final AnimationDefinition FLIGHT = Frame.loadAnimation(new ResourceLocation(AudreysAdditions.MODID, "frame/console/pertwee/flight.json"));
-    public static final AnimationDefinition CRASH = Frame.loadAnimation(new ResourceLocation(AudreysAdditions.MODID, "frame/console/pertwee/crash.json"));
-    public static final AnimationDefinition POWER_ON = Frame.loadAnimation(new ResourceLocation(AudreysAdditions.MODID, "frame/console/pertwee/power_on.json"));
-    public static final AnimationDefinition POWER_OFF = Frame.loadAnimation(new ResourceLocation(AudreysAdditions.MODID, "frame/console/pertwee/power_off.json"));
+    public static final AnimationDefinition IDLE = Frame.loadAnimation(new ResourceLocation(AudreysAdditions.MODID, "frame/console/master/idle.json"));
+    public static final AnimationDefinition FLIGHT = Frame.loadAnimation(new ResourceLocation(AudreysAdditions.MODID, "frame/console/master/flight.json"));
+    public static final AnimationDefinition CRASH = Frame.loadAnimation(new ResourceLocation(AudreysAdditions.MODID, "frame/console/master/crash.json"));
+    public static final AnimationDefinition POWER_ON = Frame.loadAnimation(new ResourceLocation(AudreysAdditions.MODID, "frame/console/master/power_on.json"));
+    public static final AnimationDefinition POWER_OFF = Frame.loadAnimation(new ResourceLocation(AudreysAdditions.MODID, "frame/console/master/power_off.json"));
 
     private final ModelPart root, throttle_1, throttle_2, throttle_3, incrementSwitch;
 
-    public PertweeConsoleModel(ModelPart root) {
+    public MasterConsoleModel(ModelPart root) {
         this.root = root;
         this.throttle_1 = Frame.findPart(this, "ThrottleSwitch1");
         this.throttle_2 = Frame.findPart(this, "ThrottleSwitch2");
@@ -73,7 +73,7 @@ public class PertweeConsoleModel extends HierarchicalModel implements ConsoleUni
                 this.animate(reactions.ROTOR_ANIMATION, FLIGHT, tickCount);
             } else if (reactions.isCrashing()) {
                 root().getAllParts().forEach(ModelPart::resetPose);
-                this.animate(reactions.CRASHING_ANIMATION, CRASH, tickCount);
+                    this.animate(reactions.CRASHING_ANIMATION, CRASH, tickCount);
             } else {
                 if (TRConfig.CLIENT.PLAY_CONSOLE_IDLE_ANIMATIONS.get() && globalConsoleBlock.getTicksBooting() == 0) {
                     root().getAllParts().forEach(ModelPart::resetPose);
@@ -98,7 +98,7 @@ public class PertweeConsoleModel extends HierarchicalModel implements ConsoleUni
 
     @Override
     public ResourceLocation getDefaultTexture() {
-        return new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/pertwee/pertwee.png");
+        return new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/master/master.png");
     }
 
     @Override

@@ -19,7 +19,7 @@ public class AudItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         blockItem(AudBlocks.LIMINTON_MONITOR.getId());
-        blockItem(AudBlocks.KNOSSOS_THRONE.getId());
+        basicItem(AudBlocks.KNOSSOS_THRONE.getId());
     }
 
     public ItemModelBuilder blockItem(ResourceLocation item) {
