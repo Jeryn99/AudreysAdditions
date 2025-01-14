@@ -1,3 +1,6 @@
 {
-  "parent": "audreys_additions:block/knossos_throne"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "audreys_additions:item/knossos_throne"
+  }
 }
