@@ -23,9 +23,18 @@ public class AudDesktopProvider extends DesktopProvider {
 
     @Override
     protected void addDesktops() {
+
         addDesktop(new DesktopTheme(
                 new ResourceLocation(AudreysAdditions.MODID, "newbery"),
                 new ResourceLocation(AudreysAdditions.MODID, "desktop/newbery"),
-                TardisRefined.GSON.toJson(Component.literal(MiscHelper.getCleanName("Secondary")).setStyle(Style.EMPTY.withColor(ChatFormatting.GOLD)))
-        ));    }
+                TardisRefined.GSON.toJson(Component.literal(MiscHelper.getCleanName("Secondary")).setStyle(Style.EMPTY.withColor(ChatFormatting.BLUE)))
+        ));
+
+        addDesktop(new DesktopTheme(
+                new ResourceLocation(AudreysAdditions.MODID, "liminton"),
+                new ResourceLocation(AudreysAdditions.MODID, "desktop/liminton"),
+                TardisRefined.GSON.toJson(Component.literal(MiscHelper.getCleanName("Liminton")).setStyle(Style.EMPTY.withColor(ChatFormatting.BLUE)))
+        ));
+
+    }
 }
