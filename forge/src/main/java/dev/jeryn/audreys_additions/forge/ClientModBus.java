@@ -21,7 +21,6 @@ public class ClientModBus {
     public static void event(EntityRenderersEvent.RegisterLayerDefinitions event) {
         AUDModelRegistry.init();
         AUDModelRegistryImpl.register(event);
-        ClientUtil.init();
         EntityRenderers.register(AudEntities.CHAIR.get(), NoopRenderer::new);
         BlockEntityRenderers.register(AudBlockEntities.KNOSSOS_THRONE.get(), RenderChairBlockEntity::new);
 

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "audreys_additions",
   "version": "${version}",
-  "name": "audreys_additions",
+  "name": "Audreys Additions",
   "description": "Adds more Shells to the mod Tardis Refined!",
   "authors": ["Jeryn99"],
   "contact": {},
@@ -11,10 +11,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "dev.jeryn.audreys_additions.fabric.ExtraShellsFabric"
+      "dev.jeryn.audreys_additions.fabric.AudreysAdditionsFabric"
     ],
     "client": [
-      "dev.jeryn.audreys_additions.fabric.ExtraShellsClientFabric"
+      "dev.jeryn.audreys_additions.fabric.AudreysAdditionsClientFabric"
     ]
   },
   "injected_interfaces": {
