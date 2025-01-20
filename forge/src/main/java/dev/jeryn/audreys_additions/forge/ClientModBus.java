@@ -2,7 +2,6 @@ package dev.jeryn.audreys_additions.forge;
 
 import dev.jeryn.audreys_additions.AUDModelRegistry;
 import dev.jeryn.audreys_additions.AudreysAdditions;
-import dev.jeryn.audreys_additions.ClientUtil;
 import dev.jeryn.audreys_additions.client.models.renderers.RenderChairBlockEntity;
 import dev.jeryn.audreys_additions.client.models.renderers.RenderFoodMachineBlockEntity;
 import dev.jeryn.audreys_additions.common.registry.AudBlockEntities;

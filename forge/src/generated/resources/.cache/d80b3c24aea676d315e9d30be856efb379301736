@@ -1,5 +1,7 @@
-// 1.20.1	2025-01-20T12:17:08.6320931	Item Models: audreys_additions
+// 1.20.1	2025-01-20T15:07:09.9522181	Item Models: audreys_additions
 222d59164b48eb15a4ace41d85a07cf7b293a948 assets/audreys_additions/models/item/food_cube.json
 855b4f02f77f4a601a6710dcc53aef585f37360e assets/audreys_additions/models/item/food_machine.json
 94ed1ec3d79d639b9cadf044b691f5943a5d5ed3 assets/audreys_additions/models/item/knossos_throne.json
+df8087e22a5a2df22a02fc5f296cbe59495e84f2 assets/audreys_additions/models/item/lightcolumn_left.json
+2f289de7182add4edca74642665cc87daae210bf assets/audreys_additions/models/item/lightcolumn_right.json
 dd97d9fd26d58e040cf1a87bfecca620289ae84d assets/audreys_additions/models/item/liminton_monitor.json
