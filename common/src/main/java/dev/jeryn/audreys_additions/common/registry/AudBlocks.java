@@ -3,6 +3,7 @@ package dev.jeryn.audreys_additions.common.registry;
 import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.blocks.ChairBlock;
 import dev.jeryn.audreys_additions.blocks.FoodMachineBlock;
+import dev.jeryn.audreys_additions.blocks.LightBoxBlock;
 import dev.jeryn.audreys_additions.blocks.MonitorBlock;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
@@ -23,6 +24,9 @@ public class AudBlocks {
     public static final RegistrySupplier<Block> KNOSSOS_THRONE = register("knossos_throne", () -> new ChairBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
     public static final RegistrySupplier<Block> LIMINTON_MONITOR = register("liminton_monitor", () -> new MonitorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
     public static final RegistrySupplier<Block> FOOD_MACHINE = register("food_machine", () -> new FoodMachineBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
+    public static final RegistrySupplier<Block> LIGHTCOLUMN_LEFT = register("lightcolumn_left", () -> new LightBoxBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
+    public static final RegistrySupplier<Block> LIGHTCOLUMN_RIGHT = register("lightcolumn_right", () -> new LightBoxBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
+
 
 
     /**

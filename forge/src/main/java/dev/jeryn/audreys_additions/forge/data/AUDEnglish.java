@@ -25,6 +25,8 @@ public class AUDEnglish extends LanguageProvider {
         add(AudBlocks.KNOSSOS_THRONE.get(), "Knossos Throne");
         add(AudBlocks.LIMINTON_MONITOR.get(), "Liminton Monitor");
         add(AudBlocks.FOOD_MACHINE.get(), "Food Machine");
+        add(AudBlocks.LIGHTCOLUMN_LEFT.get(), "Light Column (Left)");
+        add(AudBlocks.LIGHTCOLUMN_RIGHT.get(), "Light Column (Right)");
 
         add(AudItems.FOOD_CUBE.get(), "Food Cube");
     }

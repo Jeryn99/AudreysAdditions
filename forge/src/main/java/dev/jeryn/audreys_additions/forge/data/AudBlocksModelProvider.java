@@ -5,6 +5,7 @@ import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.blocks.ChairBlock;
 import dev.jeryn.audreys_additions.blocks.FoodMachineBlock;
 import dev.jeryn.audreys_additions.blocks.MonitorBlock;
+import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
@@ -36,6 +37,18 @@ public class AudBlocksModelProvider extends BlockStateProvider {
                     continue;
                 }
 
+                if(value == AudBlocks.LIGHTCOLUMN_RIGHT.get()){
+                    ResourceLocation leftColumn = new ResourceLocation(AudreysAdditions.MODID, "block/lightcolumn_right");
+                    threeDeeRotating(value, leftColumn);
+                    continue;
+                }
+
+                if(value == AudBlocks.LIGHTCOLUMN_LEFT.get()){
+                    ResourceLocation leftColumn = new ResourceLocation(AudreysAdditions.MODID, "block/lightcolumn_left");
+                    threeDeeRotating(value, leftColumn);
+                    continue;
+                }
+
                 if (value instanceof MonitorBlock monitorBlock) {
                     ResourceLocation vicMon = new ResourceLocation(AudreysAdditions.MODID, "block/liminton_monitor");
                     threeDeeRotating(monitorBlock, vicMon);
@@ -57,6 +70,7 @@ public class AudBlocksModelProvider extends BlockStateProvider {
         return getVariantBuilder(block).forAllStates(
                 state -> ConfiguredModel.builder().modelFile(new ModelFile.UncheckedModelFile(location)).rotationY((int) state.getValue(HorizontalDirectionalBlock.FACING).toYRot()).build()).toJson();
     }
+
 
 
 }

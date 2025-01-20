@@ -1,6 +1,8 @@
 {
   "block.audreys_additions.food_machine": "Food Machine",
   "block.audreys_additions.knossos_throne": "Knossos Throne",
+  "block.audreys_additions.lightcolumn_left": "Light Column (Left)",
+  "block.audreys_additions.lightcolumn_right": "Light Column (Right)",
   "block.audreys_additions.liminton_monitor": "Liminton Monitor",
   "item.audreys_additions.food_cube": "Food Cube",
   "shell.audreys_additions.policebox_1976": "§9Police Box (1976)",
