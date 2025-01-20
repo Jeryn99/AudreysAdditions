@@ -47,6 +47,10 @@ public class AudConsolePatternProvider extends ConsolePatternProvider {
 
     @Override
     protected void addPatterns() {
+        addPatternToDatagen(AudConsoleRegistry.BRACHACKI.getId(), createWithDefaultSound("brachacki", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/brachacki/brachacki.png"), true)));
+        addPatternToDatagen(AudConsoleRegistry.BRACHACKI.getId(), createWithDefaultSound("brachacki_ruth", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/brachacki/brachacki_ruth.png"), true)));
+        addPatternToDatagen(AudConsoleRegistry.BRACHACKI.getId(), createWithDefaultSound("brachacki_quartz", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/brachacki/brachacki_quartz.png"), true)));
+
         addPatternToDatagen(AudConsoleRegistry.PERTWEE.getId(), createWithDefaultSound("pertwee", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/pertwee/pertwee.png"), true)));
         addPatternToDatagen(AudConsoleRegistry.PERTWEE.getId(), createWithDefaultSound("master", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/pertwee/master.png"), true)));
 
