@@ -2,6 +2,7 @@ package dev.jeryn.audreys_additions.common.registry;
 
 
 import dev.jeryn.audreys_additions.AudreysAdditions;
+import dev.jeryn.audreys_additions.console.theme.BrachackiConsoleTheme;
 import dev.jeryn.audreys_additions.console.theme.NewberyConsoleTheme;
 import dev.jeryn.audreys_additions.console.theme.PertweeConsoleTheme;
 import net.minecraft.resources.ResourceLocation;
@@ -16,6 +17,7 @@ public class AudConsoleRegistry {
 
     public static final RegistrySupplier<ConsoleTheme> PERTWEE = registerConsoleTheme("pertwee", new PertweeConsoleTheme());
     public static final RegistrySupplier<ConsoleTheme> NEWBERY = registerConsoleTheme("newbery", new NewberyConsoleTheme());
+    public static final RegistrySupplier<ConsoleTheme> BRACHACKI = registerConsoleTheme("brachacki", new BrachackiConsoleTheme());
 
 
     private static RegistrySupplier<ConsoleTheme> registerConsoleTheme(String id, ConsoleThemeDetails themeDetails) {
