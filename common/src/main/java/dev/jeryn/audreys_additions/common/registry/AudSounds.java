@@ -10,6 +10,8 @@ import whocraft.tardis_refined.registry.RegistrySupplier;
 public class AudSounds {
 
     public static final DeferredRegistry<SoundEvent> SOUNDS = DeferredRegistry.create(AudreysAdditions.MODID, Registries.SOUND_EVENT);
+    public static final RegistrySupplier<SoundEvent> FOOD_MACHINE = setUpSound("food_machine");
+
 
     private static RegistrySupplier<SoundEvent> setUpSound(String soundName) {
         SoundEvent sound = SoundEvent.createVariableRangeEvent(new ResourceLocation(AudreysAdditions.MODID, soundName));

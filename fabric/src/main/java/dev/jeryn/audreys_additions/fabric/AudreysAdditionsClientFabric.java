@@ -3,6 +3,7 @@ package dev.jeryn.audreys_additions.fabric;
 import dev.jeryn.audreys_additions.AUDModelRegistry;
 import dev.jeryn.audreys_additions.ClientUtil;
 import dev.jeryn.audreys_additions.client.models.renderers.RenderChairBlockEntity;
+import dev.jeryn.audreys_additions.client.models.renderers.RenderFoodMachineBlockEntity;
 import dev.jeryn.audreys_additions.common.registry.AudBlockEntities;
 import dev.jeryn.audreys_additions.common.registry.AudEntities;
 import net.fabricmc.api.ClientModInitializer;
@@ -17,6 +18,7 @@ public class AudreysAdditionsClientFabric implements ClientModInitializer {
         ClientUtil.init();
         EntityRendererRegistry.register(AudEntities.CHAIR.get(), NoopRenderer::new);
         BlockEntityRendererRegistry.register(AudBlockEntities.KNOSSOS_THRONE.get(), RenderChairBlockEntity::new);
+        BlockEntityRendererRegistry.register(AudBlockEntities.FOOD_MACHINE.get(), RenderFoodMachineBlockEntity::new);
     }
 }
 

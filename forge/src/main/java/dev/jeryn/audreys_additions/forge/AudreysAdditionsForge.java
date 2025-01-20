@@ -4,6 +4,7 @@ import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.forge.data.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.common.data.ForgeBlockTagsProvider;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -25,6 +26,12 @@ public class AudreysAdditionsForge {
         generator.addProvider(e.includeServer(), new AUDPatterns(generator));
 
         generator.addProvider(e.includeClient(), new AUDEnglish(generator));
+
+        AudBlockTagsProvider blockTags = new AudBlockTagsProvider(generator.getPackOutput(), e.getLookupProvider(), e.getExistingFileHelper());
+        generator.addProvider(e.includeServer(), blockTags);
+
+
+        generator.addProvider(e.includeClient(), new AudItemTagProvider(generator.getPackOutput(), e.getLookupProvider(), blockTags.contentsGetter(), existingFileHelper));
         generator.addProvider(e.includeClient(), new AudDesktopProvider(generator, false));
         generator.addProvider(e.includeClient(), new AudBlocksModelProvider(generator, existingFileHelper));
         generator.addProvider(e.includeClient(), new AudItemModelProvider(generator.getPackOutput(), existingFileHelper));

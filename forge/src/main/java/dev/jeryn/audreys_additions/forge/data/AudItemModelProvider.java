@@ -2,6 +2,7 @@ package dev.jeryn.audreys_additions.forge.data;
 
 import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
+import dev.jeryn.audreys_additions.common.registry.AudItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
@@ -20,6 +21,8 @@ public class AudItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         blockItem(AudBlocks.LIMINTON_MONITOR.getId());
         basicItem(AudBlocks.KNOSSOS_THRONE.getId());
+        basicItem(AudBlocks.FOOD_MACHINE.getId());
+        basicItem(AudItems.FOOD_CUBE.getId());
     }
 
     public ItemModelBuilder blockItem(ResourceLocation item) {

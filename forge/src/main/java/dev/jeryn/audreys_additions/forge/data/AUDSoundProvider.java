@@ -1,6 +1,7 @@
 package dev.jeryn.audreys_additions.forge.data;
 
 import dev.jeryn.audreys_additions.AudreysAdditions;
+import dev.jeryn.audreys_additions.common.registry.AudSounds;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -16,7 +17,7 @@ public class AUDSoundProvider extends SoundDefinitionsProvider {
 
     @Override
     public void registerSounds() {
-
+        add(AudSounds.FOOD_MACHINE.get(), basicSound("food_machine", AudSounds.FOOD_MACHINE.getId()));
     }
 
     public SoundDefinition basicSound(String langKey, ResourceLocation resourceLocation) {

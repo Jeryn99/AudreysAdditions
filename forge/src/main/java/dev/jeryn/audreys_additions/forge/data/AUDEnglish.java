@@ -2,6 +2,7 @@ package dev.jeryn.audreys_additions.forge.data;
 
 import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
+import dev.jeryn.audreys_additions.common.registry.AudItems;
 import dev.jeryn.audreys_additions.common.registry.AudShellRegistry;
 import net.minecraft.ChatFormatting;
 import net.minecraft.data.DataGenerator;
@@ -23,6 +24,9 @@ public class AUDEnglish extends LanguageProvider {
 
         add(AudBlocks.KNOSSOS_THRONE.get(), "Knossos Throne");
         add(AudBlocks.LIMINTON_MONITOR.get(), "Liminton Monitor");
+        add(AudBlocks.FOOD_MACHINE.get(), "Food Machine");
+
+        add(AudItems.FOOD_CUBE.get(), "Food Cube");
     }
 
     public void addShell(ShellTheme theme, String name) {
