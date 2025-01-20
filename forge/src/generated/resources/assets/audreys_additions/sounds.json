@@ -1,0 +1,8 @@
+{
+  "food_machine": {
+    "sounds": [
+      "audreys_additions:food_machine"
+    ],
+    "subtitle": "sound.food_machine.subtitle"
+  }
+}
