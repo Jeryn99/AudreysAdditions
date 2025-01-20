@@ -38,6 +38,7 @@ public class AUDModelRegistry {
     public static ModelLayerLocation BRACHACKI_CONSOLE = console("brachacki");
 
     public static ModelLayerLocation KNOSSOS_THRONE = furniture("knossos_throne");
+    public static ModelLayerLocation FOOD_MACHINE = furniture("food_machine");
 
 
     private static ModelLayerLocation interiorDoor(String name) {

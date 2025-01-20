@@ -3,6 +3,7 @@ package dev.jeryn.audreys_additions.forge.data;
 import com.google.gson.JsonObject;
 import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.blocks.ChairBlock;
+import dev.jeryn.audreys_additions.blocks.FoodMachineBlock;
 import dev.jeryn.audreys_additions.blocks.MonitorBlock;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
@@ -28,7 +29,10 @@ public class AudBlocksModelProvider extends BlockStateProvider {
             if (location.getNamespace().matches(AudreysAdditions.MODID)) {
 
                 if(value instanceof ChairBlock chairBlock){
+                    continue;
+                }
 
+                if(value instanceof FoodMachineBlock foodMachineBlock){
                     continue;
                 }
 
