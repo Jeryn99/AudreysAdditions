@@ -2,7 +2,7 @@ package dev.jeryn.audreys_additions.forge;
 
 import dev.jeryn.audreys_additions.AUDModelRegistry;
 import dev.jeryn.audreys_additions.AudreysAdditions;
-import dev.jeryn.audreys_additions.client.models.renderers.RenderChairBlockEntity;
+import dev.jeryn.audreys_additions.client.models.renderers.RenderKnossosChairBlockEntity;
 import dev.jeryn.audreys_additions.client.models.renderers.RenderFoodMachineBlockEntity;
 import dev.jeryn.audreys_additions.common.registry.AudBlockEntities;
 import dev.jeryn.audreys_additions.common.registry.AudEntities;
@@ -22,7 +22,7 @@ public class ClientModBus {
         AUDModelRegistry.init();
         AUDModelRegistryImpl.register(event);
         EntityRenderers.register(AudEntities.CHAIR.get(), NoopRenderer::new);
-        BlockEntityRenderers.register(AudBlockEntities.KNOSSOS_THRONE.get(), RenderChairBlockEntity::new);
+        BlockEntityRenderers.register(AudBlockEntities.KNOSSOS_THRONE.get(), RenderKnossosChairBlockEntity::new);
         BlockEntityRenderers.register(AudBlockEntities.FOOD_MACHINE.get(), RenderFoodMachineBlockEntity::new);
 
     }

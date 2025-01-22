@@ -36,6 +36,7 @@ public class AUDModelRegistry {
     public static ModelLayerLocation NEWBERY_CONSOLE = console("newbery");
     public static ModelLayerLocation MASTER_CONSOLE = console("master");
     public static ModelLayerLocation BRACHACKI_CONSOLE = console("brachacki");
+    public static ModelLayerLocation TOYOTA_CONSOLE = console("toyota");
 
     public static ModelLayerLocation KNOSSOS_THRONE = furniture("knossos_throne");
     public static ModelLayerLocation FOOD_MACHINE = furniture("food_machine");

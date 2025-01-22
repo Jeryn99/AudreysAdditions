@@ -31,6 +31,7 @@ public class AudreysAdditionsAPIEvents {
         TardisClientEvents.CONSOLE_MODELS_SETUP.register((consoleModelCollection, entityModelSet) -> consoleModelCollection.registerModel(AudConsoleRegistry.PERTWEE.getId(), new PertweeConsoleEntry(new PertweeConsoleModel(entityModelSet.bakeLayer(PERTWEE_CONSOLE)))));
         TardisClientEvents.CONSOLE_MODELS_SETUP.register((consoleModelCollection, entityModelSet) -> consoleModelCollection.registerModel(AudConsoleRegistry.NEWBERY.getId(), new ConsoleModelEntry(new NewberyConsoleModel(entityModelSet.bakeLayer(NEWBERY_CONSOLE)))));
         TardisClientEvents.CONSOLE_MODELS_SETUP.register((consoleModelCollection, entityModelSet) -> consoleModelCollection.registerModel(AudConsoleRegistry.BRACHACKI.getId(), new ConsoleModelEntry(new BrachackiConsoleModel(entityModelSet.bakeLayer(BRACHACKI_CONSOLE)))));
+        TardisClientEvents.CONSOLE_MODELS_SETUP.register((consoleModelCollection, entityModelSet) -> consoleModelCollection.registerModel(AudConsoleRegistry.TOYOTA.getId(), new ConsoleModelEntry(new BrachackiConsoleModel(entityModelSet.bakeLayer(TOYOTA_CONSOLE)))));
     }
 
 }
