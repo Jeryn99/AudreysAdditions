@@ -2,7 +2,7 @@ package dev.jeryn.audreys_additions.forge.data;
 
 import com.google.gson.JsonObject;
 import dev.jeryn.audreys_additions.AudreysAdditions;
-import dev.jeryn.audreys_additions.blocks.ChairBlock;
+import dev.jeryn.audreys_additions.blocks.ChairBaseBlock;
 import dev.jeryn.audreys_additions.blocks.FoodMachineBlock;
 import dev.jeryn.audreys_additions.blocks.MonitorBlock;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
@@ -10,6 +10,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -29,10 +30,6 @@ public class AudBlocksModelProvider extends BlockStateProvider {
             @Nullable ResourceLocation location = ForgeRegistries.BLOCKS.getKey(value);
             if (location.getNamespace().matches(AudreysAdditions.MODID)) {
 
-                if(value instanceof ChairBlock chairBlock){
-                    continue;
-                }
-
                 if(value instanceof FoodMachineBlock foodMachineBlock){
                     continue;
                 }
@@ -46,6 +43,16 @@ public class AudBlocksModelProvider extends BlockStateProvider {
                 if(value == AudBlocks.LIGHTCOLUMN_LEFT.get()){
                     ResourceLocation leftColumn = new ResourceLocation(AudreysAdditions.MODID, "block/lightcolumn_left");
                     threeDeeRotating(value, leftColumn);
+                    continue;
+                }
+
+                if(value == AudBlocks.ARMCHAIR.get()){
+                    ResourceLocation armChairModel = new ResourceLocation(AudreysAdditions.MODID, "block/armchair");
+                    threeDeeRotating(value, armChairModel);
+                    continue;
+                }
+
+                if(value == AudBlocks.KNOSSOS_THRONE.get()){
                     continue;
                 }
 
@@ -70,6 +77,7 @@ public class AudBlocksModelProvider extends BlockStateProvider {
         return getVariantBuilder(block).forAllStates(
                 state -> ConfiguredModel.builder().modelFile(new ModelFile.UncheckedModelFile(location)).rotationY((int) state.getValue(HorizontalDirectionalBlock.FACING).toYRot()).build()).toJson();
     }
+
 
 
 

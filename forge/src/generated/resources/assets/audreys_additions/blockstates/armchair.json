@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "audreys_additions:block/armchair",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "audreys_additions:block/armchair",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "audreys_additions:block/armchair"
+    },
+    "facing=west": {
+      "model": "audreys_additions:block/armchair",
+      "y": 90
+    }
+  }
+}

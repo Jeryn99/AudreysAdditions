@@ -47,6 +47,9 @@ public class AudConsolePatternProvider extends ConsolePatternProvider {
 
     @Override
     protected void addPatterns() {
+        addPatternToDatagen(AudConsoleRegistry.TOYOTA.getId(), createWithDefaultSound("toyota", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/toyota/toyota.png"), false)));
+        addPatternToDatagen(AudConsoleRegistry.TOYOTA.getId(), createWithDefaultSound("toyota_blue", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/toyota/toyota_blue.png"), false)));
+
         addPatternToDatagen(AudConsoleRegistry.BRACHACKI.getId(), createWithDefaultSound("brachacki", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/brachacki/brachacki.png"), true)));
         addPatternToDatagen(AudConsoleRegistry.BRACHACKI.getId(), createWithDefaultSound("brachacki_ruth", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/brachacki/brachacki_ruth.png"), true)));
         addPatternToDatagen(AudConsoleRegistry.BRACHACKI.getId(), createWithDefaultSound("brachacki_quartz", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/brachacki/brachacki_quartz.png"), true)));

@@ -5,7 +5,7 @@ import com.mojang.math.Axis;
 import dev.jeryn.audreys_additions.AUDModelRegistry;
 import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.blockentity.FoodMachineBlockEntity;
-import dev.jeryn.audreys_additions.blocks.ChairBlock;
+import dev.jeryn.audreys_additions.blocks.ChairBaseBlock;
 import dev.jeryn.audreys_additions.client.models.FoodMachineModel;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
@@ -13,7 +13,9 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
 public class RenderFoodMachineBlockEntity implements BlockEntityRenderer<FoodMachineBlockEntity>, BlockEntityRendererProvider<FoodMachineBlockEntity> {
 
@@ -33,7 +35,7 @@ public class RenderFoodMachineBlockEntity implements BlockEntityRenderer<FoodMac
 
         BlockState blockstate = blockEntity.getBlockState();
         poseStack.mulPose(Axis.ZP.rotationDegrees(180));
-        poseStack.mulPose(Axis.YP.rotationDegrees(blockstate.getValue(ChairBlock.ROTATION).floatValue() * 22.5F));
+        poseStack.mulPose(Axis.YP.rotationDegrees(blockstate.getValue(BlockStateProperties.ROTATION_16).floatValue() * 22.5F));
         foodMachine.renderToBuffer(blockEntity, poseStack, bufferSource.getBuffer(RenderType.entityTranslucent(texture)), packedLight, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
         foodMachine.renderToBuffer(blockEntity, poseStack, bufferSource.getBuffer(RenderType.entityTranslucentEmissive(lightmap)), packedLight, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
         poseStack.popPose();

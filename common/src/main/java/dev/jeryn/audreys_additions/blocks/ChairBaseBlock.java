@@ -1,9 +1,11 @@
 package dev.jeryn.audreys_additions.blocks;
 
 import dev.jeryn.audreys_additions.blockentity.ChairBlockEntity;
+import dev.jeryn.audreys_additions.blockentity.KnossosChairBlockEntity;
 import dev.jeryn.audreys_additions.common.registry.AudEntities;
 import dev.jeryn.audreys_additions.entity.ChairEntity;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
@@ -27,49 +29,24 @@ import whocraft.tardis_refined.common.util.PlayerUtil;
 import whocraft.tardis_refined.registry.TRItemRegistry;
 import whocraft.tardis_refined.registry.TRSoundRegistry;
 
-public class ChairBlock extends Block implements EntityBlock {
+public class ChairBaseBlock extends HorizontalDirectionalBlock implements EntityBlock {
 
-    public static final IntegerProperty ROTATION = BlockStateProperties.ROTATION_16;
-
-    public ChairBlock(Properties properties) {
+    public ChairBaseBlock(Properties properties) {
         super(properties.noOcclusion());
     }
 
-    @Override
-    public @NotNull RenderShape getRenderShape(@NotNull BlockState p_60550_) {
-        return RenderShape.ENTITYBLOCK_ANIMATED;
-    }
-
-    @Override
-    public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return this.defaultBlockState().setValue(ROTATION, Mth.floor((double)(context.getRotation() * 16.0F / 360.0F) + 0.5) & 15);
-    }
-    @Override
-    public BlockState rotate(BlockState state, Rotation rotation) {
-        return state.setValue(ROTATION, rotation.rotate(state.getValue(ROTATION), 16));
-    }
-    @Override
-    public BlockState mirror(BlockState state, Mirror mirror) {
-        return state.setValue(ROTATION, mirror.mirror(state.getValue(ROTATION), 16));
-    }
 
     @Override
     public void onRemove(BlockState blockState, Level level, BlockPos blockPos, BlockState blockState2, boolean bl) {
-        if (level.getBlockEntity(blockPos) instanceof ChairBlockEntity chairBlockEntity) {
-            if (chairBlockEntity.getChairEntity() != null) {
-                ChairEntity chairEntity = chairBlockEntity.getChairEntity();
+        if (level.getBlockEntity(blockPos) instanceof KnossosChairBlockEntity knossosChairBlockEntity) {
+            if (knossosChairBlockEntity.getChairEntity() != null) {
+                ChairEntity chairEntity = knossosChairBlockEntity.getChairEntity();
                 chairEntity.ejectPassengers();
                 chairEntity.remove(Entity.RemovalReason.KILLED);
             }
         }
 
         super.onRemove(blockState, level, blockPos, blockState2, bl);
-    }
-
-    @Override
-    protected void createBlockStateDefinition(StateDefinition.@NotNull Builder<Block, BlockState> builder) {
-        super.createBlockStateDefinition(builder);
-        builder.add(ROTATION);
     }
 
     @Override
@@ -80,7 +57,7 @@ public class ChairBlock extends Block implements EntityBlock {
         }
 
         // Check if the block at the position is a ChairBlockEntity
-        if (!(level.getBlockEntity(pos) instanceof ChairBlockEntity blockChair)) {
+        if (!(level.getBlockEntity(pos) instanceof KnossosChairBlockEntity blockChair)) {
             return super.use(state, level, pos, player, hand, hit);
         }
 
@@ -100,7 +77,7 @@ public class ChairBlock extends Block implements EntityBlock {
 
         if (chairEntity == null || !chairEntity.isAlive()) {
             chairEntity = new ChairEntity(AudEntities.CHAIR.get(), level);
-            chairEntity.moveTo(pos, state.getValue(ROTATION), player.xRotO);
+            chairEntity.moveTo(pos, player.yBodyRot, player.xRotO);
             blockChair.setChairEntity(chairEntity);
             level.addFreshEntity(chairEntity);
         }
@@ -113,6 +90,25 @@ public class ChairBlock extends Block implements EntityBlock {
         return InteractionResult.SUCCESS;
     }
 
+    @Override
+    public BlockState rotate(BlockState blockState, Rotation rotation) {
+        return blockState.setValue(FACING, rotation.rotate(blockState.getValue(FACING)));
+    }
+
+    @Override
+    public BlockState mirror(BlockState blockState, Mirror mirror) {
+        return blockState.rotate(mirror.getRotation(blockState.getValue(FACING)));
+    }
+
+    @Override
+    public BlockState getStateForPlacement(BlockPlaceContext arg) {
+        return this.defaultBlockState().setValue(FACING, arg.getHorizontalDirection().getClockWise());
+    }
+
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.@NotNull Builder<Block, BlockState> builder) {
+        builder.add(HorizontalDirectionalBlock.FACING);
+    }
 
     @Nullable
     @Override
