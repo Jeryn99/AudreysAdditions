@@ -3,6 +3,12 @@
     "sounds": [
       "audreys_additions:food_machine"
     ],
-    "subtitle": "sound.food_machine.subtitle"
+    "subtitle": "sound.audreys_additions.food_machine.subtitle"
+  },
+  "sidrat": {
+    "sounds": [
+      "audreys_additions:sidrat"
+    ],
+    "subtitle": "sound.audreys_additions.sidrat.subtitle"
   }
 }
