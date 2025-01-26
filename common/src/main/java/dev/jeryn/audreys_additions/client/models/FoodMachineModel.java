@@ -31,7 +31,7 @@ public class FoodMachineModel extends GenericModel implements Animatable<FoodMac
             animate(blockentity.POWER, POWER, blockentity.getAdjustedFrameTime());
         } else {
             root().getAllParts().forEach(ModelPart::resetPose);
-            animate(blockentity.FLASHING, FLASHING, blockentity.getProductionTimer());
+            animate(blockentity.FLASHING, FLASHING, blockentity.getLevel().getGameTime());
         }
 
         this.root().render(poseStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);

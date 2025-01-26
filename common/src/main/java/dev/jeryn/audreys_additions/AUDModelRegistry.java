@@ -16,12 +16,14 @@ public class AUDModelRegistry {
 
 
     // Models
-    public static PoliceBoxModel policeBox18, policeBox10, policeBox76, policeBox96;
-    public static DualInteriorDoorModel policeBox18Door, policeBox10Door, policeBox76Door, policeBox96Door;
+    public static PoliceBoxModel policeBox18, policeBox18_special, policeBox10, policeBox76, policeBox96;
+    public static DualInteriorDoorModel policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox76Door, policeBox96Door;
 
     // Model Layers
     public static ModelLayerLocation POLICEBOX_2018 = shell("policebox_2018");
+    public static ModelLayerLocation POLICEBOX_2018_SPECIAL = shell("policebox_2018_special");
     public static ModelLayerLocation POLICEBOX_2018_DOOR = interiorDoor("policebox_2018_door");
+    public static ModelLayerLocation POLICEBOX_2018_DOOR_SPECIAL = interiorDoor("policebox_2018_door_special");
 
     public static ModelLayerLocation POLICEBOX_2010 = shell("policebox_2010");
     public static ModelLayerLocation POLICEBOX_2010_DOOR = interiorDoor("policebox_2010_door");
@@ -37,6 +39,7 @@ public class AUDModelRegistry {
     public static ModelLayerLocation MASTER_CONSOLE = console("master");
     public static ModelLayerLocation BRACHACKI_CONSOLE = console("brachacki");
     public static ModelLayerLocation TOYOTA_CONSOLE = console("toyota");
+    public static ModelLayerLocation KELT_CONSOLE = console("kelt");
 
     public static ModelLayerLocation KNOSSOS_THRONE = furniture("knossos_throne");
     public static ModelLayerLocation FOOD_MACHINE = furniture("food_machine");
@@ -88,7 +91,16 @@ public class AUDModelRegistry {
             poseStack.scale(0.7F, 0.7F, 0.7F);
             poseStack.translate(0F, 0.7F, 0F);
         });
+
+        policeBox18_special = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_2018_SPECIAL), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
+            poseStack.scale(0.7F, 0.7F, 0.7F);
+            poseStack.translate(0F, 0.7F, 0F);
+        });
+
         policeBox18Door = new DualInteriorDoorModel(entityModels.bakeLayer(POLICEBOX_2018_DOOR), -275.0F, false, true);
+
+        policeBox18Door_special = new DualInteriorDoorModel(entityModels.bakeLayer(POLICEBOX_2018_DOOR_SPECIAL), -275.0F, false, true);
+
 
         // Police Box - 2010
         policeBox10 = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_2010), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
