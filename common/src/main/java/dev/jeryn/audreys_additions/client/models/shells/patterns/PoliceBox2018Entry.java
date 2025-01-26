@@ -14,7 +14,7 @@ public class PoliceBox2018Entry extends ShellEntry {
 
     @Override
     public ShellModel getShellModel(ShellPattern shellPattern) {
-        if (shellPattern.id().getPath().contains("proms") || shellPattern.id().getPath().contains("barbie")) {
+        if (isSpecialShellPattern(shellPattern)) {
             return AUDModelRegistry.policeBox18_special;
         }
         return super.getShellModel(shellPattern);
@@ -22,9 +22,15 @@ public class PoliceBox2018Entry extends ShellEntry {
 
     @Override
     public ShellDoorModel getShellDoorModel(ShellPattern shellPattern) {
-        if (shellPattern.id().getPath().contains("proms") || shellPattern.id().getPath().contains("barbie")) {
+        if (isSpecialShellPattern(shellPattern)) {
             return AUDModelRegistry.policeBox18Door_special;
         }
         return super.getShellDoorModel(shellPattern);
     }
+
+    private boolean isSpecialShellPattern(ShellPattern shellPattern) {
+        String path = shellPattern.id().getPath();
+        return path.contains("proms") || path.contains("barbie");
+    }
+
 }
