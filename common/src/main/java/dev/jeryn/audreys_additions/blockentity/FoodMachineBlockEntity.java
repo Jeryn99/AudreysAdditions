@@ -91,23 +91,23 @@ public class FoodMachineBlockEntity extends BlockEntity implements BlockEntityTi
             return;
         }
 
+        int frameIndex;
+        int totalFrames = 380;
+
+        if (fuelLevel > 0) {
+            float fuelPercentage = (float) fuelLevel / 100;
+            frameIndex = Math.round(fuelPercentage * (totalFrames - 1));
+        } else {
+            frameIndex = 0;
+        }
+
+
         if (isProducing) {
             POWER.stop();
-
-            int frameIndex;
-            int totalFrames = 380;
-
-            if (fuelLevel > 0) {
-                float fuelPercentage = (float) fuelLevel / 100;
-                frameIndex = Math.round(fuelPercentage * (totalFrames - 1));
-            } else {
-                frameIndex = 0;
-            }
-
-            adjustedFrameTime = level.getGameTime() + frameIndex;
             FLASHING.start((int) level.getGameTime());
         } else {
             if (!POWER.isStarted()) {
+                adjustedFrameTime = level.getGameTime() + frameIndex;
                 FLASHING.stop();
                 POWER.start((int) adjustedFrameTime);
             }

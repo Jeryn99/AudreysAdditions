@@ -22,6 +22,9 @@ public class AUDPatterns extends ShellPatternProvider {
         quickAdd(AudShellRegistry.POLICEBOX_2010.getId(), "default", true);
         quickAdd(AudShellRegistry.POLICEBOX_1976.getId(), "default", true);
         quickAdd(AudShellRegistry.POLICEBOX_1996.getId(), "default", true);
+
+        quickAdd(AudShellRegistry.POLICEBOX_2018.getId(), "policebox_2018_barbie", true);
+        quickAdd(AudShellRegistry.POLICEBOX_2018.getId(), "policebox_2018_proms", true);
     }
 
     public void quickAdd(ResourceLocation themeId, String patternName, boolean hasEmissiveTexture) {

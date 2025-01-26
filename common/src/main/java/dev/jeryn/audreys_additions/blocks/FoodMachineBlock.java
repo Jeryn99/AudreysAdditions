@@ -3,9 +3,7 @@ package dev.jeryn.audreys_additions.blocks;
 import dev.jeryn.audreys_additions.AudTags;
 import dev.jeryn.audreys_additions.blockentity.FoodMachineBlockEntity;
 import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.Mth;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -48,7 +46,7 @@ public class FoodMachineBlock extends Block  implements EntityBlock {
         if(level.getBlockEntity(blockPos) instanceof FoodMachineBlockEntity foodMachine){
 
             // Start Producing
-            if(player.getMainHandItem().isEmpty() && !foodMachine.isProducing()){
+            if (foodMachine.getFuelLevel() > 0 && player.getMainHandItem().isEmpty() && !foodMachine.isProducing()) {
                 foodMachine.setProducing(true);
                 return InteractionResult.SUCCESS;
             }

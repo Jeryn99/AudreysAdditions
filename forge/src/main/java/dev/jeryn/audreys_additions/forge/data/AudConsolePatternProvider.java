@@ -50,6 +50,10 @@ public class AudConsolePatternProvider extends ConsolePatternProvider {
         addPatternToDatagen(AudConsoleRegistry.TOYOTA.getId(), createWithDefaultSound("toyota", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/toyota/toyota.png"), false)));
         addPatternToDatagen(AudConsoleRegistry.TOYOTA.getId(), createWithDefaultSound("toyota_blue", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/toyota/toyota_blue.png"), false)));
 
+        addPatternToDatagen(AudConsoleRegistry.KELT.getId(), createWithDefaultSound("kelt", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/kelt/kelt.png"), true)));
+        addPatternToDatagen(AudConsoleRegistry.KELT.getId(), createWithDefaultSound("kelt_rani", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/kelt/kelt_rani.png"), true)));
+        addPatternToDatagen(AudConsoleRegistry.KELT.getId(), createWithDefaultSound("kelt_master", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/kelt/kelt_master.png"), true)));
+
         addPatternToDatagen(AudConsoleRegistry.BRACHACKI.getId(), createWithDefaultSound("brachacki", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/brachacki/brachacki.png"), true)));
         addPatternToDatagen(AudConsoleRegistry.BRACHACKI.getId(), createWithDefaultSound("brachacki_ruth", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/brachacki/brachacki_ruth.png"), true)));
         addPatternToDatagen(AudConsoleRegistry.BRACHACKI.getId(), createWithDefaultSound("brachacki_quartz", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/brachacki/brachacki_quartz.png"), true)));

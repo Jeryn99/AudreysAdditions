@@ -2,10 +2,7 @@ package dev.jeryn.audreys_additions.common.registry;
 
 
 import dev.jeryn.audreys_additions.AudreysAdditions;
-import dev.jeryn.audreys_additions.console.theme.BrachackiConsoleTheme;
-import dev.jeryn.audreys_additions.console.theme.NewberyConsoleTheme;
-import dev.jeryn.audreys_additions.console.theme.PertweeConsoleTheme;
-import dev.jeryn.audreys_additions.console.theme.ToyotaConsoleTheme;
+import dev.jeryn.audreys_additions.console.theme.*;
 import net.minecraft.resources.ResourceLocation;
 import whocraft.tardis_refined.common.tardis.themes.ConsoleTheme;
 import whocraft.tardis_refined.common.tardis.themes.console.ConsoleThemeDetails;
@@ -20,6 +17,7 @@ public class AudConsoleRegistry {
     public static final RegistrySupplier<ConsoleTheme> NEWBERY = registerConsoleTheme("newbery", new NewberyConsoleTheme());
     public static final RegistrySupplier<ConsoleTheme> BRACHACKI = registerConsoleTheme("brachacki", new BrachackiConsoleTheme());
     public static final RegistrySupplier<ConsoleTheme> TOYOTA = registerConsoleTheme("toyota", new ToyotaConsoleTheme());
+    public static final RegistrySupplier<ConsoleTheme> KELT = registerConsoleTheme("kelt", new KeltConsoleTheme());
 
 
     private static RegistrySupplier<ConsoleTheme> registerConsoleTheme(String id, ConsoleThemeDetails themeDetails) {
