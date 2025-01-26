@@ -6,9 +6,11 @@ import dev.jeryn.audreys_additions.common.registry.*;
 
 public class AudreysAdditions {
 	public static final String MODID = "audreys_additions";
+	public static final String NAME = "Audreys Additions";
 
 	public static void init() {
 		AudreysAdditionsAPIEvents.init();
+		AudTabs.TABS.registerToModBus();
 		AudItems.ITEMS.registerToModBus();
 		AudBlocks.BLOCKS.registerToModBus();
 		AudBlockEntities.TILES.registerToModBus();

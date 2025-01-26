@@ -25,6 +25,7 @@ public class AudItemModelProvider extends ItemModelProvider {
         basicItem(AudItems.FOOD_CUBE.getId());
         blockItem(AudBlocks.LIGHTCOLUMN_LEFT.getId());
         blockItem(AudBlocks.LIGHTCOLUMN_RIGHT.getId());
+        blockItem(AudBlocks.ARMCHAIR.getId());
     }
 
     public ItemModelBuilder blockItem(ResourceLocation item) {

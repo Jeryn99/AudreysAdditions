@@ -16,6 +16,7 @@ public class AudItems {
     public static final DeferredRegistry<Item> ITEMS = DeferredRegistry.create(AudreysAdditions.MODID, Registries.ITEM);
     public static Item.Properties GENERIC_PROPERTIES = new Item.Properties().stacksTo(1);
 
+
     public static List<RegistrySupplier<Item>> TAB_ITEMS = new ArrayList();
 
     public static final RegistrySupplier<Item> FOOD_CUBE = register("food_cube", () -> new Item((new Item.Properties().food(new FoodProperties.Builder().nutrition(1).saturationMod(0.1F).build()))), true);
