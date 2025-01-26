@@ -18,10 +18,16 @@ public class AUDPatterns extends ShellPatternProvider {
 
     @Override
     protected void addPatterns() {
+
+
+
         quickAdd(AudShellRegistry.POLICEBOX_2018.getId(), "default", true);
         quickAdd(AudShellRegistry.POLICEBOX_2010.getId(), "default", true);
         quickAdd(AudShellRegistry.POLICEBOX_1976.getId(), "default", true);
         quickAdd(AudShellRegistry.POLICEBOX_1996.getId(), "default", true);
+
+        quickAdd(AudShellRegistry.SIDRAT.getId(), "sidrat", false);
+        quickAdd(AudShellRegistry.SIDRAT.getId(), "sidrat_gallifrey", false);
 
         quickAdd(AudShellRegistry.POLICEBOX_2018.getId(), "policebox_2018_barbie", true);
         quickAdd(AudShellRegistry.POLICEBOX_2018.getId(), "policebox_2018_proms", true);
