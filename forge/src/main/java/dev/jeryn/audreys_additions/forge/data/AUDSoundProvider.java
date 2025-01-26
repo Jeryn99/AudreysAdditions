@@ -18,6 +18,7 @@ public class AUDSoundProvider extends SoundDefinitionsProvider {
     @Override
     public void registerSounds() {
         add(AudSounds.FOOD_MACHINE.get(), basicSound("food_machine", AudSounds.FOOD_MACHINE.getId()));
+        add(AudSounds.SIDRAT.get(), basicSound("sidrat", AudSounds.SIDRAT.getId()));
     }
 
     public SoundDefinition basicSound(String langKey, ResourceLocation resourceLocation) {
@@ -25,6 +26,6 @@ public class AUDSoundProvider extends SoundDefinitionsProvider {
     }
 
     public static String createSubtitle(String langKey) {
-        return "sound." + langKey + ".subtitle";
+        return "sound." + AudreysAdditions.MODID + "." + langKey + ".subtitle";
     }
 }

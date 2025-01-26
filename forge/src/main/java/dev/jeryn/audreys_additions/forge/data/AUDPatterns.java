@@ -2,12 +2,14 @@ package dev.jeryn.audreys_additions.forge.data;
 
 import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.common.registry.AudShellRegistry;
+import dev.jeryn.audreys_additions.common.registry.AudSounds;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import whocraft.tardis_refined.common.data.ShellPatternProvider;
 import whocraft.tardis_refined.patterns.PatternTexture;
 import whocraft.tardis_refined.patterns.ShellPattern;
 import whocraft.tardis_refined.patterns.ShellPatterns;
+import whocraft.tardis_refined.patterns.sound.ConfiguredSound;
 import whocraft.tardis_refined.patterns.sound.ShellSoundProfile;
 import whocraft.tardis_refined.patterns.sound.TRShellSoundProfiles;
 
@@ -19,15 +21,17 @@ public class AUDPatterns extends ShellPatternProvider {
     @Override
     protected void addPatterns() {
 
-
+        ShellSoundProfile sidratSounds = new ShellSoundProfile();
+        sidratSounds.setDoorClose(new ConfiguredSound(AudSounds.SIDRAT.get()));
+        sidratSounds.setDoorOpen(new ConfiguredSound(AudSounds.SIDRAT.get()));
 
         quickAdd(AudShellRegistry.POLICEBOX_2018.getId(), "default", true);
         quickAdd(AudShellRegistry.POLICEBOX_2010.getId(), "default", true);
         quickAdd(AudShellRegistry.POLICEBOX_1976.getId(), "default", true);
         quickAdd(AudShellRegistry.POLICEBOX_1996.getId(), "default", true);
 
-        quickAdd(AudShellRegistry.SIDRAT.getId(), "sidrat", false);
-        quickAdd(AudShellRegistry.SIDRAT.getId(), "sidrat_gallifrey", false);
+        quickAdd(AudShellRegistry.SIDRAT.getId(), "sidrat", false, sidratSounds);
+        quickAdd(AudShellRegistry.SIDRAT.getId(), "sidrat_gallifrey", false, sidratSounds);
 
         quickAdd(AudShellRegistry.POLICEBOX_2018.getId(), "policebox_2018_barbie", true);
         quickAdd(AudShellRegistry.POLICEBOX_2018.getId(), "policebox_2018_proms", true);

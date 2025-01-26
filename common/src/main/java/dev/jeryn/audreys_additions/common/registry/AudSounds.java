@@ -11,6 +11,7 @@ public class AudSounds {
 
     public static final DeferredRegistry<SoundEvent> SOUNDS = DeferredRegistry.create(AudreysAdditions.MODID, Registries.SOUND_EVENT);
     public static final RegistrySupplier<SoundEvent> FOOD_MACHINE = setUpSound("food_machine");
+    public static final RegistrySupplier<SoundEvent> SIDRAT = setUpSound("sidrat");
 
 
     private static RegistrySupplier<SoundEvent> setUpSound(String soundName) {
