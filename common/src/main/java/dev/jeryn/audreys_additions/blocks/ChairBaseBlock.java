@@ -5,29 +5,22 @@ import dev.jeryn.audreys_additions.blockentity.KnossosChairBlockEntity;
 import dev.jeryn.audreys_additions.common.registry.AudEntities;
 import dev.jeryn.audreys_additions.entity.ChairEntity;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.network.chat.Component;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.DyeItem;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import whocraft.tardis_refined.common.util.MiscHelper;
-import whocraft.tardis_refined.common.util.PlayerUtil;
-import whocraft.tardis_refined.registry.TRItemRegistry;
-import whocraft.tardis_refined.registry.TRSoundRegistry;
 
 public class ChairBaseBlock extends HorizontalDirectionalBlock implements EntityBlock {
 
@@ -57,38 +50,41 @@ public class ChairBaseBlock extends HorizontalDirectionalBlock implements Entity
         }
 
         // Check if the block at the position is a ChairBlockEntity
-        if (!(level.getBlockEntity(pos) instanceof KnossosChairBlockEntity blockChair)) {
+        if (!(level.getBlockEntity(pos) instanceof ChairBlockEntity blockChair)) {
             return super.use(state, level, pos, player, hand, hit);
         }
 
-        // Handle Pattern Manipulator usage
-        if (player.getMainHandItem().getItem() == TRItemRegistry.PATTERN_MANIPULATOR.get()) {
-            if (player.getCooldowns().isOnCooldown(TRItemRegistry.PATTERN_MANIPULATOR.get()))
-                return InteractionResult.CONSUME;
-            blockChair.cycleVariant();
-            PlayerUtil.sendMessage(player, Component.translatable(MiscHelper.getCleanName(blockChair.getCurrentVariant())), true);
-            level.playSound(player, pos, TRSoundRegistry.PATTERN_MANIPULATOR.get(), SoundSource.BLOCKS, 1.0F, 1.0F);
-            player.getCooldowns().addCooldown(TRItemRegistry.PATTERN_MANIPULATOR.get(), 20);
-            return InteractionResult.SUCCESS;
+        // Handle dye interaction
+        ItemStack heldItem = player.getItemInHand(hand);
+        if (heldItem.getItem() instanceof DyeItem dyeItem) {
+            DyeColor dyeColour = dyeItem.getDyeColor();
+            if (blockChair.getColour() != dyeColour) {
+                blockChair.setColour(dyeColour);
+                if (!player.isCreative()) {
+                    heldItem.shrink(1);
+                }
+                level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
+                return InteractionResult.SUCCESS;
+            }
+            return InteractionResult.PASS;
         }
 
         // Handle ChairEntity interaction
         ChairEntity chairEntity = blockChair.getChairEntity();
-
         if (chairEntity == null || !chairEntity.isAlive()) {
             chairEntity = new ChairEntity(AudEntities.CHAIR.get(), level);
-            chairEntity.moveTo(pos, player.yBodyRot, player.xRotO);
+            chairEntity.moveTo(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5, player.getYRot(), 0);
             blockChair.setChairEntity(chairEntity);
             level.addFreshEntity(chairEntity);
         }
 
-        // Let the player ride the chair if not already riding
         if (!chairEntity.hasPassenger(player)) {
             player.startRiding(chairEntity);
         }
 
         return InteractionResult.SUCCESS;
     }
+
 
     @Override
     public BlockState rotate(BlockState blockState, Rotation rotation) {
