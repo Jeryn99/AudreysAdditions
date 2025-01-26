@@ -3,11 +3,14 @@ package dev.jeryn.audreys_additions;
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import dev.jeryn.audreys_additions.client.models.shell.AUDShellEntryRegistry;
 import dev.jeryn.audreys_additions.client.models.shell.PoliceBoxModel;
+import dev.jeryn.audreys_additions.client.models.shell.SidratModel;
 import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.resources.ResourceLocation;
 import whocraft.tardis_refined.client.model.blockentity.door.interior.DualInteriorDoorModel;
+import whocraft.tardis_refined.client.model.blockentity.door.interior.DualTexInteriorDoorModel;
+import whocraft.tardis_refined.client.model.blockentity.door.interior.SingleTexInteriorDoorModel;
 import whocraft.tardis_refined.common.util.PlatformWarning;
 
 import java.util.function.Supplier;
@@ -18,7 +21,8 @@ public class AUDModelRegistry {
     // Models
     public static PoliceBoxModel policeBox18, policeBox18_special, policeBox10, policeBox76, policeBox96;
     public static DualInteriorDoorModel policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox76Door, policeBox96Door;
-
+    public static DualTexInteriorDoorModel sidratDoor;
+    public static SidratModel sidrat;
     // Model Layers
     public static ModelLayerLocation POLICEBOX_2018 = shell("policebox_2018");
     public static ModelLayerLocation POLICEBOX_2018_SPECIAL = shell("policebox_2018_special");
@@ -33,6 +37,9 @@ public class AUDModelRegistry {
 
     public static ModelLayerLocation POLICEBOX_1996 = shell("policebox_1996");
     public static ModelLayerLocation POLICEBOX_1996_DOOR = interiorDoor("policebox_1996_door");
+
+    public static ModelLayerLocation SIDRAT = shell("sidrat");
+    public static ModelLayerLocation SIDRAT_DOOR = interiorDoor("sidrat_door");
 
     public static ModelLayerLocation PERTWEE_CONSOLE = console("pertwee");
     public static ModelLayerLocation NEWBERY_CONSOLE = console("newbery");
@@ -108,6 +115,10 @@ public class AUDModelRegistry {
             poseStack.translate(0F, 0.5F, 0F);
         });
         policeBox10Door = new DualInteriorDoorModel(entityModels.bakeLayer(POLICEBOX_2010_DOOR), -275.0F, false, true);
+
+        sidrat = new SidratModel(entityModels.bakeLayer(SIDRAT));
+        sidratDoor = new DualTexInteriorDoorModel(entityModels.bakeLayer(SIDRAT_DOOR));
+
 
         // Model Registration
         AUDShellEntryRegistry.init();
