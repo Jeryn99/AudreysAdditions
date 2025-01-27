@@ -23,9 +23,11 @@ public class AudItemModelProvider extends ItemModelProvider {
         basicItem(AudBlocks.KNOSSOS_THRONE.getId());
         basicItem(AudBlocks.FOOD_MACHINE.getId());
         basicItem(AudItems.FOOD_CUBE.getId());
+        basicItem(AudItems.FOOD_CUBE.getId());
         blockItem(AudBlocks.LIGHTCOLUMN_LEFT.getId());
         blockItem(AudBlocks.LIGHTCOLUMN_RIGHT.getId());
         blockItem(AudBlocks.ARMCHAIR.getId());
+        basicItem(AudBlocks.ASTRAL_MAP.getId());
     }
 
     public ItemModelBuilder blockItem(ResourceLocation item) {

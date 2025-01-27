@@ -2,15 +2,13 @@ package dev.jeryn.audreys_additions.forge.data;
 
 import com.google.gson.JsonObject;
 import dev.jeryn.audreys_additions.AudreysAdditions;
-import dev.jeryn.audreys_additions.blocks.ChairBaseBlock;
-import dev.jeryn.audreys_additions.blocks.FoodMachineBlock;
-import dev.jeryn.audreys_additions.blocks.MonitorBlock;
+import dev.jeryn.audreys_additions.common.blocks.FoodMachineBlock;
+import dev.jeryn.audreys_additions.common.blocks.MonitorBlock;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -53,6 +51,10 @@ public class AudBlocksModelProvider extends BlockStateProvider {
                 }
 
                 if(value == AudBlocks.KNOSSOS_THRONE.get()){
+                    continue;
+                }
+
+                if(value == AudBlocks.ASTRAL_MAP.get()){
                     continue;
                 }
 

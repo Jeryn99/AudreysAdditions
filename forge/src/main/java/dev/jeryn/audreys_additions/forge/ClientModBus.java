@@ -2,9 +2,10 @@ package dev.jeryn.audreys_additions.forge;
 
 import dev.jeryn.audreys_additions.AUDModelRegistry;
 import dev.jeryn.audreys_additions.AudreysAdditions;
-import dev.jeryn.audreys_additions.blockentity.ChairBlockEntity;
-import dev.jeryn.audreys_additions.client.models.renderers.RenderKnossosChairBlockEntity;
-import dev.jeryn.audreys_additions.client.models.renderers.RenderFoodMachineBlockEntity;
+import dev.jeryn.audreys_additions.client.renderers.RenderAstralMapBlockEntity;
+import dev.jeryn.audreys_additions.common.blockentity.ChairBlockEntity;
+import dev.jeryn.audreys_additions.client.renderers.RenderKnossosChairBlockEntity;
+import dev.jeryn.audreys_additions.client.renderers.RenderFoodMachineBlockEntity;
 import dev.jeryn.audreys_additions.common.registry.AudBlockEntities;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import dev.jeryn.audreys_additions.common.registry.AudEntities;
@@ -29,6 +30,7 @@ public class ClientModBus {
         EntityRenderers.register(AudEntities.CHAIR.get(), NoopRenderer::new);
         BlockEntityRenderers.register(AudBlockEntities.KNOSSOS_THRONE.get(), RenderKnossosChairBlockEntity::new);
         BlockEntityRenderers.register(AudBlockEntities.FOOD_MACHINE.get(), RenderFoodMachineBlockEntity::new);
+        BlockEntityRenderers.register(AudBlockEntities.ASTRAL_MAP.get(), RenderAstralMapBlockEntity::new);
     }
 
     @SubscribeEvent
