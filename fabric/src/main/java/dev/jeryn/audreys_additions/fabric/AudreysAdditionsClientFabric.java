@@ -3,6 +3,7 @@ package dev.jeryn.audreys_additions.fabric;
 import dev.jeryn.audreys_additions.AUDModelRegistry;
 import dev.jeryn.audreys_additions.ClientUtil;
 import dev.jeryn.audreys_additions.client.renderers.RenderAstralMapBlockEntity;
+import dev.jeryn.audreys_additions.client.renderers.RenderCeilingCanopyBlockEntity;
 import dev.jeryn.audreys_additions.common.blockentity.ChairBlockEntity;
 import dev.jeryn.audreys_additions.client.renderers.RenderKnossosChairBlockEntity;
 import dev.jeryn.audreys_additions.client.renderers.RenderFoodMachineBlockEntity;
@@ -26,6 +27,7 @@ public class AudreysAdditionsClientFabric implements ClientModInitializer {
         BlockEntityRendererRegistry.register(AudBlockEntities.KNOSSOS_THRONE.get(), RenderKnossosChairBlockEntity::new);
         BlockEntityRendererRegistry.register(AudBlockEntities.FOOD_MACHINE.get(), RenderFoodMachineBlockEntity::new);
         BlockEntityRendererRegistry.register(AudBlockEntities.ASTRAL_MAP.get(), RenderAstralMapBlockEntity::new);
+        BlockEntityRendererRegistry.register(AudBlockEntities.CEILING_CANOPY.get(), RenderCeilingCanopyBlockEntity::new);
 
         ColorProviderRegistry.BLOCK.register((blockState, blockAndTintGetter, blockPos, tintIndex) -> {
             if (blockAndTintGetter != null && blockPos != null) {

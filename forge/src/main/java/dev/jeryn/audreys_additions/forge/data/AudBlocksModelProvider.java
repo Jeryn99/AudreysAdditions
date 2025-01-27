@@ -54,6 +54,10 @@ public class AudBlocksModelProvider extends BlockStateProvider {
                     continue;
                 }
 
+                if(value == AudBlocks.CEILING_CANOPY.get()){
+                    continue;
+                }
+
                 if(value == AudBlocks.ASTRAL_MAP.get()){
                     continue;
                 }

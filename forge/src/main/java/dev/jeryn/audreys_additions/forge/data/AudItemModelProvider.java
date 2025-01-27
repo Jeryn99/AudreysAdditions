@@ -28,6 +28,7 @@ public class AudItemModelProvider extends ItemModelProvider {
         blockItem(AudBlocks.LIGHTCOLUMN_RIGHT.getId());
         blockItem(AudBlocks.ARMCHAIR.getId());
         basicItem(AudBlocks.ASTRAL_MAP.getId());
+        basicItem(AudBlocks.CEILING_CANOPY.getId());
     }
 
     public ItemModelBuilder blockItem(ResourceLocation item) {

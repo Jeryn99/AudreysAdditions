@@ -31,6 +31,7 @@ public class AUDEnglish extends LanguageProvider {
         add(AudBlocks.LIGHTCOLUMN_RIGHT.get(), "Light Column (Right)");
         add(AudBlocks.ASTRAL_MAP.get(), "Astral Map");
         add(AudBlocks.ARMCHAIR.get(), "Armchair");
+        add(AudBlocks.CEILING_CANOPY.get(), "Ceiling Canopy");
 
         add(AudItems.FOOD_CUBE.get(), "Food Cube");
     }
