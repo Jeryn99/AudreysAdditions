@@ -1,11 +1,10 @@
-package dev.jeryn.audreys_additions.client.models.renderers;
+package dev.jeryn.audreys_additions.client.renderers;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 import dev.jeryn.audreys_additions.AUDModelRegistry;
 import dev.jeryn.audreys_additions.AudreysAdditions;
-import dev.jeryn.audreys_additions.blockentity.KnossosChairBlockEntity;
-import dev.jeryn.audreys_additions.blocks.ChairBaseBlock;
+import dev.jeryn.audreys_additions.common.blockentity.KnossosChairBlockEntity;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;

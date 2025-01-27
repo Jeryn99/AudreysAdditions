@@ -1,4 +1,4 @@
-package dev.jeryn.audreys_additions.client.models.renderers;
+package dev.jeryn.audreys_additions.client.renderers;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;

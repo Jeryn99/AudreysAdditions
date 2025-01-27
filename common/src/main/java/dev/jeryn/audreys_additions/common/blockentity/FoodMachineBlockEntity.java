@@ -1,4 +1,4 @@
-package dev.jeryn.audreys_additions.blockentity;
+package dev.jeryn.audreys_additions.common.blockentity;
 
 import dev.jeryn.audreys_additions.AudTags;
 import dev.jeryn.audreys_additions.common.registry.AudBlockEntities;

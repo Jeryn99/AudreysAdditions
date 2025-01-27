@@ -1,7 +1,7 @@
-package dev.jeryn.audreys_additions.blocks;
+package dev.jeryn.audreys_additions.common.blocks;
 
-import dev.jeryn.audreys_additions.blockentity.ChairBlockEntity;
-import dev.jeryn.audreys_additions.blockentity.KnossosChairBlockEntity;
+import dev.jeryn.audreys_additions.common.blockentity.ChairBlockEntity;
+import dev.jeryn.audreys_additions.common.blockentity.KnossosChairBlockEntity;
 import dev.jeryn.audreys_additions.common.registry.AudEntities;
 import dev.jeryn.audreys_additions.entity.ChairEntity;
 import net.minecraft.core.BlockPos;

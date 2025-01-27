@@ -1,4 +1,4 @@
-package dev.jeryn.audreys_additions.blocks;
+package dev.jeryn.audreys_additions.common.blocks;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

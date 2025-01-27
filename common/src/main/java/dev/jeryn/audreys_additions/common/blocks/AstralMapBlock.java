@@ -1,10 +1,13 @@
-package dev.jeryn.audreys_additions.blocks;
+package dev.jeryn.audreys_additions.common.blocks;
 
-import dev.jeryn.audreys_additions.blockentity.KnossosChairBlockEntity;
+import dev.jeryn.audreys_additions.common.blockentity.AstralMapBlockEntity;
+import dev.jeryn.audreys_additions.common.blockentity.KnossosChairBlockEntity;
 import dev.jeryn.audreys_additions.common.registry.AudEntities;
 import dev.jeryn.audreys_additions.entity.ChairEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
@@ -24,12 +27,14 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import whocraft.tardis_refined.common.capability.tardis.TardisLevelOperator;
+import whocraft.tardis_refined.common.network.messages.screens.S2COpenMonitor;
 import whocraft.tardis_refined.common.util.MiscHelper;
 import whocraft.tardis_refined.common.util.PlayerUtil;
 import whocraft.tardis_refined.registry.TRItemRegistry;
 import whocraft.tardis_refined.registry.TRSoundRegistry;
 
-public class KnossosChairBlock extends ChairBaseBlock{
+public class AstralMapBlock extends ChairBaseBlock{
 
     public static final IntegerProperty ROTATION = BlockStateProperties.ROTATION_16;
 
@@ -38,7 +43,7 @@ public class KnossosChairBlock extends ChairBaseBlock{
         builder.add(ROTATION);
     }
 
-    public KnossosChairBlock(Properties properties) {
+    public AstralMapBlock(Properties properties) {
         super(properties);
     }
 
@@ -56,53 +61,24 @@ public class KnossosChairBlock extends ChairBaseBlock{
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        // Only handle main hand interactions
-        if (hand != InteractionHand.MAIN_HAND) {
-            return super.use(state, level, pos, player, hand, hit);
-        }
-
-        // Check if the block at the position is a ChairBlockEntity
-        if (!(level.getBlockEntity(pos) instanceof KnossosChairBlockEntity blockChair)) {
-            return super.use(state, level, pos, player, hand, hit);
-        }
-
-        // Handle Pattern Manipulator usage
-        if (player.getMainHandItem().getItem() == TRItemRegistry.PATTERN_MANIPULATOR.get()) {
-            if (player.getCooldowns().isOnCooldown(TRItemRegistry.PATTERN_MANIPULATOR.get()))
-                return InteractionResult.CONSUME;
-            blockChair.cycleVariant();
-            PlayerUtil.sendMessage(player, Component.translatable(MiscHelper.getCleanName(blockChair.getCurrentVariant())), true);
-            level.playSound(player, pos, TRSoundRegistry.PATTERN_MANIPULATOR.get(), SoundSource.BLOCKS, 1.0F, 1.0F);
-            player.getCooldowns().addCooldown(TRItemRegistry.PATTERN_MANIPULATOR.get(), 20);
-            return InteractionResult.SUCCESS;
-        }
-
-        // Handle ChairEntity interaction
-        ChairEntity chairEntity = blockChair.getChairEntity();
-
-        if (chairEntity == null || !chairEntity.isAlive()) {
-            chairEntity = new ChairEntity(AudEntities.CHAIR.get(), level);
-            chairEntity.moveTo(pos, player.yBodyRot, player.xRotO);
-            blockChair.setChairEntity(chairEntity);
-            level.addFreshEntity(chairEntity);
-        }
-
-        // Let the player ride the chair if not already riding
-        if (!chairEntity.hasPassenger(player)) {
-            player.startRiding(chairEntity);
-        }
-
-        return InteractionResult.SUCCESS;
-    }
-
-    @Override
     public @NotNull RenderShape getRenderShape(@NotNull BlockState p_60550_) {
         return RenderShape.ENTITYBLOCK_ANIMATED;
     }
 
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new KnossosChairBlockEntity(pos, state);
+        return new AstralMapBlockEntity(pos, state);
+    }
+
+    @Override
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+
+        if (level instanceof ServerLevel serverLevel) {
+            TardisLevelOperator.get(serverLevel).ifPresent(tardisLevelOperator -> {
+                (new S2COpenMonitor(tardisLevelOperator.getInteriorManager().isWaitingToGenerate(), tardisLevelOperator.getPilotingManager().getCurrentLocation(), tardisLevelOperator.getPilotingManager().getTargetLocation(), tardisLevelOperator.getUpgradeHandler(), tardisLevelOperator.getAestheticHandler().getShellTheme())).send((ServerPlayer) player);
+            });
+        }
+
+        return super.use(state, level, pos, player, hand, hit);
     }
 }

@@ -21,6 +21,7 @@ public class AUDEnglish extends LanguageProvider {
         addShell(AudShellRegistry.POLICEBOX_2010.get(), ChatFormatting.BLUE + "Police Box (2010)");
         addShell(AudShellRegistry.POLICEBOX_1976.get(), ChatFormatting.BLUE + "Police Box (1976)");
         addShell(AudShellRegistry.POLICEBOX_1996.get(), ChatFormatting.BLUE + "Police Box (1996)");
+        addShell(AudShellRegistry.POLICEBOX_1963.get(), ChatFormatting.BLUE + "Police Box (1963)");
         addShell(AudShellRegistry.SIDRAT.get(), ChatFormatting.BLUE + "Sidrat");
 
         add(AudBlocks.KNOSSOS_THRONE.get(), "Knossos Throne");
@@ -28,6 +29,8 @@ public class AUDEnglish extends LanguageProvider {
         add(AudBlocks.FOOD_MACHINE.get(), "Food Machine");
         add(AudBlocks.LIGHTCOLUMN_LEFT.get(), "Light Column (Left)");
         add(AudBlocks.LIGHTCOLUMN_RIGHT.get(), "Light Column (Right)");
+        add(AudBlocks.ASTRAL_MAP.get(), "Astral Map");
+        add(AudBlocks.ARMCHAIR.get(), "Armchair");
 
         add(AudItems.FOOD_CUBE.get(), "Food Cube");
     }

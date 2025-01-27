@@ -1,7 +1,7 @@
-package dev.jeryn.audreys_additions.blocks;
+package dev.jeryn.audreys_additions.common.blocks;
 
 import dev.jeryn.audreys_additions.AudTags;
-import dev.jeryn.audreys_additions.blockentity.FoodMachineBlockEntity;
+import dev.jeryn.audreys_additions.common.blockentity.FoodMachineBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
