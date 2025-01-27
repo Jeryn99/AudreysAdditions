@@ -6,7 +6,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -38,12 +38,16 @@ public class AudItemTagProvider extends ItemTagsProvider {
 
             // Check if the block is an instance of any class in the set
             if (fuelBlockClasses.stream().anyMatch(clazz -> clazz.isInstance(block))) {
-                tag(AudTags.FUEL_ITEMS).add(Item.byBlock(block));
+                if (block.asItem() != Items.AIR) {
+                    tag(AudTags.FUEL_ITEMS).add(block.asItem());
+                }
             }
 
             // Check if the block's path contains "log"
             if (BuiltInRegistries.BLOCK.getKey(block).getPath().contains("log")) {
-                tag(AudTags.FUEL_ITEMS).add(Item.byBlock(block));
+                if (block.asItem() != Items.AIR) {
+                    tag(AudTags.FUEL_ITEMS).add(block.asItem());
+                }
             }
         });
 

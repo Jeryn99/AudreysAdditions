@@ -1,6 +1,7 @@
 {
 	"credit": "audrey (@LocalToybot) made this!",
 	"texture_size": [64, 64],
+	"render_type" : "cutout",
 	"textures": {
 		"0": "audreys_additions:block/armchair",
 		"particle": "audreys_additions:block/armchair"

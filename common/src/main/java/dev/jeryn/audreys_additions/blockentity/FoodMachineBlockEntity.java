@@ -29,14 +29,6 @@ public class FoodMachineBlockEntity extends BlockEntity implements BlockEntityTi
     private int productionTimer = 0;
     private boolean isProducing = false;
 
-    public int getProductionTimer() {
-        return productionTimer;
-    }
-
-    public void setProductionTimer(int productionTimer) {
-        this.productionTimer = productionTimer;
-    }
-
     public FoodMachineBlockEntity(BlockPos blockPos, BlockState blockState) {
         super(AudBlockEntities.FOOD_MACHINE.get(), blockPos, blockState);
     }
@@ -80,7 +72,6 @@ public class FoodMachineBlockEntity extends BlockEntity implements BlockEntityTi
         productionTimer = tag.getInt("ProductionTimer");
         isProducing = tag.getBoolean("IsProducing");
     }
-    private long adjustedFrameTime;
 
     @Override
     public void tick(Level level, BlockPos blockPos, BlockState blockState, FoodMachineBlockEntity blockEntity) {
@@ -91,33 +82,12 @@ public class FoodMachineBlockEntity extends BlockEntity implements BlockEntityTi
             return;
         }
 
-        int frameIndex;
-        int totalFrames = 380;
-
-        if (fuelLevel > 0) {
-            float fuelPercentage = (float) fuelLevel / 100;
-            frameIndex = Math.round(fuelPercentage * (totalFrames - 1));
-        } else {
-            frameIndex = 0;
-        }
-
-
         if (isProducing) {
-            POWER.stop();
-            FLASHING.start((int) level.getGameTime());
-        } else {
-            if (!POWER.isStarted()) {
-                adjustedFrameTime = level.getGameTime() + frameIndex;
-                FLASHING.stop();
-                POWER.start((int) adjustedFrameTime);
+            if(!FLASHING.isStarted()) {
+                FLASHING.start(12);
             }
         }
     }
-
-    public long getAdjustedFrameTime() {
-        return adjustedFrameTime;
-    }
-
 
 
     public void startProducing(Level level, BlockPos blockPos) {
