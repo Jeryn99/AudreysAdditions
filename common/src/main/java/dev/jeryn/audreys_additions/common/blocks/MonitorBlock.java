@@ -37,6 +37,7 @@ public class MonitorBlock extends HorizontalDirectionalBlock implements SimpleWa
         this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false));
     }
 
+
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
 

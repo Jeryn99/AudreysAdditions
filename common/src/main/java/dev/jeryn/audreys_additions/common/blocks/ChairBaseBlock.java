@@ -13,6 +13,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -27,6 +28,8 @@ public class ChairBaseBlock extends HorizontalDirectionalBlock implements Entity
     public ChairBaseBlock(Properties properties) {
         super(properties.noOcclusion());
     }
+
+   
 
 
     @Override

@@ -14,11 +14,9 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Mirror;
-import net.minecraft.world.level.block.RenderShape;
-import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -34,7 +32,7 @@ import whocraft.tardis_refined.common.util.PlayerUtil;
 import whocraft.tardis_refined.registry.TRItemRegistry;
 import whocraft.tardis_refined.registry.TRSoundRegistry;
 
-public class AstralMapBlock extends ChairBaseBlock{
+public class AstralMapBlock extends Block implements EntityBlock {
 
     public static final IntegerProperty ROTATION = BlockStateProperties.ROTATION_16;
 
@@ -46,6 +44,8 @@ public class AstralMapBlock extends ChairBaseBlock{
     public AstralMapBlock(Properties properties) {
         super(properties);
     }
+
+   
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
