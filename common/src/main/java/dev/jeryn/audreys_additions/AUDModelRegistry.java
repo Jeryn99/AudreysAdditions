@@ -54,6 +54,8 @@ public class AUDModelRegistry {
     public static ModelLayerLocation KNOSSOS_THRONE = furniture("knossos_throne");
     public static ModelLayerLocation FOOD_MACHINE = furniture("food_machine");
     public static ModelLayerLocation ASTRAL_MAP = furniture("astral_map");
+    public static ModelLayerLocation CEILING_CANOPY = furniture("ceiling_canopy");
+    public static ModelLayerLocation CEILING_CANOPY_HANGING = furniture("ceiling_canopy_hanging");
 
 
     private static ModelLayerLocation interiorDoor(String name) {
