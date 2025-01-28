@@ -63,7 +63,7 @@ public class AudBlocksModelProvider extends BlockStateProvider {
                 }
 
                 if (value instanceof MonitorBlock monitorBlock) {
-                    ResourceLocation vicMon = new ResourceLocation(AudreysAdditions.MODID, "block/liminton_monitor");
+                    ResourceLocation vicMon = new ResourceLocation(AudreysAdditions.MODID, "block/" + location.getPath());
                     threeDeeRotating(monitorBlock, vicMon);
                     continue;
                 }

@@ -38,6 +38,7 @@ public class MonitorBlock extends HorizontalDirectionalBlock implements SimpleWa
     }
 
 
+
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
 
