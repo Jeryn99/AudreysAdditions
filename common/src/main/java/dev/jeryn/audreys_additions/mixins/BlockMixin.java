@@ -14,7 +14,7 @@ public class BlockMixin {
     @Inject(method = {"isExceptionForConnection(Lnet/minecraft/world/level/block/state/BlockState;)Z"}, at = {@At(value = "HEAD")}, cancellable = true)
     private static void audreysAdditions$isExceptionForConnection(BlockState blockState, CallbackInfoReturnable<Boolean> cir) {
         Block block = blockState.getBlock();
-        if(block instanceof AstralMapBlock || block instanceof CeilingCanopyBlock || block instanceof ChairBaseBlock || block instanceof FoodMachineBlock || block instanceof LightBoxBlock || block instanceof MonitorBlock){
+        if(block instanceof AstralMapBlock || block instanceof CeilingCanopyBlock || block instanceof ChairBaseBlock || block instanceof FoodMachineBlock  || block instanceof MonitorBlock){
             cir.setReturnValue(true);
         }
     }

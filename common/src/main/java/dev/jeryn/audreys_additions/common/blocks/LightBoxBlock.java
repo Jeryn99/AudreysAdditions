@@ -36,9 +36,6 @@ public class LightBoxBlock extends HorizontalDirectionalBlock {
         builder.add(FACING);
     }
 
-   
-
-
     @Override
     @Nullable
     public BlockState getStateForPlacement(BlockPlaceContext arg) {

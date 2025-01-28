@@ -24,6 +24,8 @@ import org.jetbrains.annotations.Nullable;
 import whocraft.tardis_refined.registry.TRItemRegistry;
 import whocraft.tardis_refined.registry.TRSoundRegistry;
 
+import java.util.function.ToIntFunction;
+
 public class CeilingCanopyBlock extends HorizontalDirectionalBlock implements EntityBlock {
 
     public static final BooleanProperty HANGING = BlockStateProperties.HANGING;
@@ -35,11 +37,8 @@ public class CeilingCanopyBlock extends HorizontalDirectionalBlock implements En
     }
 
     public CeilingCanopyBlock(Properties properties) {
-        super(properties);
+        super(properties.lightLevel(value -> 15));
     }
-
-   
-
 
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {

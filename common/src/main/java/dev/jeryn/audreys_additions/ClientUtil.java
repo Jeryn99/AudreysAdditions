@@ -9,6 +9,7 @@ public class ClientUtil {
     public static void init(){
         BlockRenderLayerMap.INSTANCE.putBlock(AudBlocks.KNOSSOS_THRONE.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(AudBlocks.LIMINTON_MONITOR.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(AudBlocks.BRACHACKI_MONITOR.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(AudBlocks.ARMCHAIR.get(), RenderType.cutout());
     }
 
