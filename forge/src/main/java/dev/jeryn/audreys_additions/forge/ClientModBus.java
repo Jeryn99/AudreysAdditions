@@ -2,11 +2,8 @@ package dev.jeryn.audreys_additions.forge;
 
 import dev.jeryn.audreys_additions.AUDModelRegistry;
 import dev.jeryn.audreys_additions.AudreysAdditions;
-import dev.jeryn.audreys_additions.client.renderers.RenderAstralMapBlockEntity;
-import dev.jeryn.audreys_additions.client.renderers.RenderCeilingCanopyBlockEntity;
+import dev.jeryn.audreys_additions.client.renderers.*;
 import dev.jeryn.audreys_additions.common.blockentity.ChairBlockEntity;
-import dev.jeryn.audreys_additions.client.renderers.RenderKnossosChairBlockEntity;
-import dev.jeryn.audreys_additions.client.renderers.RenderFoodMachineBlockEntity;
 import dev.jeryn.audreys_additions.common.registry.AudBlockEntities;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import dev.jeryn.audreys_additions.common.registry.AudEntities;
@@ -33,6 +30,7 @@ public class ClientModBus {
         BlockEntityRenderers.register(AudBlockEntities.FOOD_MACHINE.get(), RenderFoodMachineBlockEntity::new);
         BlockEntityRenderers.register(AudBlockEntities.ASTRAL_MAP.get(), RenderAstralMapBlockEntity::new);
         BlockEntityRenderers.register(AudBlockEntities.CEILING_CANOPY.get(), RenderCeilingCanopyBlockEntity::new);
+        BlockEntityRenderers.register(AudBlockEntities.FOLD_OUT_BED.get(), RenderFoldOutBedBlockEntity::new);
     }
 
     @SubscribeEvent

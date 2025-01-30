@@ -44,6 +44,10 @@ logoFile = "audreys_additions.png" #optional
 description = '''
 Adds more Content to the mod Tardis Refined!
 '''
+
+[[mixins]]
+config = "audreys_additions-common.mixins.json"
+
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.audreys_additions]]
 modId = "minecraft"

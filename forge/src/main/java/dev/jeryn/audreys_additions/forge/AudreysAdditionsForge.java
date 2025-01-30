@@ -33,6 +33,7 @@ public class AudreysAdditionsForge {
 
         generator.addProvider(e.includeClient(), new AudItemTagProvider(generator.getPackOutput(), e.getLookupProvider(), blockTags.contentsGetter(), existingFileHelper));
         generator.addProvider(e.includeClient(), new AudDesktopProvider(generator, false));
+        generator.addProvider(e.includeClient(), new AudHumSoundScapeProvider(generator));
         generator.addProvider(e.includeClient(), new AudBlocksModelProvider(generator, existingFileHelper));
         generator.addProvider(e.includeClient(), new AudItemModelProvider(generator.getPackOutput(), existingFileHelper));
         generator.addProvider(e.includeClient(), new AUDSoundProvider(generator.getPackOutput(), existingFileHelper));

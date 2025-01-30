@@ -7,6 +7,8 @@
     "BlockMixin"
   ],
   "client": [
+    "HumanoidModelMixin",
+    "PlayerRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

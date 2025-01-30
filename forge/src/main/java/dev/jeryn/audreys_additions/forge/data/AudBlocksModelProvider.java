@@ -6,6 +6,9 @@ import dev.jeryn.audreys_additions.common.blocks.FoodMachineBlock;
 import dev.jeryn.audreys_additions.common.blocks.MonitorBlock;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.models.BlockModelGenerators;
+import net.minecraft.data.models.model.ModelTemplates;
+import net.minecraft.data.models.model.TextureMapping;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
@@ -51,6 +54,11 @@ public class AudBlocksModelProvider extends BlockStateProvider {
                 }
 
                 if(value == AudBlocks.KNOSSOS_THRONE.get()){
+
+                    continue;
+                }
+
+                if(value == AudBlocks.FOLD_OUT_BED.get()){
                     continue;
                 }
 
@@ -59,6 +67,7 @@ public class AudBlocksModelProvider extends BlockStateProvider {
                 }
 
                 if(value == AudBlocks.ASTRAL_MAP.get()){
+
                     continue;
                 }
 
@@ -73,6 +82,7 @@ public class AudBlocksModelProvider extends BlockStateProvider {
             }
         }
     }
+
 
     public JsonObject customLocation(Block block, ResourceLocation resourceLocation) {
         return getVariantBuilder(block).partialState().modelForState().modelFile(models().getExistingFile(resourceLocation)).addModel().toJson();

@@ -5,10 +5,16 @@ import dev.jeryn.audreys_additions.common.blocks.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.BedBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BedPart;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import whocraft.tardis_refined.registry.DeferredRegistry;
 import whocraft.tardis_refined.registry.RegistrySupplier;
 
@@ -27,6 +33,7 @@ public class AudBlocks {
     public static final RegistrySupplier<Block> ASTRAL_MAP = register("astral_map", () -> new AstralMapBlock(BlockBehaviour.Properties.copy(Blocks.ACACIA_WOOD).noOcclusion()));
     public static final RegistrySupplier<Block> CEILING_CANOPY  = register("ceiling_canopy", () -> new CeilingCanopyBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BLOCK).noOcclusion()));
     public static final RegistrySupplier<Block> BRACHACKI_MONITOR = register("brachacki_monitor", () -> new MonitorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
+    public static final RegistrySupplier<Block> FOLD_OUT_BED = register("fold_out_bed", AudBlocks::createBed);
 
 
 
@@ -55,6 +62,16 @@ public class AudBlocks {
         RegistrySupplier<T> RegistrySupplier = BLOCKS.register(id, blockSupplier);
         AudItems.ITEMS.register(id, () -> new BlockItem(RegistrySupplier.get(), new Item.Properties()));
         return RegistrySupplier;
+    }
+
+
+    private static FoldOutBedBlock createBed() {
+        return new FoldOutBedBlock(BlockBehaviour.Properties.of()
+                .sound(SoundType.WOOD)
+                .strength(0.2f)
+                .noOcclusion()
+                .ignitedByLava()
+                .pushReaction(PushReaction.DESTROY));
     }
 
 }

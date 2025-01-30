@@ -1,4 +1,16 @@
 {
+  "brachacki_ambience": {
+    "sounds": [
+      "audreys_additions:brachacki_ambience"
+    ],
+    "subtitle": "sound.audreys_additions.brachacki_ambience.subtitle"
+  },
+  "brachacki_hum": {
+    "sounds": [
+      "audreys_additions:brachacki_hum"
+    ],
+    "subtitle": "sound.audreys_additions.brachacki_hum.subtitle"
+  },
   "food_machine": {
     "sounds": [
       "audreys_additions:food_machine"

@@ -19,7 +19,7 @@ public class AUDModelRegistry {
 
 
     // Models
-    public static PoliceBoxModel policeBox18, policeBox18_special, policeBox10, policeBox76, policeBox96, policeBox63;
+    public static PoliceBoxModel policeBox18, policeBox18_special, policeBox10, policeBox76, policeBox96, policeBox63, policeBox63Massacre;
     public static DualInteriorDoorModel policeBox63Door, policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox76Door, policeBox96Door;
     public static DualTexInteriorDoorModel sidratDoor;
     public static SidratModel sidrat;
@@ -39,6 +39,7 @@ public class AUDModelRegistry {
     public static ModelLayerLocation POLICEBOX_1996_DOOR = interiorDoor("policebox_1996_door");
 
     public static ModelLayerLocation POLICEBOX_1963 = shell("policebox_1963");
+    public static ModelLayerLocation POLICEBOX_1963_MASSACRE = shell("policebox_1963_massacre");
     public static ModelLayerLocation POLICEBOX_1963_DOOR = interiorDoor("policebox_1963_door");
 
     public static ModelLayerLocation SIDRAT = shell("sidrat");
@@ -56,6 +57,7 @@ public class AUDModelRegistry {
     public static ModelLayerLocation ASTRAL_MAP = furniture("astral_map");
     public static ModelLayerLocation CEILING_CANOPY = furniture("ceiling_canopy");
     public static ModelLayerLocation CEILING_CANOPY_HANGING = furniture("ceiling_canopy_hanging");
+    public static ModelLayerLocation FOLD_OUT_BED = furniture("fold_out_bed");
 
 
     private static ModelLayerLocation interiorDoor(String name) {
@@ -103,6 +105,11 @@ public class AUDModelRegistry {
         policeBox63 = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_1963), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
 
         });
+
+        policeBox63Massacre = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_1963_MASSACRE), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
+
+        });
+
         policeBox63Door = new DualInteriorDoorModel(entityModels.bakeLayer(POLICEBOX_1963_DOOR), -275.0F, false, true);
 
 
