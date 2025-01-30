@@ -2,6 +2,7 @@ package dev.jeryn.audreys_additions.common.registry;
 
 import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.common.blocks.*;
+import dev.jeryn.audreys_additions.common.item.DyedItemBlock;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -29,7 +30,7 @@ public class AudBlocks {
     public static final RegistrySupplier<Block> FOOD_MACHINE = register("food_machine", () -> new FoodMachineBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
     public static final RegistrySupplier<Block> LIGHTCOLUMN_LEFT = register("lightcolumn_left", () -> new LightBoxBlock(BlockBehaviour.Properties.copy(Blocks.GLOWSTONE).noOcclusion()));
     public static final RegistrySupplier<Block> LIGHTCOLUMN_RIGHT = register("lightcolumn_right", () -> new LightBoxBlock(BlockBehaviour.Properties.copy(Blocks.GLOWSTONE).noOcclusion()));
-    public static final RegistrySupplier<Block> ARMCHAIR = register("armchair", () -> new ChairBaseBlock(BlockBehaviour.Properties.copy(Blocks.ACACIA_WOOD).noOcclusion()));
+    public static final RegistrySupplier<Block> ARMCHAIR = registerDyed("armchair", () -> new ChairBaseBlock(BlockBehaviour.Properties.copy(Blocks.ACACIA_WOOD).noOcclusion()));
     public static final RegistrySupplier<Block> ASTRAL_MAP = register("astral_map", () -> new AstralMapBlock(BlockBehaviour.Properties.copy(Blocks.ACACIA_WOOD).noOcclusion()));
     public static final RegistrySupplier<Block> CEILING_CANOPY  = register("ceiling_canopy", () -> new CeilingCanopyBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BLOCK).noOcclusion()));
     public static final RegistrySupplier<Block> BRACHACKI_MONITOR = register("brachacki_monitor", () -> new MonitorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
@@ -61,6 +62,12 @@ public class AudBlocks {
     private static <T extends Block> RegistrySupplier<T> register(String id, Supplier<T> blockSupplier) {
         RegistrySupplier<T> RegistrySupplier = BLOCKS.register(id, blockSupplier);
         AudItems.ITEMS.register(id, () -> new BlockItem(RegistrySupplier.get(), new Item.Properties()));
+        return RegistrySupplier;
+    }
+
+    private static <T extends Block> RegistrySupplier<T> registerDyed(String id, Supplier<T> blockSupplier) {
+        RegistrySupplier<T> RegistrySupplier = BLOCKS.register(id, blockSupplier);
+        AudItems.ITEMS.register(id, () -> new DyedItemBlock(RegistrySupplier.get(), new Item.Properties()));
         return RegistrySupplier;
     }
 

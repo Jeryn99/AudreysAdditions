@@ -17,9 +17,6 @@
       "dev.jeryn.audreys_additions.fabric.AudreysAdditionsClientFabric"
     ]
   },
-  "injected_interfaces": {
-
-  },
   "mixins": [
     "audreys_additions.mixins.json",
     "audreys_additions-common.mixins.json"

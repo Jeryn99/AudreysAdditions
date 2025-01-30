@@ -4,19 +4,28 @@ import dev.jeryn.audreys_additions.AUDModelRegistry;
 import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.client.renderers.*;
 import dev.jeryn.audreys_additions.common.blockentity.ChairBlockEntity;
+import dev.jeryn.audreys_additions.common.item.DyedItemBlock;
 import dev.jeryn.audreys_additions.common.registry.AudBlockEntities;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import dev.jeryn.audreys_additions.common.registry.AudEntities;
+import net.minecraft.client.color.item.ItemColor;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.NoopRenderer;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.DyeableLeatherItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.Map;
 
 @Mod.EventBusSubscriber(modid = AudreysAdditions.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientModBus {
@@ -39,12 +48,21 @@ public class ClientModBus {
             if (blockAndTintGetter != null && blockPos != null) {
                 BlockEntity blockEntity = blockAndTintGetter.getBlockEntity(blockPos);
                 if (blockEntity instanceof ChairBlockEntity chairBlockEntity) {
-                    DyeColor dyeColor = chairBlockEntity.getColour();
-                    return dyeColor.getTextColor();
+                    return chairBlockEntity.getColour();
                 }
             }
-            return DyeColor.WHITE.getTextColor();
+            return DyeColor.RED.getTextColor();
         }, AudBlocks.ARMCHAIR.get());
+    }
+
+    @SubscribeEvent
+    public static void registerColorHandlersEventItem(RegisterColorHandlersEvent.Item event) {
+
+        for (Map.Entry<ResourceKey<Item>, Item> entry : ForgeRegistries.ITEMS.getEntries()) {
+            if(entry.getValue() instanceof DyedItemBlock dyedItemBlock){
+                event.register((arg, i) -> dyedItemBlock.getColor(arg), dyedItemBlock);
+            }
+        }
     }
 
 

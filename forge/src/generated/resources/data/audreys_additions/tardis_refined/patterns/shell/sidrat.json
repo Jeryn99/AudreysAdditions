@@ -33,14 +33,14 @@
     {
       "exterior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/sidrat/sidrat_gallifrey.png"
+        "texture": "audreys_additions:textures/blockentity/shell/sidrat/gallifrey.png"
       },
-      "id": "audreys_additions:sidrat_gallifrey",
+      "id": "audreys_additions:gallifrey",
       "interior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/sidrat/sidrat_gallifrey_interior.png"
+        "texture": "audreys_additions:textures/blockentity/shell/sidrat/gallifrey_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Sidrat Gallifrey\"}",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Gallifrey\"}",
       "sound_profile": {
         "sounds": {
           "tardis_refined:door_close": {

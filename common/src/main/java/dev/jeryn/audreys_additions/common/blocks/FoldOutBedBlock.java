@@ -23,8 +23,9 @@ public class FoldOutBedBlock extends BedBlock implements EntityBlock {
 
     @Override
     public InteractionResult use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
-        if (!(level.getBlockEntity(blockPos) instanceof FoldOutBedBlockEntity foldOutBedBlockEntity)) {
-            return super.use(blockState, level, blockPos, player, interactionHand, blockHitResult);
+
+        if (!(level.getBlockEntity(blockState.getValue(PART) == BedPart.FOOT ? blockPos : blockPos.relative(blockState.getValue(FACING).getOpposite())) instanceof FoldOutBedBlockEntity foldOutBedBlockEntity)) {
+            return InteractionResult.FAIL;
         }
 
         if (foldOutBedBlockEntity.isFolding() && !player.isCrouching()) {
@@ -34,7 +35,7 @@ public class FoldOutBedBlock extends BedBlock implements EntityBlock {
         if (player.isCrouching()) {
             boolean isFolding = !foldOutBedBlockEntity.isFolding();
             foldOutBedBlockEntity.setFolding(isFolding);
-            level.playSound(null, player.getX(), player.getY(), player.getZ(), AudSounds.SIDRAT.get(), SoundSource.BLOCKS, 0.3F, 0.3F);
+            level.playSound(null, player.getX(), player.getY(), player.getZ(), AudSounds.SIDRAT.get(), SoundSource.BLOCKS, 1, 1F);
 
             if (isFolding) {
                 foldOutBedBlockEntity.FOLDING.start(player.tickCount);

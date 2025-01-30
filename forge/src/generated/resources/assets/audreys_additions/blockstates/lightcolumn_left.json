@@ -1,17 +1,32 @@
 {
   "variants": {
-    "facing=east": {
+    "facing=east,part=foot": {
       "model": "audreys_additions:block/lightcolumn_left",
       "y": 270
     },
-    "facing=north": {
+    "facing=east,part=head": {
+      "model": "audreys_additions:block/lightcolumn_left",
+      "y": 270
+    },
+    "facing=north,part=foot": {
       "model": "audreys_additions:block/lightcolumn_left",
       "y": 180
     },
-    "facing=south": {
+    "facing=north,part=head": {
+      "model": "audreys_additions:block/lightcolumn_left",
+      "y": 180
+    },
+    "facing=south,part=foot": {
       "model": "audreys_additions:block/lightcolumn_left"
     },
-    "facing=west": {
+    "facing=south,part=head": {
+      "model": "audreys_additions:block/lightcolumn_left"
+    },
+    "facing=west,part=foot": {
+      "model": "audreys_additions:block/lightcolumn_left",
+      "y": 90
+    },
+    "facing=west,part=head": {
       "model": "audreys_additions:block/lightcolumn_left",
       "y": 90
     }

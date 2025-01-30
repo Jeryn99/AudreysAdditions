@@ -4,7 +4,7 @@
 	"render_type" : "cutout",
 	"textures": {
 		"0": "audreys_additions:block/brachacki_monitor",
-		"particle": "audreys_additions:block/brachacki_monitor"
+		"particle": "minecraft:block/quartz_pillar"
 	},
 	"elements": [
 		{

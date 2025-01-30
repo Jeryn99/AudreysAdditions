@@ -49,10 +49,10 @@ public class ChairBaseBlock extends HorizontalDirectionalBlock implements Entity
         if (blockState.getBlock() == AudBlocks.ARMCHAIR.get()) {
             Direction facing = blockState.getValue(BlockStateProperties.HORIZONTAL_FACING);
             return switch (facing) {
-                case EAST -> ARMCHAIR_WEST;
-                case SOUTH -> ARMCHAIR_NORTH;
-                case WEST -> ARMCHAIR_EAST;
-                default -> ARMCHAIR_SOUTH;
+                case EAST -> ARMCHAIR_NORTH;
+                case SOUTH -> ARMCHAIR_EAST;
+                case WEST -> ARMCHAIR_SOUTH;
+                default -> ARMCHAIR_WEST;
             };
         }
         return super.getShape(blockState, blockGetter, blockPos, collisionContext);
@@ -108,8 +108,8 @@ public class ChairBaseBlock extends HorizontalDirectionalBlock implements Entity
         ItemStack heldItem = player.getItemInHand(hand);
         if (heldItem.getItem() instanceof DyeItem dyeItem) {
             DyeColor dyeColour = dyeItem.getDyeColor();
-            if (blockChair.getColour() != dyeColour) {
-                blockChair.setColour(dyeColour);
+            if (blockChair.getColour() != dyeColour.getTextColor()) {
+                blockChair.setColour(dyeColour.getTextColor());
                 if (!player.isCreative()) {
                     heldItem.shrink(1);
                 }
@@ -148,7 +148,7 @@ public class ChairBaseBlock extends HorizontalDirectionalBlock implements Entity
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext arg) {
-        return this.defaultBlockState().setValue(FACING, arg.getHorizontalDirection().getClockWise());
+        return this.defaultBlockState().setValue(FACING, arg.getHorizontalDirection());
     }
 
     @Override

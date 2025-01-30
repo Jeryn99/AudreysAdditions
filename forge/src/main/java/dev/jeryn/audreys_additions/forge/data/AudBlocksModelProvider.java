@@ -31,10 +31,6 @@ public class AudBlocksModelProvider extends BlockStateProvider {
             @Nullable ResourceLocation location = ForgeRegistries.BLOCKS.getKey(value);
             if (location.getNamespace().matches(AudreysAdditions.MODID)) {
 
-                if(value instanceof FoodMachineBlock foodMachineBlock){
-                    continue;
-                }
-
                 if(value == AudBlocks.LIGHTCOLUMN_RIGHT.get()){
                     ResourceLocation leftColumn = new ResourceLocation(AudreysAdditions.MODID, "block/lightcolumn_right");
                     threeDeeRotating(value, leftColumn);
@@ -54,20 +50,27 @@ public class AudBlocksModelProvider extends BlockStateProvider {
                 }
 
                 if(value == AudBlocks.KNOSSOS_THRONE.get()){
-
+                    simpleBlockParticleOnly(value, new ResourceLocation("block/spruce_planks"));
                     continue;
                 }
 
                 if(value == AudBlocks.FOLD_OUT_BED.get()){
+                    simpleBlockParticleOnly(value, new ResourceLocation("block/black_wool"));
                     continue;
                 }
 
                 if(value == AudBlocks.CEILING_CANOPY.get()){
+                    simpleBlockParticleOnly(value, new ResourceLocation("block/quartz_pillar"));
                     continue;
                 }
 
                 if(value == AudBlocks.ASTRAL_MAP.get()){
+                    simpleBlockParticleOnly(value, new ResourceLocation("block/clay"));
+                    continue;
+                }
 
+                if(value == AudBlocks.FOOD_MACHINE.get()){
+                    simpleBlockParticleOnly(value, new ResourceLocation("block/clay"));
                     continue;
                 }
 
@@ -83,6 +86,19 @@ public class AudBlocksModelProvider extends BlockStateProvider {
         }
     }
 
+
+    private void simpleBlockParticleOnly(Block block, ResourceLocation particleTexture) {
+
+        @Nullable ResourceLocation key = ForgeRegistries.BLOCKS.getKey(block);
+
+        models().getBuilder(key.toString())
+                .texture("particle", particleTexture);
+
+        getVariantBuilder(block)
+                .partialState().modelForState()
+                .modelFile(models().getExistingFile(modLoc("block/" + key.getPath())))
+                .addModel();
+    }
 
     public JsonObject customLocation(Block block, ResourceLocation resourceLocation) {
         return getVariantBuilder(block).partialState().modelForState().modelFile(models().getExistingFile(resourceLocation)).addModel().toJson();
