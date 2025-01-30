@@ -12,7 +12,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class ChairBlockEntity extends BlockEntity {
 
     private ChairEntity chairEntity = null;
-    private DyeColor colour = DyeColor.RED;
+    private int colour = DyeColor.RED.getTextColor();
 
     public ChairBlockEntity(BlockPos blockPos, BlockState blockState) {
         super(AudBlockEntities.ARMCHAIR.get(), blockPos, blockState);
@@ -45,11 +45,11 @@ public class ChairBlockEntity extends BlockEntity {
         this.chairEntity = chairEntity;
     }
 
-    public DyeColor getColour() {
+    public int getColour() {
         return colour;
     }
 
-    public void setColour(DyeColor colour) {
+    public void setColour(int colour) {
         this.colour = colour;
         this.sendUpdates();
     }
@@ -57,14 +57,14 @@ public class ChairBlockEntity extends BlockEntity {
     @Override
     public void saveAdditional(CompoundTag tag) {
         super.saveAdditional(tag);
-        tag.putInt("Colour", colour.getId());
+        tag.putInt("DyeColour", colour);
     }
 
     @Override
     public void load(CompoundTag tag) {
         super.load(tag);
-        if (tag.contains("Colour")) {
-            this.colour = DyeColor.byId(tag.getInt("Colour"));
+        if (tag.contains("DyeColour")) {
+            this.colour = tag.getInt("DyeColour");
         }
     }
 }

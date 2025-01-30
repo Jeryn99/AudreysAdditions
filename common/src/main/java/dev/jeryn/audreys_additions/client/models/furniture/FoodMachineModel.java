@@ -38,7 +38,7 @@ public class FoodMachineModel extends GenericModel implements Animatable<FoodMac
 
         if (blockentity.isProducing()) {
             root().getAllParts().forEach(ModelPart::resetPose);
-            animate(blockentity.FLASHING, FLASHING, Minecraft.getInstance().player.tickCount);
+            animate(blockentity.FLASHING, FLASHING, blockentity.getLevel().getGameTime());
         }
 
         root().render(poseStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);

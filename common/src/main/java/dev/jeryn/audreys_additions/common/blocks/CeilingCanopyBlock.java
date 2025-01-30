@@ -68,7 +68,7 @@ public class CeilingCanopyBlock extends HorizontalDirectionalBlock implements En
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext arg) {
-        return this.defaultBlockState().setValue(HANGING, false).setValue(FACING, arg.getHorizontalDirection().getClockWise());
+        return this.defaultBlockState().setValue(HANGING, false).setValue(FACING, arg.getHorizontalDirection());
     }
 
 

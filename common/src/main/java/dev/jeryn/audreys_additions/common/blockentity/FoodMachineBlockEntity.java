@@ -9,6 +9,8 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.item.ItemStack;
@@ -39,7 +41,7 @@ public class FoodMachineBlockEntity extends BlockEntity implements BlockEntityTi
 
     public void setProducing(boolean producing) {
         isProducing = producing;
-        setChanged();
+        sendUpdates();
     }
 
     @Override
@@ -84,8 +86,10 @@ public class FoodMachineBlockEntity extends BlockEntity implements BlockEntityTi
 
         if (isProducing) {
             if(!FLASHING.isStarted()) {
-                FLASHING.start(12);
+                FLASHING.start((int) level.getGameTime());
             }
+        } else {
+            FLASHING.stop();
         }
     }
 
@@ -103,6 +107,7 @@ public class FoodMachineBlockEntity extends BlockEntity implements BlockEntityTi
                 productionTimer = 0;
                 isProducing = false;
                 fuelLevel = fuelLevel - 5;
+                sendUpdates();
             }
         }
     }
@@ -121,11 +126,17 @@ public class FoodMachineBlockEntity extends BlockEntity implements BlockEntityTi
                 int fuelToAdd = Math.min(fuelValue, spaceLeft);
                 fuelLevel += fuelToAdd;
                 sendUpdates();
+
                 if (level instanceof ServerLevel serverLevel) {
                     BlockPos blockPos = getBlockPos();
                     serverLevel.sendParticles(ParticleTypes.SMOKE, blockPos.getX() + 0.5, blockPos.getY() + 1, blockPos.getZ() + 0.5, 5, 0.2, 0.2, 0.2, 0.02);
-
                 }
+
+                float pitch = 0.5F + ((float) fuelLevel / MAX_FUEL) * 1.5F;
+                pitch = Math.min(pitch, 2.0F);
+
+                level.playSound(null, worldPosition.getX(), worldPosition.getY(), worldPosition.getZ(),
+                        SoundEvents.NOTE_BLOCK_BIT.value(), SoundSource.BLOCKS, 1.0F, pitch);
 
                 fuelItem.shrink(1);
                 return true;
@@ -133,6 +144,7 @@ public class FoodMachineBlockEntity extends BlockEntity implements BlockEntityTi
         }
         return false;
     }
+
 
     public int getFuelLevel() {
         return fuelLevel;

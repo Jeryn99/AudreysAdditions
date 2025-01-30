@@ -13,6 +13,10 @@ public class AudTabsImpl {
     public static final CreativeModeTab ITEM_GROUP = FabricItemGroup.builder().icon(() -> new ItemStack(AudBlocks.FOOD_MACHINE.get())).displayItems((enabledFeatures, entries) -> {
         BuiltInRegistries.ITEM.iterator().forEachRemaining(item -> {
             if (BuiltInRegistries.ITEM.getKey(item).getNamespace().matches(AudreysAdditions.MODID)) {
+                if(item == AudBlocks.ARMCHAIR.get().asItem()){
+                    entries.accept(AudBlocks.ARMCHAIR.get().asItem().getDefaultInstance());
+                    return;
+                }
                 entries.accept(item);
             }
         });
@@ -21,4 +25,5 @@ public class AudTabsImpl {
     public static CreativeModeTab getCreativeTab() {
         return ITEM_GROUP;
     }
+
 }

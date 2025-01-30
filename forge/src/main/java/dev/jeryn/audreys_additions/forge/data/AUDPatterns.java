@@ -33,10 +33,10 @@ public class AUDPatterns extends ShellPatternProvider {
         quickAdd(AudShellRegistry.POLICEBOX_1963.getId(), "massacre", true);
 
         quickAdd(AudShellRegistry.SIDRAT.getId(), "sidrat", false, sidratSounds);
-        quickAdd(AudShellRegistry.SIDRAT.getId(), "sidrat_gallifrey", false, sidratSounds);
+        quickAdd(AudShellRegistry.SIDRAT.getId(), "gallifrey", false, sidratSounds);
 
-        quickAdd(AudShellRegistry.POLICEBOX_2018.getId(), "policebox_2018_barbie", true);
-        quickAdd(AudShellRegistry.POLICEBOX_2018.getId(), "policebox_2018_proms", true);
+        quickAdd(AudShellRegistry.POLICEBOX_2018.getId(), "barbie", true);
+        quickAdd(AudShellRegistry.POLICEBOX_2018.getId(), "proms", true);
     }
 
     public void quickAdd(ResourceLocation themeId, String patternName, boolean hasEmissiveTexture) {

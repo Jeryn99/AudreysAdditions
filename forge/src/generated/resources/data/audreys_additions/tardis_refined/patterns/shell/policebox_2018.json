@@ -47,14 +47,14 @@
     {
       "exterior": {
         "emissive": true,
-        "texture": "audreys_additions:textures/blockentity/shell/policebox_2018/policebox_2018_barbie.png"
+        "texture": "audreys_additions:textures/blockentity/shell/policebox_2018/barbie.png"
       },
-      "id": "audreys_additions:policebox_2018_barbie",
+      "id": "audreys_additions:barbie",
       "interior": {
         "emissive": true,
-        "texture": "audreys_additions:textures/blockentity/shell/policebox_2018/policebox_2018_barbie_interior.png"
+        "texture": "audreys_additions:textures/blockentity/shell/policebox_2018/barbie_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Policebox 2018 Barbie\"}",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Barbie\"}",
       "sound_profile": {
         "sounds": {
           "tardis_refined:door_close": {
@@ -91,14 +91,14 @@
     {
       "exterior": {
         "emissive": true,
-        "texture": "audreys_additions:textures/blockentity/shell/policebox_2018/policebox_2018_proms.png"
+        "texture": "audreys_additions:textures/blockentity/shell/policebox_2018/proms.png"
       },
-      "id": "audreys_additions:policebox_2018_proms",
+      "id": "audreys_additions:proms",
       "interior": {
         "emissive": true,
-        "texture": "audreys_additions:textures/blockentity/shell/policebox_2018/policebox_2018_proms_interior.png"
+        "texture": "audreys_additions:textures/blockentity/shell/policebox_2018/proms_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Policebox 2018 Proms\"}",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Proms\"}",
       "sound_profile": {
         "sounds": {
           "tardis_refined:door_close": {

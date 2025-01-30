@@ -4,7 +4,7 @@
 	"render_type" : "cutout",
 	"textures": {
 		"0": "audreys_additions:block/liminton_monitor",
-		"particle": "audreys_additions:block/liminton_monitor"
+		"particle": "minecraft:block/dark_oak_planks"
 	},
 	"elements": [
 		{
