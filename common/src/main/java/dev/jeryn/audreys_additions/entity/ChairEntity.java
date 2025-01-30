@@ -56,6 +56,7 @@ public class ChairEntity extends Entity {
     public void tick() {
         if (getPassengers().isEmpty()) {
             kill();
+            return;
         }
 
         super.tick();

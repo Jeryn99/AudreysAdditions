@@ -1,0 +1,1 @@
+{"length":1,"looping":false,"animations":[{"bone":"PARENT","target":"rotation","keyframes":[{"timestamp":0,"target":[-90,0,0],"interpolation":"linear"},{"timestamp":1,"target":[0,0,0],"interpolation":"linear"}]}]}

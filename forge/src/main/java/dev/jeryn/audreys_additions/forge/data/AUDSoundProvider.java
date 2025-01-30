@@ -19,6 +19,8 @@ public class AUDSoundProvider extends SoundDefinitionsProvider {
     public void registerSounds() {
         add(AudSounds.FOOD_MACHINE.get(), basicSound("food_machine", AudSounds.FOOD_MACHINE.getId()));
         add(AudSounds.SIDRAT.get(), basicSound("sidrat", AudSounds.SIDRAT.getId()));
+        add(AudSounds.BRACHACKI_HUM.get(), basicSound("brachacki_hum", AudSounds.BRACHACKI_HUM.getId()));
+        add(AudSounds.BRACHACKI_AMBIENCE.get(), basicSound("brachacki_ambience", AudSounds.BRACHACKI_AMBIENCE.getId()));
     }
 
     public SoundDefinition basicSound(String langKey, ResourceLocation resourceLocation) {

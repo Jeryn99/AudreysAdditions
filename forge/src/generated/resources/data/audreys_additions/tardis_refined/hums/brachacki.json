@@ -1,0 +1,8 @@
+{
+  "ambient_sounds": [
+    "audreys_additions:brachacki_ambience"
+  ],
+  "hum_sound": "audreys_additions:brachacki_hum",
+  "id": "audreys_additions:brachacki",
+  "name_component": "{\"color\":\"gold\",\"text\":\"Brachacki\"}"
+}

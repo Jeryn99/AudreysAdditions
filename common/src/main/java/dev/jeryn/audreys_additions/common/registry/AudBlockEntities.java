@@ -18,6 +18,7 @@ public class AudBlockEntities {
     public static final RegistrySupplier<BlockEntityType<ChairBlockEntity>> ARMCHAIR = TILES.register("armchair", () -> registerTiles(ChairBlockEntity::new, AudBlocks.ARMCHAIR.get()));
     public static final RegistrySupplier<BlockEntityType<AstralMapBlockEntity>> ASTRAL_MAP = TILES.register("astral_map", () -> registerTiles(AstralMapBlockEntity::new, AudBlocks.ASTRAL_MAP.get()));
     public static final RegistrySupplier<BlockEntityType<CeilingCanopyBlockEntity>> CEILING_CANOPY = TILES.register("ceiling_canopy", () -> registerTiles(CeilingCanopyBlockEntity::new, AudBlocks.CEILING_CANOPY.get()));
+    public static final RegistrySupplier<BlockEntityType<FoldOutBedBlockEntity>> FOLD_OUT_BED = TILES.register("fold_out_bed", () -> registerTiles(FoldOutBedBlockEntity::new, AudBlocks.FOLD_OUT_BED.get()));
 
 
     private static <T extends BlockEntity> BlockEntityType<T> registerTiles(BlockEntityType.BlockEntitySupplier<T> tile, Block... validBlock) {

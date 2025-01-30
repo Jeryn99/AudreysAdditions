@@ -8,6 +8,13 @@ architectury {
 }
 
 loom {
+
+    forge {
+        convertAccessWideners = true
+        mixinConfig "audreys_additions-common.mixins.json"
+    }
+
+
     runs {
         data {
             data()
@@ -122,7 +129,7 @@ publishing {
     // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
     repositories {
         maven {
-            url = "https://maven.craig.software/repository/whocraft/"
+            url = "https://mvn.jeryn.dev/snapshots"
             credentials {
                 username = project.findProperty("MAVEN_REPO_USERNAME") ?: System.getenv("MAVEN_REPO_USERNAME") ?: ""
                 password = project.findProperty("MAVEN_REPO_PASSWORD") ?: System.getenv("MAVEN_REPO_PASSWORD") ?: ""

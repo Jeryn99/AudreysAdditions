@@ -22,6 +22,21 @@ public class ChairBlockEntity extends BlockEntity {
         super(blockEntityType, blockPos, blockState);
     }
 
+    @Override
+    public CompoundTag getUpdateTag() {
+        CompoundTag tag = new CompoundTag();
+        saveAdditional(tag);
+        return tag;
+    }
+
+    public void sendUpdates() {
+        if (level != null && getBlockState() != null && getBlockState().getBlock() != null) {
+            level.updateNeighbourForOutputSignal(worldPosition, getBlockState().getBlock());
+            level.sendBlockUpdated(worldPosition, level.getBlockState(worldPosition), level.getBlockState(worldPosition), 3);
+        }
+        setChanged();
+    }
+
     public ChairEntity getChairEntity() {
         return chairEntity;
     }
@@ -36,7 +51,7 @@ public class ChairBlockEntity extends BlockEntity {
 
     public void setColour(DyeColor colour) {
         this.colour = colour;
-        this.setChanged(); // Mark the block entity as changed
+        this.sendUpdates();
     }
 
     @Override

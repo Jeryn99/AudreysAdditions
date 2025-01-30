@@ -33,6 +33,7 @@ public class AUDEnglish extends LanguageProvider {
         add(AudBlocks.ASTRAL_MAP.get(), "Astral Map");
         add(AudBlocks.ARMCHAIR.get(), "Armchair");
         add(AudBlocks.CEILING_CANOPY.get(), "Ceiling Canopy");
+        add(AudBlocks.FOLD_OUT_BED.get(), "Foldout Bed");
 
         add(AudItems.FOOD_CUBE.get(), "Food Cube");
     }
