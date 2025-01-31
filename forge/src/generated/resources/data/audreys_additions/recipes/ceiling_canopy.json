@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:chain"
+    },
+    "L": {
+      "item": "minecraft:redstone_lamp"
+    },
+    "Q": {
+      "item": "minecraft:quartz_block"
+    }
+  },
+  "pattern": [
+    "QQQ",
+    "CLC",
+    "QQQ"
+  ],
+  "result": {
+    "item": "audreys_additions:ceiling_canopy"
+  },
+  "show_notification": true
+}

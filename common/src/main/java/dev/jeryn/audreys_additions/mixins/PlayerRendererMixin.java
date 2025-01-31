@@ -16,9 +16,14 @@ public class PlayerRendererMixin {
 
     @Inject(method = {"render(Lnet/minecraft/world/entity/LivingEntity;FFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V"}, at = {@At(value = "HEAD")}, cancellable = true)
     private void audreysAdditions$render(LivingEntity livingEntity, float f, float g, PoseStack poseStack, MultiBufferSource multiBufferSource, int i, CallbackInfo ci) {
-        if (livingEntity.isSleeping() && livingEntity.level().getBlockState(livingEntity.getSleepingPos().get()).getBlock() == AudBlocks.FOLD_OUT_BED.get()) {
-            poseStack.translate(0, PlayerPose.getPlayerBedOffset(), 0);
+        if (livingEntity.isSleeping()) {
+            livingEntity.getSleepingPos().ifPresent(sleepingPos -> {
+                if (livingEntity.level().getBlockState(sleepingPos).getBlock() == AudBlocks.FOLD_OUT_BED.get()) {
+                    poseStack.translate(0, PlayerPose.getPlayerBedOffset(), 0);
+                }
+            });
         }
     }
+
 
 }
