@@ -24,7 +24,7 @@ This addon introduces a variety of shell options, custom-modelled blocks, consol
 - **Police Box (2018)** *  
 - **SIDRAT** *  
 
-(*Currently has variants*)  
+(*Currently has variants)  
 
 ### Blocks/Items  
 - **Food Machine & Food Cubes**  
