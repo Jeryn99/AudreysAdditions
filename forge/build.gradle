@@ -12,6 +12,7 @@ loom {
     forge {
         convertAccessWideners = true
         mixinConfig "audreys_additions-common.mixins.json"
+        mixinConfig "audreys_additions.mixins.json"
     }
 
 
@@ -54,7 +55,7 @@ unifiedPublishing {
         if (CURSE_API_KEY != "") {
             curseforge {
                 token = CURSE_API_KEY
-                id = "937305"
+                id = "1172569"
                 gameVersions.addAll "Java 17", "1.20.1"
             }
         }
@@ -63,7 +64,7 @@ unifiedPublishing {
         if (MODRINTH_TOKEN != "") {
             modrinth {
                 token = MODRINTH_TOKEN
-                id = "JPwgh9iH"
+                id = "futCeFPo"
                 version = "mc$rootProject.minecraft_version-v$project.version"
             }
         }

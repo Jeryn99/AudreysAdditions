@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:gray_stained_glass"
+    },
+    "Q": {
+      "item": "minecraft:dark_oak_planks"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "Z": {
+      "item": "tardis_refined:zeiton_ingot"
+    }
+  },
+  "pattern": [
+    "QRQ",
+    "QGQ",
+    "QZQ"
+  ],
+  "result": {
+    "item": "audreys_additions:liminton_monitor"
+  },
+  "show_notification": true
+}

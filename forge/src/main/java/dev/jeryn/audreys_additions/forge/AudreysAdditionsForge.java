@@ -24,6 +24,7 @@ public class AudreysAdditionsForge {
         /*Data Pack*/
         generator.addProvider(e.includeServer(), new AudConsolePatternProvider(generator));
         generator.addProvider(e.includeServer(), new AUDPatterns(generator));
+        generator.addProvider(e.includeServer(), new AudRecipeProvider(generator.getPackOutput()));
 
         generator.addProvider(e.includeClient(), new AUDEnglish(generator));
 

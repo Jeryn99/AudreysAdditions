@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "tag": "minecraft:fences"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "W": {
+      "tag": "minecraft:wool"
+    }
+  },
+  "pattern": [
+    " P ",
+    " W ",
+    " F "
+  ],
+  "result": {
+    "item": "audreys_additions:armchair"
+  },
+  "show_notification": true
+}

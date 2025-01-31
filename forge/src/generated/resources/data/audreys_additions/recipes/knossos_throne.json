@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "tag": "minecraft:fences"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    " P ",
+    " P ",
+    " F "
+  ],
+  "result": {
+    "item": "audreys_additions:knossos_throne"
+  },
+  "show_notification": true
+}

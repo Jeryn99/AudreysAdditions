@@ -3,9 +3,13 @@
   "id": "audreys_additions",
   "version": "${version}",
   "name": "Audreys Additions",
-  "description": "Adds more Shells to the mod Tardis Refined!",
-  "authors": ["Jeryn99"],
-  "contact": {},
+  "description": "Adds many Shells and Consoles to TARDIS Refined!",
+  "authors": ["Jeryn99", "LocalToyBot"],
+  "contact": {
+    "homepage": "https://modrinth.com/project/tardis-refined-audreys-additions",
+    "issues": "https://github.com/Jeryn99/AudreysAdditions/issues",
+    "sources": "https://github.com/Jeryn99/AudreysAdditions"
+  },
   "license": "All Rights Reserved",
   "icon": "audreys_additions.png",
   "environment": "*",

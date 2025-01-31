@@ -31,6 +31,12 @@ public class AudDesktopProvider extends DesktopProvider {
         ));
 
         addDesktop(new DesktopTheme(
+                new ResourceLocation(AudreysAdditions.MODID, "brachacki"),
+                new ResourceLocation(AudreysAdditions.MODID, "desktop/brachacki"),
+                TardisRefined.GSON.toJson(Component.literal(MiscHelper.getCleanName("Brachacki")).setStyle(Style.EMPTY.withColor(ChatFormatting.BLUE)))
+        ));
+
+        addDesktop(new DesktopTheme(
                 new ResourceLocation(AudreysAdditions.MODID, "liminton"),
                 new ResourceLocation(AudreysAdditions.MODID, "desktop/liminton"),
                 TardisRefined.GSON.toJson(Component.literal(MiscHelper.getCleanName("Liminton")).setStyle(Style.EMPTY.withColor(ChatFormatting.BLUE)))
