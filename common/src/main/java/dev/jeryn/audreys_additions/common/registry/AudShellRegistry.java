@@ -11,6 +11,7 @@ public class AudShellRegistry {
     public static final DeferredRegistry<ShellTheme> SHELL_THEMES = DeferredRegistry.create(AudreysAdditions.MODID, ShellTheme.SHELL_THEME_REGISTRY_KEY);
 
     public static final RegistrySupplier<ShellTheme> POLICEBOX_2018 = registerShellTheme("policebox_2018");
+    public static final RegistrySupplier<ShellTheme> POLICEBOX_2003 = registerShellTheme("policebox_2003");
     public static final RegistrySupplier<ShellTheme> POLICEBOX_2010 = registerShellTheme("policebox_2010");
     public static final RegistrySupplier<ShellTheme> POLICEBOX_1976 = registerShellTheme("policebox_1976");
     public static final RegistrySupplier<ShellTheme> POLICEBOX_1996 = registerShellTheme("policebox_1996");
