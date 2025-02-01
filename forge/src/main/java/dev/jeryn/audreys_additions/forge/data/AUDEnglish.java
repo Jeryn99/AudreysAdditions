@@ -18,6 +18,7 @@ public class AUDEnglish extends LanguageProvider {
     @Override
     protected void addTranslations() {
         addShell(AudShellRegistry.POLICEBOX_2018.get(), ChatFormatting.BLUE + "Police Box " + ChatFormatting.YELLOW + "(2018)");
+        addShell(AudShellRegistry.POLICEBOX_2003.get(), ChatFormatting.BLUE + "Police Box " + ChatFormatting.YELLOW + "(2003)");
         addShell(AudShellRegistry.POLICEBOX_2010.get(), ChatFormatting.BLUE + "Police Box " + ChatFormatting.YELLOW + "(2010)");
         addShell(AudShellRegistry.POLICEBOX_1976.get(), ChatFormatting.BLUE + "Police Box " + ChatFormatting.YELLOW + "(1976)");
         addShell(AudShellRegistry.POLICEBOX_1996.get(), ChatFormatting.BLUE + "Police Box " + ChatFormatting.YELLOW + "(1996)");
