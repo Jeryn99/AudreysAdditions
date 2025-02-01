@@ -17,7 +17,8 @@ This addon introduces a variety of shell options, custom-modelled blocks, consol
 - **Toyota Console (2012)** *  
 
 ### Shells  
-- **Police Box (1963)** *  
+- **Police Box (1963)** *
+- **Police Box (1966)** *
 - **Police Box (1976)** *  
 - **Police Box (1996)**  
 - **Police Box (2010)**  
