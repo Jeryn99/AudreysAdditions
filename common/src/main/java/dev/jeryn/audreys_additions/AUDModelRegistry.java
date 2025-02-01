@@ -19,10 +19,11 @@ public class AUDModelRegistry {
 
 
     // Models
-    public static PoliceBoxModel policeBox18, policeBox18_special, policeBox10, policeBox76, policeBox96, policeBox63, policeBox63Massacre;
-    public static DualInteriorDoorModel policeBox63Door, policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox76Door, policeBox96Door;
+    public static PoliceBoxModel policeBox66, policeBoxRuth, policeBox73, policeBox18, policeBox18_special, policeBox10, policeBox76, policeBox96, policeBox63, policeBox63Massacre;
+    public static DualInteriorDoorModel policeBox66Door, policeBox63Door, policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox76Door, policeBox96Door;
     public static DualTexInteriorDoorModel sidratDoor;
     public static SidratModel sidrat;
+
     // Model Layers
     public static ModelLayerLocation POLICEBOX_2018 = shell("policebox_2018");
     public static ModelLayerLocation POLICEBOX_2018_SPECIAL = shell("policebox_2018_special");
@@ -37,6 +38,12 @@ public class AUDModelRegistry {
 
     public static ModelLayerLocation POLICEBOX_1996 = shell("policebox_1996");
     public static ModelLayerLocation POLICEBOX_1996_DOOR = interiorDoor("policebox_1996_door");
+
+    public static ModelLayerLocation POLICEBOX_1966 = shell("policebox_1966");
+    public static ModelLayerLocation POLICEBOX_RUTH = shell("policebox_ruth");
+    public static ModelLayerLocation POLICEBOX_1973= shell("policebox_1973");
+    public static ModelLayerLocation POLICEBOX_1966_DOOR = interiorDoor("policebox_1966_door");
+
 
     public static ModelLayerLocation POLICEBOX_1963 = shell("policebox_1963");
     public static ModelLayerLocation POLICEBOX_1963_MASSACRE = shell("policebox_1963_massacre");
@@ -127,6 +134,22 @@ public class AUDModelRegistry {
         policeBox18Door = new DualInteriorDoorModel(entityModels.bakeLayer(POLICEBOX_2018_DOOR), -275.0F, false, true);
 
         policeBox18Door_special = new DualInteriorDoorModel(entityModels.bakeLayer(POLICEBOX_2018_DOOR_SPECIAL), -275.0F, false, true);
+
+
+
+        policeBox66 = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_1966), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
+        });
+
+        policeBoxRuth = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_RUTH), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
+        });
+
+        policeBox73 = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_1973), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
+        });
+
+
+
+        policeBox66Door = new DualInteriorDoorModel(entityModels.bakeLayer(POLICEBOX_1966_DOOR), -275.0F, false, true);
+
 
 
         // Police Box - 2010
