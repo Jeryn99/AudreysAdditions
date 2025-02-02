@@ -41,51 +41,48 @@ public class BrachackiConsoleModel extends HierarchicalModel implements ConsoleU
     public void renderConsole(GlobalConsoleBlockEntity globalConsoleBlock, Level level, PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
         root().getAllParts().forEach(ModelPart::resetPose);
 
-        if (globalConsoleBlock == null || globalConsoleBlock.getBlockState() == null) return;
-
-        Boolean powered = globalConsoleBlock.getBlockState() == null ? true : globalConsoleBlock.getBlockState().getValue(GlobalConsoleBlock.POWERED);
-
+        boolean powered = globalConsoleBlock == null || globalConsoleBlock.getBlockState().getValue(GlobalConsoleBlock.POWERED);
 
         // Store tick count for later use
         int tickCount = Minecraft.getInstance().player.tickCount;
 
         TardisClientData reactions = TardisClientData.getInstance(level.dimension());
+        if (globalConsoleBlock != null) {
+            // Booting logic
+            if (powered) {
+                if (globalConsoleBlock.getTicksBooting() > 0) {
+                    globalConsoleBlock.powerOff.stop();
+                    globalConsoleBlock.powerOn.startIfStopped(tickCount);
 
-        // Booting logic
-        if (powered) {
-            if (globalConsoleBlock.getTicksBooting() > 0) {
-                globalConsoleBlock.powerOff.stop();
-                globalConsoleBlock.powerOn.startIfStopped(tickCount);
-
-                root().getAllParts().forEach(ModelPart::resetPose);
-                this.animate(globalConsoleBlock.powerOn, POWER_ON, tickCount);
-            } else {
-                globalConsoleBlock.powerOff.stop();
-            }
-
-            if (reactions.isFlying()) {
-                root().getAllParts().forEach(ModelPart::resetPose);
-                this.animate(reactions.ROTOR_ANIMATION, FLIGHT, tickCount);
-            } else if (reactions.isCrashing()) {
-                root().getAllParts().forEach(ModelPart::resetPose);
-                    this.animate(reactions.CRASHING_ANIMATION, CRASH, tickCount);
-            } else {
-                if (TRConfig.CLIENT.PLAY_CONSOLE_IDLE_ANIMATIONS.get() && globalConsoleBlock.getTicksBooting() == 0) {
                     root().getAllParts().forEach(ModelPart::resetPose);
-                    this.animate(globalConsoleBlock.liveliness, IDLE, tickCount);
+                    this.animate(globalConsoleBlock.powerOn, POWER_ON, tickCount);
+                } else {
+                    globalConsoleBlock.powerOff.stop();
                 }
-            }
 
-        } else {
-            // Power off animation if not booting
-            if (!globalConsoleBlock.powerOff.isStarted()) {
-                globalConsoleBlock.powerOn.stop();
-                globalConsoleBlock.powerOff.start(tickCount);
+                if (reactions.isFlying()) {
+                    root().getAllParts().forEach(ModelPart::resetPose);
+                    this.animate(reactions.ROTOR_ANIMATION, FLIGHT, tickCount);
+                } else if (reactions.isCrashing()) {
+                    root().getAllParts().forEach(ModelPart::resetPose);
+                    this.animate(reactions.CRASHING_ANIMATION, CRASH, tickCount);
+                } else {
+                    if (TRConfig.CLIENT.PLAY_CONSOLE_IDLE_ANIMATIONS.get() && globalConsoleBlock.getTicksBooting() == 0) {
+                        root().getAllParts().forEach(ModelPart::resetPose);
+                        this.animate(globalConsoleBlock.liveliness, IDLE, tickCount);
+                    }
+                }
+
+            } else {
+                // Power off animation if not booting
+                if (!globalConsoleBlock.powerOff.isStarted()) {
+                    globalConsoleBlock.powerOn.stop();
+                    globalConsoleBlock.powerOff.start(tickCount);
+                }
+                root().getAllParts().forEach(ModelPart::resetPose);
+                this.animate(globalConsoleBlock.powerOff, POWER_OFF, tickCount);
             }
-            root().getAllParts().forEach(ModelPart::resetPose);
-            this.animate(globalConsoleBlock.powerOff, POWER_OFF, tickCount);
         }
-
         // Final render call
         root().render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
     }

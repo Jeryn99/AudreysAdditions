@@ -42,9 +42,7 @@ public class NewberyConsoleModel extends HierarchicalModel implements ConsoleUni
     public void renderConsole(GlobalConsoleBlockEntity globalConsoleBlock, Level level, PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
         root().getAllParts().forEach(ModelPart::resetPose);
 
-        if (globalConsoleBlock == null || globalConsoleBlock.getBlockState() == null) return;
-
-        Boolean powered = globalConsoleBlock.getBlockState() == null ? true : globalConsoleBlock.getBlockState().getValue(GlobalConsoleBlock.POWERED);
+        boolean powered = globalConsoleBlock == null || globalConsoleBlock.getBlockState().getValue(GlobalConsoleBlock.POWERED);
 
 
         // Store tick count for later use
@@ -52,39 +50,42 @@ public class NewberyConsoleModel extends HierarchicalModel implements ConsoleUni
 
         TardisClientData reactions = TardisClientData.getInstance(level.dimension());
 
-        // Booting logic
-        if (powered) {
-            if (globalConsoleBlock.getTicksBooting() > 0) {
-                globalConsoleBlock.powerOff.stop();
-                globalConsoleBlock.powerOn.startIfStopped(tickCount);
+        if (globalConsoleBlock != null) {
 
-                root().getAllParts().forEach(ModelPart::resetPose);
-                this.animate(globalConsoleBlock.powerOn, POWER_ON, tickCount);
-            } else {
-                globalConsoleBlock.powerOff.stop();
-            }
+            // Booting logic
+            if (powered) {
+                if (globalConsoleBlock.getTicksBooting() > 0) {
+                    globalConsoleBlock.powerOff.stop();
+                    globalConsoleBlock.powerOn.startIfStopped(tickCount);
 
-            if (reactions.isFlying()) {
-                root().getAllParts().forEach(ModelPart::resetPose);
-                this.animate(reactions.ROTOR_ANIMATION, FLIGHT, tickCount);
-            } else if (reactions.isCrashing()) {
-                root().getAllParts().forEach(ModelPart::resetPose);
-                //    this.animate(reactions.CRASHING_ANIMATION, CRASH, tickCount);
-            } else {
-                if (TRConfig.CLIENT.PLAY_CONSOLE_IDLE_ANIMATIONS.get() && globalConsoleBlock.getTicksBooting() == 0) {
                     root().getAllParts().forEach(ModelPart::resetPose);
-                    this.animate(globalConsoleBlock.liveliness, IDLE, tickCount);
+                    this.animate(globalConsoleBlock.powerOn, POWER_ON, tickCount);
+                } else {
+                    globalConsoleBlock.powerOff.stop();
                 }
-            }
 
-        } else {
-            // Power off animation if not booting
-            if (!globalConsoleBlock.powerOff.isStarted()) {
-                globalConsoleBlock.powerOn.stop();
-                globalConsoleBlock.powerOff.start(tickCount);
+                if (reactions.isFlying()) {
+                    root().getAllParts().forEach(ModelPart::resetPose);
+                    this.animate(reactions.ROTOR_ANIMATION, FLIGHT, tickCount);
+                } else if (reactions.isCrashing()) {
+                    root().getAllParts().forEach(ModelPart::resetPose);
+                    //    this.animate(reactions.CRASHING_ANIMATION, CRASH, tickCount);
+                } else {
+                    if (TRConfig.CLIENT.PLAY_CONSOLE_IDLE_ANIMATIONS.get() && globalConsoleBlock.getTicksBooting() == 0) {
+                        root().getAllParts().forEach(ModelPart::resetPose);
+                        this.animate(globalConsoleBlock.liveliness, IDLE, tickCount);
+                    }
+                }
+
+            } else {
+                // Power off animation if not booting
+                if (!globalConsoleBlock.powerOff.isStarted()) {
+                    globalConsoleBlock.powerOn.stop();
+                    globalConsoleBlock.powerOff.start(tickCount);
+                }
+                root().getAllParts().forEach(ModelPart::resetPose);
+                this.animate(globalConsoleBlock.powerOff, POWER_OFF, tickCount);
             }
-            root().getAllParts().forEach(ModelPart::resetPose);
-            this.animate(globalConsoleBlock.powerOff, POWER_OFF, tickCount);
         }
 
         // Final render call
@@ -94,7 +95,7 @@ public class NewberyConsoleModel extends HierarchicalModel implements ConsoleUni
 
     @Override
     public ResourceLocation getDefaultTexture() {
-        return new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/newbery/newbery.png");
+        return new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/newbery/default.png");
     }
 
     @Override
