@@ -22,10 +22,15 @@ public class PertweeConsoleEntry extends ConsoleModelEntry {
 
     @Override
     public ConsoleUnit getConsoleModel(ConsolePattern consolePattern) {
-        if(consolePattern.id().getPath().contains("master")){
+        if (consolePattern == null || consolePattern.id() == null || consolePattern.id().getPath() == null) {
+            return super.getConsoleModel(consolePattern);
+        }
+
+        if (consolePattern.id().getPath().contains("master")) {
             return alt;
         }
 
         return super.getConsoleModel(consolePattern);
     }
+
 }
