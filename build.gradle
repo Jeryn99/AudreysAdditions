@@ -27,7 +27,7 @@ githubRelease {
     owner "Jeryn99"
     repo "AudreysAdditions"
     tagName "v$rootProject.minecraft_version-$project.mod_version"
-    targetCommitish "mc/1.20.1"
+    targetCommitish "mc/1.20.2"
     releaseName "[$rootProject.minecraft_version] Audreys Additions - v$project.mod_version"
     generateReleaseNotes true
     body new File("${rootProject.projectDir}/changelog.md").text
