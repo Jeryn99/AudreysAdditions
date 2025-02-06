@@ -54,12 +54,13 @@ public class ChairEntity extends Entity {
 
     @Override
     public void tick() {
-        if (getPassengers().isEmpty()) {
-            kill();
-            return;
-        }
-
         super.tick();
+
+        if (!level().isClientSide) {
+            if (getPassengers().isEmpty()) {
+                kill();
+            }
+        }
     }
 
     @Override
