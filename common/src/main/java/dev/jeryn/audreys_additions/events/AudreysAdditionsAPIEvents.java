@@ -31,6 +31,7 @@ public class AudreysAdditionsAPIEvents {
         TardisClientEvents.CONSOLE_MODELS_SETUP.register((consoleModelCollection, entityModelSet) -> consoleModelCollection.registerModel(AudConsoleRegistry.BRACHACKI.getId(), new ConsoleModelEntry(new BrachackiConsoleModel(entityModelSet.bakeLayer(BRACHACKI_CONSOLE)))));
         TardisClientEvents.CONSOLE_MODELS_SETUP.register((consoleModelCollection, entityModelSet) -> consoleModelCollection.registerModel(AudConsoleRegistry.TOYOTA.getId(), new ConsoleModelEntry(new ToyotaConsoleModel(entityModelSet.bakeLayer(TOYOTA_CONSOLE)))));
         TardisClientEvents.CONSOLE_MODELS_SETUP.register((consoleModelCollection, entityModelSet) -> consoleModelCollection.registerModel(AudConsoleRegistry.KELT.getId(), new ConsoleModelEntry(new KeltConsoleModel(entityModelSet.bakeLayer(KELT_CONSOLE)))));
+        TardisClientEvents.CONSOLE_MODELS_SETUP.register((consoleModelCollection, entityModelSet) -> consoleModelCollection.registerModel(AudConsoleRegistry.MCGANN.getId(), new ConsoleModelEntry(new McGannConsoleModel(entityModelSet.bakeLayer(MCGANN_CONSOLE)))));
     }
 
 }
