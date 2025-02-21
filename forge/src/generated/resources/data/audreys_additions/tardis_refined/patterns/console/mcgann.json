@@ -1,0 +1,1108 @@
+{
+  "patterns": [
+    {
+      "id": "audreys_additions:acacia",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Acacia\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/mcgann/acacia.png"
+      }
+    },
+    {
+      "id": "audreys_additions:bamboo",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Bamboo\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/mcgann/bamboo.png"
+      }
+    },
+    {
+      "id": "audreys_additions:birch",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Birch\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/mcgann/birch.png"
+      }
+    },
+    {
+      "id": "audreys_additions:cherry",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Cherry\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/mcgann/cherry.png"
+      }
+    },
+    {
+      "id": "audreys_additions:crimson",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Crimson\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/mcgann/crimson.png"
+      }
+    },
+    {
+      "id": "audreys_additions:dark_oak",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Dark Oak\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/mcgann/dark_oak.png"
+      }
+    },
+    {
+      "id": "audreys_additions:default",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/mcgann/default.png"
+      }
+    },
+    {
+      "id": "audreys_additions:jungle",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Jungle\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/mcgann/jungle.png"
+      }
+    },
+    {
+      "id": "audreys_additions:oak",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Oak\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/mcgann/oak.png"
+      }
+    },
+    {
+      "id": "audreys_additions:pale",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Pale\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/mcgann/pale.png"
+      }
+    },
+    {
+      "id": "audreys_additions:spruce",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Spruce\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/mcgann/spruce.png"
+      }
+    },
+    {
+      "id": "audreys_additions:warped",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Warped\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/mcgann/warped.png"
+      }
+    }
+  ]
+}
