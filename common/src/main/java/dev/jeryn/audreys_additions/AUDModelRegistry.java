@@ -163,8 +163,6 @@ public class AUDModelRegistry {
 
         // Police Box - 2010
         policeBox10 = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_2010), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
-            poseStack.scale(0.75F, 0.75F, 0.75F);
-            poseStack.translate(0F, 0.5F, 0F);
         });
         policeBox10Door = new DualInteriorDoorModel(entityModels.bakeLayer(POLICEBOX_2010_DOOR), -275.0F, false, true);
 
