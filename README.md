@@ -19,10 +19,9 @@ This addon introduces a variety of shell options, custom-modelled blocks, consol
 ### Shells  
 - **Police Box (1963)** *
 - **Police Box (1966)** *
-- **Police Box (1976)** *  
-- **Police Box (1996)**  
-- **Police Box (2003)**
-- **Police Box (2010)**  
+- **Police Box (1976)**   
+- **Police Box (1996)** *
+- **Police Box (2010)** *
 - **Police Box (2018)** *  
 - **SIDRAT** *  
 
@@ -36,4 +35,4 @@ This addon introduces a variety of shell options, custom-modelled blocks, consol
 - **Ceiling Canopy**  
 - **Brachacki & Liminton Monitors**  
 - **Foldout Beds**  
-- **Light Columns (Left & Right)**  
+- **Light Columns (Left & Right)**
