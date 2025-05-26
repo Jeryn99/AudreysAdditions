@@ -10,7 +10,6 @@ import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.resources.ResourceLocation;
 import whocraft.tardis_refined.client.model.blockentity.door.interior.DualInteriorDoorModel;
 import whocraft.tardis_refined.client.model.blockentity.door.interior.DualTexInteriorDoorModel;
-import whocraft.tardis_refined.client.model.blockentity.door.interior.SingleTexInteriorDoorModel;
 import whocraft.tardis_refined.common.util.PlatformWarning;
 
 import java.util.function.Supplier;
@@ -19,8 +18,8 @@ public class AUDModelRegistry {
 
 
     // Models
-    public static PoliceBoxModel policeBox03, policeBox66, policeBoxRuth, policeBox73, policeBox18, policeBox18_special, policeBox10, policeBox17, policeBox76, policeBox96, policeBox63, policeBox63Massacre;
-    public static DualInteriorDoorModel policeBox03Door, policeBox66Door, policeBox63Door, policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox17Door, policeBox76Door, policeBox96Door;
+    public static PoliceBoxModel policeBox03, policeBox66, policeBoxRuth, policeBox73, policeBox18, policeBox18_special, policeBox10, policeBox11, policeBox17, policeBoxMemorial, policeBox76, policeBox96, policeBox63, policeBox63Massacre;
+    public static DualInteriorDoorModel policeBox03Door, policeBox66Door, policeBox63Door, policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox11Door, policeBox17Door, policeBox76Door, policeBox96Door;
     public static DualTexInteriorDoorModel sidratDoor;
     public static SidratModel sidrat;
 
@@ -32,8 +31,11 @@ public class AUDModelRegistry {
 
     public static ModelLayerLocation POLICEBOX_2010 = shell("policebox_2010");
     public static ModelLayerLocation POLICEBOX_2010_DOOR = interiorDoor("policebox_2010_door");
+    public static ModelLayerLocation POLICEBOX_2011 = shell("policebox_2011");
+    public static ModelLayerLocation POLICEBOX_2011_DOOR = interiorDoor("policebox_2011_door");
     public static ModelLayerLocation POLICEBOX_2017 = shell("policebox_2017");
     public static ModelLayerLocation POLICEBOX_2017_DOOR = interiorDoor("policebox_2017_door");
+    public static ModelLayerLocation POLICEBOX_MEMORIAL = shell("policebox_memorial");
 
     public static ModelLayerLocation POLICEBOX_1976 = shell("policebox_1976");
     public static ModelLayerLocation POLICEBOX_1976_DOOR = interiorDoor("policebox_1976_door");
@@ -162,10 +164,17 @@ public class AUDModelRegistry {
         });
         policeBox10Door = new DualInteriorDoorModel(entityModels.bakeLayer(POLICEBOX_2010_DOOR), -275.0F, false, true);
 
+        policeBox11 = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_2011), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
+        });
+        policeBox11Door = new DualInteriorDoorModel(entityModels.bakeLayer(POLICEBOX_2011_DOOR), -275.0F, false, true);
+
+
         policeBox17 = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_2017), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
         });
         policeBox17Door = new DualInteriorDoorModel(entityModels.bakeLayer(POLICEBOX_2017_DOOR), -275.0F, false, true);
 
+        policeBoxMemorial = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_MEMORIAL), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
+        });
         // Sidrat
         sidrat = new SidratModel(entityModels.bakeLayer(SIDRAT));
         sidratDoor = new DualTexInteriorDoorModel(entityModels.bakeLayer(SIDRAT_DOOR));

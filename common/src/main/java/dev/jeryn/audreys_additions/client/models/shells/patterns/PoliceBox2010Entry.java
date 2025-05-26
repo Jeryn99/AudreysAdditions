@@ -18,8 +18,17 @@ public class PoliceBox2010Entry extends ShellEntry {
 
         String variantPath = shellPattern.id().getPath();
 
+
+        if (variantPath.contains("series_7")) {
+            return AUDModelRegistry.policeBox11;
+        }
+
         if (variantPath.contains("series_10")) {
             return AUDModelRegistry.policeBox17;
+        }
+
+        if (variantPath.contains("memorial")) {
+            return AUDModelRegistry.policeBoxMemorial;
         }
 
         return super.getShellModel(shellPattern);
@@ -30,7 +39,11 @@ public class PoliceBox2010Entry extends ShellEntry {
         String variantPath = shellPattern.id().getPath();
 
 
-        if (variantPath.contains("series_10")) {
+        if (variantPath.contains("series_7")) {
+            return AUDModelRegistry.policeBox11Door;
+        }
+
+        if (variantPath.contains("series_10") || variantPath.contains("memorial"))  {
             return AUDModelRegistry.policeBox17Door;
         }
 
