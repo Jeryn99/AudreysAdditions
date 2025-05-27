@@ -30,7 +30,6 @@ public class AUDPatterns extends ShellPatternProvider {
         quickAdd(AudShellRegistry.POLICEBOX_1966.getId(), "season_6", true);
         quickAdd(AudShellRegistry.POLICEBOX_1966.getId(), "season_11", true);
         quickAdd(AudShellRegistry.POLICEBOX_1966.getId(), "ruth", true);
-        quickAdd(AudShellRegistry.POLICEBOX_2003.getId(), "default", true);
 
         quickAdd(AudShellRegistry.POLICEBOX_2018.getId(), "default", true);
         quickAdd(AudShellRegistry.POLICEBOX_2018.getId(), "blue", true);
@@ -41,7 +40,9 @@ public class AUDPatterns extends ShellPatternProvider {
         quickAdd(AudShellRegistry.POLICEBOX_2010.getId(), "memorial", true);
 
         quickAdd(AudShellRegistry.POLICEBOX_1976.getId(), "default", true);
+
         quickAdd(AudShellRegistry.POLICEBOX_1996.getId(), "default", true);
+        quickAdd(AudShellRegistry.POLICEBOX_1996.getId(), "shalka", true);
         quickAdd(AudShellRegistry.POLICEBOX_1963.getId(), "default", true);
         quickAdd(AudShellRegistry.POLICEBOX_1963.getId(), "massacre", true);
 
@@ -75,7 +76,6 @@ public class AUDPatterns extends ShellPatternProvider {
     public ShellPattern createPattern(ResourceLocation themeId, String patternName, boolean hasEmissiveTexture, ShellSoundProfile soundProfile) {
         ResourceLocation exteriorTextureLocation = ShellPatterns.exteriorTextureLocation(themeId, AudreysAdditions.MODID, patternName);
         ResourceLocation interiorTextureLocation = ShellPatterns.interiorTextureLocation(themeId, AudreysAdditions.MODID, patternName);
-        ;
         ShellPattern pattern = new ShellPattern(new ResourceLocation(themeId.getNamespace(), patternName), new PatternTexture(exteriorTextureLocation, hasEmissiveTexture), new PatternTexture(interiorTextureLocation, hasEmissiveTexture), Optional.of(soundProfile));
         pattern.setThemeId(themeId);
 
