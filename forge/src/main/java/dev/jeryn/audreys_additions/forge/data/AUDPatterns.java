@@ -41,6 +41,19 @@ public class AUDPatterns extends ShellPatternProvider {
 
         quickAdd(AudShellRegistry.POLICEBOX_1976.getId(), "default", true);
 
+        quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "default", false);
+        quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "acacia", false);
+        quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "bamboo", false);
+        quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "birch", false);
+        quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "cherry", false);
+        quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "crimson", false);
+        quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "dark_oak", false);
+        quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "jungle", false);
+        quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "mangrove", false);
+        quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "oak", false);
+        quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "pale", false);
+        quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "warped", false);
+
         quickAdd(AudShellRegistry.POLICEBOX_1996.getId(), "default", true);
         quickAdd(AudShellRegistry.POLICEBOX_1996.getId(), "shalka", true);
         quickAdd(AudShellRegistry.POLICEBOX_1963.getId(), "default", true);
