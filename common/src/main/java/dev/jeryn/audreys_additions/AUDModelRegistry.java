@@ -18,8 +18,8 @@ public class AUDModelRegistry {
 
 
     // Models
-    public static PoliceBoxModel policeBox03, policeBox66, policeBoxRuth, policeBox73, policeBox18, policeBox18_special, policeBox10, policeBox11, policeBox17, policeBoxMemorial, policeBox76, policeBox96, policeBox63, policeBox63Massacre;
-    public static DualInteriorDoorModel policeBox03Door, policeBox66Door, policeBox63Door, policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox11Door, policeBox17Door, policeBox76Door, policeBox96Door;
+    public static PoliceBoxModel policeBox03, policeBox66, policeBoxRuth, policeBox73, policeBox18, policeBox18_special, policeBox10, policeBox11, policeBox17, policeBoxMemorial, policeBox76, policeBox96, policeBox63, policeBox63Massacre, trakenClock;
+    public static DualInteriorDoorModel policeBox03Door, policeBox66Door, policeBox63Door, policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox11Door, policeBox17Door, policeBox76Door, policeBox96Door, trakenClockDoor;
     public static DualTexInteriorDoorModel sidratDoor;
     public static SidratModel sidrat;
 
@@ -58,6 +58,9 @@ public class AUDModelRegistry {
 
     public static ModelLayerLocation SIDRAT = shell("sidrat");
     public static ModelLayerLocation SIDRAT_DOOR = interiorDoor("sidrat_door");
+
+    public static ModelLayerLocation TRAKENCLOCK = shell("trakenclock");
+    public static ModelLayerLocation TRAKENCLOCK_DOOR = interiorDoor("trakenclock_door");
 
     public static ModelLayerLocation PERTWEE_CONSOLE = console("pertwee");
     public static ModelLayerLocation NEWBERY_CONSOLE = console("newbery");
@@ -179,6 +182,11 @@ public class AUDModelRegistry {
         sidrat = new SidratModel(entityModels.bakeLayer(SIDRAT));
         sidratDoor = new DualTexInteriorDoorModel(entityModels.bakeLayer(SIDRAT_DOOR));
 
+        // Traken Clock
+        trakenClock = new PoliceBoxModel(entityModels.bakeLayer(TRAKENCLOCK), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
+
+        });
+        trakenClockDoor = new DualInteriorDoorModel(entityModels.bakeLayer(TRAKENCLOCK_DOOR), (float)Math.toRadians(110), true, false);
 
         // Model Registration
         AUDShellEntryRegistry.init();
