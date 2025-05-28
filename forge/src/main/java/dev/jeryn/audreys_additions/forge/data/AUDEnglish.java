@@ -24,6 +24,7 @@ public class AUDEnglish extends LanguageProvider {
         addShell(AudShellRegistry.POLICEBOX_1963.get(), ChatFormatting.BLUE + "Police Box " + ChatFormatting.YELLOW + "(1963)");
         addShell(AudShellRegistry.POLICEBOX_1966.get(), ChatFormatting.BLUE + "Police Box " + ChatFormatting.YELLOW + "(1966)");
         addShell(AudShellRegistry.SIDRAT.get(), ChatFormatting.BLUE + "SIDRAT");
+        addShell(AudShellRegistry.TRAKENCLOCK.get(), ChatFormatting.BLUE + "Traken Clock");
 
         add(AudBlocks.KNOSSOS_THRONE.get(), "Knossos Throne");
         add(AudBlocks.LIMINTON_MONITOR.get(), "Liminton Monitor");
