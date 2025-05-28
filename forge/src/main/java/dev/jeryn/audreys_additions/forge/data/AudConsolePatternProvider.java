@@ -75,18 +75,18 @@ public class AudConsolePatternProvider extends ConsolePatternProvider {
         addPatternToDatagen(AudConsoleRegistry.NEWBERY.getId(), createWithDefaultSound("newbery_spruce", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/newbery/newbery_spruce.png"), false)));
         addPatternToDatagen(AudConsoleRegistry.NEWBERY.getId(), createWithDefaultSound("newbery_warped", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/newbery/newbery_warped.png"), false)));
 
-        addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("acacia", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/acacia.png"), false)));
-        addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("bamboo", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/bamboo.png"), false)));
-        addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("birch", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/birch.png"), false)));
-        addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("cherry", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/cherry.png"), false)));
-        addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("crimson", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/crimson.png"), false)));
-        addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("dark_oak", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/dark_oak.png"), false)));
-        addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("default", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/default.png"), false)));
-        addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("jungle", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/jungle.png"), false)));
-        addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("oak", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/oak.png"), false)));
-        addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("pale", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/pale.png"), false)));
-        addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("spruce", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/spruce.png"), false)));
-        addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("warped", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/warped.png"), false)));
+        addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("default", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/mcgann.png"), true)));
+        addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("acacia", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/mcgann_acacia.png"), true)));
+        addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("bamboo", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/mcgann_bamboo.png"), true)));
+        addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("birch", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/mcgann_birch.png"), true)));
+        addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("cherry", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/mcgann_cherry.png"), true)));
+        addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("crimson", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/mcgann_crimson.png"), true)));
+        addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("dark_oak", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/mcgann_dark_oak.png"), true)));
+        addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("jungle", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/mcgann_jungle.png"), true)));
+        addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("oak", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/mcgann_oak.png"), true)));
+        addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("pale", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/mcgann_pale.png"), true)));
+        addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("spruce", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/mcgann_spruce.png"), true)));
+        addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("warped", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/mcgann_warped.png"), true)));
 
 
     }

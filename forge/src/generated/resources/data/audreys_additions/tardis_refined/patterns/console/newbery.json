@@ -554,7 +554,7 @@
     },
     {
       "id": "audreys_additions:newbery_darkoak",
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Newbery Darkoak\"}",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Newbery Dark Oak\"}",
       "sound_profile": {
         "sounds": {
           "tardis_refined:generic_console": {

@@ -1,6 +1,98 @@
 {
   "patterns": [
     {
+      "id": "audreys_additions:default",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": true,
+        "texture": "audreys_additions:textures/blockentity/console/mcgann/mcgann.png"
+      }
+    },
+    {
       "id": "audreys_additions:acacia",
       "name_component": "{\"color\":\"yellow\",\"text\":\"Acacia\"}",
       "sound_profile": {
@@ -88,8 +180,8 @@
         }
       },
       "texture_definition": {
-        "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/console/mcgann/acacia.png"
+        "emissive": true,
+        "texture": "audreys_additions:textures/blockentity/console/mcgann/mcgann_acacia.png"
       }
     },
     {
@@ -180,8 +272,8 @@
         }
       },
       "texture_definition": {
-        "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/console/mcgann/bamboo.png"
+        "emissive": true,
+        "texture": "audreys_additions:textures/blockentity/console/mcgann/mcgann_bamboo.png"
       }
     },
     {
@@ -272,8 +364,8 @@
         }
       },
       "texture_definition": {
-        "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/console/mcgann/birch.png"
+        "emissive": true,
+        "texture": "audreys_additions:textures/blockentity/console/mcgann/mcgann_birch.png"
       }
     },
     {
@@ -364,8 +456,8 @@
         }
       },
       "texture_definition": {
-        "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/console/mcgann/cherry.png"
+        "emissive": true,
+        "texture": "audreys_additions:textures/blockentity/console/mcgann/mcgann_cherry.png"
       }
     },
     {
@@ -456,8 +548,8 @@
         }
       },
       "texture_definition": {
-        "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/console/mcgann/crimson.png"
+        "emissive": true,
+        "texture": "audreys_additions:textures/blockentity/console/mcgann/mcgann_crimson.png"
       }
     },
     {
@@ -548,100 +640,8 @@
         }
       },
       "texture_definition": {
-        "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/console/mcgann/dark_oak.png"
-      }
-    },
-    {
-      "id": "audreys_additions:default",
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}",
-      "sound_profile": {
-        "sounds": {
-          "tardis_refined:generic_console": {
-            "left_click": {
-              "pitch": 0.95,
-              "sound_event": {
-                "sound_id": "minecraft:block.stone_button.click_on"
-              },
-              "volume": 1.0
-            },
-            "right_click": {
-              "pitch": 1.1,
-              "sound_event": {
-                "sound_id": "minecraft:block.stone_button.click_on"
-              },
-              "volume": 1.0
-            }
-          },
-          "tardis_refined:handbrake_disable": {
-            "left_click": {
-              "pitch": 1.0,
-              "sound_event": {
-                "sound_id": "minecraft:intentionally_empty"
-              },
-              "volume": 0.0
-            },
-            "right_click": {
-              "pitch": 0.5,
-              "sound_event": {
-                "sound_id": "minecraft:block.lever.click"
-              },
-              "volume": 1.0
-            }
-          },
-          "tardis_refined:handbrake_enable": {
-            "left_click": {
-              "pitch": 1.0,
-              "sound_event": {
-                "sound_id": "minecraft:intentionally_empty"
-              },
-              "volume": 0.0
-            },
-            "right_click": {
-              "pitch": 0.6,
-              "sound_event": {
-                "sound_id": "minecraft:block.lever.click"
-              },
-              "volume": 1.0
-            }
-          },
-          "tardis_refined:throttle_disable": {
-            "left_click": {
-              "pitch": 1.0,
-              "sound_event": {
-                "sound_id": "minecraft:intentionally_empty"
-              },
-              "volume": 0.0
-            },
-            "right_click": {
-              "pitch": 0.5,
-              "sound_event": {
-                "sound_id": "minecraft:block.lever.click"
-              },
-              "volume": 1.0
-            }
-          },
-          "tardis_refined:throttle_enable": {
-            "left_click": {
-              "pitch": 1.0,
-              "sound_event": {
-                "sound_id": "minecraft:intentionally_empty"
-              },
-              "volume": 0.0
-            },
-            "right_click": {
-              "pitch": 0.6,
-              "sound_event": {
-                "sound_id": "minecraft:block.lever.click"
-              },
-              "volume": 1.0
-            }
-          }
-        }
-      },
-      "texture_definition": {
-        "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/console/mcgann/default.png"
+        "emissive": true,
+        "texture": "audreys_additions:textures/blockentity/console/mcgann/mcgann_dark_oak.png"
       }
     },
     {
@@ -732,8 +732,8 @@
         }
       },
       "texture_definition": {
-        "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/console/mcgann/jungle.png"
+        "emissive": true,
+        "texture": "audreys_additions:textures/blockentity/console/mcgann/mcgann_jungle.png"
       }
     },
     {
@@ -824,8 +824,8 @@
         }
       },
       "texture_definition": {
-        "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/console/mcgann/oak.png"
+        "emissive": true,
+        "texture": "audreys_additions:textures/blockentity/console/mcgann/mcgann_oak.png"
       }
     },
     {
@@ -916,8 +916,8 @@
         }
       },
       "texture_definition": {
-        "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/console/mcgann/pale.png"
+        "emissive": true,
+        "texture": "audreys_additions:textures/blockentity/console/mcgann/mcgann_pale.png"
       }
     },
     {
@@ -1008,8 +1008,8 @@
         }
       },
       "texture_definition": {
-        "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/console/mcgann/spruce.png"
+        "emissive": true,
+        "texture": "audreys_additions:textures/blockentity/console/mcgann/mcgann_spruce.png"
       }
     },
     {
@@ -1100,8 +1100,8 @@
         }
       },
       "texture_definition": {
-        "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/console/mcgann/warped.png"
+        "emissive": true,
+        "texture": "audreys_additions:textures/blockentity/console/mcgann/mcgann_warped.png"
       }
     }
   ]
