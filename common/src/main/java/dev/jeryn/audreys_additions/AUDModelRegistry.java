@@ -10,6 +10,7 @@ import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.resources.ResourceLocation;
 import whocraft.tardis_refined.client.model.blockentity.door.interior.DualInteriorDoorModel;
 import whocraft.tardis_refined.client.model.blockentity.door.interior.DualTexInteriorDoorModel;
+import whocraft.tardis_refined.client.model.blockentity.door.interior.SingleInteriorDoorModel;
 import whocraft.tardis_refined.common.util.PlatformWarning;
 
 import java.util.function.Supplier;
@@ -19,7 +20,8 @@ public class AUDModelRegistry {
 
     // Models
     public static PoliceBoxModel policeBox03, policeBox66, policeBoxRuth, policeBox73, policeBox18, policeBox18_special, policeBox10, policeBox11, policeBox17, policeBoxMemorial, policeBox76, policeBox96, policeBox63, policeBox63Massacre, trakenClock;
-    public static DualInteriorDoorModel policeBox03Door, policeBox66Door, policeBox63Door, policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox11Door, policeBox17Door, policeBox76Door, policeBox96Door, trakenClockDoor;
+    public static DualInteriorDoorModel policeBox03Door, policeBox66Door, policeBox63Door, policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox11Door, policeBox17Door, policeBox76Door, policeBox96Door;
+    public static SingleInteriorDoorModel trakenClockDoor;
     public static DualTexInteriorDoorModel sidratDoor;
     public static SidratModel sidrat;
 
@@ -192,7 +194,7 @@ public class AUDModelRegistry {
         trakenClock = new PoliceBoxModel(entityModels.bakeLayer(TRAKENCLOCK), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
 
         });
-        trakenClockDoor = new DualInteriorDoorModel(entityModels.bakeLayer(TRAKENCLOCK_DOOR), (float)Math.toRadians(110), true, false);
+        trakenClockDoor = new SingleInteriorDoorModel(entityModels.bakeLayer(TRAKENCLOCK_DOOR), (float)Math.toRadians(110));
 
         // Model Registration
         AUDShellEntryRegistry.init();
