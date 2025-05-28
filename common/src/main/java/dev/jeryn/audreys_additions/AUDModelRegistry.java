@@ -194,7 +194,7 @@ public class AUDModelRegistry {
         trakenClock = new PoliceBoxModel(entityModels.bakeLayer(TRAKENCLOCK), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
 
         });
-        trakenClockDoor = new SingleInteriorDoorModel(entityModels.bakeLayer(TRAKENCLOCK_DOOR), (float)Math.toRadians(110));
+        trakenClockDoor = new SingleInteriorDoorModel(entityModels.bakeLayer(TRAKENCLOCK_DOOR), (float)Math.toRadians(-110));
 
         // Model Registration
         AUDShellEntryRegistry.init();
