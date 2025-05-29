@@ -19,6 +19,7 @@ public class AudConsoleRegistry {
     public static final RegistrySupplier<ConsoleTheme> TOYOTA = registerConsoleTheme("toyota", new ToyotaConsoleTheme());
     public static final RegistrySupplier<ConsoleTheme> KELT = registerConsoleTheme("kelt", new KeltConsoleTheme());
     public static final RegistrySupplier<ConsoleTheme> MCGANN = registerConsoleTheme("mcgann", new McGannConsoleTheme());
+    public static final RegistrySupplier<ConsoleTheme> HUMAN_NATURE = registerConsoleTheme("human_nature", new HumanNatureConsoleTheme());
 
 
     private static RegistrySupplier<ConsoleTheme> registerConsoleTheme(String id, ConsoleThemeDetails themeDetails) {
