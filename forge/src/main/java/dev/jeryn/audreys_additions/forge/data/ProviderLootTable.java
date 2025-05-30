@@ -8,7 +8,10 @@ import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.level.block.BedBlock;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import whocraft.tardis_refined.registry.TRBlockRegistry;
 
@@ -40,6 +43,12 @@ public class ProviderLootTable extends LootTableProvider {
             for (Map.Entry<ResourceKey<Block>, Block> resourceKeyBlockEntry : AudBlocks.BLOCKS.entrySet()) {
                 ResourceLocation blockId = TRBlockRegistry.BLOCKS.getKey(resourceKeyBlockEntry.getValue());
                 if (blockId.toString().contains(AudreysAdditions.MODID)) {
+
+                    if(blockId.getNamespace().contains("bed")){
+                        this.add(resourceKeyBlockEntry.getValue(), (block) -> this.createSinglePropConditionTable(block, BedBlock.PART, BedPart.HEAD));
+                        continue;
+                    }
+
                     blocks.add(resourceKeyBlockEntry.getValue());
                 }
             }

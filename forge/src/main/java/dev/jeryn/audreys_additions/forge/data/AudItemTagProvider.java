@@ -6,6 +6,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -49,6 +50,8 @@ public class AudItemTagProvider extends ItemTagsProvider {
                     tag(AudTags.FUEL_ITEMS).add(block.asItem());
                 }
             }
+
+
         });
 
     }
