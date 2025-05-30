@@ -30,6 +30,7 @@ public class AudreysAdditionsForge {
 
         AudBlockTagsProvider blockTags = new AudBlockTagsProvider(generator.getPackOutput(), e.getLookupProvider(), e.getExistingFileHelper());
         generator.addProvider(e.includeServer(), blockTags);
+        generator.addProvider(e.includeServer(), new ProviderLootTable(generator.getPackOutput()));
 
 
         generator.addProvider(e.includeClient(), new AudItemTagProvider(generator.getPackOutput(), e.getLookupProvider(), blockTags.contentsGetter(), existingFileHelper));
