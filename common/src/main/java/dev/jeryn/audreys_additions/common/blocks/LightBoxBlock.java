@@ -32,7 +32,7 @@ public class LightBoxBlock extends HorizontalDirectionalBlock {
 
     @Override
     public void playerWillDestroy(Level level, BlockPos blockPos, BlockState blockState, Player player) {
-        if (!level.isClientSide && player.isCreative()) {
+        if (!level.isClientSide) {
             BedPart bedPart = blockState.getValue(PART);
             BlockPos otherPartPos = blockPos.relative(getNeighbourDirection(bedPart, blockState.getValue(FACING)));
             BlockState otherPartState = level.getBlockState(otherPartPos);
