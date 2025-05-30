@@ -1,9 +1,7 @@
 package dev.jeryn.audreys_additions;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
-import dev.jeryn.audreys_additions.client.models.shell.AUDShellEntryRegistry;
-import dev.jeryn.audreys_additions.client.models.shell.PoliceBoxModel;
-import dev.jeryn.audreys_additions.client.models.shell.SidratModel;
+import dev.jeryn.audreys_additions.client.models.shell.*;
 import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
@@ -79,6 +77,8 @@ public class AUDModelRegistry {
     public static ModelLayerLocation CEILING_CANOPY = furniture("ceiling_canopy");
     public static ModelLayerLocation CEILING_CANOPY_HANGING = furniture("ceiling_canopy_hanging");
     public static ModelLayerLocation FOLD_OUT_BED = furniture("fold_out_bed");
+    public static ModelLayerLocation CAT = overlords("cat");
+    public static AnimatedCatModel cat;
 
 
     private static ModelLayerLocation interiorDoor(String name) {
@@ -97,6 +97,10 @@ public class AUDModelRegistry {
         return createLocation(name, "furniture");
     }
 
+    private static ModelLayerLocation overlords(String name) {
+        return createLocation(name, "overlords");
+    }
+
 
     private static ModelLayerLocation createLocation(String name, String layer) {
         return new ModelLayerLocation(new ResourceLocation(AudreysAdditions.MODID, name), layer);
@@ -108,6 +112,7 @@ public class AUDModelRegistry {
     }
 
     public static void setupModelInstances(EntityModelSet entityModels) {
+        cat = new AnimatedCatModel(entityModels.bakeLayer(CAT));
 
         // Police Box - 1976
         policeBox76 = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_1976), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
@@ -186,10 +191,8 @@ public class AUDModelRegistry {
         sidratDoor = new DualTexInteriorDoorModel(entityModels.bakeLayer(SIDRAT_DOOR));
 
         // Traken Clock
-        trakenClock = new PoliceBoxModel(entityModels.bakeLayer(TRAKENCLOCK), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
-
-        });
-        trakenClockDoor = new SingleInteriorDoorModel(entityModels.bakeLayer(TRAKENCLOCK_DOOR), (float)Math.toRadians(-110));
+        trakenClock = new TrakenClockModel(entityModels.bakeLayer(TRAKENCLOCK));
+        trakenClockDoor = new TrakenClockInteriorDoorModel(entityModels.bakeLayer(TRAKENCLOCK_DOOR), (float)Math.toRadians(110));
 
         // Model Registration
         AUDShellEntryRegistry.init();
