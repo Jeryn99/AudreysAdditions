@@ -1,6 +1,7 @@
 package dev.jeryn.audreys_additions.forge.data;
 
 import dev.jeryn.audreys_additions.AudreysAdditions;
+import dev.jeryn.audreys_additions.common.blocks.LightBoxBlock;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -48,6 +49,12 @@ public class ProviderLootTable extends LootTableProvider {
                         this.add(resourceKeyBlockEntry.getValue(), (block) -> this.createSinglePropConditionTable(block, BedBlock.PART, BedPart.HEAD));
                         continue;
                     }
+
+                    if(resourceKeyBlockEntry instanceof LightBoxBlock lightBoxBlock){
+                        this.add(resourceKeyBlockEntry.getValue(), (block) -> this.createSinglePropConditionTable(block, LightBoxBlock.PART, BedPart.HEAD));
+                        continue;
+                    }
+
 
                     blocks.add(resourceKeyBlockEntry.getValue());
                 }
