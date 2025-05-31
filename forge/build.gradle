@@ -40,12 +40,12 @@ configurations {
 
 unifiedPublishing {
     project {
-        displayName = "[Forge] - Audreys Additions - $rootProject.minecraft_version - v$project.version"
+        displayName = "[Neoforge] - Audreys Additions - v$project.version"
         releaseType = "release"
         changelog = new File("${rootProject.projectDir}/changelog.md").text
         gameVersions = ["1.20.2"]
         mainPublication tasks.remapJar
-        gameLoaders = ["forge"]
+        gameLoaders = ["neoforge"]
         relations {
             depends {
                 curseforge = "tardis-refined"
