@@ -11,7 +11,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.BedBlock;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import whocraft.tardis_refined.registry.TRBlockRegistry;
@@ -34,8 +33,31 @@ public class ProviderLootTable extends LootTableProvider {
 
         protected void generate() {
             for (Block block : this.getKnownBlocks()) {
+
+                if (block == AudBlocks.ARMCHAIR.get()) {
+                    this.add(block, noDrop());
+                    continue;
+                }
+
+                if (block == AudBlocks.FOLD_OUT_BED.get()) {
+                    this.add(block, (block2) -> this.createSinglePropConditionTable(block2, BedBlock.PART, BedPart.HEAD));
+                    continue;
+                }
+
+                if (block == AudBlocks.LIGHTCOLUMN_LEFT.get()) {
+                    this.add(block, (block2) -> this.createSinglePropConditionTable(block2, LightBoxBlock.PART, BedPart.HEAD));
+                    continue;
+                }
+
+                if (block == AudBlocks.LIGHTCOLUMN_RIGHT.get()) {
+                    this.add(block, (block2) -> this.createSinglePropConditionTable(block2, LightBoxBlock.PART, BedPart.HEAD));
+                    continue;
+                }
+
                 this.dropSelf(block);
             }
+
+
         }
 
         protected Iterable<Block> getKnownBlocks() {
@@ -44,18 +66,6 @@ public class ProviderLootTable extends LootTableProvider {
             for (Map.Entry<ResourceKey<Block>, Block> resourceKeyBlockEntry : AudBlocks.BLOCKS.entrySet()) {
                 ResourceLocation blockId = TRBlockRegistry.BLOCKS.getKey(resourceKeyBlockEntry.getValue());
                 if (blockId.toString().contains(AudreysAdditions.MODID)) {
-
-                    if(blockId.getNamespace().contains("bed")){
-                        this.add(resourceKeyBlockEntry.getValue(), (block) -> this.createSinglePropConditionTable(block, BedBlock.PART, BedPart.HEAD));
-                        continue;
-                    }
-
-                    if(resourceKeyBlockEntry instanceof LightBoxBlock lightBoxBlock){
-                        this.add(resourceKeyBlockEntry.getValue(), (block) -> this.createSinglePropConditionTable(block, LightBoxBlock.PART, BedPart.HEAD));
-                        continue;
-                    }
-
-
                     blocks.add(resourceKeyBlockEntry.getValue());
                 }
             }

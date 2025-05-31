@@ -42,6 +42,7 @@ public class TrakenClockInteriorDoorModel extends SingleInteriorDoorModel {
 
         if (isInFlight) {
             this.root().getAllParts().forEach(ModelPart::resetPose);
+            setDoorPosition(open);
             animate(tardisClientData.ROTOR_ANIMATION, FREE_SPIN, Minecraft.getInstance().player.tickCount, 1F);
         } else {
             Calendar calendar = Calendar.getInstance();

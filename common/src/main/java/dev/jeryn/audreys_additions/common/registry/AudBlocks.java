@@ -75,7 +75,7 @@ public class AudBlocks {
     private static FoldOutBedBlock createBed() {
         return new FoldOutBedBlock(BlockBehaviour.Properties.of()
                 .sound(SoundType.WOOD)
-                .strength(0.2f)
+                .strength(0.4f)
                 .noOcclusion()
                 .ignitedByLava()
                 .pushReaction(PushReaction.DESTROY));

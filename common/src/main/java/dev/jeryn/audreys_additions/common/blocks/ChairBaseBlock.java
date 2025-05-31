@@ -10,6 +10,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.DyeItem;
@@ -89,6 +90,16 @@ public class ChairBaseBlock extends HorizontalDirectionalBlock implements Entity
             }
         }
 
+        if (level.getBlockEntity(blockPos) instanceof ChairBlockEntity chairBlockEntity) {
+            ItemStack coloredItemBlock = new ItemStack(AudBlocks.ARMCHAIR.get());
+            coloredItemBlock.setCount(1);
+            coloredItemBlock.getOrCreateTagElement("display").putInt("color", chairBlockEntity.getColour());
+
+            ItemEntity itemEntity = new ItemEntity(level, blockPos.getX(), blockPos.getY(), blockPos.getZ(), coloredItemBlock);
+            itemEntity.setPos(blockPos.getX(), blockPos.getY(), blockPos.getZ());
+            level.addFreshEntity(itemEntity);
+        }
+
         super.onRemove(blockState, level, blockPos, blockState2, bl);
     }
 
@@ -155,6 +166,7 @@ public class ChairBaseBlock extends HorizontalDirectionalBlock implements Entity
     protected void createBlockStateDefinition(StateDefinition.@NotNull Builder<Block, BlockState> builder) {
         builder.add(HorizontalDirectionalBlock.FACING);
     }
+
 
     @Nullable
     @Override
