@@ -76,6 +76,7 @@ public class AudConsolePatternProvider extends ConsolePatternProvider {
         addPatternToDatagen(AudConsoleRegistry.NEWBERY.getId(), createWithDefaultSound("newbery_warped", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/newbery/newbery_warped.png"), false)));
 
         addPatternToDatagen(AudConsoleRegistry.HUMAN_NATURE.getId(), createWithDefaultSound("human_nature", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/human_nature/human_nature.png"), true)));
+        addPatternToDatagen(AudConsoleRegistry.HUMAN_NATURE.getId(), createWithDefaultSound("human_nature_no_cat", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/human_nature/human_nature.png"), true)));
 
         addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("default", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/mcgann.png"), true)));
         addPatternToDatagen(AudConsoleRegistry.MCGANN.getId(), createWithDefaultSound("acacia", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/mcgann/mcgann_acacia.png"), true)));

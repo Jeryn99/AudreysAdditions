@@ -24,6 +24,8 @@ public class FoldOutBedBlock extends BedBlock implements EntityBlock {
     }
 
 
+
+
     @Override
     public InteractionResult use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
 
@@ -51,10 +53,6 @@ public class FoldOutBedBlock extends BedBlock implements EntityBlock {
         return super.use(blockState, level, blockPos, player, interactionHand, blockHitResult);
     }
 
-    @Override
-    public void spawnAfterBreak(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, ItemStack itemStack, boolean bl) {
-        super.spawnAfterBreak(blockState, serverLevel, blockPos, itemStack, bl);
-    }
 
     @Override
     public BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {

@@ -26,12 +26,23 @@ public class GlobalConsoleRendererMixin {
             cancellable = true,
             remap = false
     )
-    private void audreysAdditions$render(GlobalConsoleBlockEntity blockEntity, float partialTick, PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, int packedOverlay, CallbackInfo ci) {
-        if (!blockEntity.theme().getPath().contains("human_nature") || AUDModelRegistry.cat == null) return;
+    private void audreysAdditions$render(
+            GlobalConsoleBlockEntity blockEntity,
+            float partialTick,
+            PoseStack poseStack,
+            MultiBufferSource bufferSource,
+            int packedLight,
+            int packedOverlay,
+            CallbackInfo ci
+    ) {
+        if (AUDModelRegistry.cat == null ||
+                !blockEntity.theme().getPath().contains("human_nature") ||
+                blockEntity.pattern().id().getPath().contains("no_cat")) {
+            return;
+        }
 
         ResourceLocation catLocation = ((CatVariantHolder) blockEntity).getCatVariant();
-
-        if (catLocation == null ||  !BuiltInRegistries.CAT_VARIANT.containsKey(catLocation)) {
+        if (catLocation == null || !BuiltInRegistries.CAT_VARIANT.containsKey(catLocation)) {
             catLocation = CatVariant.ALL_BLACK.location();
         }
 
@@ -49,6 +60,7 @@ public class GlobalConsoleRendererMixin {
                 1f, 1f, 1f, 1f
         );
     }
+
 
 
 
