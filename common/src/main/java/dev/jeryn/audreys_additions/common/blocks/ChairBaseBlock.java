@@ -79,40 +79,36 @@ public class ChairBaseBlock extends HorizontalDirectionalBlock implements Entity
         return shape;
     }
 
+
     @Override
-    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
-        if (!state.is(newState.getBlock())) {
-            BlockEntity be = level.getBlockEntity(pos);
-            if (be instanceof ChairBlockEntity chairBE) {
-                ChairEntity chairEntity = chairBE.getChairEntity();
-                if (chairEntity != null) {
-                    if (!chairEntity.getPassengers().isEmpty()) {
-                        chairEntity.ejectPassengers();
-                    }
-                    chairEntity.remove(Entity.RemovalReason.DISCARDED);
-                    chairBE.setChairEntity(null);
-                }
+    public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
+        if (!level.isClientSide && state.getBlock() == AudBlocks.ARMCHAIR.get()) {
+            if (!player.isCreative() && level.getBlockEntity(pos) instanceof ChairBlockEntity chairBlockEntity) {
+                ItemStack coloredItemBlock = new ItemStack(AudBlocks.ARMCHAIR.get());
+                coloredItemBlock.setCount(1);
+                coloredItemBlock.getOrCreateTagElement("display").putInt("color", chairBlockEntity.getColour());
+
+                ItemEntity itemEntity = new ItemEntity(level, pos.getX(), pos.getY(), pos.getZ(), coloredItemBlock);
+                level.addFreshEntity(itemEntity);
             }
         }
-        super.onRemove(state, level, pos, newState, isMoving);
-    }
 
+        super.playerWillDestroy(level, pos, state, player);
+    }
 
     @Override
-    public void playerDestroy(Level level, Player player, BlockPos blockPos, BlockState blockState, @Nullable BlockEntity blockEntity, ItemStack itemStack) {
-
-        if (level.getBlockEntity(blockPos) instanceof ChairBlockEntity chairBlockEntity && !player.isCreative()) {
-            ItemStack coloredItemBlock = new ItemStack(AudBlocks.ARMCHAIR.get());
-            coloredItemBlock.setCount(1);
-            coloredItemBlock.getOrCreateTagElement("display").putInt("color", chairBlockEntity.getColour());
-
-            ItemEntity itemEntity = new ItemEntity(level, blockPos.getX(), blockPos.getY(), blockPos.getZ(), coloredItemBlock);
-            itemEntity.setPos(blockPos.getX(), blockPos.getY(), blockPos.getZ());
-            level.addFreshEntity(itemEntity);
+    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
+        if (level.getBlockEntity(pos) instanceof KnossosChairBlockEntity knossosChairBlockEntity) {
+            if (knossosChairBlockEntity.getChairEntity() != null) {
+                ChairEntity chairEntity = knossosChairBlockEntity.getChairEntity();
+                chairEntity.ejectPassengers();
+                chairEntity.remove(Entity.RemovalReason.KILLED);
+            }
         }
 
-        super.playerDestroy(level, player, blockPos, blockState, blockEntity, itemStack);
+        super.onRemove(state, level, pos, newState, movedByPiston);
     }
+
 
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
