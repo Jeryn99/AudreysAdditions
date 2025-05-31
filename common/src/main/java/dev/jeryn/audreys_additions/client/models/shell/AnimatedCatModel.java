@@ -40,9 +40,6 @@ public class AnimatedCatModel extends HierarchicalModel {
     public void renderCat(GlobalConsoleBlockEntity globalConsoleBlock, Level level, PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
         poseStack.pushPose();
         root().getAllParts().forEach(ModelPart::resetPose);
-        poseStack.mulPose(Axis.ZP.rotationDegrees(180.0F));
-        poseStack.translate(-0.5F, -1.5F, 0.5);
-
 
         boolean powered = globalConsoleBlock == null || globalConsoleBlock.getBlockState().getValue(GlobalConsoleBlock.POWERED);
 

@@ -5,12 +5,9 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "BlockMixin",
-    ,
-    "GlobalConsoleBlockEntityMixin",
-    "GlobalConsoleBlockMixin"
+    "GlobalConsoleBlockEntityMixin"
   ],
   "client": [
-    "GlobalConsoleRendererMixin",
     "HumanoidModelMixin",
     "PlayerRendererMixin"
   ],

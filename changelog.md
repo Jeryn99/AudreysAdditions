@@ -1,4 +1,4 @@
-Audrey's Additions version 1.1 is out!
+Audrey's Additions version 1.0.2 is out!
 ```Console Units -
 * Hudolin Console unit (1996) 
 * Variants: Each wood type 
@@ -27,6 +27,8 @@ Bug Fixes -
 * Fixed texture error on Proms police box
 * Fixed chairs making players behave oddly
 * 'SIDRAT' is now fully capitalized in Chameleon Circuit menu
+* Fixes game crash on Fabric
+* Cat now makes sounds
 ```
 Download it at:
 https://modrinth.com/project/tardis-refined-audreys-additions

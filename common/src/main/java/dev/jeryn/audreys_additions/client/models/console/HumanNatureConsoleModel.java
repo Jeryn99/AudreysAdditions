@@ -1,15 +1,23 @@
 package dev.jeryn.audreys_additions.client.models.console;
 
+import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
+import com.mojang.math.Axis;
+import dev.jeryn.audreys_additions.AUDModelRegistry;
 import dev.jeryn.audreys_additions.AudreysAdditions;
+import dev.jeryn.audreys_additions.CatVariantHolder;
 import dev.jeryn.frame.tardis.Frame;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.animation.AnimationDefinition;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.animal.CatVariant;
 import net.minecraft.world.level.Level;
 import whocraft.tardis_refined.TRConfig;
 import whocraft.tardis_refined.client.TardisClientData;
@@ -30,6 +38,43 @@ public class HumanNatureConsoleModel extends HierarchicalModel implements Consol
     public HumanNatureConsoleModel(ModelPart root) {
         this.root = root;
     }
+
+    public static void renderConsoleCat(GlobalConsoleBlockEntity blockEntity, PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, int packedOverlay) {
+        if (AUDModelRegistry.cat == null ||
+                !blockEntity.theme().getPath().contains("human_nature") ||
+                blockEntity.pattern().id().getPath().contains("no_cat")) {
+            return;
+        }
+
+        ResourceLocation catLocation = ((CatVariantHolder) blockEntity).getCatVariant();
+        if (catLocation == null || !BuiltInRegistries.CAT_VARIANT.containsKey(catLocation)) {
+            catLocation = CatVariant.ALL_BLACK.location();
+        }
+
+        CatVariant catVariant = BuiltInRegistries.CAT_VARIANT.get(catLocation);
+        if (catVariant == null) return;
+
+        poseStack.pushPose();
+
+        Minecraft mc = Minecraft.getInstance();
+        MultiBufferSource.BufferSource isolatedBuffer = mc.renderBuffers().bufferSource();
+
+        RenderType renderType = RenderType.entityCutoutNoCull(catVariant.texture());
+
+        AUDModelRegistry.cat.renderCat(
+                blockEntity,
+                blockEntity.getLevel(),
+                poseStack,
+                isolatedBuffer.getBuffer(renderType),
+                packedLight,
+                packedOverlay,
+                1f, 1f, 1f, 1f
+        );
+
+        poseStack.popPose();
+        isolatedBuffer.endBatch(renderType);
+    }
+
 
     @Override
     public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
@@ -85,6 +130,8 @@ public class HumanNatureConsoleModel extends HierarchicalModel implements Consol
         }
         // Final render call
         root().render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+        renderConsoleCat(globalConsoleBlock, poseStack, Minecraft.getInstance().renderBuffers().bufferSource(), 0xF000F0, packedOverlay);
+
     }
 
 
