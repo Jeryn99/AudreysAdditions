@@ -79,18 +79,29 @@ public class ChairBaseBlock extends HorizontalDirectionalBlock implements Entity
         return shape;
     }
 
-
     @Override
-    public void onRemove(BlockState blockState, Level level, BlockPos blockPos, BlockState blockState2, boolean bl) {
-        if (level.getBlockEntity(blockPos) instanceof KnossosChairBlockEntity knossosChairBlockEntity) {
-            if (knossosChairBlockEntity.getChairEntity() != null) {
-                ChairEntity chairEntity = knossosChairBlockEntity.getChairEntity();
-                chairEntity.ejectPassengers();
-                chairEntity.remove(Entity.RemovalReason.KILLED);
+    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
+        if (!state.is(newState.getBlock())) {
+            BlockEntity be = level.getBlockEntity(pos);
+            if (be instanceof ChairBlockEntity chairBE) {
+                ChairEntity chairEntity = chairBE.getChairEntity();
+                if (chairEntity != null) {
+                    if (!chairEntity.getPassengers().isEmpty()) {
+                        chairEntity.ejectPassengers();
+                    }
+                    chairEntity.remove(Entity.RemovalReason.DISCARDED);
+                    chairBE.setChairEntity(null);
+                }
             }
         }
+        super.onRemove(state, level, pos, newState, isMoving);
+    }
 
-        if (level.getBlockEntity(blockPos) instanceof ChairBlockEntity chairBlockEntity) {
+
+    @Override
+    public void playerDestroy(Level level, Player player, BlockPos blockPos, BlockState blockState, @Nullable BlockEntity blockEntity, ItemStack itemStack) {
+
+        if (level.getBlockEntity(blockPos) instanceof ChairBlockEntity chairBlockEntity && !player.isCreative()) {
             ItemStack coloredItemBlock = new ItemStack(AudBlocks.ARMCHAIR.get());
             coloredItemBlock.setCount(1);
             coloredItemBlock.getOrCreateTagElement("display").putInt("color", chairBlockEntity.getColour());
@@ -100,7 +111,7 @@ public class ChairBaseBlock extends HorizontalDirectionalBlock implements Entity
             level.addFreshEntity(itemEntity);
         }
 
-        super.onRemove(blockState, level, blockPos, blockState2, bl);
+        super.playerDestroy(level, player, blockPos, blockState, blockEntity, itemStack);
     }
 
     @Override
