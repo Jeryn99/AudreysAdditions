@@ -1,6 +1,7 @@
-package dev.jeryn.audreys_additions.forge.data;
+package dev.jeryn.audreys_additions.neoforge.data;
 
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
@@ -12,12 +13,14 @@ import net.minecraft.world.level.block.Blocks;
 import whocraft.tardis_refined.registry.TRBlockRegistry;
 import whocraft.tardis_refined.registry.TRItemRegistry;
 
+import java.util.concurrent.CompletableFuture;
+
 public class AudRecipeProvider extends RecipeProvider {
 
-    public AudRecipeProvider(PackOutput arg) {
-        super(arg);
-    }
 
+    public AudRecipeProvider(PackOutput arg, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+        super(arg, lookupProvider);
+    }
 
     @Override
     protected void buildRecipes(RecipeOutput arg) {

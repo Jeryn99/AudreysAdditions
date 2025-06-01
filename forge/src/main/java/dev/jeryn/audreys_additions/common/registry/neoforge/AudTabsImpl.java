@@ -1,4 +1,4 @@
-package dev.jeryn.audreys_additions.common.registry.forge;
+package dev.jeryn.audreys_additions.common.registry.neoforge;
 
 import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;

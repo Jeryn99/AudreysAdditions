@@ -1,9 +1,9 @@
-package dev.jeryn.audreys_additions.forge;
+package dev.jeryn.audreys_additions.neoforge;
 
 import dev.jeryn.audreys_additions.AUDModelRegistry;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
-import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

@@ -1,4 +1,4 @@
-package dev.jeryn.audreys_additions.forge.data;
+package dev.jeryn.audreys_additions.neoforge.data;
 
 import dev.jeryn.audreys_additions.AudTags;
 import dev.jeryn.audreys_additions.AudreysAdditions;
@@ -6,10 +6,9 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.*;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;

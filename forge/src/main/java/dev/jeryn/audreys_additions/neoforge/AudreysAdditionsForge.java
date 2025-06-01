@@ -1,14 +1,13 @@
-package dev.jeryn.audreys_additions.forge;
+package dev.jeryn.audreys_additions.neoforge;
 
 import dev.jeryn.audreys_additions.AudreysAdditions;
-import dev.jeryn.audreys_additions.forge.data.*;
+import dev.jeryn.audreys_additions.neoforge.data.*;
 import net.minecraft.data.DataGenerator;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.common.data.ForgeBlockTagsProvider;
-import net.minecraftforge.data.event.GatherDataEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 @Mod(AudreysAdditions.MODID)
 public class AudreysAdditionsForge {
@@ -24,7 +23,7 @@ public class AudreysAdditionsForge {
         /*Data Pack*/
         generator.addProvider(e.includeServer(), new AudConsolePatternProvider(generator));
         generator.addProvider(e.includeServer(), new AUDPatterns(generator));
-        generator.addProvider(e.includeServer(), new AudRecipeProvider(generator.getPackOutput()));
+        generator.addProvider(e.includeServer(), new AudRecipeProvider(generator.getPackOutput(), e.getLookupProvider()));
 
         generator.addProvider(e.includeClient(), new AUDEnglish(generator));
 

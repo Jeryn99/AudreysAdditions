@@ -1,4 +1,4 @@
-package dev.jeryn.audreys_additions.forge.data;
+package dev.jeryn.audreys_additions.neoforge.data;
 
 import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.common.registry.AudConsoleRegistry;

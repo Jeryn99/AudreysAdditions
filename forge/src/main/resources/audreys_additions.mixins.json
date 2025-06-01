@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "dev.jeryn.audreys_additions.forge.mixin",
+  "package": "dev.jeryn.audreys_additions.neoforge.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "BlockEntityRendererMixin"

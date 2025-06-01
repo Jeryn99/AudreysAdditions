@@ -1,4 +1,4 @@
-package dev.jeryn.audreys_additions.forge;
+package dev.jeryn.audreys_additions.neoforge;
 
 import dev.jeryn.audreys_additions.AUDModelRegistry;
 import dev.jeryn.audreys_additions.AudreysAdditions;
@@ -8,24 +8,18 @@ import dev.jeryn.audreys_additions.common.item.DyedItemBlock;
 import dev.jeryn.audreys_additions.common.registry.AudBlockEntities;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import dev.jeryn.audreys_additions.common.registry.AudEntities;
-import net.minecraft.client.color.item.ItemColor;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.NoopRenderer;
-import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.item.DyeableLeatherItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.EntityRenderersEvent;
-import net.minecraftforge.client.event.RegisterColorHandlersEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.ForgeRegistries;
-
-import java.util.Map;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 
 @Mod.EventBusSubscriber(modid = AudreysAdditions.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientModBus {
@@ -56,11 +50,11 @@ public class ClientModBus {
     }
 
     @SubscribeEvent
-    public static void registerColorHandlersEventItem(RegisterColorHandlersEvent.Item event) {
-
-        for (Map.Entry<ResourceKey<Item>, Item> entry : ForgeRegistries.ITEMS.getEntries()) {
-            if(entry.getValue() instanceof DyedItemBlock dyedItemBlock){
-                event.register((arg, i) -> dyedItemBlock.getColor(arg), dyedItemBlock);
+    public static void registerItemColors(RegisterColorHandlersEvent.Item event) {
+        for (var entry : BuiltInRegistries.ITEM.entrySet()) {
+            Item item = entry.getValue();
+            if (item instanceof DyedItemBlock dyedItemBlock) {
+                event.register((stack, tintIndex) -> dyedItemBlock.getColor(stack), item);
             }
         }
     }

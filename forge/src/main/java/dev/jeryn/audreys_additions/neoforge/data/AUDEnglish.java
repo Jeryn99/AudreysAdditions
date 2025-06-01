@@ -1,4 +1,4 @@
-package dev.jeryn.audreys_additions.forge.data;
+package dev.jeryn.audreys_additions.neoforge.data;
 
 import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
@@ -6,7 +6,7 @@ import dev.jeryn.audreys_additions.common.registry.AudItems;
 import dev.jeryn.audreys_additions.common.registry.AudShellRegistry;
 import net.minecraft.ChatFormatting;
 import net.minecraft.data.DataGenerator;
-import net.minecraftforge.common.data.LanguageProvider;
+import net.neoforged.neoforge.common.data.LanguageProvider;
 import whocraft.tardis_refined.common.tardis.themes.ShellTheme;
 
 public class AUDEnglish extends LanguageProvider {

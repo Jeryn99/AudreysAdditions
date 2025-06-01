@@ -8,7 +8,7 @@ architectury {
     minecraft = rootProject.minecraft_version
 }
 
-def forgeDir = new File(project.projectDir, 'forge/build/libs/')
+def forgeDir = new File(project.projectDir, 'neoforge/build/libs/')
 def fabricDir = new File(project.projectDir, 'fabric/build/libs/')
 def commonDir = new File(project.projectDir, 'common/build/libs/')
 
@@ -56,7 +56,7 @@ subprojects {
 }
 
 task publishMeEverywhere(){
-    dependsOn ':forge:publishUnified'
+    dependsOn ':neoforge:publishUnified'
     dependsOn ':fabric:publishUnified'
     dependsOn ':githubRelease'
 }
@@ -93,6 +93,9 @@ allprojects {
         maven {
             url 'https://jitpack.io'
         }
+
+        maven { url "https://maven.neoforged.net/releases/" }
+
 
         maven {
             name = 'Ladysnake Mods'

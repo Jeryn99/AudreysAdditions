@@ -1,23 +1,22 @@
-package dev.jeryn.audreys_additions.forge.data;
+package dev.jeryn.audreys_additions.neoforge.data;
 
 import com.google.gson.JsonObject;
 import dev.jeryn.audreys_additions.AudreysAdditions;
-import dev.jeryn.audreys_additions.common.blocks.FoodMachineBlock;
 import dev.jeryn.audreys_additions.common.blocks.MonitorBlock;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.models.BlockModelGenerators;
-import net.minecraft.data.models.model.ModelTemplates;
-import net.minecraft.data.models.model.TextureMapping;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
-import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.client.model.generators.ConfiguredModel;
-import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Map;
 
 public class AudBlocksModelProvider extends BlockStateProvider {
 
@@ -27,8 +26,9 @@ public class AudBlocksModelProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        for (Block value : ForgeRegistries.BLOCKS.getValues()) {
-            @Nullable ResourceLocation location = ForgeRegistries.BLOCKS.getKey(value);
+        for (Map.Entry<ResourceKey<Block>, Block> block : BuiltInRegistries.BLOCK.entrySet()) {
+            Block value = block.getValue();
+            @Nullable ResourceLocation location = BuiltInRegistries.BLOCK.getKey(value);
             if (location.getNamespace().matches(AudreysAdditions.MODID)) {
 
                 if(value == AudBlocks.LIGHTCOLUMN_RIGHT.get()){
@@ -89,7 +89,7 @@ public class AudBlocksModelProvider extends BlockStateProvider {
 
     private void simpleBlockParticleOnly(Block block, ResourceLocation particleTexture) {
 
-        @Nullable ResourceLocation key = ForgeRegistries.BLOCKS.getKey(block);
+        @Nullable ResourceLocation key = BuiltInRegistries.BLOCK.getKey(block);
 
         models().getBuilder(key.toString())
                 .texture("particle", particleTexture);

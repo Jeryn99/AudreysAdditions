@@ -67,7 +67,7 @@ configurations.configureEach {
 }
 
 sourceSets.main.resources {
-    srcDir project(":forge").file("src/generated/resources").absolutePath
+    srcDir project(":neoforge").file("src/generated/resources").absolutePath
 }
 
 dependencies {

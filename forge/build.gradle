@@ -4,25 +4,18 @@ plugins {
 }
 architectury {
     platformSetupLoomIde()
-    forge()
+    neoForge()
 }
 
 
 
 loom {
 
-    forge {
-        convertAccessWideners = true
-        mixinConfig "audreys_additions-common.mixins.json"
-        mixinConfig "audreys_additions.mixins.json"
-    }
-
-
     runs {
         data {
             data()
             programArgs "--all", "--mod", "audreys_additions"
-            programArgs "--output", project(":forge").file("src/generated/resources").absolutePath
+            programArgs "--output", project(":neoforge").file("src/generated/resources").absolutePath
             programArgs "--existing", project(":common").file("src/main/resources/").absolutePath
         }
     }
@@ -35,7 +28,7 @@ configurations {
     shadowCommon // Don't use shadow from the shadow plugin because we don't want IDEA to index this.
     compileClasspath.extendsFrom common
     runtimeClasspath.extendsFrom common
-    developmentForge.extendsFrom common
+    developmentNeoForge.extendsFrom common
 }
 
 unifiedPublishing {
@@ -75,12 +68,12 @@ unifiedPublishing {
 
 
 dependencies {
-    forge "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+    neoForge "net.neoforged:neoforge:${neoforge_version}"
 
     modImplementation "dev.jeryn:neoforgetr:2.1.6"
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
-    shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
+    shadowCommon(project(path: ":common", configuration: "transformProductionNeoForge")) { transitive false }
 }
 
 processResources {
