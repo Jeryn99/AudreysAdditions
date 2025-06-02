@@ -11,7 +11,7 @@ architectury {
 
 unifiedPublishing {
     project {
-        displayName = "[Fabric] - Audreys Additions - mc$rootProject.minecraft_version - v$project.version"
+        displayName = "[Fabric] - Audreys Additions - v$project.version"
         releaseType = "release"
         changelog = new File("${rootProject.projectDir}/changelog.md").text
         gameVersions = ["1.20.1"]

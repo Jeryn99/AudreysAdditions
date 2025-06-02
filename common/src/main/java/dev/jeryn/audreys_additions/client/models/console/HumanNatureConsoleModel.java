@@ -40,7 +40,8 @@ public class HumanNatureConsoleModel extends HierarchicalModel implements Consol
     }
 
     public static void renderConsoleCat(GlobalConsoleBlockEntity blockEntity, PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, int packedOverlay) {
-        if (AUDModelRegistry.cat == null ||
+        if (blockEntity == null ||
+                AUDModelRegistry.cat == null ||
                 !blockEntity.theme().getPath().contains("human_nature") ||
                 blockEntity.pattern().id().getPath().contains("no_cat")) {
             return;
@@ -74,6 +75,7 @@ public class HumanNatureConsoleModel extends HierarchicalModel implements Consol
         poseStack.popPose();
         isolatedBuffer.endBatch(renderType);
     }
+
 
 
     @Override
