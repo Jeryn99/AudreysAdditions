@@ -41,6 +41,8 @@ public class AUDPatterns extends ShellPatternProvider {
 
         quickAdd(AudShellRegistry.POLICEBOX_1976.getId(), "default", true);
 
+        quickAdd(AudShellRegistry.TELEPHONE_BOOTH.getId(), "default", true);
+
         quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "default", false);
         quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "acacia", false);
         quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "bamboo", false);

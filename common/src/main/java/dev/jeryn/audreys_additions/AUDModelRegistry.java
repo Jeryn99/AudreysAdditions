@@ -17,9 +17,9 @@ public class AUDModelRegistry {
 
 
     // Models
-    public static PoliceBoxModel policeBox03, policeBox66, policeBoxRuth, policeBox73, policeBox18, policeBox18_special, policeBox10, policeBox11, policeBox17, policeBoxMemorial, policeBox76, policeBox96, policeBox63, policeBox63Massacre, trakenClock;
+    public static PoliceBoxModel policeBox03, policeBox66, policeBoxRuth, policeBox73, policeBox18, policeBox18_special, policeBox10, policeBox11, policeBox17, policeBoxMemorial, policeBox76, policeBox96, policeBox63, policeBox63Massacre, trakenClock, telephoneBooth;
     public static DualInteriorDoorModel policeBox03Door, policeBox66Door, policeBox63Door, policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox11Door, policeBox17Door, policeBox76Door, policeBox96Door;
-    public static SingleInteriorDoorModel trakenClockDoor;
+    public static SingleInteriorDoorModel trakenClockDoor, telephoneBoothDoor;
     public static DualTexInteriorDoorModel sidratDoor;
     public static SidratModel sidrat;
 
@@ -62,14 +62,19 @@ public class AUDModelRegistry {
     public static ModelLayerLocation TRAKENCLOCK = shell("trakenclock");
     public static ModelLayerLocation TRAKENCLOCK_DOOR = interiorDoor("trakenclock_door");
 
+    public static ModelLayerLocation TELEPHONE_BOOTH = shell("telephone_booth");
+    public static ModelLayerLocation TELEPHONE_BOOTH_DOOR = interiorDoor("telephone_booth_door");
+
     public static ModelLayerLocation PERTWEE_CONSOLE = console("pertwee");
     public static ModelLayerLocation NEWBERY_CONSOLE = console("newbery");
     public static ModelLayerLocation MASTER_CONSOLE = console("master");
     public static ModelLayerLocation BRACHACKI_CONSOLE = console("brachacki");
     public static ModelLayerLocation TOYOTA_CONSOLE = console("toyota");
     public static ModelLayerLocation KELT_CONSOLE = console("kelt");
+    public static ModelLayerLocation WARRIOR_CONSOLE = console("kelt_warrior");
     public static ModelLayerLocation MCGANN_CONSOLE = console("mcgann");
     public static ModelLayerLocation HUMAN_NATURE_CONSOLE = console("human_nature");
+    public static ModelLayerLocation SILENCE_CONSOLE = console("silence");
 
     public static ModelLayerLocation KNOSSOS_THRONE = furniture("knossos_throne");
     public static ModelLayerLocation FOOD_MACHINE = furniture("food_machine");
@@ -199,6 +204,11 @@ public class AUDModelRegistry {
         // Traken Clock
         trakenClock = new TrakenClockModel(entityModels.bakeLayer(TRAKENCLOCK));
         trakenClockDoor = new TrakenClockInteriorDoorModel(entityModels.bakeLayer(TRAKENCLOCK_DOOR), (float)Math.toRadians(110));
+
+        // Telephone Booth
+        telephoneBooth = new PoliceBoxModel(entityModels.bakeLayer(TELEPHONE_BOOTH), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
+        });
+        telephoneBoothDoor = new SingleInteriorDoorModel(entityModels.bakeLayer(TELEPHONE_BOOTH_DOOR), (float)Math.toRadians(-120));
 
         // Model Registration
         AUDShellEntryRegistry.init();
