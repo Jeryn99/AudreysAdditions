@@ -18,6 +18,7 @@ public class AUDShellEntryRegistry {
         ShellModelCollection.registerShellEntry(AudShellRegistry.POLICEBOX_1966.get(), new PoliceBox1966Entry(AUDModelRegistry.policeBox66, AUDModelRegistry.policeBox66Door));
         ShellModelCollection.registerShellEntry(AudShellRegistry.SIDRAT.get(), AUDModelRegistry.sidrat, AUDModelRegistry.sidratDoor);
         ShellModelCollection.registerShellEntry(AudShellRegistry.TRAKENCLOCK.get(), AUDModelRegistry.trakenClock, AUDModelRegistry.trakenClockDoor);
+        ShellModelCollection.registerShellEntry(AudShellRegistry.GRANDFATHER_CLOCK.get(), AUDModelRegistry.grandfatherClock, AUDModelRegistry.grandfatherClockDoor);
         ShellModelCollection.registerShellEntry(AudShellRegistry.TELEPHONE_BOOTH.get(), AUDModelRegistry.telephoneBooth, AUDModelRegistry.telephoneBoothDoor);
     }
 }

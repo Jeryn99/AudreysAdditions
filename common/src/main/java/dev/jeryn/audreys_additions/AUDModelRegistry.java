@@ -22,6 +22,8 @@ public class AUDModelRegistry {
     public static SingleInteriorDoorModel trakenClockDoor, telephoneBoothDoor;
     public static DualTexInteriorDoorModel sidratDoor;
     public static SidratModel sidrat;
+    public static TrakenClockModel grandfatherClock;
+    public static TrakenClockInteriorDoorModel grandfatherClockDoor;
 
     // Model Layers
     public static ModelLayerLocation POLICEBOX_2018 = shell("policebox_2018");
@@ -70,6 +72,9 @@ public class AUDModelRegistry {
 
     public static ModelLayerLocation TRAKENCLOCK = shell("trakenclock");
     public static ModelLayerLocation TRAKENCLOCK_DOOR = interiorDoor("trakenclock_door");
+
+    public static ModelLayerLocation GRANDFATHER_CLOCK = shell("grandfather_clock");
+    public static ModelLayerLocation GRANDFATHER_CLOCK_DOOR = interiorDoor("grandfather_clock_door");
 
     public static ModelLayerLocation TELEPHONE_BOOTH = shell("telephone_booth");
     public static ModelLayerLocation TELEPHONE_BOOTH_DOOR = interiorDoor("telephone_booth_door");
@@ -232,6 +237,10 @@ public class AUDModelRegistry {
         // Traken Clock
         trakenClock = new TrakenClockModel(entityModels.bakeLayer(TRAKENCLOCK));
         trakenClockDoor = new TrakenClockInteriorDoorModel(entityModels.bakeLayer(TRAKENCLOCK_DOOR), (float)Math.toRadians(110));
+
+        // Grandfather Clock
+        grandfatherClock = new TrakenClockModel(entityModels.bakeLayer(GRANDFATHER_CLOCK));
+        grandfatherClockDoor = new TrakenClockInteriorDoorModel(entityModels.bakeLayer(GRANDFATHER_CLOCK_DOOR), (float)Math.toRadians(120));
 
         // Telephone Booth
         telephoneBooth = new PoliceBoxModel(entityModels.bakeLayer(TELEPHONE_BOOTH), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {

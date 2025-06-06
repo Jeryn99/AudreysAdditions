@@ -49,6 +49,8 @@ public class AUDPatterns extends ShellPatternProvider {
 
         quickAdd(AudShellRegistry.TELEPHONE_BOOTH.getId(), "default", true);
 
+        quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock", false);
+
         quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "default", false);
         quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "acacia", false);
         quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "bamboo", false);
