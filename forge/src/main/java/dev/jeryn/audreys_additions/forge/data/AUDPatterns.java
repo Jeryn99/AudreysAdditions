@@ -72,6 +72,9 @@ public class AUDPatterns extends ShellPatternProvider {
         quickAdd(AudShellRegistry.SIDRAT.getId(), "sidrat", false, sidratSounds);
         quickAdd(AudShellRegistry.SIDRAT.getId(), "gallifrey", false, sidratSounds);
 
+        quickAdd(AudShellRegistry.COLUMN.getId(), "sandstone", false);
+        quickAdd(AudShellRegistry.COLUMN.getId(), "red_sandstone", false);
+
         quickAdd(AudShellRegistry.POLICEBOX_2018.getId(), "barbie", true);
         quickAdd(AudShellRegistry.POLICEBOX_2018.getId(), "proms", true);
 

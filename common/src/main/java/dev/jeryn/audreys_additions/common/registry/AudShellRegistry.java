@@ -18,6 +18,7 @@ public class AudShellRegistry {
     public static final RegistrySupplier<ShellTheme> POLICEBOX_1963 = registerShellTheme("policebox_1963");
     public static final RegistrySupplier<ShellTheme> POLICEBOX_1966 = registerShellTheme("policebox_1966");
     public static final RegistrySupplier<ShellTheme> SIDRAT = registerShellTheme("sidrat");
+    public static final RegistrySupplier<ShellTheme> COLUMN = registerShellTheme("column");
     public static final RegistrySupplier<ShellTheme> TRAKENCLOCK = registerShellTheme("trakenclock");
     public static final RegistrySupplier<ShellTheme> TELEPHONE_BOOTH = registerShellTheme("telephone_booth");
     public static final RegistrySupplier<ShellTheme> GRANDFATHER_CLOCK = registerShellTheme("grandfather_clock");

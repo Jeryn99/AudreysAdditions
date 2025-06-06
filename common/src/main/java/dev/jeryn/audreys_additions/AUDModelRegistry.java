@@ -20,8 +20,8 @@ public class AUDModelRegistry {
     public static PoliceBoxModel policeBox03, policeBox66, policeBoxRuth, policeBox73, policeBox18, policeBox18_special, policeBox10, policeBox11, policeBox17, policeBoxMemorial, policeBox76, policeBox96, policeBox63, policeBox63Massacre, trakenClock, telephoneBooth, policeBox80, policeBox83, policeBox87, policeBoxHappinessPatrol;
     public static DualInteriorDoorModel policeBox03Door, policeBox66Door, policeBox63Door, policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox11Door, policeBox17Door, policeBox76Door, policeBox96Door, policeBox80Door, policeBox83Door, policeBox87Door, policeBoxHappinessPatrolDoor;
     public static SingleInteriorDoorModel trakenClockDoor, telephoneBoothDoor;
-    public static DualTexInteriorDoorModel sidratDoor;
-    public static SidratModel sidrat;
+    public static DualTexInteriorDoorModel sidratDoor, columnDoor;
+    public static SidratModel sidrat, column;
     public static TrakenClockModel grandfatherClock;
     public static TrakenClockInteriorDoorModel grandfatherClockDoor;
 
@@ -69,6 +69,9 @@ public class AUDModelRegistry {
 
     public static ModelLayerLocation SIDRAT = shell("sidrat");
     public static ModelLayerLocation SIDRAT_DOOR = interiorDoor("sidrat_door");
+
+    public static ModelLayerLocation COLUMN = shell("column");
+    public static ModelLayerLocation COLUMN_DOOR = interiorDoor("column_door");
 
     public static ModelLayerLocation TRAKENCLOCK = shell("trakenclock");
     public static ModelLayerLocation TRAKENCLOCK_DOOR = interiorDoor("trakenclock_door");
@@ -233,6 +236,10 @@ public class AUDModelRegistry {
         // Sidrat
         sidrat = new SidratModel(entityModels.bakeLayer(SIDRAT));
         sidratDoor = new DualTexInteriorDoorModel(entityModels.bakeLayer(SIDRAT_DOOR));
+
+        // Column
+        column = new SidratModel(entityModels.bakeLayer(COLUMN));
+        columnDoor = new DualTexInteriorDoorModel(entityModels.bakeLayer(COLUMN_DOOR));
 
         // Traken Clock
         trakenClock = new TrakenClockModel(entityModels.bakeLayer(TRAKENCLOCK));

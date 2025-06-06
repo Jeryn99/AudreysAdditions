@@ -25,6 +25,7 @@ public class AUDEnglish extends LanguageProvider {
         addShell(AudShellRegistry.POLICEBOX_1963.get(), ChatFormatting.BLUE + "Police Box " + ChatFormatting.YELLOW + "(1963)");
         addShell(AudShellRegistry.POLICEBOX_1966.get(), ChatFormatting.BLUE + "Police Box " + ChatFormatting.YELLOW + "(1966)");
         addShell(AudShellRegistry.SIDRAT.get(), ChatFormatting.BLUE + "SIDRAT");
+        addShell(AudShellRegistry.COLUMN.get(), ChatFormatting.BLUE + "Sandstone Column");
         addShell(AudShellRegistry.TRAKENCLOCK.get(), ChatFormatting.BLUE + "Traken Clock");
         addShell(AudShellRegistry.GRANDFATHER_CLOCK.get(), ChatFormatting.BLUE + "Grandfather Clock");
         addShell(AudShellRegistry.TELEPHONE_BOOTH.get(), ChatFormatting.BLUE + "Telephone Booth");
