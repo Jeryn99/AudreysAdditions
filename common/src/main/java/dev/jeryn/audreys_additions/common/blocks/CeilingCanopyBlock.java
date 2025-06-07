@@ -1,6 +1,7 @@
 package dev.jeryn.audreys_additions.common.blocks;
 
 import dev.jeryn.audreys_additions.common.blockentity.CeilingCanopyBlockEntity;
+import dev.jeryn.audreys_additions.common.blocks.enums.CeilingCanopyVariants;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -18,6 +19,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.block.state.properties.RedstoneSide;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -28,12 +31,12 @@ import java.util.function.ToIntFunction;
 
 public class CeilingCanopyBlock extends HorizontalDirectionalBlock implements EntityBlock {
 
-    public static final BooleanProperty HANGING = BlockStateProperties.HANGING;
+    public static final EnumProperty<CeilingCanopyVariants> VARIANT = EnumProperty.create("variant", CeilingCanopyVariants.class);;
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.@NotNull Builder<Block, BlockState> builder) {
         builder.add(HorizontalDirectionalBlock.FACING);
-        builder.add(HANGING);
+        builder.add(VARIANT);
     }
 
     public CeilingCanopyBlock(Properties properties) {
@@ -56,7 +59,7 @@ public class CeilingCanopyBlock extends HorizontalDirectionalBlock implements En
             if (player.getCooldowns().isOnCooldown(TRItemRegistry.PATTERN_MANIPULATOR.get()))
                 return InteractionResult.CONSUME;
 
-            level.setBlock(pos, state.cycle(HANGING), Block.UPDATE_ALL);
+            level.setBlock(pos, state.cycle(VARIANT), Block.UPDATE_ALL);
 
             level.playSound(player, pos, TRSoundRegistry.PATTERN_MANIPULATOR.get(), SoundSource.BLOCKS, 1.0F, 1.0F);
             player.getCooldowns().addCooldown(TRItemRegistry.PATTERN_MANIPULATOR.get(), 20);
@@ -68,7 +71,7 @@ public class CeilingCanopyBlock extends HorizontalDirectionalBlock implements En
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext arg) {
-        return this.defaultBlockState().setValue(HANGING, false).setValue(FACING, arg.getHorizontalDirection());
+        return this.defaultBlockState().setValue(VARIANT, CeilingCanopyVariants.NORMAL).setValue(FACING, arg.getHorizontalDirection());
     }
 
 
