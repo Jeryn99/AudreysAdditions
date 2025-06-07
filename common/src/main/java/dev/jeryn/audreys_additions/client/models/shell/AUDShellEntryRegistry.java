@@ -21,5 +21,6 @@ public class AUDShellEntryRegistry {
         ShellModelCollection.registerShellEntry(AudShellRegistry.TRAKENCLOCK.get(), AUDModelRegistry.trakenClock, AUDModelRegistry.trakenClockDoor);
         ShellModelCollection.registerShellEntry(AudShellRegistry.GRANDFATHER_CLOCK.get(), AUDModelRegistry.grandfatherClock, AUDModelRegistry.grandfatherClockDoor);
         ShellModelCollection.registerShellEntry(AudShellRegistry.TELEPHONE_BOOTH.get(), AUDModelRegistry.telephoneBooth, AUDModelRegistry.telephoneBoothDoor);
+        ShellModelCollection.registerShellEntry(AudShellRegistry.IRON_MAIDEN.get(), AUDModelRegistry.ironMaiden, AUDModelRegistry.ironMaidenDoor);
     }
 }

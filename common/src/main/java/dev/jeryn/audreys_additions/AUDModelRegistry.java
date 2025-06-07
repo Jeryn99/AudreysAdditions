@@ -20,8 +20,8 @@ public class AUDModelRegistry {
     public static PoliceBoxModel policeBox03, policeBox66, policeBoxRuth, policeBox73, policeBox18, policeBox18_special, policeBox10, policeBox11, policeBox17, policeBoxMemorial, policeBox76, policeBox96, policeBox63, policeBox63Massacre, trakenClock, telephoneBooth, policeBox80, policeBox83, policeBox87, policeBoxHappinessPatrol;
     public static DualInteriorDoorModel policeBox03Door, policeBox66Door, policeBox63Door, policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox11Door, policeBox17Door, policeBox76Door, policeBox96Door, policeBox80Door, policeBox83Door, policeBox87Door, policeBoxHappinessPatrolDoor;
     public static SingleInteriorDoorModel trakenClockDoor, telephoneBoothDoor;
-    public static DualTexInteriorDoorModel sidratDoor, columnDoor;
-    public static SidratModel sidrat, column;
+    public static DualTexInteriorDoorModel sidratDoor, columnDoor, ironMaidenDoor;
+    public static SidratModel sidrat, column, ironMaiden;
     public static TrakenClockModel grandfatherClock;
     public static TrakenClockInteriorDoorModel grandfatherClockDoor;
 
@@ -81,6 +81,9 @@ public class AUDModelRegistry {
 
     public static ModelLayerLocation TELEPHONE_BOOTH = shell("telephone_booth");
     public static ModelLayerLocation TELEPHONE_BOOTH_DOOR = interiorDoor("telephone_booth_door");
+
+    public static ModelLayerLocation IRON_MAIDEN = shell("iron_maiden");
+    public static ModelLayerLocation IRON_MAIDEN_DOOR = interiorDoor("iron_maiden_door");
 
     public static ModelLayerLocation PERTWEE_CONSOLE = console("pertwee");
     public static ModelLayerLocation NEWBERY_CONSOLE = console("newbery");
@@ -253,6 +256,10 @@ public class AUDModelRegistry {
         telephoneBooth = new PoliceBoxModel(entityModels.bakeLayer(TELEPHONE_BOOTH), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
         });
         telephoneBoothDoor = new SingleInteriorDoorModel(entityModels.bakeLayer(TELEPHONE_BOOTH_DOOR), (float)Math.toRadians(-120));
+
+        // Iron Maiden
+        ironMaiden = new SidratModel(entityModels.bakeLayer(IRON_MAIDEN));
+        ironMaidenDoor = new DualTexInteriorDoorModel(entityModels.bakeLayer(IRON_MAIDEN_DOOR));
 
         // Model Registration
         AUDShellEntryRegistry.init();

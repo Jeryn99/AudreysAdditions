@@ -64,6 +64,8 @@ public class AUDPatterns extends ShellPatternProvider {
         quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "pale", false);
         quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "warped", false);
 
+        quickAdd(AudShellRegistry.IRON_MAIDEN.getId(), "iron_maiden", false);
+
         quickAdd(AudShellRegistry.POLICEBOX_1996.getId(), "default", true);
         quickAdd(AudShellRegistry.POLICEBOX_1996.getId(), "shalka", true);
         quickAdd(AudShellRegistry.POLICEBOX_1963.getId(), "default", true);
