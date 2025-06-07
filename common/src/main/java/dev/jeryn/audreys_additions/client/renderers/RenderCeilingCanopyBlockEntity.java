@@ -8,6 +8,7 @@ import dev.jeryn.audreys_additions.client.models.furniture.FoodMachineModel;
 import dev.jeryn.audreys_additions.common.blockentity.CeilingCanopyBlockEntity;
 import dev.jeryn.audreys_additions.common.blockentity.FoodMachineBlockEntity;
 import dev.jeryn.audreys_additions.common.blocks.CeilingCanopyBlock;
+import dev.jeryn.audreys_additions.common.blocks.enums.CeilingCanopyVariants;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
@@ -20,9 +21,7 @@ import whocraft.tardis_refined.client.model.GenericModel;
 
 public class RenderCeilingCanopyBlockEntity implements BlockEntityRenderer<CeilingCanopyBlockEntity>, BlockEntityRendererProvider<CeilingCanopyBlockEntity> {
 
-    private static final ResourceLocation CEILING_CANOPY = new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/ceiling_canopy.png");
-    private static final ResourceLocation CEILING_CANOPY_HANGING = new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/ceiling_canopy_hanging.png");
-    private static final ResourceLocation CEILING_CANOPY_EMISSIVE = new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/ceiling_canopy_emissive.png");
+    private static final ResourceLocation CEILING_CANOPY_EMISSIVE = new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/ceiling_canopy/ceiling_canopy_emissive.png");
 
     private final GenericModel ceilingCanopy, ceilingCanopyHanging;
 
@@ -40,12 +39,16 @@ public class RenderCeilingCanopyBlockEntity implements BlockEntityRenderer<Ceili
         poseStack.mulPose(Axis.ZP.rotationDegrees(180));
         poseStack.mulPose(Axis.YP.rotationDegrees(blockstate.getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot()));
 
-        if(blockEntity.getBlockState().getValue(CeilingCanopyBlock.HANGING)) {
+        CeilingCanopyVariants currentVariant = blockEntity.getBlockState().getValue(CeilingCanopyBlock.VARIANT);
+
+        ResourceLocation currentTexture = new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/ceiling_canopy/ceiling_canopy_" + currentVariant.getSerializedName() + ".png");
+
+        if(currentVariant.getSerializedName().contains("hanging")) {
             poseStack.translate(0,1, 0);
-            ceilingCanopyHanging.renderToBuffer(poseStack, bufferSource.getBuffer(RenderType.entityTranslucent(CEILING_CANOPY_HANGING)), packedLight, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
+            ceilingCanopyHanging.renderToBuffer(poseStack, bufferSource.getBuffer(RenderType.entityTranslucent(currentTexture)), packedLight, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
             ceilingCanopyHanging.renderToBuffer(poseStack, bufferSource.getBuffer(RenderType.entityTranslucentEmissive(CEILING_CANOPY_EMISSIVE)), packedLight, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
         } else {
-            ceilingCanopy.renderToBuffer(poseStack, bufferSource.getBuffer(RenderType.entityTranslucent(CEILING_CANOPY)), packedLight, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
+            ceilingCanopy.renderToBuffer(poseStack, bufferSource.getBuffer(RenderType.entityTranslucent(currentTexture)), packedLight, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
             ceilingCanopy.renderToBuffer(poseStack, bufferSource.getBuffer(RenderType.entityTranslucentEmissive(CEILING_CANOPY_EMISSIVE)), packedLight, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
         }
 
