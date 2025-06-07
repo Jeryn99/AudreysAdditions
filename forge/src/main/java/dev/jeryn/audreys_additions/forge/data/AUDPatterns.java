@@ -66,6 +66,8 @@ public class AUDPatterns extends ShellPatternProvider {
 
         quickAdd(AudShellRegistry.IRON_MAIDEN.getId(), "iron_maiden", false);
 
+        quickAdd(AudShellRegistry.TT_CAPSULE.getId(), "tt_capsule", false);
+
         quickAdd(AudShellRegistry.POLICEBOX_1996.getId(), "default", true);
         quickAdd(AudShellRegistry.POLICEBOX_1996.getId(), "shalka", true);
         quickAdd(AudShellRegistry.POLICEBOX_1963.getId(), "default", true);

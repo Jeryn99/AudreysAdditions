@@ -20,8 +20,8 @@ public class AUDModelRegistry {
     public static PoliceBoxModel policeBox03, policeBox66, policeBoxRuth, policeBox73, policeBox18, policeBox18_special, policeBox10, policeBox11, policeBox17, policeBoxMemorial, policeBox76, policeBox96, policeBox63, policeBox63Massacre, trakenClock, telephoneBooth, policeBox80, policeBox83, policeBox87, policeBoxHappinessPatrol;
     public static DualInteriorDoorModel policeBox03Door, policeBox66Door, policeBox63Door, policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox11Door, policeBox17Door, policeBox76Door, policeBox96Door, policeBox80Door, policeBox83Door, policeBox87Door, policeBoxHappinessPatrolDoor;
     public static SingleInteriorDoorModel trakenClockDoor, telephoneBoothDoor;
-    public static DualTexInteriorDoorModel sidratDoor, columnDoor, ironMaidenDoor;
-    public static SidratModel sidrat, column, ironMaiden;
+    public static DualTexInteriorDoorModel sidratDoor, columnDoor, ironMaidenDoor, ttCapsuleDoor;
+    public static SidratModel sidrat, column, ironMaiden, ttCapsule;
     public static TrakenClockModel grandfatherClock;
     public static TrakenClockInteriorDoorModel grandfatherClockDoor;
 
@@ -84,6 +84,9 @@ public class AUDModelRegistry {
 
     public static ModelLayerLocation IRON_MAIDEN = shell("iron_maiden");
     public static ModelLayerLocation IRON_MAIDEN_DOOR = interiorDoor("iron_maiden_door");
+
+    public static ModelLayerLocation TT_CAPSULE = shell("tt_capsule");
+    public static ModelLayerLocation TT_CAPSULE_DOOR = interiorDoor("tt_capsule_door");
 
     public static ModelLayerLocation PERTWEE_CONSOLE = console("pertwee");
     public static ModelLayerLocation NEWBERY_CONSOLE = console("newbery");
@@ -243,6 +246,10 @@ public class AUDModelRegistry {
         // Column
         column = new SidratModel(entityModels.bakeLayer(COLUMN));
         columnDoor = new DualTexInteriorDoorModel(entityModels.bakeLayer(COLUMN_DOOR));
+
+        // TT Capsule
+        ttCapsule = new SidratModel(entityModels.bakeLayer(TT_CAPSULE));
+        ttCapsuleDoor = new DualTexInteriorDoorModel(entityModels.bakeLayer(TT_CAPSULE_DOOR));
 
         // Traken Clock
         trakenClock = new TrakenClockModel(entityModels.bakeLayer(TRAKENCLOCK));
