@@ -17,11 +17,13 @@ public class AUDModelRegistry {
 
 
     // Models
-    public static PoliceBoxModel policeBox03, policeBox66, policeBoxRuth, policeBox73, policeBox18, policeBox18_special, policeBox10, policeBox11, policeBox17, policeBoxMemorial, policeBox76, policeBox96, policeBox63, policeBox63Massacre, trakenClock;
-    public static DualInteriorDoorModel policeBox03Door, policeBox66Door, policeBox63Door, policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox11Door, policeBox17Door, policeBox76Door, policeBox96Door;
-    public static SingleInteriorDoorModel trakenClockDoor;
-    public static DualTexInteriorDoorModel sidratDoor;
-    public static SidratModel sidrat;
+    public static PoliceBoxModel policeBox03, policeBox66, policeBoxRuth, policeBox73, policeBox18, policeBox18_special, policeBox10, policeBox11, policeBox17, policeBoxMemorial, policeBox76, policeBox96, policeBox63, policeBox63Massacre, trakenClock, telephoneBooth, policeBox80, policeBox83, policeBox87, policeBoxHappinessPatrol;
+    public static DualInteriorDoorModel policeBox03Door, policeBox66Door, policeBox63Door, policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox11Door, policeBox17Door, policeBox76Door, policeBox96Door, policeBox80Door, policeBox83Door, policeBox87Door, policeBoxHappinessPatrolDoor;
+    public static SingleInteriorDoorModel trakenClockDoor, telephoneBoothDoor;
+    public static DualTexInteriorDoorModel sidratDoor, columnDoor, ironMaidenDoor, ttCapsuleDoor, type40Door;
+    public static SidratModel sidrat, column, ironMaiden, ttCapsule, type40;
+    public static TrakenClockModel grandfatherClock;
+    public static TrakenClockInteriorDoorModel grandfatherClockDoor;
 
     // Model Layers
     public static ModelLayerLocation POLICEBOX_2018 = shell("policebox_2018");
@@ -36,6 +38,15 @@ public class AUDModelRegistry {
     public static ModelLayerLocation POLICEBOX_2017 = shell("policebox_2017");
     public static ModelLayerLocation POLICEBOX_2017_DOOR = interiorDoor("policebox_2017_door");
     public static ModelLayerLocation POLICEBOX_MEMORIAL = shell("policebox_memorial");
+
+    public static ModelLayerLocation POLICEBOX_1980 = shell("policebox_1980");
+    public static ModelLayerLocation POLICEBOX_1980_DOOR = interiorDoor("policebox_1980_door");
+    public static ModelLayerLocation POLICEBOX_1983 = shell("policebox_1983");
+    public static ModelLayerLocation POLICEBOX_1983_DOOR = interiorDoor("policebox_1983_door");
+    public static ModelLayerLocation POLICEBOX_1987 = shell("policebox_1987");
+    public static ModelLayerLocation POLICEBOX_1987_DOOR = interiorDoor("policebox_1987_door");
+    public static ModelLayerLocation POLICEBOX_HAPPINESS_PATROL = shell("policebox_happiness_patrol");
+    public static ModelLayerLocation POLICEBOX_HAPPINESS_PATROL_DOOR = interiorDoor("policebox_happiness_patrol_door");
 
     public static ModelLayerLocation POLICEBOX_1976 = shell("policebox_1976");
     public static ModelLayerLocation POLICEBOX_1976_DOOR = interiorDoor("policebox_1976_door");
@@ -59,8 +70,26 @@ public class AUDModelRegistry {
     public static ModelLayerLocation SIDRAT = shell("sidrat");
     public static ModelLayerLocation SIDRAT_DOOR = interiorDoor("sidrat_door");
 
+    public static ModelLayerLocation COLUMN = shell("column");
+    public static ModelLayerLocation COLUMN_DOOR = interiorDoor("column_door");
+
     public static ModelLayerLocation TRAKENCLOCK = shell("trakenclock");
     public static ModelLayerLocation TRAKENCLOCK_DOOR = interiorDoor("trakenclock_door");
+
+    public static ModelLayerLocation GRANDFATHER_CLOCK = shell("grandfather_clock");
+    public static ModelLayerLocation GRANDFATHER_CLOCK_DOOR = interiorDoor("grandfather_clock_door");
+
+    public static ModelLayerLocation TELEPHONE_BOOTH = shell("telephone_booth");
+    public static ModelLayerLocation TELEPHONE_BOOTH_DOOR = interiorDoor("telephone_booth_door");
+
+    public static ModelLayerLocation IRON_MAIDEN = shell("iron_maiden");
+    public static ModelLayerLocation IRON_MAIDEN_DOOR = interiorDoor("iron_maiden_door");
+
+    public static ModelLayerLocation TT_CAPSULE = shell("tt_capsule");
+    public static ModelLayerLocation TT_CAPSULE_DOOR = interiorDoor("tt_capsule_door");
+
+    public static ModelLayerLocation TYPE_40 = shell("type_40");
+    public static ModelLayerLocation TYPE_40_DOOR = interiorDoor("type_40_door");
 
     public static ModelLayerLocation PERTWEE_CONSOLE = console("pertwee");
     public static ModelLayerLocation NEWBERY_CONSOLE = console("newbery");
@@ -68,8 +97,10 @@ public class AUDModelRegistry {
     public static ModelLayerLocation BRACHACKI_CONSOLE = console("brachacki");
     public static ModelLayerLocation TOYOTA_CONSOLE = console("toyota");
     public static ModelLayerLocation KELT_CONSOLE = console("kelt");
+    public static ModelLayerLocation WARRIOR_CONSOLE = console("kelt_warrior");
     public static ModelLayerLocation MCGANN_CONSOLE = console("mcgann");
     public static ModelLayerLocation HUMAN_NATURE_CONSOLE = console("human_nature");
+    public static ModelLayerLocation SILENCE_CONSOLE = console("silence");
 
     public static ModelLayerLocation KNOSSOS_THRONE = furniture("knossos_throne");
     public static ModelLayerLocation FOOD_MACHINE = furniture("food_machine");
@@ -192,13 +223,56 @@ public class AUDModelRegistry {
 
         policeBoxMemorial = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_MEMORIAL), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
         });
+
+        // Police Box - 1980
+        policeBox80 = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_1980), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
+        });
+        policeBox80Door = new DualInteriorDoorModel(entityModels.bakeLayer(POLICEBOX_1980_DOOR), -275.0F, true, false);
+
+        policeBox83 = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_1983), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
+        });
+        policeBox83Door = new DualInteriorDoorModel(entityModels.bakeLayer(POLICEBOX_1983_DOOR), -275.0F, false, true);
+
+        policeBox87 = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_1987), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
+        });
+        policeBox87Door = new DualInteriorDoorModel(entityModels.bakeLayer(POLICEBOX_1987_DOOR), -275.0F, false, true);
+
+        policeBoxHappinessPatrol = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_HAPPINESS_PATROL), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
+        });
+        policeBoxHappinessPatrolDoor = new DualInteriorDoorModel(entityModels.bakeLayer(POLICEBOX_HAPPINESS_PATROL_DOOR), -275.0F, false, true);
+
+
         // Sidrat
         sidrat = new SidratModel(entityModels.bakeLayer(SIDRAT));
         sidratDoor = new DualTexInteriorDoorModel(entityModels.bakeLayer(SIDRAT_DOOR));
 
+        // Column
+        column = new SidratModel(entityModels.bakeLayer(COLUMN));
+        columnDoor = new DualTexInteriorDoorModel(entityModels.bakeLayer(COLUMN_DOOR));
+
+        // TT Capsule
+        ttCapsule = new SidratModel(entityModels.bakeLayer(TT_CAPSULE));
+        ttCapsuleDoor = new DualTexInteriorDoorModel(entityModels.bakeLayer(TT_CAPSULE_DOOR));
+
+        type40 = new SidratModel(entityModels.bakeLayer(TYPE_40));
+        type40Door = new DualTexInteriorDoorModel(entityModels.bakeLayer(TYPE_40_DOOR));
+
         // Traken Clock
         trakenClock = new TrakenClockModel(entityModels.bakeLayer(TRAKENCLOCK));
         trakenClockDoor = new TrakenClockInteriorDoorModel(entityModels.bakeLayer(TRAKENCLOCK_DOOR), (float)Math.toRadians(110));
+
+        // Grandfather Clock
+        grandfatherClock = new TrakenClockModel(entityModels.bakeLayer(GRANDFATHER_CLOCK));
+        grandfatherClockDoor = new TrakenClockInteriorDoorModel(entityModels.bakeLayer(GRANDFATHER_CLOCK_DOOR), (float)Math.toRadians(120));
+
+        // Telephone Booth
+        telephoneBooth = new PoliceBoxModel(entityModels.bakeLayer(TELEPHONE_BOOTH), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
+        });
+        telephoneBoothDoor = new SingleInteriorDoorModel(entityModels.bakeLayer(TELEPHONE_BOOTH_DOOR), (float)Math.toRadians(-120));
+
+        // Iron Maiden
+        ironMaiden = new SidratModel(entityModels.bakeLayer(IRON_MAIDEN));
+        ironMaidenDoor = new DualTexInteriorDoorModel(entityModels.bakeLayer(IRON_MAIDEN_DOOR));
 
         // Model Registration
         AUDShellEntryRegistry.init();
