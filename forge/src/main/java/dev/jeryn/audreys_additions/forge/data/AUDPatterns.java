@@ -39,7 +39,17 @@ public class AUDPatterns extends ShellPatternProvider {
         quickAdd(AudShellRegistry.POLICEBOX_2010.getId(), "series_10", true);
         quickAdd(AudShellRegistry.POLICEBOX_2010.getId(), "memorial", true);
 
+        quickAdd(AudShellRegistry.POLICEBOX_1980.getId(), "default", true);
+        quickAdd(AudShellRegistry.POLICEBOX_1980.getId(), "season_20", true);
+        quickAdd(AudShellRegistry.POLICEBOX_1980.getId(), "season_22", true);
+        quickAdd(AudShellRegistry.POLICEBOX_1980.getId(), "season_24", true);
+        quickAdd(AudShellRegistry.POLICEBOX_1980.getId(), "happiness_patrol", true);
+
         quickAdd(AudShellRegistry.POLICEBOX_1976.getId(), "default", true);
+
+        quickAdd(AudShellRegistry.TELEPHONE_BOOTH.getId(), "default", true);
+
+        quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock", false);
 
         quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "default", false);
         quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "acacia", false);
@@ -54,6 +64,11 @@ public class AUDPatterns extends ShellPatternProvider {
         quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "pale", false);
         quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "warped", false);
 
+        quickAdd(AudShellRegistry.IRON_MAIDEN.getId(), "iron_maiden", false);
+
+        quickAdd(AudShellRegistry.TT_CAPSULE.getId(), "tt_capsule", false);
+        quickAdd(AudShellRegistry.TT_CAPSULE.getId(), "type_40", false);
+
         quickAdd(AudShellRegistry.POLICEBOX_1996.getId(), "default", true);
         quickAdd(AudShellRegistry.POLICEBOX_1996.getId(), "shalka", true);
         quickAdd(AudShellRegistry.POLICEBOX_1963.getId(), "default", true);
@@ -61,6 +76,9 @@ public class AUDPatterns extends ShellPatternProvider {
 
         quickAdd(AudShellRegistry.SIDRAT.getId(), "sidrat", false, sidratSounds);
         quickAdd(AudShellRegistry.SIDRAT.getId(), "gallifrey", false, sidratSounds);
+
+        quickAdd(AudShellRegistry.COLUMN.getId(), "sandstone", false);
+        quickAdd(AudShellRegistry.COLUMN.getId(), "red_sandstone", false);
 
         quickAdd(AudShellRegistry.POLICEBOX_2018.getId(), "barbie", true);
         quickAdd(AudShellRegistry.POLICEBOX_2018.getId(), "proms", true);
