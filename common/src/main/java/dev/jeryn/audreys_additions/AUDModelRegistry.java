@@ -101,6 +101,8 @@ public class AUDModelRegistry {
     public static ModelLayerLocation MCGANN_CONSOLE = console("mcgann");
     public static ModelLayerLocation HUMAN_NATURE_CONSOLE = console("human_nature");
     public static ModelLayerLocation SILENCE_CONSOLE = console("silence");
+    public static ModelLayerLocation RANI_CONSOLE = console("rani");
+
 
     public static ModelLayerLocation KNOSSOS_THRONE = furniture("knossos_throne");
     public static ModelLayerLocation FOOD_MACHINE = furniture("food_machine");
