@@ -42,16 +42,8 @@ public class PoliceBox1980Entry extends ShellEntry {
     public ShellDoorModel getShellDoorModel(ShellPattern shellPattern) {
         String variantPath = shellPattern.id().getPath();
 
-        if (variantPath.contains("season_20") || variantPath.contains("season_22"))  {
+        if (variantPath.contains("season_20") || variantPath.contains("season_22") || variantPath.contains("season_24") || variantPath.contains("happiness_patrol")){
             return AUDModelRegistry.policeBox83Door;
-        }
-
-        if (variantPath.contains("season_24")) {
-            return AUDModelRegistry.policeBox87Door;
-        }
-
-        if (variantPath.contains("happiness_patrol")) {
-            return AUDModelRegistry.policeBoxHappinessPatrolDoor;
         }
 
         return super.getShellDoorModel(shellPattern);
