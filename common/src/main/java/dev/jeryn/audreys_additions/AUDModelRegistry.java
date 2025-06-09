@@ -109,6 +109,17 @@ public class AUDModelRegistry {
     public static ModelLayerLocation CEILING_CANOPY_HANGING = furniture("ceiling_canopy_hanging");
     public static ModelLayerLocation FOLD_OUT_BED = furniture("fold_out_bed");
     public static ModelLayerLocation CAT = overlords("cat");
+
+    public static ModelLayerLocation SPECIMEN_JAR = furniture("specimen_jar/specimen_jar");
+    public static ModelLayerLocation SPECIMEN_JAR_ALLAY = furniture("specimen_jar/specimen_jar_allay");
+    public static ModelLayerLocation SPECIMEN_JAR_CREEPER = furniture("specimen_jar/specimen_jar_creeper");
+    public static ModelLayerLocation SPECIMEN_JAR_DRAGON = furniture("specimen_jar/specimen_jar_dragon");
+    public static ModelLayerLocation SPECIMEN_JAR_PIGLIN = furniture("specimen_jar/specimen_jar_piglin");
+    public static ModelLayerLocation SPECIMEN_JAR_SKELETON = furniture("specimen_jar/specimen_jar_skeleton");
+    public static ModelLayerLocation SPECIMEN_JAR_VEX = furniture("specimen_jar/specimen_jar_vex");
+    public static ModelLayerLocation SPECIMEN_JAR_WITHERSKELETON = furniture("specimen_jar/specimen_jar_wither_skeleton");
+    public static ModelLayerLocation SPECIMEN_JAR_ZOMBIE = furniture("specimen_jar/specimen_jar_zombie");
+
     public static AnimatedCatModel cat;
 
 

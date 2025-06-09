@@ -2,21 +2,19 @@ package dev.jeryn.audreys_additions.forge;
 
 import dev.jeryn.audreys_additions.AUDModelRegistry;
 import dev.jeryn.audreys_additions.AudreysAdditions;
+import dev.jeryn.audreys_additions.client.renderers.RenderSpecimenJar;
 import dev.jeryn.audreys_additions.client.renderers.*;
 import dev.jeryn.audreys_additions.common.blockentity.ChairBlockEntity;
 import dev.jeryn.audreys_additions.common.item.DyedItemBlock;
 import dev.jeryn.audreys_additions.common.registry.AudBlockEntities;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import dev.jeryn.audreys_additions.common.registry.AudEntities;
-import net.minecraft.client.color.item.ItemColor;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.item.DyeableLeatherItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -40,6 +38,7 @@ public class ClientModBus {
         BlockEntityRenderers.register(AudBlockEntities.ASTRAL_MAP.get(), RenderAstralMapBlockEntity::new);
         BlockEntityRenderers.register(AudBlockEntities.CEILING_CANOPY.get(), RenderCeilingCanopyBlockEntity::new);
         BlockEntityRenderers.register(AudBlockEntities.FOLD_OUT_BED.get(), RenderFoldOutBedBlockEntity::new);
+        BlockEntityRenderers.register(AudBlockEntities.SPECIMEN_JAR.get(), RenderSpecimenJar::new);
     }
 
     @SubscribeEvent
