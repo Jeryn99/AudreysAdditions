@@ -4,6 +4,7 @@ import com.google.gson.JsonObject;
 import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.common.blocks.FoodMachineBlock;
 import dev.jeryn.audreys_additions.common.blocks.MonitorBlock;
+import dev.jeryn.audreys_additions.common.blocks.SpecimenJarBlock;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.models.BlockModelGenerators;
@@ -80,6 +81,11 @@ public class AudBlocksModelProvider extends BlockStateProvider {
                     continue;
                 }
 
+                if(value instanceof SpecimenJarBlock specimenJarBlock){
+                    ResourceLocation specimenJarBlockModel = new ResourceLocation(AudreysAdditions.MODID, "item/specimen_jar");
+                    customLocation(value, specimenJarBlockModel);
+                    continue;
+                }
 
                 simpleBlock(value);
             }

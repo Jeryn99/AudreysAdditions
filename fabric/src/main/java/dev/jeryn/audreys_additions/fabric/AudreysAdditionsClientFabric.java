@@ -2,6 +2,7 @@ package dev.jeryn.audreys_additions.fabric;
 
 import dev.jeryn.audreys_additions.AUDModelRegistry;
 import dev.jeryn.audreys_additions.ClientUtil;
+import dev.jeryn.audreys_additions.client.renderers.RenderSpecimenJar;
 import dev.jeryn.audreys_additions.client.renderers.*;
 import dev.jeryn.audreys_additions.common.blockentity.ChairBlockEntity;
 import dev.jeryn.audreys_additions.common.item.DyedItemBlock;
@@ -12,12 +13,10 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
-import net.minecraft.client.color.item.ItemColor;
 import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
 
 public class AudreysAdditionsClientFabric implements ClientModInitializer {
@@ -31,6 +30,7 @@ public class AudreysAdditionsClientFabric implements ClientModInitializer {
         BlockEntityRendererRegistry.register(AudBlockEntities.ASTRAL_MAP.get(), RenderAstralMapBlockEntity::new);
         BlockEntityRendererRegistry.register(AudBlockEntities.CEILING_CANOPY.get(), RenderCeilingCanopyBlockEntity::new);
         BlockEntityRendererRegistry.register(AudBlockEntities.FOLD_OUT_BED.get(), RenderFoldOutBedBlockEntity::new);
+        BlockEntityRendererRegistry.register(AudBlockEntities.SPECIMEN_JAR.get(), RenderSpecimenJar::new);
 
         ColorProviderRegistry.BLOCK.register((blockState, blockAndTintGetter, blockPos, tintIndex) -> {
             if (blockAndTintGetter != null && blockPos != null) {

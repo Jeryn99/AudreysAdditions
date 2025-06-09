@@ -36,6 +36,32 @@ public class AudBlocks {
     public static final RegistrySupplier<Block> BRACHACKI_MONITOR = register("brachacki_monitor", () -> new MonitorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
     public static final RegistrySupplier<Block> FOLD_OUT_BED = register("fold_out_bed", AudBlocks::createBed);
 
+    public static final RegistrySupplier<Block> SPECIMEN_JAR = register("specimen_jar",
+            () -> new SpecimenJarBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
+
+    public static final RegistrySupplier<Block> SPECIMEN_JAR_ALLAY = register("specimen_jar_allay",
+            () -> new SpecimenJarBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
+
+    public static final RegistrySupplier<Block> SPECIMEN_JAR_CREEPER = register("specimen_jar_creeper",
+            () -> new SpecimenJarBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
+
+    public static final RegistrySupplier<Block> SPECIMEN_JAR_DRAGON = register("specimen_jar_dragon",
+            () -> new SpecimenJarBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
+
+    public static final RegistrySupplier<Block> SPECIMEN_JAR_PIGLIN = register("specimen_jar_piglin",
+            () -> new SpecimenJarBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
+
+    public static final RegistrySupplier<Block> SPECIMEN_JAR_SKELETON = register("specimen_jar_skeleton",
+            () -> new SpecimenJarBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
+
+    public static final RegistrySupplier<Block> SPECIMEN_JAR_VEX = register("specimen_jar_vex",
+            () -> new SpecimenJarBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
+
+    public static final RegistrySupplier<Block> SPECIMEN_JAR_WITHERSKELETON = register("specimen_jar_witherskeleton",
+            () -> new SpecimenJarBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
+
+    public static final RegistrySupplier<Block> SPECIMEN_JAR_ZOMBIE = register("specimen_jar_zombie",
+            () -> new SpecimenJarBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
 
 
     /**

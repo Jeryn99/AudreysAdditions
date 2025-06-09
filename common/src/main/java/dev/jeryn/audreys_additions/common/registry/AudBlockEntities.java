@@ -20,6 +20,20 @@ public class AudBlockEntities {
     public static final RegistrySupplier<BlockEntityType<CeilingCanopyBlockEntity>> CEILING_CANOPY = TILES.register("ceiling_canopy", () -> registerTiles(CeilingCanopyBlockEntity::new, AudBlocks.CEILING_CANOPY.get()));
     public static final RegistrySupplier<BlockEntityType<FoldOutBedBlockEntity>> FOLD_OUT_BED = TILES.register("fold_out_bed", () -> registerTiles(FoldOutBedBlockEntity::new, AudBlocks.FOLD_OUT_BED.get()));
 
+    public static final RegistrySupplier<BlockEntityType<SpecimenJarBlockEntity>> SPECIMEN_JAR =
+            TILES.register("specimen_jar", () ->
+                    registerTiles(SpecimenJarBlockEntity::new,
+                            AudBlocks.SPECIMEN_JAR.get(),
+                            AudBlocks.SPECIMEN_JAR_ALLAY.get(),
+                            AudBlocks.SPECIMEN_JAR_CREEPER.get(),
+                            AudBlocks.SPECIMEN_JAR_DRAGON.get(),
+                            AudBlocks.SPECIMEN_JAR_PIGLIN.get(),
+                            AudBlocks.SPECIMEN_JAR_SKELETON.get(),
+                            AudBlocks.SPECIMEN_JAR_VEX.get(),
+                            AudBlocks.SPECIMEN_JAR_WITHERSKELETON.get(),
+                            AudBlocks.SPECIMEN_JAR_ZOMBIE.get()
+                    ));
+
 
     private static <T extends BlockEntity> BlockEntityType<T> registerTiles(BlockEntityType.BlockEntitySupplier<T> tile, Block... validBlock) {
         return BlockEntityType.Builder.of(tile, validBlock).build(null);

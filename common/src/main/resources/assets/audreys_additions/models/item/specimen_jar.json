@@ -2,7 +2,7 @@
 	"credit": "audrey (@LocalToybot) made this!",
 	"texture_size": [32, 32],
 	"textures": {
-		"2": "block/specimenjar"
+		"2": "audreys_additions:item/specimen_jar"
 	},
 	"elements": [
 		{
