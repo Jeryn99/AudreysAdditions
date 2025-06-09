@@ -17,11 +17,11 @@ public class AUDModelRegistry {
 
 
     // Models
-    public static PoliceBoxModel policeBox03, policeBox66, policeBoxRuth, policeBox73, policeBox18, policeBox18_special, policeBox10, policeBox11, policeBox17, policeBoxMemorial, policeBox76, policeBox96, policeBox63, policeBox63Massacre, trakenClock, telephoneBooth, policeBox80, policeBox83, policeBox87, policeBoxHappinessPatrol;
+    public static PoliceBoxModel policeBox03, policeBox66, policeBoxRuth, policeBox73, policeBox18, policeBox18_special, policeBox10, policeBox11, policeBox17, policeBoxMemorial, policeBox76, policeBox96, policeBox63, policeBox63Massacre, trakenClock, policeBox80, policeBox83, policeBox87, policeBoxHappinessPatrol;
     public static DualInteriorDoorModel policeBox03Door, policeBox66Door, policeBox63Door, policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox11Door, policeBox17Door, policeBox76Door, policeBox96Door, policeBox80Door, policeBox83Door, policeBox87Door, policeBoxHappinessPatrolDoor;
-    public static SingleInteriorDoorModel trakenClockDoor, telephoneBoothDoor;
-    public static DualTexInteriorDoorModel sidratDoor, columnDoor, ironMaidenDoor, ttCapsuleDoor, type40Door;
-    public static SidratModel sidrat, column, ironMaiden, ttCapsule, type40;
+    public static SingleInteriorDoorModel trakenClockDoor;
+    public static DualTexInteriorDoorModel sidratDoor, columnDoor, ironMaidenDoor, ttCapsuleDoor, type40Door, telephoneBoothDoor;
+    public static SidratModel sidrat, column, ironMaiden, ttCapsule, type40, telephoneBooth;
     public static TrakenClockModel grandfatherClock;
     public static TrakenClockInteriorDoorModel grandfatherClockDoor;
 
@@ -268,9 +268,8 @@ public class AUDModelRegistry {
         grandfatherClockDoor = new TrakenClockInteriorDoorModel(entityModels.bakeLayer(GRANDFATHER_CLOCK_DOOR), (float)Math.toRadians(120));
 
         // Telephone Booth
-        telephoneBooth = new PoliceBoxModel(entityModels.bakeLayer(TELEPHONE_BOOTH), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
-        });
-        telephoneBoothDoor = new SingleInteriorDoorModel(entityModels.bakeLayer(TELEPHONE_BOOTH_DOOR), (float)Math.toRadians(-120));
+        telephoneBooth = new SidratModel(entityModels.bakeLayer(TELEPHONE_BOOTH));
+        telephoneBoothDoor = new DualTexInteriorDoorModel(entityModels.bakeLayer(TELEPHONE_BOOTH_DOOR));
 
         // Iron Maiden
         ironMaiden = new SidratModel(entityModels.bakeLayer(IRON_MAIDEN));
