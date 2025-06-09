@@ -11,6 +11,7 @@ This addon introduces a variety of shell options, custom-modelled blocks, consol
 - **Thornton Interior (1983)**
 - **Tremas Interior (1984)**
 - **Rani Interior (1985)**
+- **Fugitive Interior (2020)**
 
 ### Console Units  
 - **Brachacki Console (1963)** *
