@@ -6,6 +6,7 @@ import dev.jeryn.audreys_additions.AUDModelRegistry;
 import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.client.models.furniture.SpecimenJarModel;
 import dev.jeryn.audreys_additions.common.blockentity.SpecimenJarBlockEntity;
+import dev.jeryn.audreys_additions.common.blocks.SpecimenJarBlock;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import dev.jeryn.frame.tardis.Frame;
 import net.minecraft.client.animation.AnimationDefinition;
@@ -46,7 +47,7 @@ public class RenderSpecimenJar implements BlockEntityRenderer<SpecimenJarBlockEn
         ResourceLocation animation = new ResourceLocation(AudreysAdditions.MODID, "frame/specimen_jar/" + name + ".json");
 
         renderMap.put(block, new RenderData(
-                new SpecimenJarModel(context.bakeLayer(modelLayer)).setAnimation(Objects.equals(name, "specimen_jar") ? null : Frame.loadAnimation(animation)),
+                new SpecimenJarModel(context.bakeLayer(modelLayer)).setAnimation(Frame.loadAnimation(animation)),
                 texture
         ));
     }
@@ -61,7 +62,7 @@ public class RenderSpecimenJar implements BlockEntityRenderer<SpecimenJarBlockEn
         poseStack.pushPose();
         poseStack.translate(0.5D, 1.5D, 0.5D);
         poseStack.mulPose(Axis.ZP.rotationDegrees(180));
-        poseStack.mulPose(Axis.YP.rotationDegrees(state.getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot()));
+        poseStack.mulPose(Axis.YP.rotationDegrees(state.getValue(BlockStateProperties.ROTATION_16).floatValue() * 22.5F));
 
         renderData.model.renderToBuffer(
                 blockEntity,
