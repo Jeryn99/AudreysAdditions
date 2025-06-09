@@ -13,10 +13,18 @@ import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.block.state.properties.RotationSegment;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class SpecimenJarBlock extends HorizontalDirectionalBlock implements EntityBlock {
+public class SpecimenJarBlock extends Block implements EntityBlock {
+
+    public static final int MAX = RotationSegment.getMaxSegmentIndex();
+    private static final int ROTATIONS = MAX + 1;
+
+    public static final IntegerProperty ROTATION = BlockStateProperties.ROTATION_16;
 
     public SpecimenJarBlock(Properties properties) {
         super(properties);
@@ -28,24 +36,30 @@ public class SpecimenJarBlock extends HorizontalDirectionalBlock implements Enti
     }
 
     @Override
+    public BlockState getStateForPlacement(BlockPlaceContext blockPlaceContext) {
+        return this.defaultBlockState().setValue(ROTATION, RotationSegment.convertToSegment(blockPlaceContext.getRotation()));
+    }
+
+    @Override
     public BlockState rotate(BlockState blockState, Rotation rotation) {
-        return blockState.setValue(FACING, rotation.rotate(blockState.getValue(FACING)));
+        return blockState.setValue(ROTATION, rotation.rotate(blockState.getValue(ROTATION), ROTATIONS));
     }
 
     @Override
     public BlockState mirror(BlockState blockState, Mirror mirror) {
-        return blockState.rotate(mirror.getRotation(blockState.getValue(FACING)));
-    }
-
-    @Override
-    public BlockState getStateForPlacement(BlockPlaceContext arg) {
-        return this.defaultBlockState().setValue(FACING, arg.getHorizontalDirection());
+        return blockState.setValue(ROTATION, mirror.mirror(blockState.getValue(ROTATION), ROTATIONS));
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.@NotNull Builder<Block, BlockState> builder) {
-        builder.add(HorizontalDirectionalBlock.FACING);
+        builder.add(ROTATION);
     }
+
+    @Override
+    public RenderShape getRenderShape(BlockState blockState) {
+        return RenderShape.ENTITYBLOCK_ANIMATED;
+    }
+
 
 
     @Override
