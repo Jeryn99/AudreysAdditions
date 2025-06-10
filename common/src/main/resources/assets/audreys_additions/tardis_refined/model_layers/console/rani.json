@@ -6,9 +6,9 @@
 				"identifier": "geometry.unknown",
 				"texture_width": 128,
 				"texture_height": 128,
-				"visible_bounds_width": 5,
-				"visible_bounds_height": 4,
-				"visible_bounds_offset": [0, 1, 0]
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
 			},
 			"bones": [
 				{
@@ -1463,11 +1463,10 @@
 				{
 					"name": "RSAngler",
 					"parent": "RotorSpinny",
-					"pivot": [0, 20.5, -8.5],
-					"rotation": [25, 0, 0],
+					"pivot": [0, 24, 0],
 					"cubes": [
 						{
-							"origin": [-8.5, 19.5, -8.5],
+							"origin": [-8.5, 23, -8.5],
 							"size": [17, 1, 17],
 							"uv": {
 								"up": {"uv": [0, 21], "uv_size": [17, 17]}
@@ -1477,15 +1476,14 @@
 				},
 				{
 					"name": "RSAngler2",
-					"parent": "RSAngler",
-					"pivot": [0, 20.5, 8.5],
-					"rotation": [-50, 0, 0],
+					"parent": "RotorSpinny",
+					"pivot": [0, 31.5, 0],
 					"cubes": [
 						{
-							"origin": [-8.5, 19.5, -8.5],
+							"origin": [-8.5, 31.5, -8.5],
 							"size": [17, 1, 17],
 							"uv": {
-								"up": {"uv": [17, 38], "uv_size": [-17, -17]}
+								"down": {"uv": [0, 38], "uv_size": [17, -17]}
 							}
 						}
 					]
