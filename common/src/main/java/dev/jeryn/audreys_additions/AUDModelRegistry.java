@@ -20,8 +20,8 @@ public class AUDModelRegistry {
     public static PoliceBoxModel policeBox03, policeBox66, policeBoxRuth, policeBox73, policeBox18, policeBox18_special, policeBox10, policeBox11, policeBox17, policeBoxMemorial, policeBox76, policeBox96, policeBox63, policeBox63Massacre, trakenClock, policeBox83, policeBox87, policeBoxHappinessPatrol;
     public static DualInteriorDoorModel policeBox03Door, policeBox66Door, policeBox63Door, policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox11Door, policeBox17Door, policeBox76Door, policeBox96Door, policeBox80Door, policeBox83Door, policeBox87Door, policeBoxHappinessPatrolDoor;
     public static SingleInteriorDoorModel trakenClockDoor;
-    public static DualTexInteriorDoorModel sidratDoor, columnDoor, ironMaidenDoor, ttCapsuleDoor, type40Door, telephoneBoothDoor, raniWardrobeDoor;
-    public static SidratModel sidrat, column, ironMaiden, ttCapsule, type40, telephoneBooth, policeBox80, raniWardrobe;
+    public static DualTexInteriorDoorModel sidratDoor, columnDoor, ironMaidenDoor, ttCapsuleDoor, type40Door, telephoneBoothDoor, raniWardrobeDoor, lakertyanPyramidDoor;
+    public static SidratModel sidrat, column, ironMaiden, ttCapsule, type40, telephoneBooth, policeBox80, raniWardrobe, lakertyanPyramid;
     public static TrakenClockModel grandfatherClock;
     public static TrakenClockInteriorDoorModel grandfatherClockDoor;
 
@@ -91,6 +91,9 @@ public class AUDModelRegistry {
 
     public static ModelLayerLocation TYPE_40 = shell("type_40");
     public static ModelLayerLocation TYPE_40_DOOR = interiorDoor("type_40_door");
+
+    public static ModelLayerLocation LAKERTYAN_PYRAMID = shell("pyramid");
+    public static ModelLayerLocation LAKERTYAN_PYRAMID_DOOR = interiorDoor("pyramid_door");
 
     public static ModelLayerLocation PERTWEE_CONSOLE = console("pertwee");
     public static ModelLayerLocation NEWBERY_CONSOLE = console("newbery");
@@ -255,6 +258,10 @@ public class AUDModelRegistry {
         // Sidrat
         sidrat = new SidratModel(entityModels.bakeLayer(SIDRAT));
         sidratDoor = new DualTexInteriorDoorModel(entityModels.bakeLayer(SIDRAT_DOOR));
+
+        // Lakertyan Pyramid
+        lakertyanPyramid = new SidratModel(entityModels.bakeLayer(LAKERTYAN_PYRAMID));
+        lakertyanPyramidDoor = new DualTexInteriorDoorModel(entityModels.bakeLayer(LAKERTYAN_PYRAMID_DOOR));
 
         // Column
         column = new SidratModel(entityModels.bakeLayer(COLUMN));
