@@ -91,6 +91,466 @@
         "emissive": false,
         "texture": "audreys_additions:textures/blockentity/console/rani/rani.png"
       }
+    },
+    {
+      "id": "audreys_additions:rani_crimson",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Rani Crimson\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/rani/rani_crimson.png"
+      }
+    },
+    {
+      "id": "audreys_additions:rani_end",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Rani End\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": true,
+        "texture": "audreys_additions:textures/blockentity/console/rani/rani_end.png"
+      }
+    },
+    {
+      "id": "audreys_additions:rani_keltic",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Rani Keltic\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/rani/rani_keltic.png"
+      }
+    },
+    {
+      "id": "audreys_additions:rani_nether",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Rani Nether\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": true,
+        "texture": "audreys_additions:textures/blockentity/console/rani/rani_nether.png"
+      }
+    },
+    {
+      "id": "audreys_additions:rani_white",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Rani White\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/rani/rani_white.png"
+      }
     }
   ]
 }

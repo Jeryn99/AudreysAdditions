@@ -47,10 +47,33 @@ public class AUDPatterns extends ShellPatternProvider {
 
         quickAdd(AudShellRegistry.POLICEBOX_1976.getId(), "default", true);
 
+        quickAdd(AudShellRegistry.RANI_WARDROBE.getId(), "default", true);
+        quickAdd(AudShellRegistry.RANI_WARDROBE.getId(), "iron", true);
+        quickAdd(AudShellRegistry.RANI_WARDROBE.getId(), "nether_brick", true);
+        quickAdd(AudShellRegistry.RANI_WARDROBE.getId(), "purpur", true);
+        quickAdd(AudShellRegistry.RANI_WARDROBE.getId(), "quartz", true);
+        quickAdd(AudShellRegistry.RANI_WARDROBE.getId(), "sandstone", true);
+        quickAdd(AudShellRegistry.RANI_WARDROBE.getId(), "stone", true);
+        quickAdd(AudShellRegistry.RANI_WARDROBE.getId(), "wooden", true);
+
         quickAdd(AudShellRegistry.TELEPHONE_BOOTH.getId(), "default", true);
         quickAdd(AudShellRegistry.TELEPHONE_BOOTH.getId(), "bee", true);
 
         quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock", false);
+        quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock_acacia", false);
+        quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock_bamboo", false);
+        quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock_birch", false);
+        quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock_cherry", false);
+        quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock_crimson", false);
+        quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock_jungle", false);
+        quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock_mangrove", false);
+        quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock_oak", false);
+        quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock_pale", false);
+        quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock_spruce", false);
+        quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock_warped", false);
+
+        quickAdd(AudShellRegistry.LAKERTYAN_PYRAMID.getId(), "default", false);
+
 
         quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "default", false);
         quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "acacia", false);
