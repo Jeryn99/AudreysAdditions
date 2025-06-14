@@ -47,6 +47,15 @@ public class AUDPatterns extends ShellPatternProvider {
 
         quickAdd(AudShellRegistry.POLICEBOX_1976.getId(), "default", true);
 
+        quickAdd(AudShellRegistry.RANI_WARDROBE.getId(), "default", true);
+        quickAdd(AudShellRegistry.RANI_WARDROBE.getId(), "iron", true);
+        quickAdd(AudShellRegistry.RANI_WARDROBE.getId(), "nether_brick", true);
+        quickAdd(AudShellRegistry.RANI_WARDROBE.getId(), "purpur", true);
+        quickAdd(AudShellRegistry.RANI_WARDROBE.getId(), "quartz", true);
+        quickAdd(AudShellRegistry.RANI_WARDROBE.getId(), "sandstone", true);
+        quickAdd(AudShellRegistry.RANI_WARDROBE.getId(), "stone", true);
+        quickAdd(AudShellRegistry.RANI_WARDROBE.getId(), "wooden", true);
+
         quickAdd(AudShellRegistry.TELEPHONE_BOOTH.getId(), "default", true);
         quickAdd(AudShellRegistry.TELEPHONE_BOOTH.getId(), "bee", true);
 
