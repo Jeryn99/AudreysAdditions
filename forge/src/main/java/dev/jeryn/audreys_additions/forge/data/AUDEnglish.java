@@ -46,14 +46,15 @@ public class AUDEnglish extends LanguageProvider {
         add(AudBlocks.FOLD_OUT_BED.get(), "Foldout Bed");
 
         add(AudBlocks.SPECIMEN_JAR.get(), "Specimen Jar");
-        add(AudBlocks.SPECIMEN_JAR_ALLAY.get(), "Specimen Jar (Allay)");
-        add(AudBlocks.SPECIMEN_JAR_CREEPER.get(), "Specimen Jar (Creeper)");
-        add(AudBlocks.SPECIMEN_JAR_DRAGON.get(), "Specimen Jar (Dragon)");
-        add(AudBlocks.SPECIMEN_JAR_PIGLIN.get(), "Specimen Jar (Piglin)");
-        add(AudBlocks.SPECIMEN_JAR_SKELETON.get(), "Specimen Jar (Skeleton)");
-        add(AudBlocks.SPECIMEN_JAR_VEX.get(), "Specimen Jar (Vex)");
-        add(AudBlocks.SPECIMEN_JAR_WITHERSKELETON.get(), "Specimen Jar (Wither Skeleton)");
-        add(AudBlocks.SPECIMEN_JAR_ZOMBIE.get(), "Specimen Jar (Zombie)");
+        add(AudBlocks.SPECIMEN_JAR_ALLAY.get(), "Specimen Jar (" + ChatFormatting.AQUA + "Allay" + ChatFormatting.RESET + ")");
+        add(AudBlocks.SPECIMEN_JAR_CREEPER.get(), "Specimen Jar (" + ChatFormatting.GREEN + "Creeper" + ChatFormatting.RESET + ")");
+        add(AudBlocks.SPECIMEN_JAR_DRAGON.get(), "Specimen Jar (" + ChatFormatting.DARK_PURPLE + "Dragon" + ChatFormatting.RESET + ")");
+        add(AudBlocks.SPECIMEN_JAR_PIGLIN.get(), "Specimen Jar (" + ChatFormatting.GOLD + "Piglin" + ChatFormatting.RESET + ")");
+        add(AudBlocks.SPECIMEN_JAR_SKELETON.get(), "Specimen Jar (" + ChatFormatting.GRAY + "Skeleton" + ChatFormatting.RESET + ")");
+        add(AudBlocks.SPECIMEN_JAR_VEX.get(), "Specimen Jar (" + ChatFormatting.BLUE + "Vex" + ChatFormatting.RESET + ")");
+        add(AudBlocks.SPECIMEN_JAR_WITHERSKELETON.get(), "Specimen Jar (" + ChatFormatting.DARK_GRAY + "Wither Skeleton" + ChatFormatting.RESET + ")");
+        add(AudBlocks.SPECIMEN_JAR_ZOMBIE.get(), "Specimen Jar (" + ChatFormatting.DARK_GREEN + "Zombie" + ChatFormatting.RESET + ")");
+
 
         add(AudItems.FOOD_CUBE.get(), "Food Cube");
 

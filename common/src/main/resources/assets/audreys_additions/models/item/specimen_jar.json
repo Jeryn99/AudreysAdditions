@@ -4,6 +4,7 @@
 	"textures": {
 		"2": "audreys_additions:item/specimen_jar"
 	},
+	"particle": "minecraft:block/red_stained_glass",
 	"elements": [
 		{
 			"from": [2.5, 0, 2.5],
