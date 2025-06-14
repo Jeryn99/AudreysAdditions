@@ -24,6 +24,7 @@ public class AudShellRegistry {
     public static final RegistrySupplier<ShellTheme> TRAKENCLOCK = registerShellTheme("trakenclock");
     public static final RegistrySupplier<ShellTheme> TELEPHONE_BOOTH = registerShellTheme("telephone_booth");
     public static final RegistrySupplier<ShellTheme> GRANDFATHER_CLOCK = registerShellTheme("grandfather_clock");
+    public static final RegistrySupplier<ShellTheme> RANI_WARDROBE = registerShellTheme("rani_wardrobe");
 
 
     private static RegistrySupplier<ShellTheme> registerShellTheme(String id) {
