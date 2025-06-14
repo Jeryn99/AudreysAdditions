@@ -43,6 +43,490 @@
           }
         }
       }
+    },
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_acacia.png"
+      },
+      "id": "audreys_additions:grandfather_clock_acacia",
+      "interior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_acacia_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Grandfather Clock Acacia\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_bamboo.png"
+      },
+      "id": "audreys_additions:grandfather_clock_bamboo",
+      "interior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_bamboo_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Grandfather Clock Bamboo\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_birch.png"
+      },
+      "id": "audreys_additions:grandfather_clock_birch",
+      "interior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_birch_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Grandfather Clock Birch\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_cherry.png"
+      },
+      "id": "audreys_additions:grandfather_clock_cherry",
+      "interior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_cherry_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Grandfather Clock Cherry\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_crimson.png"
+      },
+      "id": "audreys_additions:grandfather_clock_crimson",
+      "interior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_crimson_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Grandfather Clock Crimson\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_jungle.png"
+      },
+      "id": "audreys_additions:grandfather_clock_jungle",
+      "interior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_jungle_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Grandfather Clock Jungle\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_mangrove.png"
+      },
+      "id": "audreys_additions:grandfather_clock_mangrove",
+      "interior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_mangrove_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Grandfather Clock Mangrove\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_oak.png"
+      },
+      "id": "audreys_additions:grandfather_clock_oak",
+      "interior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_oak_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Grandfather Clock Oak\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_pale.png"
+      },
+      "id": "audreys_additions:grandfather_clock_pale",
+      "interior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_pale_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Grandfather Clock Pale\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_spruce.png"
+      },
+      "id": "audreys_additions:grandfather_clock_spruce",
+      "interior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_spruce_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Grandfather Clock Spruce\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_warped.png"
+      },
+      "id": "audreys_additions:grandfather_clock_warped",
+      "interior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_warped_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Grandfather Clock Warped\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
     }
   ]
 }

@@ -23,5 +23,8 @@ public class AUDShellEntryRegistry {
         ShellModelCollection.registerShellEntry(AudShellRegistry.TELEPHONE_BOOTH.get(), AUDModelRegistry.telephoneBooth, AUDModelRegistry.telephoneBoothDoor);
         ShellModelCollection.registerShellEntry(AudShellRegistry.IRON_MAIDEN.get(), AUDModelRegistry.ironMaiden, AUDModelRegistry.ironMaidenDoor);
         ShellModelCollection.registerShellEntry(AudShellRegistry.TT_CAPSULE.get(), new TTCapsuleEntry(AUDModelRegistry.ttCapsule, AUDModelRegistry.ttCapsuleDoor));
+        ShellModelCollection.registerShellEntry(AudShellRegistry.RANI_WARDROBE.get(), AUDModelRegistry.raniWardrobe, AUDModelRegistry.raniWardrobeDoor);
+        ShellModelCollection.registerShellEntry(AudShellRegistry.LAKERTYAN_PYRAMID.get(), AUDModelRegistry.lakertyanPyramid, AUDModelRegistry.lakertyanPyramidDoor);
+
     }
 }
