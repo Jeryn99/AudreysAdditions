@@ -72,6 +72,8 @@ public class AUDPatterns extends ShellPatternProvider {
         quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock_spruce", false);
         quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock_warped", false);
 
+        quickAdd(AudShellRegistry.LAKERTYAN_PYRAMID.getId(), "default", false);
+
 
         quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "default", false);
         quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "acacia", false);

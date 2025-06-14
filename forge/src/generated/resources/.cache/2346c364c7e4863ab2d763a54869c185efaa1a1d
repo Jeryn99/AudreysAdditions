@@ -1,4 +1,4 @@
-// 1.20.1	2025-06-14T10:44:23.7696896	audreys_additions Patterns
+// 1.20.1	2025-06-14T14:24:00.370674	audreys_additions Patterns
 d57eebb6c6a41c19f690477d63a4efcb2957bbf0 data/audreys_additions/tardis_refined/patterns/shell/column.json
 8057b418e3abdc517d7ff87cc3300da97980b7b9 data/audreys_additions/tardis_refined/patterns/shell/grandfather_clock.json
 d188e3fc6696f0aa08a80c2d8cf56e6e67876adf data/audreys_additions/tardis_refined/patterns/shell/iron_maiden.json
@@ -9,6 +9,7 @@ d3cfe319092ec8b5aaf3825bb08588626e7a0968 data/audreys_additions/tardis_refined/p
 817828a9e47ce0c426befa320d1175e8afd16206 data/audreys_additions/tardis_refined/patterns/shell/policebox_1996.json
 331e86290875e74c5774450162620c5b01a807be data/audreys_additions/tardis_refined/patterns/shell/policebox_2010.json
 2a5e6490fae47040533d3994a50a6ebd5f8732c4 data/audreys_additions/tardis_refined/patterns/shell/policebox_2018.json
+94841909da9a0efce7dbb31267ddbc5fd2403ad0 data/audreys_additions/tardis_refined/patterns/shell/pyramid.json
 e7660c0bef4f6e4e40930765cf08ee1a3f4fbae9 data/audreys_additions/tardis_refined/patterns/shell/rani_wardrobe.json
 c31298a027b4a44275e12e3c812198a0f5fd6e43 data/audreys_additions/tardis_refined/patterns/shell/sidrat.json
 d3e672499e9659d4f92ffe319343a314a12221f9 data/audreys_additions/tardis_refined/patterns/shell/telephone_booth.json
