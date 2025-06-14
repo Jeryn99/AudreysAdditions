@@ -6,10 +6,8 @@ import dev.jeryn.audreys_additions.AUDModelRegistry;
 import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.client.models.furniture.SpecimenJarModel;
 import dev.jeryn.audreys_additions.common.blockentity.SpecimenJarBlockEntity;
-import dev.jeryn.audreys_additions.common.blocks.SpecimenJarBlock;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import dev.jeryn.frame.tardis.Frame;
-import net.minecraft.client.animation.AnimationDefinition;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
@@ -20,11 +18,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import whocraft.tardis_refined.client.model.GenericModel;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 public class RenderSpecimenJar implements BlockEntityRenderer<SpecimenJarBlockEntity>, BlockEntityRendererProvider<SpecimenJarBlockEntity> {
 
@@ -82,13 +78,6 @@ public class RenderSpecimenJar implements BlockEntityRenderer<SpecimenJarBlockEn
         return new RenderSpecimenJar(context);
     }
 
-    private static class RenderData {
-        final SpecimenJarModel model;
-        final ResourceLocation texture;
-
-        RenderData(SpecimenJarModel model, ResourceLocation texture) {
-            this.model = model;
-            this.texture = texture;
-        }
+    private record RenderData(SpecimenJarModel model, ResourceLocation texture) {
     }
 }

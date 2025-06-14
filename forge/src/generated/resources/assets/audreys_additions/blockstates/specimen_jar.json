@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "audreys_additions:item/specimen_jar"
+      "model": "audreys_additions:block/specimen_jar"
     }
   }
 }
