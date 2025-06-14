@@ -82,8 +82,8 @@ public class AudBlocksModelProvider extends BlockStateProvider {
                 }
 
                 if(value instanceof SpecimenJarBlock specimenJarBlock){
-                    ResourceLocation specimenJarBlockModel = new ResourceLocation(AudreysAdditions.MODID, "item/specimen_jar");
-                    customLocation(value, specimenJarBlockModel);
+                    ResourceLocation specimenJarBlockModel = new ResourceLocation("block/red_stained_glass");
+                    simpleBlockParticleOnly(value, specimenJarBlockModel);
                     continue;
                 }
 

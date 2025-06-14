@@ -43,7 +43,22 @@ public class AUDEnglish extends LanguageProvider {
         add(AudBlocks.CEILING_CANOPY.get(), "Ceiling Canopy");
         add(AudBlocks.FOLD_OUT_BED.get(), "Foldout Bed");
 
+        add(AudBlocks.SPECIMEN_JAR.get(), "Specimen Jar");
+        add(AudBlocks.SPECIMEN_JAR_ALLAY.get(), "Specimen Jar (Allay)");
+        add(AudBlocks.SPECIMEN_JAR_CREEPER.get(), "Specimen Jar (Creeper)");
+        add(AudBlocks.SPECIMEN_JAR_DRAGON.get(), "Specimen Jar (Dragon)");
+        add(AudBlocks.SPECIMEN_JAR_PIGLIN.get(), "Specimen Jar (Piglin)");
+        add(AudBlocks.SPECIMEN_JAR_SKELETON.get(), "Specimen Jar (Skeleton)");
+        add(AudBlocks.SPECIMEN_JAR_VEX.get(), "Specimen Jar (Vex)");
+        add(AudBlocks.SPECIMEN_JAR_WITHERSKELETON.get(), "Specimen Jar (Wither Skeleton)");
+        add(AudBlocks.SPECIMEN_JAR_ZOMBIE.get(), "Specimen Jar (Zombie)");
+
         add(AudItems.FOOD_CUBE.get(), "Food Cube");
+
+
+
+
+
     }
 
     public void addShell(ShellTheme theme, String name) {

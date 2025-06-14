@@ -3,6 +3,7 @@ package dev.jeryn.audreys_additions.common.registry;
 import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.common.blocks.*;
 import dev.jeryn.audreys_additions.common.item.DyedItemBlock;
+import dev.jeryn.audreys_additions.common.item.SpecimenJarItemBlock;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -36,31 +37,31 @@ public class AudBlocks {
     public static final RegistrySupplier<Block> BRACHACKI_MONITOR = register("brachacki_monitor", () -> new MonitorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
     public static final RegistrySupplier<Block> FOLD_OUT_BED = register("fold_out_bed", AudBlocks::createBed);
 
-    public static final RegistrySupplier<Block> SPECIMEN_JAR = register("specimen_jar",
+    public static final RegistrySupplier<Block> SPECIMEN_JAR = registerSpecimenJar("specimen_jar",
             () -> new SpecimenJarBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
 
-    public static final RegistrySupplier<Block> SPECIMEN_JAR_ALLAY = register("specimen_jar_allay",
+    public static final RegistrySupplier<Block> SPECIMEN_JAR_ALLAY = registerSpecimenJar("specimen_jar_allay",
             () -> new SpecimenJarBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
 
-    public static final RegistrySupplier<Block> SPECIMEN_JAR_CREEPER = register("specimen_jar_creeper",
+    public static final RegistrySupplier<Block> SPECIMEN_JAR_CREEPER = registerSpecimenJar("specimen_jar_creeper",
             () -> new SpecimenJarBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
 
-    public static final RegistrySupplier<Block> SPECIMEN_JAR_DRAGON = register("specimen_jar_dragon",
+    public static final RegistrySupplier<Block> SPECIMEN_JAR_DRAGON = registerSpecimenJar("specimen_jar_dragon",
             () -> new SpecimenJarBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
 
-    public static final RegistrySupplier<Block> SPECIMEN_JAR_PIGLIN = register("specimen_jar_piglin",
+    public static final RegistrySupplier<Block> SPECIMEN_JAR_PIGLIN = registerSpecimenJar("specimen_jar_piglin",
             () -> new SpecimenJarBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
 
-    public static final RegistrySupplier<Block> SPECIMEN_JAR_SKELETON = register("specimen_jar_skeleton",
+    public static final RegistrySupplier<Block> SPECIMEN_JAR_SKELETON = registerSpecimenJar("specimen_jar_skeleton",
             () -> new SpecimenJarBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
 
-    public static final RegistrySupplier<Block> SPECIMEN_JAR_VEX = register("specimen_jar_vex",
+    public static final RegistrySupplier<Block> SPECIMEN_JAR_VEX = registerSpecimenJar("specimen_jar_vex",
             () -> new SpecimenJarBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
 
-    public static final RegistrySupplier<Block> SPECIMEN_JAR_WITHERSKELETON = register("specimen_jar_witherskeleton",
+    public static final RegistrySupplier<Block> SPECIMEN_JAR_WITHERSKELETON = registerSpecimenJar("specimen_jar_witherskeleton",
             () -> new SpecimenJarBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
 
-    public static final RegistrySupplier<Block> SPECIMEN_JAR_ZOMBIE = register("specimen_jar_zombie",
+    public static final RegistrySupplier<Block> SPECIMEN_JAR_ZOMBIE = registerSpecimenJar("specimen_jar_zombie",
             () -> new SpecimenJarBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
 
 
@@ -94,6 +95,12 @@ public class AudBlocks {
     private static <T extends Block> RegistrySupplier<T> registerDyed(String id, Supplier<T> blockSupplier) {
         RegistrySupplier<T> RegistrySupplier = BLOCKS.register(id, blockSupplier);
         AudItems.ITEMS.register(id, () -> new DyedItemBlock(RegistrySupplier.get(), new Item.Properties()));
+        return RegistrySupplier;
+    }
+
+    private static <T extends Block> RegistrySupplier<T> registerSpecimenJar(String id, Supplier<T> blockSupplier) {
+        RegistrySupplier<T> RegistrySupplier = BLOCKS.register(id, blockSupplier);
+        AudItems.ITEMS.register(id, () -> new SpecimenJarItemBlock(RegistrySupplier.get(), new Item.Properties()));
         return RegistrySupplier;
     }
 
