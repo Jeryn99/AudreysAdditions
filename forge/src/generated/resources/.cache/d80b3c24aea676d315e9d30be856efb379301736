@@ -1,4 +1,4 @@
-// 1.20.1	2025-01-28T22:28:58.5184529	Item Models: audreys_additions
+// 1.20.1	2025-06-14T21:32:49.0131541	Item Models: audreys_additions
 ec86cbbda42ea0fe30aae29769f5bfe28e8d2585 assets/audreys_additions/models/item/armchair.json
 f6e05d592446c5826e6b95e73debba09eca89da6 assets/audreys_additions/models/item/astral_map.json
 cc5ee705f2e4dc5845e2cae92da973bae8efad7d assets/audreys_additions/models/item/brachacki_monitor.json
@@ -9,3 +9,11 @@ cc5ee705f2e4dc5845e2cae92da973bae8efad7d assets/audreys_additions/models/item/br
 df8087e22a5a2df22a02fc5f296cbe59495e84f2 assets/audreys_additions/models/item/lightcolumn_left.json
 2f289de7182add4edca74642665cc87daae210bf assets/audreys_additions/models/item/lightcolumn_right.json
 dd97d9fd26d58e040cf1a87bfecca620289ae84d assets/audreys_additions/models/item/liminton_monitor.json
+68a7f790e5c005d6e3c040ce2e7930eb9e9d318d assets/audreys_additions/models/item/specimen_jar_allay.json
+68a7f790e5c005d6e3c040ce2e7930eb9e9d318d assets/audreys_additions/models/item/specimen_jar_creeper.json
+68a7f790e5c005d6e3c040ce2e7930eb9e9d318d assets/audreys_additions/models/item/specimen_jar_dragon.json
+68a7f790e5c005d6e3c040ce2e7930eb9e9d318d assets/audreys_additions/models/item/specimen_jar_piglin.json
+68a7f790e5c005d6e3c040ce2e7930eb9e9d318d assets/audreys_additions/models/item/specimen_jar_skeleton.json
+68a7f790e5c005d6e3c040ce2e7930eb9e9d318d assets/audreys_additions/models/item/specimen_jar_vex.json
+68a7f790e5c005d6e3c040ce2e7930eb9e9d318d assets/audreys_additions/models/item/specimen_jar_witherskeleton.json
+68a7f790e5c005d6e3c040ce2e7930eb9e9d318d assets/audreys_additions/models/item/specimen_jar_zombie.json
