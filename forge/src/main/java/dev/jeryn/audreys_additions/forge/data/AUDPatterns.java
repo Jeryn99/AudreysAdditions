@@ -60,6 +60,18 @@ public class AUDPatterns extends ShellPatternProvider {
         quickAdd(AudShellRegistry.TELEPHONE_BOOTH.getId(), "bee", true);
 
         quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock", false);
+        quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock_acacia", false);
+        quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock_bamboo", false);
+        quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock_birch", false);
+        quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock_cherry", false);
+        quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock_crimson", false);
+        quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock_jungle", false);
+        quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock_mangrove", false);
+        quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock_oak", false);
+        quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock_pale", false);
+        quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock_spruce", false);
+        quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "grandfather_clock_warped", false);
+
 
         quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "default", false);
         quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "acacia", false);
