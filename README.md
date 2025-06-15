@@ -23,6 +23,7 @@ This addon introduces a variety of shell options, custom-modelled blocks, consol
 - **Kelt Console (1983)** *  
 * Variants: Master, Rani, Warrior, Yellowed
 - **Rani Console (1985)**
+* Variants: Crimson, End, Keltic, Nether, White
 - **Silence Time-Ship (2010)**
 - **Toyota Console (2012)** *  
 * Variant: Blue
@@ -43,6 +44,20 @@ This addon introduces a variety of shell options, custom-modelled blocks, consol
 * Variants: Blue, Barbie, Proms
 - **SIDRAT** *  
 * Variant: Gallifreyan
+- **Rani's Wardrobe**
+* Variants: Iron, Nether Brick, Purpur, Quartz, Sandstone, Stone, Wooden
+- **Telephone Booth**
+* Variant: Bee
+- **TT Capsule**
+* Variant: Type 40
+- **Iron Maiden**
+- **Sandstone Column**
+* Variant: Red Sandstone
+- **Lakertyan Pyramid**
+- **Traken Clock**
+* Variants: Each wood type
+- **Grandfather Clock**
+* Variants: Each wood type
 
 ### Blocks/Items  
 - **Food Machine & Food Cubes**  
