@@ -34,7 +34,7 @@ public class AudreysAdditionsAPIEvents {
         TardisClientEvents.CONSOLE_MODELS_SETUP.register((consoleModelCollection, entityModelSet) -> consoleModelCollection.registerModel(AudConsoleRegistry.KELT.getId(), new KeltConsoleEntry(new KeltConsoleModel(entityModelSet.bakeLayer(KELT_CONSOLE)))));
         TardisClientEvents.CONSOLE_MODELS_SETUP.register((consoleModelCollection, entityModelSet) -> consoleModelCollection.registerModel(AudConsoleRegistry.MCGANN.getId(), new ConsoleModelEntry(new McGannConsoleModel(entityModelSet.bakeLayer(MCGANN_CONSOLE)))));
         TardisClientEvents.CONSOLE_MODELS_SETUP.register((consoleModelCollection, entityModelSet) -> consoleModelCollection.registerModel(AudConsoleRegistry.HUMAN_NATURE.getId(), new ConsoleModelEntry(new HumanNatureConsoleModel(entityModelSet.bakeLayer(HUMAN_NATURE_CONSOLE)))));
-        TardisClientEvents.CONSOLE_MODELS_SETUP.register((consoleModelCollection, entityModelSet) -> consoleModelCollection.registerModel(AudConsoleRegistry.SILENCE.getId(), new ConsoleModelEntry(new HumanNatureConsoleModel(entityModelSet.bakeLayer(SILENCE_CONSOLE)))));
+        TardisClientEvents.CONSOLE_MODELS_SETUP.register((consoleModelCollection, entityModelSet) -> consoleModelCollection.registerModel(AudConsoleRegistry.SILENCE.getId(), new ConsoleModelEntry(new SilenceConsoleModel(entityModelSet.bakeLayer(SILENCE_CONSOLE)))));
         TardisClientEvents.CONSOLE_MODELS_SETUP.register((consoleModelCollection, entityModelSet) -> consoleModelCollection.registerModel(AudConsoleRegistry.RANI.getId(), new ConsoleModelEntry(new RaniConsoleModel(entityModelSet.bakeLayer(RANI_CONSOLE)))));
     }
 
