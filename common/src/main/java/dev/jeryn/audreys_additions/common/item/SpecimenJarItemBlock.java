@@ -14,7 +14,7 @@ import net.minecraft.world.level.block.Block;
 public class SpecimenJarItemBlock extends BlockItem {
 
     public SpecimenJarItemBlock(Block block, Properties properties) {
-        super(block, properties);
+        super(block, properties.stacksTo(1));
     }
 
     @Override
@@ -30,13 +30,9 @@ public class SpecimenJarItemBlock extends BlockItem {
             }
 
             if (!replacement.isEmpty()) {
-                livingEntity.discard(); // Remove the entity
+                livingEntity.discard();
 
-                itemStack.shrink(1); // Use one empty jar
-
-                if (!player.getInventory().add(replacement)) {
-                    player.drop(replacement, false);
-                }
+                player.setItemInHand(interactionHand, replacement);
 
                 return InteractionResult.SUCCESS;
             }
@@ -44,4 +40,5 @@ public class SpecimenJarItemBlock extends BlockItem {
 
         return super.interactLivingEntity(itemStack, player, livingEntity, interactionHand);
     }
+
 }
