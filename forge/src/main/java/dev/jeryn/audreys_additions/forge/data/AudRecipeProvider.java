@@ -29,7 +29,7 @@ public class AudRecipeProvider extends RecipeProvider {
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.ARMCHAIR.get()).pattern(" P ").pattern(" W ").pattern(" F ").define('P', ItemTags.PLANKS).define('W', ItemTags.WOOL).define('F', ItemTags.FENCES).unlockedBy("has_crafting_table", has(TRBlockRegistry.ASTRAL_MANIPULATOR_BLOCK.get())).save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.ASTRAL_MAP.get()).pattern(" R ").pattern("IGI").pattern(" Z ").define('R', Blocks.REDSTONE_WIRE).define('I', Items.IRON_INGOT).define('G', Blocks.GRAY_STAINED_GLASS).define('Z', TRItemRegistry.ZEITON_INGOT.get()).unlockedBy("has_crafting_table", has(TRBlockRegistry.ASTRAL_MANIPULATOR_BLOCK.get())).save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.SPECIMEN_JAR.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.SPECIMEN_JAR.get(), 4)
                 .pattern(" G ")
                 .pattern("GSG")
                 .pattern(" G ")
