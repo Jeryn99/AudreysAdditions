@@ -3,14 +3,14 @@
     {
       "exterior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock.png"
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/default.png"
       },
-      "id": "audreys_additions:grandfather_clock",
+      "id": "audreys_additions:default",
       "interior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_interior.png"
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/default_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Grandfather Clock\"}",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}",
       "sound_profile": {
         "sounds": {
           "tardis_refined:door_close": {
@@ -47,14 +47,14 @@
     {
       "exterior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_acacia.png"
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/acacia.png"
       },
-      "id": "audreys_additions:grandfather_clock_acacia",
+      "id": "audreys_additions:acacia",
       "interior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_acacia_interior.png"
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/acacia_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Grandfather Clock Acacia\"}",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Acacia\"}",
       "sound_profile": {
         "sounds": {
           "tardis_refined:door_close": {
@@ -91,14 +91,14 @@
     {
       "exterior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_bamboo.png"
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/bamboo.png"
       },
-      "id": "audreys_additions:grandfather_clock_bamboo",
+      "id": "audreys_additions:bamboo",
       "interior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_bamboo_interior.png"
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/bamboo_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Grandfather Clock Bamboo\"}",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Bamboo\"}",
       "sound_profile": {
         "sounds": {
           "tardis_refined:door_close": {
@@ -135,14 +135,14 @@
     {
       "exterior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_birch.png"
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/birch.png"
       },
-      "id": "audreys_additions:grandfather_clock_birch",
+      "id": "audreys_additions:birch",
       "interior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_birch_interior.png"
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/birch_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Grandfather Clock Birch\"}",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Birch\"}",
       "sound_profile": {
         "sounds": {
           "tardis_refined:door_close": {
@@ -179,14 +179,14 @@
     {
       "exterior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_cherry.png"
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/cherry.png"
       },
-      "id": "audreys_additions:grandfather_clock_cherry",
+      "id": "audreys_additions:cherry",
       "interior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_cherry_interior.png"
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/cherry_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Grandfather Clock Cherry\"}",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Cherry\"}",
       "sound_profile": {
         "sounds": {
           "tardis_refined:door_close": {
@@ -223,14 +223,14 @@
     {
       "exterior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_crimson.png"
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/crimson.png"
       },
-      "id": "audreys_additions:grandfather_clock_crimson",
+      "id": "audreys_additions:crimson",
       "interior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_crimson_interior.png"
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/crimson_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Grandfather Clock Crimson\"}",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Crimson\"}",
       "sound_profile": {
         "sounds": {
           "tardis_refined:door_close": {
@@ -267,14 +267,14 @@
     {
       "exterior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_jungle.png"
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/jungle.png"
       },
-      "id": "audreys_additions:grandfather_clock_jungle",
+      "id": "audreys_additions:jungle",
       "interior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_jungle_interior.png"
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/jungle_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Grandfather Clock Jungle\"}",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Jungle\"}",
       "sound_profile": {
         "sounds": {
           "tardis_refined:door_close": {
@@ -311,14 +311,14 @@
     {
       "exterior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_mangrove.png"
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/mangrove.png"
       },
-      "id": "audreys_additions:grandfather_clock_mangrove",
+      "id": "audreys_additions:mangrove",
       "interior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_mangrove_interior.png"
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/mangrove_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Grandfather Clock Mangrove\"}",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Mangrove\"}",
       "sound_profile": {
         "sounds": {
           "tardis_refined:door_close": {
@@ -355,14 +355,14 @@
     {
       "exterior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_oak.png"
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/oak.png"
       },
-      "id": "audreys_additions:grandfather_clock_oak",
+      "id": "audreys_additions:oak",
       "interior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_oak_interior.png"
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/oak_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Grandfather Clock Oak\"}",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Oak\"}",
       "sound_profile": {
         "sounds": {
           "tardis_refined:door_close": {
@@ -399,14 +399,14 @@
     {
       "exterior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_pale.png"
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/pale.png"
       },
-      "id": "audreys_additions:grandfather_clock_pale",
+      "id": "audreys_additions:pale",
       "interior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_pale_interior.png"
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/pale_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Grandfather Clock Pale\"}",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Pale\"}",
       "sound_profile": {
         "sounds": {
           "tardis_refined:door_close": {
@@ -443,14 +443,14 @@
     {
       "exterior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_spruce.png"
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/spruce.png"
       },
-      "id": "audreys_additions:grandfather_clock_spruce",
+      "id": "audreys_additions:spruce",
       "interior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_spruce_interior.png"
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/spruce_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Grandfather Clock Spruce\"}",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Spruce\"}",
       "sound_profile": {
         "sounds": {
           "tardis_refined:door_close": {
@@ -487,14 +487,14 @@
     {
       "exterior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_warped.png"
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/warped.png"
       },
-      "id": "audreys_additions:grandfather_clock_warped",
+      "id": "audreys_additions:warped",
       "interior": {
         "emissive": false,
-        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/grandfather_clock_warped_interior.png"
+        "texture": "audreys_additions:textures/blockentity/shell/grandfather_clock/warped_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Grandfather Clock Warped\"}",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Warped\"}",
       "sound_profile": {
         "sounds": {
           "tardis_refined:door_close": {
