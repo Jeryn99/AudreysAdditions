@@ -77,7 +77,7 @@ public class MonitorBlock extends HorizontalDirectionalBlock implements SimpleWa
             };
         }
 
-        return AABB;
+        return super.getShape(blockState, blockGetter, blockPos, collisionContext);
     }
 
 
