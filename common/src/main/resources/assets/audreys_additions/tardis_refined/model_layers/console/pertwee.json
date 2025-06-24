@@ -3020,21 +3020,33 @@
 							"uv": {
 								"up": {"uv": [68, 61], "uv_size": [3, 1]}
 							}
-						},
+						}
+					]
+				},
+				{
+					"name": "RotorRotty1",
+					"parent": "RotorInnards1",
+					"pivot": [0, 27.025, -3.45],
+					"rotation": [0, -22.5, 0],
+					"cubes": [
 						{
 							"origin": [-1.725, 23, -3.45],
 							"size": [3.45, 8.05, 0],
-							"pivot": [0, 27.025, -3.45],
-							"rotation": [0, -22.5, 0],
 							"uv": {
 								"north": {"uv": [48, 57], "uv_size": [3, 7]}
 							}
-						},
+						}
+					]
+				},
+				{
+					"name": "RotorRotty2",
+					"parent": "RotorInnards1",
+					"pivot": [0, 27.025, -3.45],
+					"rotation": [0, 22.5, 0],
+					"cubes": [
 						{
 							"origin": [-1.725, 23, -3.45],
 							"size": [3.45, 8.05, 0],
-							"pivot": [0, 27.025, -3.45],
-							"rotation": [0, 22.5, 0],
 							"uv": {
 								"north": {"uv": [52, 57], "uv_size": [3, 7]}
 							}
@@ -3060,21 +3072,33 @@
 							"uv": {
 								"up": {"uv": [68, 61], "uv_size": [3, 1]}
 							}
-						},
+						}
+					]
+				},
+				{
+					"name": "RotorRotty3",
+					"parent": "RotorInnards2",
+					"pivot": [0, 27.025, -3.45],
+					"rotation": [0, -22.5, 0],
+					"cubes": [
 						{
 							"origin": [-1.725, 23, -3.45],
 							"size": [3.45, 8.05, 0],
-							"pivot": [0, 27.025, -3.45],
-							"rotation": [0, -22.5, 0],
 							"uv": {
 								"north": {"uv": [48, 57], "uv_size": [3, 7]}
 							}
-						},
+						}
+					]
+				},
+				{
+					"name": "RotorRotty4",
+					"parent": "RotorInnards2",
+					"pivot": [0, 27.025, -3.45],
+					"rotation": [0, 22.5, 0],
+					"cubes": [
 						{
 							"origin": [-1.725, 23, -3.45],
 							"size": [3.45, 8.05, 0],
-							"pivot": [0, 27.025, -3.45],
-							"rotation": [0, 22.5, 0],
 							"uv": {
 								"north": {"uv": [52, 57], "uv_size": [3, 7]}
 							}
@@ -3100,21 +3124,33 @@
 							"uv": {
 								"up": {"uv": [68, 61], "uv_size": [3, 1]}
 							}
-						},
+						}
+					]
+				},
+				{
+					"name": "RotorRotty5",
+					"parent": "RotorInnards3",
+					"pivot": [0, 27.025, -3.45],
+					"rotation": [0, -22.5, 0],
+					"cubes": [
 						{
 							"origin": [-1.725, 23, -3.45],
 							"size": [3.45, 8.05, 0],
-							"pivot": [0, 27.025, -3.45],
-							"rotation": [0, -22.5, 0],
 							"uv": {
 								"north": {"uv": [48, 57], "uv_size": [3, 7]}
 							}
-						},
+						}
+					]
+				},
+				{
+					"name": "RotorRotty6",
+					"parent": "RotorInnards3",
+					"pivot": [0, 27.025, -3.45],
+					"rotation": [0, 22.5, 0],
+					"cubes": [
 						{
 							"origin": [-1.725, 23, -3.45],
 							"size": [3.45, 8.05, 0],
-							"pivot": [0, 27.025, -3.45],
-							"rotation": [0, 22.5, 0],
 							"uv": {
 								"north": {"uv": [52, 57], "uv_size": [3, 7]}
 							}
