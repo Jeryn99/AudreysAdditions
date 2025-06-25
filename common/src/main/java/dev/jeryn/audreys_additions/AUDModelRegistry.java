@@ -17,8 +17,8 @@ public class AUDModelRegistry {
 
 
     // Models
-    public static PoliceBoxModel policeBox03, policeBox66, policeBoxRuth, policeBox73, policeBox18, policeBox18_special, policeBox10, policeBox11, policeBox17, policeBoxMemorial, policeBox76, policeBox96, policeBox63, policeBox63Massacre, trakenClock, policeBox83, policeBox87, policeBoxHappinessPatrol;
-    public static DualInteriorDoorModel policeBox03Door, policeBox66Door, policeBox63Door, policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox11Door, policeBox17Door, policeBox76Door, policeBox96Door, policeBox80Door, policeBox83Door, policeBox87Door, policeBoxHappinessPatrolDoor;
+    public static PoliceBoxModel policeBox03, policeBox66, policeBoxRuth, policeBox73, policeBox18, policeBox18_special, policeBox10, policeBox11, policeBox17, policeBoxMemorial, policeBox76, policeBox96, policeBox63, policeBox63Massacre, trakenClock, policeBox83, policeBox87, policeBoxHappinessPatrol, policeBox05;
+    public static DualInteriorDoorModel policeBox03Door, policeBox66Door, policeBox63Door, policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox11Door, policeBox17Door, policeBox76Door, policeBox96Door, policeBox80Door, policeBox83Door, policeBox87Door, policeBoxHappinessPatrolDoor, policeBox05Door;
     public static SingleInteriorDoorModel trakenClockDoor;
     public static DualTexInteriorDoorModel sidratDoor, columnDoor, ironMaidenDoor, ttCapsuleDoor, type40Door, telephoneBoothDoor, raniWardrobeDoor, lakertyanPyramidDoor;
     public static SidratModel sidrat, column, ironMaiden, ttCapsule, type40, telephoneBooth, policeBox80, raniWardrobe, lakertyanPyramid;
@@ -38,6 +38,9 @@ public class AUDModelRegistry {
     public static ModelLayerLocation POLICEBOX_2017 = shell("policebox_2017");
     public static ModelLayerLocation POLICEBOX_2017_DOOR = interiorDoor("policebox_2017_door");
     public static ModelLayerLocation POLICEBOX_MEMORIAL = shell("policebox_memorial");
+
+    public static ModelLayerLocation POLICEBOX_2005 = shell("policebox_2005");
+    public static ModelLayerLocation POLICEBOX_2005_DOOR = interiorDoor("policebox_2005_door");
 
     public static ModelLayerLocation POLICEBOX_1980 = shell("policebox_1980");
     public static ModelLayerLocation POLICEBOX_1980_DOOR = interiorDoor("policebox_1980_door");
@@ -240,6 +243,12 @@ public class AUDModelRegistry {
 
         policeBoxMemorial = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_MEMORIAL), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
         });
+
+        // Police Box - 2005
+        policeBox05 = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_2005), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
+        });
+        policeBox05Door = new DualInteriorDoorModel(entityModels.bakeLayer(POLICEBOX_2005_DOOR), -275.0F, false, true);
+
 
         // Police Box - 1980
         policeBox80 = new SidratModel(entityModels.bakeLayer(POLICEBOX_1980));

@@ -11,6 +11,7 @@ public class AUDShellEntryRegistry {
     public static void init() {
         ShellModelCollection.registerShellEntry(AudShellRegistry.POLICEBOX_2018.get(), new PoliceBox2018Entry(AUDModelRegistry.policeBox18, AUDModelRegistry.policeBox18Door));
         ShellModelCollection.registerShellEntry(AudShellRegistry.POLICEBOX_2010.get(), new PoliceBox2010Entry(AUDModelRegistry.policeBox10, AUDModelRegistry.policeBox10Door));
+        ShellModelCollection.registerShellEntry(AudShellRegistry.POLICEBOX_2005.get(), AUDModelRegistry.policeBox05, AUDModelRegistry.policeBox05Door);
         ShellModelCollection.registerShellEntry(AudShellRegistry.POLICEBOX_1976.get(), AUDModelRegistry.policeBox76, AUDModelRegistry.policeBox76Door);
         ShellModelCollection.registerShellEntry(AudShellRegistry.POLICEBOX_1996.get(), new PoliceBox1996Entry(AUDModelRegistry.policeBox96, AUDModelRegistry.policeBox96Door));
         ShellModelCollection.registerShellEntry(AudShellRegistry.POLICEBOX_1980.get(), new PoliceBox1980Entry(AUDModelRegistry.policeBox80, AUDModelRegistry.policeBox80Door));
