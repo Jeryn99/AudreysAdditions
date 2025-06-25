@@ -47,6 +47,8 @@ public class AUDPatterns extends ShellPatternProvider {
 
         quickAdd(AudShellRegistry.POLICEBOX_1976.getId(), "default", true);
 
+        quickAdd(AudShellRegistry.POLICEBOX_2005.getId(), "default", true);
+
         quickAdd(AudShellRegistry.RANI_WARDROBE.getId(), "default", true);
         quickAdd(AudShellRegistry.RANI_WARDROBE.getId(), "iron", true);
         quickAdd(AudShellRegistry.RANI_WARDROBE.getId(), "nether_brick", true);
