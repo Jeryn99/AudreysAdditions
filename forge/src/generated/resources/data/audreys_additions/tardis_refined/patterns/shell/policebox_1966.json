@@ -179,6 +179,50 @@
     {
       "exterior": {
         "emissive": true,
+        "texture": "audreys_additions:textures/blockentity/shell/policebox_1966/season_13.png"
+      },
+      "id": "audreys_additions:season_13",
+      "interior": {
+        "emissive": true,
+        "texture": "audreys_additions:textures/blockentity/shell/policebox_1966/season_13_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Season 13\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": true,
         "texture": "audreys_additions:textures/blockentity/shell/policebox_1966/ruth.png"
       },
       "id": "audreys_additions:ruth",

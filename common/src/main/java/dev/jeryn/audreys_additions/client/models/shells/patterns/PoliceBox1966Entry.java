@@ -24,7 +24,9 @@ public class PoliceBox1966Entry extends ShellEntry {
         if (variantPath.contains("season_11")) {
             return AUDModelRegistry.policeBox73;
         }
-
+        if (variantPath.contains("season_13")) {
+            return AUDModelRegistry.policeBoxS13;
+        }
         // 66
         return super.getShellModel(shellPattern);
     }
