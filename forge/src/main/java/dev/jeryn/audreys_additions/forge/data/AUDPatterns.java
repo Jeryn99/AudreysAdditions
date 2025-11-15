@@ -29,6 +29,7 @@ public class AUDPatterns extends ShellPatternProvider {
         quickAdd(AudShellRegistry.POLICEBOX_1966.getId(), "season_5", true);
         quickAdd(AudShellRegistry.POLICEBOX_1966.getId(), "season_6", true);
         quickAdd(AudShellRegistry.POLICEBOX_1966.getId(), "season_11", true);
+        quickAdd(AudShellRegistry.POLICEBOX_1966.getId(), "season_13", true);
         quickAdd(AudShellRegistry.POLICEBOX_1966.getId(), "ruth", true);
 
         quickAdd(AudShellRegistry.POLICEBOX_2018.getId(), "default", true);
