@@ -34,6 +34,7 @@ public class AUDEnglish extends LanguageProvider {
         addShell(AudShellRegistry.TELEPHONE_BOOTH.get(), ChatFormatting.BLUE + "Telephone Booth");
         addShell(AudShellRegistry.RANI_WARDROBE.get(), ChatFormatting.BLUE + "Rani's Wardrobe");
         addShell(AudShellRegistry.LAKERTYAN_PYRAMID.get(), ChatFormatting.BLUE + "Lakertyan Pyramid");
+        addShell(AudShellRegistry.CABINET.get(), ChatFormatting.BLUE + "TARDIS Cabinet");
 
         add(AudBlocks.KNOSSOS_THRONE.get(), "Knossos Throne");
         add(AudBlocks.LIMINTON_MONITOR.get(), "Liminton Monitor");

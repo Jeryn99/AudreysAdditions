@@ -1,0 +1,532 @@
+{
+  "patterns": [
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/cabinet/default.png"
+      },
+      "id": "audreys_additions:default",
+      "interior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/cabinet/default_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/cabinet/acacia.png"
+      },
+      "id": "audreys_additions:acacia",
+      "interior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/cabinet/acacia_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Acacia\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/cabinet/bamboo.png"
+      },
+      "id": "audreys_additions:bamboo",
+      "interior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/cabinet/bamboo_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Bamboo\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/cabinet/birch.png"
+      },
+      "id": "audreys_additions:birch",
+      "interior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/cabinet/birch_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Birch\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/cabinet/cherry.png"
+      },
+      "id": "audreys_additions:cherry",
+      "interior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/cabinet/cherry_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Cherry\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/cabinet/crimson.png"
+      },
+      "id": "audreys_additions:crimson",
+      "interior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/cabinet/crimson_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Crimson\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/cabinet/dark_oak.png"
+      },
+      "id": "audreys_additions:dark_oak",
+      "interior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/cabinet/dark_oak_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Dark Oak\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/cabinet/jungle.png"
+      },
+      "id": "audreys_additions:jungle",
+      "interior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/cabinet/jungle_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Jungle\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/cabinet/mangrove.png"
+      },
+      "id": "audreys_additions:mangrove",
+      "interior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/cabinet/mangrove_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Mangrove\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/cabinet/oak.png"
+      },
+      "id": "audreys_additions:oak",
+      "interior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/cabinet/oak_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Oak\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/cabinet/spruce.png"
+      },
+      "id": "audreys_additions:spruce",
+      "interior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/cabinet/spruce_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Spruce\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/cabinet/warped.png"
+      },
+      "id": "audreys_additions:warped",
+      "interior": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/shell/cabinet/warped_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Warped\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    }
+  ]
+}
