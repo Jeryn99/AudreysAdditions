@@ -74,6 +74,19 @@ public class AUDPatterns extends ShellPatternProvider {
         quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "spruce", false);
         quickAdd(AudShellRegistry.GRANDFATHER_CLOCK.getId(), "warped", false);
 
+        quickAdd(AudShellRegistry.CABINET.getId(), "default", false);
+        quickAdd(AudShellRegistry.CABINET.getId(), "acacia", false);
+        quickAdd(AudShellRegistry.CABINET.getId(), "bamboo", false);
+        quickAdd(AudShellRegistry.CABINET.getId(), "birch", false);
+        quickAdd(AudShellRegistry.CABINET.getId(), "cherry", false);
+        quickAdd(AudShellRegistry.CABINET.getId(), "crimson", false);
+        quickAdd(AudShellRegistry.CABINET.getId(), "dark_oak", false);
+        quickAdd(AudShellRegistry.CABINET.getId(), "jungle", false);
+        quickAdd(AudShellRegistry.CABINET.getId(), "mangrove", false);
+        quickAdd(AudShellRegistry.CABINET.getId(), "oak", false);
+        quickAdd(AudShellRegistry.CABINET.getId(), "spruce", false);
+        quickAdd(AudShellRegistry.CABINET.getId(), "warped", false);
+
         quickAdd(AudShellRegistry.LAKERTYAN_PYRAMID.getId(), "default", false);
 
 

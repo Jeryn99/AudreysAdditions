@@ -20,8 +20,8 @@ public class AUDModelRegistry {
     public static PoliceBoxModel policeBox03, policeBox66, policeBoxRuth, policeBox73, policeBox18, policeBox18_special, policeBox10, policeBox11, policeBox17, policeBoxMemorial, policeBox76, policeBox96, policeBox63, policeBox63Massacre, trakenClock, policeBox83, policeBox87, policeBoxHappinessPatrol, policeBox05;
     public static DualInteriorDoorModel policeBox03Door, policeBox66Door, policeBox63Door, policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox11Door, policeBox17Door, policeBox76Door, policeBox96Door, policeBox80Door, policeBox83Door, policeBox87Door, policeBoxHappinessPatrolDoor, policeBox05Door;
     public static SingleInteriorDoorModel trakenClockDoor;
-    public static DualTexInteriorDoorModel sidratDoor, columnDoor, ironMaidenDoor, ttCapsuleDoor, type40Door, telephoneBoothDoor, raniWardrobeDoor, lakertyanPyramidDoor;
-    public static SidratModel sidrat, column, ironMaiden, ttCapsule, type40, telephoneBooth, policeBox80, raniWardrobe, lakertyanPyramid;
+    public static DualTexInteriorDoorModel sidratDoor, columnDoor, ironMaidenDoor, ttCapsuleDoor, type40Door, telephoneBoothDoor, raniWardrobeDoor, lakertyanPyramidDoor, cabinetDoor;
+    public static SidratModel sidrat, column, ironMaiden, ttCapsule, type40, telephoneBooth, policeBox80, raniWardrobe, lakertyanPyramid, cabinet;
     public static TrakenClockModel grandfatherClock;
     public static TrakenClockInteriorDoorModel grandfatherClockDoor;
 
@@ -63,6 +63,8 @@ public class AUDModelRegistry {
     public static ModelLayerLocation POLICEBOX_1973= shell("policebox_1973");
     public static ModelLayerLocation POLICEBOX_1966_DOOR = interiorDoor("policebox_1966_door");
 
+    public static ModelLayerLocation CABINET = shell("cabinet");
+    public static ModelLayerLocation CABINET_DOOR = interiorDoor("cabinet_door");
 
     public static ModelLayerLocation POLICEBOX_1963 = shell("policebox_1963");
     public static ModelLayerLocation POLICEBOX_1963_MASSACRE = shell("policebox_1963_massacre");
@@ -249,6 +251,9 @@ public class AUDModelRegistry {
         });
         policeBox05Door = new DualInteriorDoorModel(entityModels.bakeLayer(POLICEBOX_2005_DOOR), -275.0F, false, true);
 
+        // TARDIS CAbinet
+        cabinet = new SidratModel(entityModels.bakeLayer(CABINET));
+        cabinetDoor = new DualTexInteriorDoorModel(entityModels.bakeLayer(CABINET_DOOR));
 
         // Police Box - 1980
         policeBox80 = new SidratModel(entityModels.bakeLayer(POLICEBOX_1980));
