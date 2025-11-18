@@ -22,6 +22,7 @@ public class AudConsoleRegistry {
     public static final RegistrySupplier<ConsoleTheme> HUMAN_NATURE = registerConsoleTheme("human_nature", new HumanNatureConsoleTheme());
     public static final RegistrySupplier<ConsoleTheme> SILENCE = registerConsoleTheme("silence", new SilenceConsoleTheme());
     public static final RegistrySupplier<ConsoleTheme> RANI = registerConsoleTheme("rani", new RaniConsoleTheme());
+    public static final RegistrySupplier<ConsoleTheme> ALTERED_SHARP = registerConsoleTheme("altered_sharp", new AlteredSharpConsoleTheme());
 
 
     private static RegistrySupplier<ConsoleTheme> registerConsoleTheme(String id, ConsoleThemeDetails themeDetails) {

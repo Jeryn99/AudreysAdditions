@@ -63,6 +63,8 @@ public class AudConsolePatternProvider extends ConsolePatternProvider {
         addPatternToDatagen(AudConsoleRegistry.PERTWEE.getId(), createWithDefaultSound("pertwee", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/pertwee/pertwee.png"), true)));
         addPatternToDatagen(AudConsoleRegistry.PERTWEE.getId(), createWithDefaultSound("master", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/pertwee/master.png"), true)));
 
+        addPatternToDatagen(AudConsoleRegistry.ALTERED_SHARP.getId(), createWithDefaultSound("altered_sharp", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/altered_sharp/altered_sharp.png"), false)));
+
         addPatternToDatagen(AudConsoleRegistry.RANI.getId(), createWithDefaultSound("rani", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/rani/rani.png"), false)));
         addPatternToDatagen(AudConsoleRegistry.RANI.getId(), createWithDefaultSound("rani_crimson", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/rani/rani_crimson.png"), false)));
         addPatternToDatagen(AudConsoleRegistry.RANI.getId(), createWithDefaultSound("rani_end", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/rani/rani_end.png"), true)));

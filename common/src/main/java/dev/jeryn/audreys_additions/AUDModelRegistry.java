@@ -112,6 +112,7 @@ public class AUDModelRegistry {
     public static ModelLayerLocation HUMAN_NATURE_CONSOLE = console("human_nature");
     public static ModelLayerLocation SILENCE_CONSOLE = console("silence");
     public static ModelLayerLocation RANI_CONSOLE = console("rani");
+    public static ModelLayerLocation ALTERED_SHARP_CONSOLE = console("altered_sharp");
 
 
     public static ModelLayerLocation KNOSSOS_THRONE = furniture("knossos_throne");
