@@ -17,7 +17,7 @@ public class AUDModelRegistry {
 
 
     // Models
-    public static PoliceBoxModel policeBox03, policeBox66, policeBoxRuth, policeBox73, policeBoxS13, policeBox18, policeBox18_special, policeBox10, policeBox11, policeBox17, policeBoxMemorial, policeBox76, policeBox96, policeBox63, policeBox63Massacre, trakenClock, policeBox83, policeBox87, policeBoxHappinessPatrol, policeBox05;
+    public static PoliceBoxModel policeBox03, policeBox66, policeBoxRuth, policeBox73, policeBoxS13, policeBox18, policeBox18_special, policeBox10, policeBox11, policeBox17, policeBoxMemorial, policeBox76, policeBox96, policeBox63, policeBox63Massacre, trakenClock, policeBox83, policeBox87, policeBoxHappinessPatrol, policeBox05, policeBoxTimeWar;
     public static DualInteriorDoorModel policeBox03Door, policeBox66Door, policeBox63Door, policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox11Door, policeBox17Door, policeBox76Door, policeBox96Door, policeBox80Door, policeBox83Door, policeBox87Door, policeBoxHappinessPatrolDoor, policeBox05Door;
     public static SingleInteriorDoorModel trakenClockDoor;
     public static DualTexInteriorDoorModel sidratDoor, columnDoor, ironMaidenDoor, ttCapsuleDoor, type40Door, telephoneBoothDoor, raniWardrobeDoor, lakertyanPyramidDoor, cabinetDoor;
@@ -41,6 +41,7 @@ public class AUDModelRegistry {
 
     public static ModelLayerLocation POLICEBOX_2005 = shell("policebox_2005");
     public static ModelLayerLocation POLICEBOX_2005_DOOR = interiorDoor("policebox_2005_door");
+    public static ModelLayerLocation POLICEBOX_TIME_WAR = shell("policebox_timewar");
 
     public static ModelLayerLocation POLICEBOX_1980 = shell("policebox_1980");
     public static ModelLayerLocation POLICEBOX_1980_DOOR = interiorDoor("policebox_1980_door");
@@ -254,6 +255,9 @@ public class AUDModelRegistry {
         policeBox05 = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_2005), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
         });
         policeBox05Door = new DualInteriorDoorModel(entityModels.bakeLayer(POLICEBOX_2005_DOOR), -275.0F, false, true);
+        policeBoxTimeWar = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_TIME_WAR), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
+        });
+
 
         // TARDIS Cabinet
         cabinet = new SidratModel(entityModels.bakeLayer(CABINET));
