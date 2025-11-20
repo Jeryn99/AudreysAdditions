@@ -208,30 +208,6 @@
 							}
 						},
 						{
-							"origin": [8.5, 27.75, -8.5],
-							"size": [4, 4, 4],
-							"uv": {
-								"north": {"uv": [0, 0], "uv_size": [2, 2]},
-								"east": {"uv": [0, 0], "uv_size": [2, 2]},
-								"south": {"uv": [0, 0], "uv_size": [2, 2]},
-								"west": {"uv": [0, 0], "uv_size": [2, 2]},
-								"up": {"uv": [2, 2], "uv_size": [-2, -2]},
-								"down": {"uv": [2, 2], "uv_size": [-2, -2]}
-							}
-						},
-						{
-							"origin": [-14.5, 27.25, 3.75],
-							"size": [4, 4, 4],
-							"uv": {
-								"north": {"uv": [0, 0], "uv_size": [2, 2]},
-								"east": {"uv": [0, 0], "uv_size": [2, 2]},
-								"south": {"uv": [0, 0], "uv_size": [2, 2]},
-								"west": {"uv": [0, 0], "uv_size": [2, 2]},
-								"up": {"uv": [2, 2], "uv_size": [-2, -2]},
-								"down": {"uv": [2, 2], "uv_size": [-2, -2]}
-							}
-						},
-						{
 							"origin": [-13.5, 17, 11.5],
 							"size": [2, 1, 2],
 							"uv": {
@@ -258,6 +234,30 @@
 						{
 							"origin": [10, 20.5, -3],
 							"size": [1, 1, 1],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [2, 2]},
+								"east": {"uv": [0, 0], "uv_size": [2, 2]},
+								"south": {"uv": [0, 0], "uv_size": [2, 2]},
+								"west": {"uv": [0, 0], "uv_size": [2, 2]},
+								"up": {"uv": [2, 2], "uv_size": [-2, -2]},
+								"down": {"uv": [2, 2], "uv_size": [-2, -2]}
+							}
+						},
+						{
+							"origin": [8.5, 27.75, -8.5],
+							"size": [4, 4, 4],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [2, 2]},
+								"east": {"uv": [0, 0], "uv_size": [2, 2]},
+								"south": {"uv": [0, 0], "uv_size": [2, 2]},
+								"west": {"uv": [0, 0], "uv_size": [2, 2]},
+								"up": {"uv": [2, 2], "uv_size": [-2, -2]},
+								"down": {"uv": [2, 2], "uv_size": [-2, -2]}
+							}
+						},
+						{
+							"origin": [-14.5, 27.25, 3.75],
+							"size": [4, 4, 4],
 							"uv": {
 								"north": {"uv": [0, 0], "uv_size": [2, 2]},
 								"east": {"uv": [0, 0], "uv_size": [2, 2]},
@@ -662,7 +662,7 @@
 							"uv": {
 								"west": {"uv": [40, 72], "uv_size": [20, 30]},
 								"up": {"uv": [84, 88], "uv_size": [18, 20]},
-								"down": {"uv": [0, 116], "uv_size": [18, -20]}
+								"down": {"uv": [58, 124], "uv_size": [-18, -20]}
 							}
 						}
 					]
@@ -679,7 +679,7 @@
 							"uv": {
 								"west": {"uv": [40, 72], "uv_size": [20, 30]},
 								"up": {"uv": [84, 88], "uv_size": [18, 20]},
-								"down": {"uv": [0, 116], "uv_size": [18, -20]}
+								"down": {"uv": [58, 124], "uv_size": [-18, -20]}
 							}
 						}
 					]
@@ -736,7 +736,7 @@
 							"uv": {
 								"west": {"uv": [40, 72], "uv_size": [20, 30]},
 								"up": {"uv": [84, 88], "uv_size": [18, 20]},
-								"down": {"uv": [0, 116], "uv_size": [18, -20]}
+								"down": {"uv": [58, 124], "uv_size": [-18, -20]}
 							}
 						}
 					]
@@ -789,7 +789,7 @@
 							"uv": {
 								"east": {"uv": [0, 132], "uv_size": [14, 4]},
 								"west": {"uv": [132, 0], "uv_size": [14, 4]},
-								"down": {"uv": [102, 154], "uv_size": [2, -14]}
+								"down": {"uv": [18, 156], "uv_size": [-2, -14]}
 							}
 						}
 					]
@@ -872,7 +872,7 @@
 							"uv": {
 								"east": {"uv": [0, 132], "uv_size": [14, 4]},
 								"west": {"uv": [132, 0], "uv_size": [14, 4]},
-								"down": {"uv": [102, 154], "uv_size": [2, -14]}
+								"down": {"uv": [18, 156], "uv_size": [-2, -14]}
 							}
 						}
 					]
@@ -898,7 +898,7 @@
 							"uv": {
 								"east": {"uv": [0, 132], "uv_size": [14, 4]},
 								"west": {"uv": [132, 0], "uv_size": [14, 4]},
-								"down": {"uv": [102, 154], "uv_size": [2, -14]}
+								"down": {"uv": [18, 156], "uv_size": [-2, -14]}
 							}
 						}
 					]
@@ -1474,7 +1474,7 @@
 							"uv": {
 								"west": {"uv": [122, 70], "uv_size": [20, 4]},
 								"up": {"uv": [20, 96], "uv_size": [18, 20]},
-								"down": {"uv": [102, 20], "uv_size": [18, -20]}
+								"down": {"uv": [120, 64], "uv_size": [-18, -20]}
 							}
 						}
 					]
@@ -1643,7 +1643,7 @@
 							"uv": {
 								"west": {"uv": [122, 70], "uv_size": [20, 4]},
 								"up": {"uv": [20, 96], "uv_size": [18, 20]},
-								"down": {"uv": [102, 20], "uv_size": [18, -20]}
+								"down": {"uv": [120, 64], "uv_size": [-18, -20]}
 							}
 						}
 					]
@@ -1660,7 +1660,7 @@
 							"uv": {
 								"west": {"uv": [122, 70], "uv_size": [20, 4]},
 								"up": {"uv": [20, 96], "uv_size": [18, 20]},
-								"down": {"uv": [102, 20], "uv_size": [18, -20]}
+								"down": {"uv": [120, 64], "uv_size": [-18, -20]}
 							}
 						}
 					]
@@ -3977,92 +3977,6 @@
 					"pivot": [0, 0, 0]
 				},
 				{
-					"name": "CenterPipe",
-					"parent": "RotorOffsetter",
-					"pivot": [0, 0, 0],
-					"cubes": [
-						{
-							"origin": [-1, 23, -1],
-							"size": [2, 10, 2],
-							"uv": {
-								"north": {"uv": [124, 122], "uv_size": [4, 20]},
-								"east": {"uv": [40, 126], "uv_size": [4, 20]},
-								"south": {"uv": [124, 122], "uv_size": [4, 20]},
-								"west": {"uv": [40, 126], "uv_size": [4, 20]},
-								"up": {"uv": [152, 56], "uv_size": [4, 4]}
-							}
-						},
-						{
-							"origin": [-1, 47, -1],
-							"size": [2, 11, 2],
-							"uv": {
-								"north": {"uv": [122, 0], "uv_size": [4, 22]},
-								"east": {"uv": [122, 24], "uv_size": [4, 22]},
-								"south": {"uv": [122, 0], "uv_size": [4, 22]},
-								"west": {"uv": [122, 24], "uv_size": [4, 22]},
-								"down": {"uv": [62, 156], "uv_size": [4, -4]}
-							}
-						}
-					]
-				},
-				{
-					"name": "TopPipey",
-					"parent": "CenterPipe",
-					"pivot": [0, 47, 0],
-					"rotation": [0, -45, 0],
-					"cubes": [
-						{
-							"origin": [-0.25, 41, -0.25],
-							"size": [0.5, 6, 0.5],
-							"uv": {
-								"north": {"uv": [154, 154], "uv_size": [1, 12]},
-								"east": {"uv": [154, 154], "uv_size": [1, 12]},
-								"south": {"uv": [154, 154], "uv_size": [1, 12]},
-								"west": {"uv": [154, 154], "uv_size": [1, 12]},
-								"down": {"uv": [14, 165], "uv_size": [1, -1]}
-							}
-						}
-					]
-				},
-				{
-					"name": "BottomPipey",
-					"parent": "CenterPipe",
-					"pivot": [0, 33, 0],
-					"rotation": [0, -45, 0],
-					"cubes": [
-						{
-							"origin": [-0.25, 33, -0.25],
-							"size": [0.5, 6, 0.5],
-							"uv": {
-								"north": {"uv": [0, 156], "uv_size": [1, 12]},
-								"east": {"uv": [0, 156], "uv_size": [1, 12]},
-								"south": {"uv": [0, 156], "uv_size": [1, 12]},
-								"west": {"uv": [0, 156], "uv_size": [1, 12]},
-								"up": {"uv": [14, 164], "uv_size": [1, 1]}
-							}
-						}
-					]
-				},
-				{
-					"name": "RotorCenter",
-					"parent": "RotorOffsetter",
-					"pivot": [0, 40, 0],
-					"cubes": [
-						{
-							"origin": [-0.5, 39.5, -0.5],
-							"size": [1, 1, 1],
-							"uv": {
-								"north": {"uv": [165, 0], "uv_size": [2, 2]},
-								"east": {"uv": [167, 0], "uv_size": [-2, 2]},
-								"south": {"uv": [165, 0], "uv_size": [2, 2]},
-								"west": {"uv": [167, 0], "uv_size": [-2, 2]},
-								"up": {"uv": [165, 2], "uv_size": [2, -2]},
-								"down": {"uv": [165, 2], "uv_size": [2, -2]}
-							}
-						}
-					]
-				},
-				{
 					"name": "RotorOn",
 					"parent": "RotorOffsetter",
 					"pivot": [0, 0, 0]
@@ -4070,70 +3984,189 @@
 				{
 					"name": "RotorRot1",
 					"parent": "RotorOn",
-					"pivot": [0, 0, 0],
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "RotorInnerAngler1",
+					"parent": "RotorRot1",
+					"pivot": [4.5, 23, 0],
+					"rotation": [0, 30, 0],
 					"cubes": [
 						{
-							"origin": [3, 23, -1],
-							"size": [2, 9, 2],
+							"origin": [3.5, 23, -4.5],
+							"size": [1, 5, 4.5],
 							"uv": {
-								"north": {"uv": [46, 126], "uv_size": [4, 18]},
-								"east": {"uv": [52, 126], "uv_size": [4, 18]},
-								"south": {"uv": [46, 126], "uv_size": [4, 18]},
-								"west": {"uv": [52, 126], "uv_size": [4, 18]},
-								"up": {"uv": [118, 146], "uv_size": [4, 4]}
+								"west": {"uv": [0, 189], "uv_size": [9, 10]},
+								"up": {"uv": [12, 198], "uv_size": [-2, -9]}
 							}
 						},
 						{
-							"origin": [3.5, 32, -0.5],
-							"size": [1, 16, 1],
+							"origin": [3.5, 30, -4.5],
+							"size": [1, 4, 4.5],
 							"uv": {
-								"north": {"uv": [128, 0], "uv_size": [2, 32]},
-								"east": {"uv": [128, 34], "uv_size": [2, 32]},
-								"south": {"uv": [128, 0], "uv_size": [2, 32]},
-								"west": {"uv": [128, 34], "uv_size": [2, 32]}
+								"west": {"uv": [0, 177], "uv_size": [9, 8]},
+								"up": {"uv": [12, 188], "uv_size": [-2, -9]},
+								"down": {"uv": [15, 188], "uv_size": [-2, -9]}
 							}
 						},
 						{
-							"origin": [-4.5, 32, -0.5],
-							"size": [1, 16, 1],
+							"origin": [3.5, 48, -4.5],
+							"size": [1, 4, 4.5],
 							"uv": {
-								"north": {"uv": [128, 0], "uv_size": [2, 32]},
-								"east": {"uv": [128, 34], "uv_size": [2, 32]},
-								"south": {"uv": [128, 0], "uv_size": [2, 32]},
-								"west": {"uv": [128, 34], "uv_size": [2, 32]}
+								"west": {"uv": [0, 185], "uv_size": [9, -8]},
+								"up": {"uv": [15, 179], "uv_size": [-2, 9]},
+								"down": {"uv": [12, 179], "uv_size": [-2, 9]}
 							}
 						},
 						{
-							"origin": [-5, 23, -1],
-							"size": [2, 9, 2],
+							"origin": [3.5, 54, -4.5],
+							"size": [1, 5, 4.5],
 							"uv": {
-								"north": {"uv": [46, 126], "uv_size": [4, 18]},
-								"east": {"uv": [52, 126], "uv_size": [4, 18]},
-								"south": {"uv": [46, 126], "uv_size": [4, 18]},
-								"west": {"uv": [52, 126], "uv_size": [4, 18]},
-								"up": {"uv": [118, 146], "uv_size": [4, 4]}
+								"west": {"uv": [0, 199], "uv_size": [9, -10]},
+								"down": {"uv": [12, 189], "uv_size": [-2, 9]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RotorInnerAngler3",
+					"parent": "RotorRot1",
+					"pivot": [4.5, 23, 0],
+					"rotation": [0, -30, 0],
+					"cubes": [
+						{
+							"origin": [3.5, 23, 0],
+							"size": [1, 5, 4.5],
+							"uv": {
+								"west": {"uv": [0, 189], "uv_size": [9, 10]},
+								"up": {"uv": [12, 189], "uv_size": [-2, 9]}
 							}
 						},
 						{
-							"origin": [3, 48, -1],
-							"size": [2, 10, 2],
+							"origin": [3.5, 30, 0],
+							"size": [1, 4, 4.5],
 							"uv": {
-								"north": {"uv": [122, 48], "uv_size": [4, 20]},
-								"east": {"uv": [124, 96], "uv_size": [4, 20]},
-								"south": {"uv": [122, 48], "uv_size": [4, 20]},
-								"west": {"uv": [124, 96], "uv_size": [4, 20]},
-								"down": {"uv": [118, 150], "uv_size": [4, -4]}
+								"west": {"uv": [0, 177], "uv_size": [9, 8]},
+								"up": {"uv": [12, 179], "uv_size": [-2, 9]},
+								"down": {"uv": [15, 179], "uv_size": [-2, 9]}
 							}
 						},
 						{
-							"origin": [-5, 48, -1],
-							"size": [2, 10, 2],
+							"origin": [3.5, 48, 0],
+							"size": [1, 4, 4.5],
 							"uv": {
-								"north": {"uv": [122, 48], "uv_size": [4, 20]},
-								"east": {"uv": [124, 96], "uv_size": [4, 20]},
-								"south": {"uv": [122, 48], "uv_size": [4, 20]},
-								"west": {"uv": [124, 96], "uv_size": [4, 20]},
-								"down": {"uv": [118, 150], "uv_size": [4, -4]}
+								"west": {"uv": [9, 185], "uv_size": [-9, -8]},
+								"up": {"uv": [15, 188], "uv_size": [-2, -9]},
+								"down": {"uv": [12, 188], "uv_size": [-2, -9]}
+							}
+						},
+						{
+							"origin": [3.5, 54, 0],
+							"size": [1, 5, 4.5],
+							"uv": {
+								"west": {"uv": [9, 199], "uv_size": [-9, -10]},
+								"down": {"uv": [12, 198], "uv_size": [-2, -9]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RotorInnerAngler2",
+					"parent": "RotorRot1",
+					"pivot": [3.5, 23, 0],
+					"rotation": [0, 30, 0],
+					"cubes": [
+						{
+							"origin": [2.5, 28, -3.5],
+							"size": [1, 8, 3.5],
+							"uv": {
+								"west": {"uv": [1, 173], "uv_size": [7, 16]},
+								"up": {"uv": [12, 176], "uv_size": [-2, -7]}
+							}
+						},
+						{
+							"origin": [2.5, 46, -3.5],
+							"size": [1, 8, 3.5],
+							"uv": {
+								"west": {"uv": [1, 189], "uv_size": [7, -16]},
+								"down": {"uv": [12, 169], "uv_size": [-2, 7]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RotorInnerAngler4",
+					"parent": "RotorRot1",
+					"pivot": [3.5, 23, 0],
+					"rotation": [0, -30, 0],
+					"cubes": [
+						{
+							"origin": [2.5, 28, 0],
+							"size": [1, 8, 3.5],
+							"uv": {
+								"west": {"uv": [1, 173], "uv_size": [7, 16]},
+								"up": {"uv": [12, 169], "uv_size": [-2, 7]}
+							}
+						},
+						{
+							"origin": [2.5, 46, 0],
+							"size": [1, 8, 3.5],
+							"uv": {
+								"west": {"uv": [8, 189], "uv_size": [-7, -16]},
+								"down": {"uv": [12, 176], "uv_size": [-2, -7]}
+							}
+						}
+					]
+				},
+				{
+					"name": "CenterPipeFormer1",
+					"parent": "RotorRot1",
+					"pivot": [-0.5, 36, 0]
+				},
+				{
+					"name": "CPFA1",
+					"parent": "CenterPipeFormer1",
+					"pivot": [2.5, 36, 0],
+					"rotation": [0, 30, 0],
+					"cubes": [
+						{
+							"origin": [-0.5, 36, -2.5],
+							"size": [3, 2, 2.5],
+							"uv": {
+								"west": {"uv": [2, 169], "uv_size": [5, 4]},
+								"up": {"uv": [19, 174], "uv_size": [-6, -5]}
+							}
+						},
+						{
+							"origin": [-0.5, 44, -2.5],
+							"size": [3, 2, 2.5],
+							"uv": {
+								"west": {"uv": [2, 173], "uv_size": [5, -4]},
+								"down": {"uv": [19, 169], "uv_size": [-6, 5]}
+							}
+						}
+					]
+				},
+				{
+					"name": "CPFA2",
+					"parent": "CenterPipeFormer1",
+					"pivot": [2.5, 36, 0],
+					"rotation": [0, -30, 0],
+					"cubes": [
+						{
+							"origin": [-0.5, 36, 0],
+							"size": [3, 2, 2.5],
+							"uv": {
+								"west": {"uv": [7, 169], "uv_size": [-5, 4]},
+								"up": {"uv": [19, 169], "uv_size": [-6, 5]}
+							}
+						},
+						{
+							"origin": [-0.5, 44, 0],
+							"size": [3, 2, 2.5],
+							"uv": {
+								"west": {"uv": [7, 173], "uv_size": [-5, -4]},
+								"down": {"uv": [19, 174], "uv_size": [-6, -5]}
 							}
 						}
 					]
@@ -4142,70 +4175,189 @@
 					"name": "RotorRot2",
 					"parent": "RotorOn",
 					"pivot": [0, 0, 0],
-					"rotation": [0, -60, 0],
+					"rotation": [0, -120, 0]
+				},
+				{
+					"name": "RotorInnerAngler5",
+					"parent": "RotorRot2",
+					"pivot": [4.5, 23, 0],
+					"rotation": [0, 30, 0],
 					"cubes": [
 						{
-							"origin": [3, 23, -1],
-							"size": [2, 9, 2],
+							"origin": [3.5, 23, -4.5],
+							"size": [1, 5, 4.5],
 							"uv": {
-								"north": {"uv": [46, 126], "uv_size": [4, 18]},
-								"east": {"uv": [52, 126], "uv_size": [4, 18]},
-								"south": {"uv": [46, 126], "uv_size": [4, 18]},
-								"west": {"uv": [52, 126], "uv_size": [4, 18]},
-								"up": {"uv": [118, 146], "uv_size": [4, 4]}
+								"west": {"uv": [0, 189], "uv_size": [9, 10]},
+								"up": {"uv": [12, 198], "uv_size": [-2, -9]}
 							}
 						},
 						{
-							"origin": [3.5, 32, -0.5],
-							"size": [1, 16, 1],
+							"origin": [3.5, 30, -4.5],
+							"size": [1, 4, 4.5],
 							"uv": {
-								"north": {"uv": [128, 0], "uv_size": [2, 32]},
-								"east": {"uv": [128, 34], "uv_size": [2, 32]},
-								"south": {"uv": [128, 0], "uv_size": [2, 32]},
-								"west": {"uv": [128, 34], "uv_size": [2, 32]}
+								"west": {"uv": [0, 177], "uv_size": [9, 8]},
+								"up": {"uv": [12, 188], "uv_size": [-2, -9]},
+								"down": {"uv": [15, 188], "uv_size": [-2, -9]}
 							}
 						},
 						{
-							"origin": [-4.5, 32, -0.5],
-							"size": [1, 16, 1],
+							"origin": [3.5, 48, -4.5],
+							"size": [1, 4, 4.5],
 							"uv": {
-								"north": {"uv": [128, 0], "uv_size": [2, 32]},
-								"east": {"uv": [128, 34], "uv_size": [2, 32]},
-								"south": {"uv": [128, 0], "uv_size": [2, 32]},
-								"west": {"uv": [128, 34], "uv_size": [2, 32]}
+								"west": {"uv": [0, 185], "uv_size": [9, -8]},
+								"up": {"uv": [15, 179], "uv_size": [-2, 9]},
+								"down": {"uv": [12, 179], "uv_size": [-2, 9]}
 							}
 						},
 						{
-							"origin": [-5, 23, -1],
-							"size": [2, 9, 2],
+							"origin": [3.5, 54, -4.5],
+							"size": [1, 5, 4.5],
 							"uv": {
-								"north": {"uv": [46, 126], "uv_size": [4, 18]},
-								"east": {"uv": [52, 126], "uv_size": [4, 18]},
-								"south": {"uv": [46, 126], "uv_size": [4, 18]},
-								"west": {"uv": [52, 126], "uv_size": [4, 18]},
-								"up": {"uv": [118, 146], "uv_size": [4, 4]}
+								"west": {"uv": [0, 199], "uv_size": [9, -10]},
+								"down": {"uv": [12, 189], "uv_size": [-2, 9]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RotorInnerAngler6",
+					"parent": "RotorRot2",
+					"pivot": [4.5, 23, 0],
+					"rotation": [0, -30, 0],
+					"cubes": [
+						{
+							"origin": [3.5, 23, 0],
+							"size": [1, 5, 4.5],
+							"uv": {
+								"west": {"uv": [0, 189], "uv_size": [9, 10]},
+								"up": {"uv": [12, 189], "uv_size": [-2, 9]}
 							}
 						},
 						{
-							"origin": [3, 48, -1],
-							"size": [2, 10, 2],
+							"origin": [3.5, 30, 0],
+							"size": [1, 4, 4.5],
 							"uv": {
-								"north": {"uv": [122, 48], "uv_size": [4, 20]},
-								"east": {"uv": [124, 96], "uv_size": [4, 20]},
-								"south": {"uv": [122, 48], "uv_size": [4, 20]},
-								"west": {"uv": [124, 96], "uv_size": [4, 20]},
-								"down": {"uv": [118, 150], "uv_size": [4, -4]}
+								"west": {"uv": [0, 177], "uv_size": [9, 8]},
+								"up": {"uv": [12, 179], "uv_size": [-2, 9]},
+								"down": {"uv": [15, 179], "uv_size": [-2, 9]}
 							}
 						},
 						{
-							"origin": [-5, 48, -1],
-							"size": [2, 10, 2],
+							"origin": [3.5, 48, 0],
+							"size": [1, 4, 4.5],
 							"uv": {
-								"north": {"uv": [122, 48], "uv_size": [4, 20]},
-								"east": {"uv": [124, 96], "uv_size": [4, 20]},
-								"south": {"uv": [122, 48], "uv_size": [4, 20]},
-								"west": {"uv": [124, 96], "uv_size": [4, 20]},
-								"down": {"uv": [118, 150], "uv_size": [4, -4]}
+								"west": {"uv": [9, 185], "uv_size": [-9, -8]},
+								"up": {"uv": [15, 188], "uv_size": [-2, -9]},
+								"down": {"uv": [12, 188], "uv_size": [-2, -9]}
+							}
+						},
+						{
+							"origin": [3.5, 54, 0],
+							"size": [1, 5, 4.5],
+							"uv": {
+								"west": {"uv": [9, 199], "uv_size": [-9, -10]},
+								"down": {"uv": [12, 198], "uv_size": [-2, -9]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RotorInnerAngler7",
+					"parent": "RotorRot2",
+					"pivot": [3.5, 23, 0],
+					"rotation": [0, 30, 0],
+					"cubes": [
+						{
+							"origin": [2.5, 28, -3.5],
+							"size": [1, 8, 3.5],
+							"uv": {
+								"west": {"uv": [1, 173], "uv_size": [7, 16]},
+								"up": {"uv": [12, 176], "uv_size": [-2, -7]}
+							}
+						},
+						{
+							"origin": [2.5, 46, -3.5],
+							"size": [1, 8, 3.5],
+							"uv": {
+								"west": {"uv": [1, 189], "uv_size": [7, -16]},
+								"down": {"uv": [12, 169], "uv_size": [-2, 7]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RotorInnerAngler8",
+					"parent": "RotorRot2",
+					"pivot": [3.5, 23, 0],
+					"rotation": [0, -30, 0],
+					"cubes": [
+						{
+							"origin": [2.5, 28, 0],
+							"size": [1, 8, 3.5],
+							"uv": {
+								"west": {"uv": [1, 173], "uv_size": [7, 16]},
+								"up": {"uv": [12, 169], "uv_size": [-2, 7]}
+							}
+						},
+						{
+							"origin": [2.5, 46, 0],
+							"size": [1, 8, 3.5],
+							"uv": {
+								"west": {"uv": [8, 189], "uv_size": [-7, -16]},
+								"down": {"uv": [12, 176], "uv_size": [-2, -7]}
+							}
+						}
+					]
+				},
+				{
+					"name": "CenterPipeFormer2",
+					"parent": "RotorRot2",
+					"pivot": [-0.5, 36, 0]
+				},
+				{
+					"name": "CPFA3",
+					"parent": "CenterPipeFormer2",
+					"pivot": [2.5, 36, 0],
+					"rotation": [0, 30, 0],
+					"cubes": [
+						{
+							"origin": [-0.5, 36, -2.5],
+							"size": [3, 2, 2.5],
+							"uv": {
+								"west": {"uv": [2, 169], "uv_size": [5, 4]},
+								"up": {"uv": [19, 174], "uv_size": [-6, -5]}
+							}
+						},
+						{
+							"origin": [-0.5, 44, -2.5],
+							"size": [3, 2, 2.5],
+							"uv": {
+								"west": {"uv": [2, 173], "uv_size": [5, -4]},
+								"down": {"uv": [19, 169], "uv_size": [-6, 5]}
+							}
+						}
+					]
+				},
+				{
+					"name": "CPFA4",
+					"parent": "CenterPipeFormer2",
+					"pivot": [2.5, 36, 0],
+					"rotation": [0, -30, 0],
+					"cubes": [
+						{
+							"origin": [-0.5, 36, 0],
+							"size": [3, 2, 2.5],
+							"uv": {
+								"west": {"uv": [7, 169], "uv_size": [-5, 4]},
+								"up": {"uv": [19, 169], "uv_size": [-6, 5]}
+							}
+						},
+						{
+							"origin": [-0.5, 44, 0],
+							"size": [3, 2, 2.5],
+							"uv": {
+								"west": {"uv": [7, 173], "uv_size": [-5, -4]},
+								"down": {"uv": [19, 174], "uv_size": [-6, -5]}
 							}
 						}
 					]
@@ -4214,70 +4366,236 @@
 					"name": "RotorRot3",
 					"parent": "RotorOn",
 					"pivot": [0, 0, 0],
+					"rotation": [0, 120, 0]
+				},
+				{
+					"name": "RotorInnerAngler9",
+					"parent": "RotorRot3",
+					"pivot": [4.5, 23, 0],
+					"rotation": [0, 30, 0],
+					"cubes": [
+						{
+							"origin": [3.5, 23, -4.5],
+							"size": [1, 5, 4.5],
+							"uv": {
+								"west": {"uv": [0, 189], "uv_size": [9, 10]},
+								"up": {"uv": [12, 198], "uv_size": [-2, -9]}
+							}
+						},
+						{
+							"origin": [3.5, 30, -4.5],
+							"size": [1, 4, 4.5],
+							"uv": {
+								"west": {"uv": [0, 177], "uv_size": [9, 8]},
+								"up": {"uv": [12, 188], "uv_size": [-2, -9]},
+								"down": {"uv": [15, 188], "uv_size": [-2, -9]}
+							}
+						},
+						{
+							"origin": [3.5, 48, -4.5],
+							"size": [1, 4, 4.5],
+							"uv": {
+								"west": {"uv": [0, 185], "uv_size": [9, -8]},
+								"up": {"uv": [15, 179], "uv_size": [-2, 9]},
+								"down": {"uv": [12, 179], "uv_size": [-2, 9]}
+							}
+						},
+						{
+							"origin": [3.5, 54, -4.5],
+							"size": [1, 5, 4.5],
+							"uv": {
+								"west": {"uv": [0, 199], "uv_size": [9, -10]},
+								"down": {"uv": [12, 189], "uv_size": [-2, 9]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RotorInnerAngler10",
+					"parent": "RotorRot3",
+					"pivot": [4.5, 23, 0],
+					"rotation": [0, -30, 0],
+					"cubes": [
+						{
+							"origin": [3.5, 23, 0],
+							"size": [1, 5, 4.5],
+							"uv": {
+								"west": {"uv": [0, 189], "uv_size": [9, 10]},
+								"up": {"uv": [12, 189], "uv_size": [-2, 9]}
+							}
+						},
+						{
+							"origin": [3.5, 30, 0],
+							"size": [1, 4, 4.5],
+							"uv": {
+								"west": {"uv": [0, 177], "uv_size": [9, 8]},
+								"up": {"uv": [12, 179], "uv_size": [-2, 9]},
+								"down": {"uv": [15, 179], "uv_size": [-2, 9]}
+							}
+						},
+						{
+							"origin": [3.5, 48, 0],
+							"size": [1, 4, 4.5],
+							"uv": {
+								"west": {"uv": [9, 185], "uv_size": [-9, -8]},
+								"up": {"uv": [15, 188], "uv_size": [-2, -9]},
+								"down": {"uv": [12, 188], "uv_size": [-2, -9]}
+							}
+						},
+						{
+							"origin": [3.5, 54, 0],
+							"size": [1, 5, 4.5],
+							"uv": {
+								"west": {"uv": [9, 199], "uv_size": [-9, -10]},
+								"down": {"uv": [12, 198], "uv_size": [-2, -9]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RotorInnerAngler11",
+					"parent": "RotorRot3",
+					"pivot": [3.5, 23, 0],
+					"rotation": [0, 30, 0],
+					"cubes": [
+						{
+							"origin": [2.5, 28, -3.5],
+							"size": [1, 8, 3.5],
+							"uv": {
+								"west": {"uv": [1, 173], "uv_size": [7, 16]},
+								"up": {"uv": [12, 176], "uv_size": [-2, -7]}
+							}
+						},
+						{
+							"origin": [2.5, 46, -3.5],
+							"size": [1, 8, 3.5],
+							"uv": {
+								"west": {"uv": [1, 189], "uv_size": [7, -16]},
+								"down": {"uv": [12, 169], "uv_size": [-2, 7]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RotorInnerAngler12",
+					"parent": "RotorRot3",
+					"pivot": [3.5, 23, 0],
+					"rotation": [0, -30, 0],
+					"cubes": [
+						{
+							"origin": [2.5, 28, 0],
+							"size": [1, 8, 3.5],
+							"uv": {
+								"west": {"uv": [1, 173], "uv_size": [7, 16]},
+								"up": {"uv": [12, 169], "uv_size": [-2, 7]}
+							}
+						},
+						{
+							"origin": [2.5, 46, 0],
+							"size": [1, 8, 3.5],
+							"uv": {
+								"west": {"uv": [8, 189], "uv_size": [-7, -16]},
+								"down": {"uv": [12, 176], "uv_size": [-2, -7]}
+							}
+						}
+					]
+				},
+				{
+					"name": "CenterPipeFormer3",
+					"parent": "RotorRot3",
+					"pivot": [-0.5, 36, 0]
+				},
+				{
+					"name": "CPFA5",
+					"parent": "CenterPipeFormer3",
+					"pivot": [2.5, 36, 0],
+					"rotation": [0, 30, 0],
+					"cubes": [
+						{
+							"origin": [-0.5, 36, -2.5],
+							"size": [3, 2, 2.5],
+							"uv": {
+								"west": {"uv": [2, 169], "uv_size": [5, 4]},
+								"up": {"uv": [19, 174], "uv_size": [-6, -5]}
+							}
+						},
+						{
+							"origin": [-0.5, 44, -2.5],
+							"size": [3, 2, 2.5],
+							"uv": {
+								"west": {"uv": [2, 173], "uv_size": [5, -4]},
+								"down": {"uv": [19, 169], "uv_size": [-6, 5]}
+							}
+						}
+					]
+				},
+				{
+					"name": "CPFA6",
+					"parent": "CenterPipeFormer3",
+					"pivot": [2.5, 36, 0],
+					"rotation": [0, -30, 0],
+					"cubes": [
+						{
+							"origin": [-0.5, 36, 0],
+							"size": [3, 2, 2.5],
+							"uv": {
+								"west": {"uv": [7, 169], "uv_size": [-5, 4]},
+								"up": {"uv": [19, 169], "uv_size": [-6, 5]}
+							}
+						},
+						{
+							"origin": [-0.5, 44, 0],
+							"size": [3, 2, 2.5],
+							"uv": {
+								"west": {"uv": [7, 173], "uv_size": [-5, -4]},
+								"down": {"uv": [19, 174], "uv_size": [-6, -5]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RotorPipes1",
+					"parent": "RotorOn",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-2, 38, -0.5],
+							"size": [4, 6, 1],
+							"uv": {
+								"east": {"uv": [20, 169], "uv_size": [2, 12]},
+								"west": {"uv": [20, 169], "uv_size": [2, 12]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RotorPipes2",
+					"parent": "RotorOn",
+					"pivot": [0, 0, 0],
+					"rotation": [0, -60, 0],
+					"cubes": [
+						{
+							"origin": [-2, 38, -0.5],
+							"size": [4, 6, 1],
+							"uv": {
+								"east": {"uv": [20, 169], "uv_size": [2, 12]},
+								"west": {"uv": [20, 169], "uv_size": [2, 12]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RotorPipes3",
+					"parent": "RotorOn",
+					"pivot": [0, 0, 0],
 					"rotation": [0, -120, 0],
 					"cubes": [
 						{
-							"origin": [3, 23, -1],
-							"size": [2, 9, 2],
+							"origin": [-2, 38, -0.5],
+							"size": [4, 6, 1],
 							"uv": {
-								"north": {"uv": [46, 126], "uv_size": [4, 18]},
-								"east": {"uv": [52, 126], "uv_size": [4, 18]},
-								"south": {"uv": [46, 126], "uv_size": [4, 18]},
-								"west": {"uv": [52, 126], "uv_size": [4, 18]},
-								"up": {"uv": [118, 146], "uv_size": [4, 4]}
-							}
-						},
-						{
-							"origin": [3.5, 32, -0.5],
-							"size": [1, 16, 1],
-							"uv": {
-								"north": {"uv": [128, 0], "uv_size": [2, 32]},
-								"east": {"uv": [128, 34], "uv_size": [2, 32]},
-								"south": {"uv": [128, 0], "uv_size": [2, 32]},
-								"west": {"uv": [128, 34], "uv_size": [2, 32]}
-							}
-						},
-						{
-							"origin": [-4.5, 32, -0.5],
-							"size": [1, 16, 1],
-							"uv": {
-								"north": {"uv": [128, 0], "uv_size": [2, 32]},
-								"east": {"uv": [128, 34], "uv_size": [2, 32]},
-								"south": {"uv": [128, 0], "uv_size": [2, 32]},
-								"west": {"uv": [128, 34], "uv_size": [2, 32]}
-							}
-						},
-						{
-							"origin": [-5, 23, -1],
-							"size": [2, 9, 2],
-							"uv": {
-								"north": {"uv": [46, 126], "uv_size": [4, 18]},
-								"east": {"uv": [52, 126], "uv_size": [4, 18]},
-								"south": {"uv": [46, 126], "uv_size": [4, 18]},
-								"west": {"uv": [52, 126], "uv_size": [4, 18]},
-								"up": {"uv": [118, 146], "uv_size": [4, 4]}
-							}
-						},
-						{
-							"origin": [3, 48, -1],
-							"size": [2, 10, 2],
-							"uv": {
-								"north": {"uv": [122, 48], "uv_size": [4, 20]},
-								"east": {"uv": [124, 96], "uv_size": [4, 20]},
-								"south": {"uv": [122, 48], "uv_size": [4, 20]},
-								"west": {"uv": [124, 96], "uv_size": [4, 20]},
-								"down": {"uv": [118, 150], "uv_size": [4, -4]}
-							}
-						},
-						{
-							"origin": [-5, 48, -1],
-							"size": [2, 10, 2],
-							"uv": {
-								"north": {"uv": [122, 48], "uv_size": [4, 20]},
-								"east": {"uv": [124, 96], "uv_size": [4, 20]},
-								"south": {"uv": [122, 48], "uv_size": [4, 20]},
-								"west": {"uv": [124, 96], "uv_size": [4, 20]},
-								"down": {"uv": [118, 150], "uv_size": [4, -4]}
+								"east": {"uv": [20, 169], "uv_size": [2, 12]},
+								"west": {"uv": [20, 169], "uv_size": [2, 12]}
 							}
 						}
 					]
@@ -4290,70 +4608,189 @@
 				{
 					"name": "RotorRot4",
 					"parent": "RotorOff",
-					"pivot": [0, 0, 0],
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "RotorInnerAngler13",
+					"parent": "RotorRot4",
+					"pivot": [4.5, 23, 0],
+					"rotation": [0, 30, 0],
 					"cubes": [
 						{
-							"origin": [3, 23, -1],
-							"size": [2, 9, 2],
+							"origin": [3.5, 23, -4.5],
+							"size": [1, 5, 4.5],
 							"uv": {
-								"north": {"uv": [171, 0], "uv_size": [4, 18]},
-								"east": {"uv": [175, 0], "uv_size": [-4, 18]},
-								"south": {"uv": [171, 0], "uv_size": [4, 18]},
-								"west": {"uv": [175, 0], "uv_size": [-4, 18]},
-								"up": {"uv": [176, 0], "uv_size": [4, 4]}
+								"west": {"uv": [0, 220], "uv_size": [9, 10]},
+								"up": {"uv": [12, 229], "uv_size": [-2, -9]}
 							}
 						},
 						{
-							"origin": [3.5, 32, -0.5],
-							"size": [1, 16, 1],
+							"origin": [3.5, 30, -4.5],
+							"size": [1, 4, 4.5],
 							"uv": {
-								"north": {"uv": [168, 0], "uv_size": [2, 32]},
-								"east": {"uv": [170, 0], "uv_size": [-2, 32]},
-								"south": {"uv": [168, 0], "uv_size": [2, 32]},
-								"west": {"uv": [170, 0], "uv_size": [-2, 32]}
+								"west": {"uv": [0, 208], "uv_size": [9, 8]},
+								"up": {"uv": [12, 219], "uv_size": [-2, -9]},
+								"down": {"uv": [15, 219], "uv_size": [-2, -9]}
 							}
 						},
 						{
-							"origin": [3, 48, -1],
-							"size": [2, 10, 2],
+							"origin": [3.5, 48, -4.5],
+							"size": [1, 4, 4.5],
 							"uv": {
-								"north": {"uv": [181, 0], "uv_size": [4, 20]},
-								"east": {"uv": [185, 0], "uv_size": [-4, 20]},
-								"south": {"uv": [181, 0], "uv_size": [4, 20]},
-								"west": {"uv": [185, 0], "uv_size": [-4, 20]},
-								"down": {"uv": [180, 0], "uv_size": [-4, 4]}
+								"west": {"uv": [0, 216], "uv_size": [9, -8]},
+								"up": {"uv": [15, 210], "uv_size": [-2, 9]},
+								"down": {"uv": [12, 210], "uv_size": [-2, 9]}
 							}
 						},
 						{
-							"origin": [-4.5, 32, -0.5],
-							"size": [1, 16, 1],
+							"origin": [3.5, 54, -4.5],
+							"size": [1, 5, 4.5],
 							"uv": {
-								"north": {"uv": [168, 0], "uv_size": [2, 32]},
-								"east": {"uv": [170, 0], "uv_size": [-2, 32]},
-								"south": {"uv": [168, 0], "uv_size": [2, 32]},
-								"west": {"uv": [170, 0], "uv_size": [-2, 32]}
+								"west": {"uv": [0, 230], "uv_size": [9, -10]},
+								"down": {"uv": [12, 220], "uv_size": [-2, 9]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RotorInnerAngler14",
+					"parent": "RotorRot4",
+					"pivot": [4.5, 23, 0],
+					"rotation": [0, -30, 0],
+					"cubes": [
+						{
+							"origin": [3.5, 23, 0],
+							"size": [1, 5, 4.5],
+							"uv": {
+								"west": {"uv": [0, 220], "uv_size": [9, 10]},
+								"up": {"uv": [12, 220], "uv_size": [-2, 9]}
 							}
 						},
 						{
-							"origin": [-5, 23, -1],
-							"size": [2, 9, 2],
+							"origin": [3.5, 30, 0],
+							"size": [1, 4, 4.5],
 							"uv": {
-								"north": {"uv": [171, 0], "uv_size": [4, 18]},
-								"east": {"uv": [175, 0], "uv_size": [-4, 18]},
-								"south": {"uv": [171, 0], "uv_size": [4, 18]},
-								"west": {"uv": [175, 0], "uv_size": [-4, 18]},
-								"up": {"uv": [176, 0], "uv_size": [4, 4]}
+								"west": {"uv": [0, 208], "uv_size": [9, 8]},
+								"up": {"uv": [12, 210], "uv_size": [-2, 9]},
+								"down": {"uv": [15, 210], "uv_size": [-2, 9]}
 							}
 						},
 						{
-							"origin": [-5, 48, -1],
-							"size": [2, 10, 2],
+							"origin": [3.5, 48, 0],
+							"size": [1, 4, 4.5],
 							"uv": {
-								"north": {"uv": [181, 0], "uv_size": [4, 20]},
-								"east": {"uv": [185, 0], "uv_size": [-4, 20]},
-								"south": {"uv": [181, 0], "uv_size": [4, 20]},
-								"west": {"uv": [185, 0], "uv_size": [-4, 20]},
-								"down": {"uv": [180, 0], "uv_size": [-4, 4]}
+								"west": {"uv": [9, 216], "uv_size": [-9, -8]},
+								"up": {"uv": [15, 219], "uv_size": [-2, -9]},
+								"down": {"uv": [12, 219], "uv_size": [-2, -9]}
+							}
+						},
+						{
+							"origin": [3.5, 54, 0],
+							"size": [1, 5, 4.5],
+							"uv": {
+								"west": {"uv": [9, 230], "uv_size": [-9, -10]},
+								"down": {"uv": [12, 229], "uv_size": [-2, -9]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RotorInnerAngler15",
+					"parent": "RotorRot4",
+					"pivot": [3.5, 23, 0],
+					"rotation": [0, 30, 0],
+					"cubes": [
+						{
+							"origin": [2.5, 28, -3.5],
+							"size": [1, 8, 3.5],
+							"uv": {
+								"west": {"uv": [1, 204], "uv_size": [7, 16]},
+								"up": {"uv": [12, 207], "uv_size": [-2, -7]}
+							}
+						},
+						{
+							"origin": [2.5, 46, -3.5],
+							"size": [1, 8, 3.5],
+							"uv": {
+								"west": {"uv": [1, 220], "uv_size": [7, -16]},
+								"down": {"uv": [12, 200], "uv_size": [-2, 7]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RotorInnerAngler16",
+					"parent": "RotorRot4",
+					"pivot": [3.5, 23, 0],
+					"rotation": [0, -30, 0],
+					"cubes": [
+						{
+							"origin": [2.5, 28, 0],
+							"size": [1, 8, 3.5],
+							"uv": {
+								"west": {"uv": [1, 204], "uv_size": [7, 16]},
+								"up": {"uv": [12, 200], "uv_size": [-2, 7]}
+							}
+						},
+						{
+							"origin": [2.5, 46, 0],
+							"size": [1, 8, 3.5],
+							"uv": {
+								"west": {"uv": [8, 220], "uv_size": [-7, -16]},
+								"down": {"uv": [12, 207], "uv_size": [-2, -7]}
+							}
+						}
+					]
+				},
+				{
+					"name": "CenterPipeFormer4",
+					"parent": "RotorRot4",
+					"pivot": [-0.5, 36, 0]
+				},
+				{
+					"name": "CPFA7",
+					"parent": "CenterPipeFormer4",
+					"pivot": [2.5, 36, 0],
+					"rotation": [0, 30, 0],
+					"cubes": [
+						{
+							"origin": [-0.5, 36, -2.5],
+							"size": [3, 2, 2.5],
+							"uv": {
+								"west": {"uv": [2, 200], "uv_size": [5, 4]},
+								"up": {"uv": [19, 205], "uv_size": [-6, -5]}
+							}
+						},
+						{
+							"origin": [-0.5, 44, -2.5],
+							"size": [3, 2, 2.5],
+							"uv": {
+								"west": {"uv": [2, 204], "uv_size": [5, -4]},
+								"down": {"uv": [19, 200], "uv_size": [-6, 5]}
+							}
+						}
+					]
+				},
+				{
+					"name": "CPFA8",
+					"parent": "CenterPipeFormer4",
+					"pivot": [2.5, 36, 0],
+					"rotation": [0, -30, 0],
+					"cubes": [
+						{
+							"origin": [-0.5, 36, 0],
+							"size": [3, 2, 2.5],
+							"uv": {
+								"west": {"uv": [7, 200], "uv_size": [-5, 4]},
+								"up": {"uv": [19, 200], "uv_size": [-6, 5]}
+							}
+						},
+						{
+							"origin": [-0.5, 44, 0],
+							"size": [3, 2, 2.5],
+							"uv": {
+								"west": {"uv": [7, 204], "uv_size": [-5, -4]},
+								"down": {"uv": [19, 205], "uv_size": [-6, -5]}
 							}
 						}
 					]
@@ -4362,70 +4799,189 @@
 					"name": "RotorRot5",
 					"parent": "RotorOff",
 					"pivot": [0, 0, 0],
-					"rotation": [0, -60, 0],
+					"rotation": [0, -120, 0]
+				},
+				{
+					"name": "RotorInnerAngler17",
+					"parent": "RotorRot5",
+					"pivot": [4.5, 23, 0],
+					"rotation": [0, 30, 0],
 					"cubes": [
 						{
-							"origin": [-4.5, 32, -0.5],
-							"size": [1, 16, 1],
+							"origin": [3.5, 23, -4.5],
+							"size": [1, 5, 4.5],
 							"uv": {
-								"north": {"uv": [168, 0], "uv_size": [2, 32]},
-								"east": {"uv": [170, 0], "uv_size": [-2, 32]},
-								"south": {"uv": [168, 0], "uv_size": [2, 32]},
-								"west": {"uv": [170, 0], "uv_size": [-2, 32]}
+								"west": {"uv": [0, 220], "uv_size": [9, 10]},
+								"up": {"uv": [12, 229], "uv_size": [-2, -9]}
 							}
 						},
 						{
-							"origin": [-5, 23, -1],
-							"size": [2, 9, 2],
+							"origin": [3.5, 30, -4.5],
+							"size": [1, 4, 4.5],
 							"uv": {
-								"north": {"uv": [171, 0], "uv_size": [4, 18]},
-								"east": {"uv": [175, 0], "uv_size": [-4, 18]},
-								"south": {"uv": [171, 0], "uv_size": [4, 18]},
-								"west": {"uv": [175, 0], "uv_size": [-4, 18]},
-								"up": {"uv": [176, 0], "uv_size": [4, 4]}
+								"west": {"uv": [0, 208], "uv_size": [9, 8]},
+								"up": {"uv": [12, 219], "uv_size": [-2, -9]},
+								"down": {"uv": [15, 219], "uv_size": [-2, -9]}
 							}
 						},
 						{
-							"origin": [-5, 48, -1],
-							"size": [2, 10, 2],
+							"origin": [3.5, 48, -4.5],
+							"size": [1, 4, 4.5],
 							"uv": {
-								"north": {"uv": [181, 0], "uv_size": [4, 20]},
-								"east": {"uv": [185, 0], "uv_size": [-4, 20]},
-								"south": {"uv": [181, 0], "uv_size": [4, 20]},
-								"west": {"uv": [185, 0], "uv_size": [-4, 20]},
-								"down": {"uv": [180, 0], "uv_size": [-4, 4]}
+								"west": {"uv": [0, 216], "uv_size": [9, -8]},
+								"up": {"uv": [15, 210], "uv_size": [-2, 9]},
+								"down": {"uv": [12, 210], "uv_size": [-2, 9]}
 							}
 						},
 						{
-							"origin": [3, 23, -1],
-							"size": [2, 9, 2],
+							"origin": [3.5, 54, -4.5],
+							"size": [1, 5, 4.5],
 							"uv": {
-								"north": {"uv": [171, 0], "uv_size": [4, 18]},
-								"east": {"uv": [175, 0], "uv_size": [-4, 18]},
-								"south": {"uv": [171, 0], "uv_size": [4, 18]},
-								"west": {"uv": [175, 0], "uv_size": [-4, 18]},
-								"up": {"uv": [176, 0], "uv_size": [4, 4]}
+								"west": {"uv": [0, 230], "uv_size": [9, -10]},
+								"down": {"uv": [12, 220], "uv_size": [-2, 9]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RotorInnerAngler18",
+					"parent": "RotorRot5",
+					"pivot": [4.5, 23, 0],
+					"rotation": [0, -30, 0],
+					"cubes": [
+						{
+							"origin": [3.5, 23, 0],
+							"size": [1, 5, 4.5],
+							"uv": {
+								"west": {"uv": [0, 220], "uv_size": [9, 10]},
+								"up": {"uv": [12, 220], "uv_size": [-2, 9]}
 							}
 						},
 						{
-							"origin": [3.5, 32, -0.5],
-							"size": [1, 16, 1],
+							"origin": [3.5, 30, 0],
+							"size": [1, 4, 4.5],
 							"uv": {
-								"north": {"uv": [168, 0], "uv_size": [2, 32]},
-								"east": {"uv": [170, 0], "uv_size": [-2, 32]},
-								"south": {"uv": [168, 0], "uv_size": [2, 32]},
-								"west": {"uv": [170, 0], "uv_size": [-2, 32]}
+								"west": {"uv": [0, 208], "uv_size": [9, 8]},
+								"up": {"uv": [12, 210], "uv_size": [-2, 9]},
+								"down": {"uv": [15, 210], "uv_size": [-2, 9]}
 							}
 						},
 						{
-							"origin": [3, 48, -1],
-							"size": [2, 10, 2],
+							"origin": [3.5, 48, 0],
+							"size": [1, 4, 4.5],
 							"uv": {
-								"north": {"uv": [181, 0], "uv_size": [4, 20]},
-								"east": {"uv": [185, 0], "uv_size": [-4, 20]},
-								"south": {"uv": [181, 0], "uv_size": [4, 20]},
-								"west": {"uv": [185, 0], "uv_size": [-4, 20]},
-								"down": {"uv": [180, 0], "uv_size": [-4, 4]}
+								"west": {"uv": [9, 216], "uv_size": [-9, -8]},
+								"up": {"uv": [15, 219], "uv_size": [-2, -9]},
+								"down": {"uv": [12, 219], "uv_size": [-2, -9]}
+							}
+						},
+						{
+							"origin": [3.5, 54, 0],
+							"size": [1, 5, 4.5],
+							"uv": {
+								"west": {"uv": [9, 230], "uv_size": [-9, -10]},
+								"down": {"uv": [12, 229], "uv_size": [-2, -9]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RotorInnerAngler19",
+					"parent": "RotorRot5",
+					"pivot": [3.5, 23, 0],
+					"rotation": [0, 30, 0],
+					"cubes": [
+						{
+							"origin": [2.5, 28, -3.5],
+							"size": [1, 8, 3.5],
+							"uv": {
+								"west": {"uv": [1, 204], "uv_size": [7, 16]},
+								"up": {"uv": [12, 207], "uv_size": [-2, -7]}
+							}
+						},
+						{
+							"origin": [2.5, 46, -3.5],
+							"size": [1, 8, 3.5],
+							"uv": {
+								"west": {"uv": [1, 220], "uv_size": [7, -16]},
+								"down": {"uv": [12, 200], "uv_size": [-2, 7]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RotorInnerAngler20",
+					"parent": "RotorRot5",
+					"pivot": [3.5, 23, 0],
+					"rotation": [0, -30, 0],
+					"cubes": [
+						{
+							"origin": [2.5, 28, 0],
+							"size": [1, 8, 3.5],
+							"uv": {
+								"west": {"uv": [1, 204], "uv_size": [7, 16]},
+								"up": {"uv": [12, 200], "uv_size": [-2, 7]}
+							}
+						},
+						{
+							"origin": [2.5, 46, 0],
+							"size": [1, 8, 3.5],
+							"uv": {
+								"west": {"uv": [8, 220], "uv_size": [-7, -16]},
+								"down": {"uv": [12, 207], "uv_size": [-2, -7]}
+							}
+						}
+					]
+				},
+				{
+					"name": "CenterPipeFormer5",
+					"parent": "RotorRot5",
+					"pivot": [-0.5, 36, 0]
+				},
+				{
+					"name": "CPFA9",
+					"parent": "CenterPipeFormer5",
+					"pivot": [2.5, 36, 0],
+					"rotation": [0, 30, 0],
+					"cubes": [
+						{
+							"origin": [-0.5, 36, -2.5],
+							"size": [3, 2, 2.5],
+							"uv": {
+								"west": {"uv": [2, 200], "uv_size": [5, 4]},
+								"up": {"uv": [19, 205], "uv_size": [-6, -5]}
+							}
+						},
+						{
+							"origin": [-0.5, 44, -2.5],
+							"size": [3, 2, 2.5],
+							"uv": {
+								"west": {"uv": [2, 204], "uv_size": [5, -4]},
+								"down": {"uv": [19, 200], "uv_size": [-6, 5]}
+							}
+						}
+					]
+				},
+				{
+					"name": "CPFA10",
+					"parent": "CenterPipeFormer5",
+					"pivot": [2.5, 36, 0],
+					"rotation": [0, -30, 0],
+					"cubes": [
+						{
+							"origin": [-0.5, 36, 0],
+							"size": [3, 2, 2.5],
+							"uv": {
+								"west": {"uv": [7, 200], "uv_size": [-5, 4]},
+								"up": {"uv": [19, 200], "uv_size": [-6, 5]}
+							}
+						},
+						{
+							"origin": [-0.5, 44, 0],
+							"size": [3, 2, 2.5],
+							"uv": {
+								"west": {"uv": [7, 204], "uv_size": [-5, -4]},
+								"down": {"uv": [19, 205], "uv_size": [-6, -5]}
 							}
 						}
 					]
@@ -4434,70 +4990,236 @@
 					"name": "RotorRot6",
 					"parent": "RotorOff",
 					"pivot": [0, 0, 0],
+					"rotation": [0, 120, 0]
+				},
+				{
+					"name": "RotorInnerAngler21",
+					"parent": "RotorRot6",
+					"pivot": [4.5, 23, 0],
+					"rotation": [0, 30, 0],
+					"cubes": [
+						{
+							"origin": [3.5, 23, -4.5],
+							"size": [1, 5, 4.5],
+							"uv": {
+								"west": {"uv": [0, 220], "uv_size": [9, 10]},
+								"up": {"uv": [12, 229], "uv_size": [-2, -9]}
+							}
+						},
+						{
+							"origin": [3.5, 30, -4.5],
+							"size": [1, 4, 4.5],
+							"uv": {
+								"west": {"uv": [0, 208], "uv_size": [9, 8]},
+								"up": {"uv": [12, 219], "uv_size": [-2, -9]},
+								"down": {"uv": [15, 219], "uv_size": [-2, -9]}
+							}
+						},
+						{
+							"origin": [3.5, 48, -4.5],
+							"size": [1, 4, 4.5],
+							"uv": {
+								"west": {"uv": [0, 216], "uv_size": [9, -8]},
+								"up": {"uv": [15, 210], "uv_size": [-2, 9]},
+								"down": {"uv": [12, 210], "uv_size": [-2, 9]}
+							}
+						},
+						{
+							"origin": [3.5, 54, -4.5],
+							"size": [1, 5, 4.5],
+							"uv": {
+								"west": {"uv": [0, 230], "uv_size": [9, -10]},
+								"down": {"uv": [12, 220], "uv_size": [-2, 9]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RotorInnerAngler22",
+					"parent": "RotorRot6",
+					"pivot": [4.5, 23, 0],
+					"rotation": [0, -30, 0],
+					"cubes": [
+						{
+							"origin": [3.5, 23, 0],
+							"size": [1, 5, 4.5],
+							"uv": {
+								"west": {"uv": [0, 220], "uv_size": [9, 10]},
+								"up": {"uv": [12, 220], "uv_size": [-2, 9]}
+							}
+						},
+						{
+							"origin": [3.5, 30, 0],
+							"size": [1, 4, 4.5],
+							"uv": {
+								"west": {"uv": [0, 208], "uv_size": [9, 8]},
+								"up": {"uv": [12, 210], "uv_size": [-2, 9]},
+								"down": {"uv": [15, 210], "uv_size": [-2, 9]}
+							}
+						},
+						{
+							"origin": [3.5, 48, 0],
+							"size": [1, 4, 4.5],
+							"uv": {
+								"west": {"uv": [9, 216], "uv_size": [-9, -8]},
+								"up": {"uv": [15, 219], "uv_size": [-2, -9]},
+								"down": {"uv": [12, 219], "uv_size": [-2, -9]}
+							}
+						},
+						{
+							"origin": [3.5, 54, 0],
+							"size": [1, 5, 4.5],
+							"uv": {
+								"west": {"uv": [9, 230], "uv_size": [-9, -10]},
+								"down": {"uv": [12, 229], "uv_size": [-2, -9]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RotorInnerAngler23",
+					"parent": "RotorRot6",
+					"pivot": [3.5, 23, 0],
+					"rotation": [0, 30, 0],
+					"cubes": [
+						{
+							"origin": [2.5, 28, -3.5],
+							"size": [1, 8, 3.5],
+							"uv": {
+								"west": {"uv": [1, 204], "uv_size": [7, 16]},
+								"up": {"uv": [12, 207], "uv_size": [-2, -7]}
+							}
+						},
+						{
+							"origin": [2.5, 46, -3.5],
+							"size": [1, 8, 3.5],
+							"uv": {
+								"west": {"uv": [1, 220], "uv_size": [7, -16]},
+								"down": {"uv": [12, 200], "uv_size": [-2, 7]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RotorInnerAngler24",
+					"parent": "RotorRot6",
+					"pivot": [3.5, 23, 0],
+					"rotation": [0, -30, 0],
+					"cubes": [
+						{
+							"origin": [2.5, 28, 0],
+							"size": [1, 8, 3.5],
+							"uv": {
+								"west": {"uv": [1, 204], "uv_size": [7, 16]},
+								"up": {"uv": [12, 200], "uv_size": [-2, 7]}
+							}
+						},
+						{
+							"origin": [2.5, 46, 0],
+							"size": [1, 8, 3.5],
+							"uv": {
+								"west": {"uv": [8, 220], "uv_size": [-7, -16]},
+								"down": {"uv": [12, 207], "uv_size": [-2, -7]}
+							}
+						}
+					]
+				},
+				{
+					"name": "CenterPipeFormer6",
+					"parent": "RotorRot6",
+					"pivot": [-0.5, 36, 0]
+				},
+				{
+					"name": "CPFA11",
+					"parent": "CenterPipeFormer6",
+					"pivot": [2.5, 36, 0],
+					"rotation": [0, 30, 0],
+					"cubes": [
+						{
+							"origin": [-0.5, 36, -2.5],
+							"size": [3, 2, 2.5],
+							"uv": {
+								"west": {"uv": [2, 200], "uv_size": [5, 4]},
+								"up": {"uv": [19, 205], "uv_size": [-6, -5]}
+							}
+						},
+						{
+							"origin": [-0.5, 44, -2.5],
+							"size": [3, 2, 2.5],
+							"uv": {
+								"west": {"uv": [2, 204], "uv_size": [5, -4]},
+								"down": {"uv": [19, 200], "uv_size": [-6, 5]}
+							}
+						}
+					]
+				},
+				{
+					"name": "CPFA12",
+					"parent": "CenterPipeFormer6",
+					"pivot": [2.5, 36, 0],
+					"rotation": [0, -30, 0],
+					"cubes": [
+						{
+							"origin": [-0.5, 36, 0],
+							"size": [3, 2, 2.5],
+							"uv": {
+								"west": {"uv": [7, 200], "uv_size": [-5, 4]},
+								"up": {"uv": [19, 200], "uv_size": [-6, 5]}
+							}
+						},
+						{
+							"origin": [-0.5, 44, 0],
+							"size": [3, 2, 2.5],
+							"uv": {
+								"west": {"uv": [7, 204], "uv_size": [-5, -4]},
+								"down": {"uv": [19, 205], "uv_size": [-6, -5]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RotorPipes4",
+					"parent": "RotorOff",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-2, 38, -0.5],
+							"size": [4, 6, 1],
+							"uv": {
+								"east": {"uv": [23, 169], "uv_size": [2, 12]},
+								"west": {"uv": [23, 169], "uv_size": [2, 12]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RotorPipes5",
+					"parent": "RotorOff",
+					"pivot": [0, 0, 0],
+					"rotation": [0, -60, 0],
+					"cubes": [
+						{
+							"origin": [-2, 38, -0.5],
+							"size": [4, 6, 1],
+							"uv": {
+								"east": {"uv": [23, 169], "uv_size": [2, 12]},
+								"west": {"uv": [23, 169], "uv_size": [2, 12]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RotorPipes6",
+					"parent": "RotorOff",
+					"pivot": [0, 0, 0],
 					"rotation": [0, -120, 0],
 					"cubes": [
 						{
-							"origin": [-4.5, 32, -0.5],
-							"size": [1, 16, 1],
+							"origin": [-2, 38, -0.5],
+							"size": [4, 6, 1],
 							"uv": {
-								"north": {"uv": [168, 0], "uv_size": [2, 32]},
-								"east": {"uv": [170, 0], "uv_size": [-2, 32]},
-								"south": {"uv": [168, 0], "uv_size": [2, 32]},
-								"west": {"uv": [170, 0], "uv_size": [-2, 32]}
-							}
-						},
-						{
-							"origin": [-5, 23, -1],
-							"size": [2, 9, 2],
-							"uv": {
-								"north": {"uv": [171, 0], "uv_size": [4, 18]},
-								"east": {"uv": [175, 0], "uv_size": [-4, 18]},
-								"south": {"uv": [171, 0], "uv_size": [4, 18]},
-								"west": {"uv": [175, 0], "uv_size": [-4, 18]},
-								"up": {"uv": [176, 0], "uv_size": [4, 4]}
-							}
-						},
-						{
-							"origin": [-5, 48, -1],
-							"size": [2, 10, 2],
-							"uv": {
-								"north": {"uv": [181, 0], "uv_size": [4, 20]},
-								"east": {"uv": [185, 0], "uv_size": [-4, 20]},
-								"south": {"uv": [181, 0], "uv_size": [4, 20]},
-								"west": {"uv": [185, 0], "uv_size": [-4, 20]},
-								"down": {"uv": [180, 0], "uv_size": [-4, 4]}
-							}
-						},
-						{
-							"origin": [3, 23, -1],
-							"size": [2, 9, 2],
-							"uv": {
-								"north": {"uv": [171, 0], "uv_size": [4, 18]},
-								"east": {"uv": [175, 0], "uv_size": [-4, 18]},
-								"south": {"uv": [171, 0], "uv_size": [4, 18]},
-								"west": {"uv": [175, 0], "uv_size": [-4, 18]},
-								"up": {"uv": [176, 0], "uv_size": [4, 4]}
-							}
-						},
-						{
-							"origin": [3.5, 32, -0.5],
-							"size": [1, 16, 1],
-							"uv": {
-								"north": {"uv": [168, 0], "uv_size": [2, 32]},
-								"east": {"uv": [170, 0], "uv_size": [-2, 32]},
-								"south": {"uv": [168, 0], "uv_size": [2, 32]},
-								"west": {"uv": [170, 0], "uv_size": [-2, 32]}
-							}
-						},
-						{
-							"origin": [3, 48, -1],
-							"size": [2, 10, 2],
-							"uv": {
-								"north": {"uv": [181, 0], "uv_size": [4, 20]},
-								"east": {"uv": [185, 0], "uv_size": [-4, 20]},
-								"south": {"uv": [181, 0], "uv_size": [4, 20]},
-								"west": {"uv": [185, 0], "uv_size": [-4, 20]},
-								"down": {"uv": [180, 0], "uv_size": [-4, 4]}
+								"east": {"uv": [23, 169], "uv_size": [2, 12]},
+								"west": {"uv": [23, 169], "uv_size": [2, 12]}
 							}
 						}
 					]

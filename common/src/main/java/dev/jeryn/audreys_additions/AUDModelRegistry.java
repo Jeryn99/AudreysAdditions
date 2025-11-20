@@ -107,6 +107,8 @@ public class AUDModelRegistry {
     public static ModelLayerLocation MASTER_CONSOLE = console("master");
     public static ModelLayerLocation BRACHACKI_CONSOLE = console("brachacki");
     public static ModelLayerLocation TOYOTA_CONSOLE = console("toyota");
+    public static ModelLayerLocation TOYOTA_BLUE_CONSOLE = console("toyota_blue");
+    public static ModelLayerLocation TOYOTA_MISSY_CONSOLE = console("toyota_missy");
     public static ModelLayerLocation KELT_CONSOLE = console("kelt");
     public static ModelLayerLocation WARRIOR_CONSOLE = console("kelt_warrior");
     public static ModelLayerLocation MCGANN_CONSOLE = console("mcgann");
