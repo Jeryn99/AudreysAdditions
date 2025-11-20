@@ -49,7 +49,7 @@ public class AudConsolePatternProvider extends ConsolePatternProvider {
     protected void addPatterns() {
         addPatternToDatagen(AudConsoleRegistry.TOYOTA.getId(), createWithDefaultSound("toyota", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/toyota/toyota.png"), false)));
         addPatternToDatagen(AudConsoleRegistry.TOYOTA.getId(), createWithDefaultSound("toyota_blue", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/toyota/toyota_blue.png"), false)));
-
+        addPatternToDatagen(AudConsoleRegistry.TOYOTA.getId(), createWithDefaultSound("toyota_missy", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/toyota/toyota_missy.png"), false)));
         addPatternToDatagen(AudConsoleRegistry.KELT.getId(), createWithDefaultSound("kelt", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/kelt/kelt.png"), true)));
         addPatternToDatagen(AudConsoleRegistry.KELT.getId(), createWithDefaultSound("kelt_rani", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/kelt/kelt_rani.png"), true)));
         addPatternToDatagen(AudConsoleRegistry.KELT.getId(), createWithDefaultSound("kelt_master", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/kelt/kelt_master.png"), true)));
