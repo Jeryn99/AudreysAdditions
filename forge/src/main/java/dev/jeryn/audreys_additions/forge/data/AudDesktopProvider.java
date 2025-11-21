@@ -72,5 +72,11 @@ public class AudDesktopProvider extends DesktopProvider {
                 TardisRefined.GSON.toJson(Component.literal(MiscHelper.getCleanName(ChatFormatting.YELLOW + "(1975) " + ChatFormatting.BLUE + "Ruscoe I"))
                 )));
 
+        addDesktop(new DesktopTheme(
+                new ResourceLocation(AudreysAdditions.MODID, "primm"),
+                new ResourceLocation(AudreysAdditions.MODID, "desktop/primm"),
+                TardisRefined.GSON.toJson(Component.literal(MiscHelper.getCleanName(ChatFormatting.BLUE + "Primm"))
+                )));
+
     }
 }
