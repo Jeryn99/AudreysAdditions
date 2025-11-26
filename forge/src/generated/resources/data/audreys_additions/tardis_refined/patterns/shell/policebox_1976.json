@@ -43,6 +43,138 @@
           }
         }
       }
+    },
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "audreys_additions:textures/blockentity/shell/policebox_1976/season_16.png"
+      },
+      "id": "audreys_additions:season_16",
+      "interior": {
+        "emissive": true,
+        "texture": "audreys_additions:textures/blockentity/shell/policebox_1976/season_16_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Season 16\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "audreys_additions:textures/blockentity/shell/policebox_1976/season_17.png"
+      },
+      "id": "audreys_additions:season_17",
+      "interior": {
+        "emissive": true,
+        "texture": "audreys_additions:textures/blockentity/shell/policebox_1976/season_17_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Season 17\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "audreys_additions:textures/blockentity/shell/policebox_1976/black_orchid.png"
+      },
+      "id": "audreys_additions:black_orchid",
+      "interior": {
+        "emissive": true,
+        "texture": "audreys_additions:textures/blockentity/shell/policebox_1976/black_orchid_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Black Orchid\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
     }
   ]
 }
