@@ -116,8 +116,10 @@ public class AUDPatterns extends ShellPatternProvider {
 
         quickAdd(AudShellRegistry.POLICEBOX_1996.getId(), "default", true);
         quickAdd(AudShellRegistry.POLICEBOX_1996.getId(), "shalka", true);
+
         quickAdd(AudShellRegistry.POLICEBOX_1963.getId(), "default", true);
         quickAdd(AudShellRegistry.POLICEBOX_1963.getId(), "massacre", true);
+        quickAdd(AudShellRegistry.POLICEBOX_1963.getId(), "adventure", true);
 
         quickAdd(AudShellRegistry.SIDRAT.getId(), "sidrat", false, sidratSounds);
         quickAdd(AudShellRegistry.SIDRAT.getId(), "gallifrey", false, sidratSounds);
