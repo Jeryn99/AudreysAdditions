@@ -12,22 +12,34 @@ public class PoliceBox1963Entry extends ShellEntry {
         super(shellModel, shellDoorModel);
     }
 
+
     @Override
     public ShellModel getShellModel(ShellPattern shellPattern) {
-        if (isSpecialShellPattern(shellPattern)) {
+
+        String variantPath = shellPattern.id().getPath();
+
+
+        if (variantPath.contains("massacre")) {
             return AUDModelRegistry.policeBox63Massacre;
         }
+
+        if (variantPath.contains("adventure")) {
+            return AUDModelRegistry.policeBoxAAISAT;
+        }
+
+
         return super.getShellModel(shellPattern);
     }
 
     @Override
     public ShellDoorModel getShellDoorModel(ShellPattern shellPattern) {
-        return super.getShellDoorModel(shellPattern);
-    }
+        String variantPath = shellPattern.id().getPath();
 
-    private boolean isSpecialShellPattern(ShellPattern shellPattern) {
-        String path = shellPattern.id().getPath();
-        return path.contains("massacre");
+        if (variantPath.contains("adventure")){
+            return AUDModelRegistry.policeBoxAAISATDoor;
+        }
+
+        return super.getShellDoorModel(shellPattern);
     }
 
 }
