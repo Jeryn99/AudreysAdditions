@@ -27,7 +27,11 @@ public class PoliceBox1980Entry extends ShellEntry {
             return AUDModelRegistry.policeBox83;
         }
 
-        if (variantPath.contains("season_24")) {
+        if (variantPath.contains("season_24"))  {
+            return AUDModelRegistry.policeBox87;
+        }
+
+        if (variantPath.contains("dimensional"))  {
             return AUDModelRegistry.policeBox87;
         }
 
@@ -42,7 +46,7 @@ public class PoliceBox1980Entry extends ShellEntry {
     public ShellDoorModel getShellDoorModel(ShellPattern shellPattern) {
         String variantPath = shellPattern.id().getPath();
 
-        if (variantPath.contains("season_20") || variantPath.contains("season_22") || variantPath.contains("season_24") || variantPath.contains("happiness_patrol")){
+        if (variantPath.contains("season_20") || variantPath.contains("season_22") || variantPath.contains("season_24") || variantPath.contains("happiness_patrol") || variantPath.contains("dimensional")){
             return AUDModelRegistry.policeBox83Door;
         }
 
