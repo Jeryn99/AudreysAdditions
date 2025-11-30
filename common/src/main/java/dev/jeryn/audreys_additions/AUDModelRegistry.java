@@ -124,6 +124,7 @@ public class AUDModelRegistry {
     public static ModelLayerLocation RANI_CONSOLE = console("rani");
     public static ModelLayerLocation ALTERED_SHARP_CONSOLE = console("altered_sharp");
     public static ModelLayerLocation SEASON_16_CONSOLE = console("season_16");
+    public static ModelLayerLocation CHRONOTIS_CONSOLE = console("chronotis");
 
 
     public static ModelLayerLocation KNOSSOS_THRONE = furniture("knossos_throne");
