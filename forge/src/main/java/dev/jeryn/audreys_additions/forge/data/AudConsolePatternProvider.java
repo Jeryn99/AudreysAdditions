@@ -73,7 +73,7 @@ public class AudConsolePatternProvider extends ConsolePatternProvider {
         addPatternToDatagen(AudConsoleRegistry.RANI.getId(), createWithDefaultSound("rani_nether", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/rani/rani_nether.png"), true)));
         addPatternToDatagen(AudConsoleRegistry.RANI.getId(), createWithDefaultSound("rani_white", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/rani/rani_white.png"), false)));
 
-
+        addPatternToDatagen(AudConsoleRegistry.CHRONOTIS.getId(), createWithDefaultSound("chronotis", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/chronotis/chronotis.png"), true)));
 
 
 
