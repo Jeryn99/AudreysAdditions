@@ -63,8 +63,6 @@ public class AudBlocks {
 
     public static final RegistrySupplier<Block> SPECIMEN_JAR_ZOMBIE = registerSpecimenJar("specimen_jar_zombie",
             () -> new SpecimenJarBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
-
-
     /**
      * Registers a Block and BlockItem to the ItemGroup of your choice
      */
@@ -73,6 +71,32 @@ public class AudBlocks {
         AudItems.ITEMS.register(id, () -> new BlockItem(RegistrySupplier.get(), new Item.Properties()));
         return RegistrySupplier;
     }
+
+    //quartzzz
+    public static final RegistrySupplier<Block> ZEITON_QUARTZ_BLOCK = registerBlockOnly("zeiton_quartz",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BLOCK)));
+
+    public static final RegistrySupplier<Block> ZEITON_QUARTZ_STAIRS = registerBlockOnly("zeiton_quartz_stairs",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.QUARTZ_STAIRS)));
+
+    public static final RegistrySupplier<Block> ZEITON_QUARTZ_SLAB = registerBlockOnly("zeiton_quartz_slab",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.QUARTZ_SLAB)));
+
+    public static final RegistrySupplier<Block> SMOOTH_ZEITON_QUARTZ_BLOCK = registerBlockOnly("smooth_zeiton_quartz",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SMOOTH_QUARTZ)));
+
+    public static final RegistrySupplier<Block> SMOOTH_ZEITON_QUARTZ_STAIRS = registerBlockOnly("smooth_zeiton_quartz_stairs",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SMOOTH_QUARTZ_STAIRS)));
+
+    public static final RegistrySupplier<Block> ZEITON_QUARTZ_BRICKS = registerBlockOnly("zeiton_quartz_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BRICKS)));
+
+    // place these two directionally
+    public static final RegistrySupplier<Block> ZEITON_QUARTZ_PILLAR = registerBlockOnly("zeiton_quartz_pillar",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR)));
+
+    public static final RegistrySupplier<Block> CHISELED_ZEITON_QUARTZ_BLOCK = registerBlockOnly("chiseled_zeiton_quartz_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CHISELED_QUARTZ_BLOCK)));
 
 
     /**
