@@ -96,6 +96,9 @@ public class AudBlocks {
     public static final RegistrySupplier<RoundelOverlayBlock> ROUNDEL_OVERLAY = register("roundel_overlay",
             () -> new RoundelOverlayBlock(BlockBehaviour.Properties.copy(Blocks.VINE)));
 
+    public static final RegistrySupplier<DoorBlock> EXAMPLE_DOOR = register("example_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR), BlockSetType.ACACIA));
+
     /**
      * Registers a Block and BlockItem to the ItemGroup of your choice
      */

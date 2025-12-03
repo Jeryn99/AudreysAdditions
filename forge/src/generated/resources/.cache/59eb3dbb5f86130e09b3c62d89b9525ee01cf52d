@@ -1,10 +1,10 @@
-// 1.20.1	2025-12-03T20:28:53.4064605	Loot Tables
+// 1.20.1	2025-12-03T21:55:48.4540586	Loot Tables
 ea3815b3201e72fbb3301d39ea4f0586ac3fcb2b data/audreys_additions/loot_tables/blocks/armchair.json
 334aa00249b17fcd52999a39d3828141d9f6f617 data/audreys_additions/loot_tables/blocks/astral_map.json
 49aebf8c6147894f801bbf830dafe4d5ac8ae327 data/audreys_additions/loot_tables/blocks/brachacki_monitor.json
 8562f9590fd72d1cc15d080306a3f3246048b71d data/audreys_additions/loot_tables/blocks/ceiling_canopy.json
 5c8fde9a7f7496f151d65fad7795536ab91c33ac data/audreys_additions/loot_tables/blocks/chiseled_zeiton_quartz_block.json
-4bbe6b3bb2376374137663642bc29b396deed5f5 data/audreys_additions/loot_tables/blocks/door.json
+02a30a8d9dfe052e91cefc6973072b76844df403 data/audreys_additions/loot_tables/blocks/example_door.json
 fb43913cb7b627d875728d8d9393dc8a0f0d078b data/audreys_additions/loot_tables/blocks/fold_out_bed.json
 fa7d78f5810ac14b16067a6b1e2a39225341dd96 data/audreys_additions/loot_tables/blocks/food_machine.json
 728229649ce8f9ce4ea8491a6f0df146155a3241 data/audreys_additions/loot_tables/blocks/knossos_throne.json
