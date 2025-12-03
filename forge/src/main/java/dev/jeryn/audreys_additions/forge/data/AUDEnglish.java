@@ -56,6 +56,15 @@ public class AUDEnglish extends LanguageProvider {
         add(AudBlocks.SPECIMEN_JAR_VEX.get(), "Specimen Jar (" + ChatFormatting.BLUE + "Vex" + ChatFormatting.RESET + ")");
         add(AudBlocks.SPECIMEN_JAR_WITHERSKELETON.get(), "Specimen Jar (" + ChatFormatting.DARK_GRAY + "Wither Skeleton" + ChatFormatting.RESET + ")");
         add(AudBlocks.SPECIMEN_JAR_ZOMBIE.get(), "Specimen Jar (" + ChatFormatting.DARK_GREEN + "Zombie" + ChatFormatting.RESET + ")");
+        add(AudBlocks.ZEITON_QUARTZ_BLOCK.get(), "Zeiton Quartz Block");
+        add(AudBlocks.ZEITON_QUARTZ_SLAB.get(), "Zeiton Quartz Slab");
+        add(AudBlocks.ZEITON_QUARTZ_STAIRS.get(), "Zeiton Quartz Stairs");
+        add(AudBlocks.SMOOTH_ZEITON_QUARTZ_BLOCK.get(), "Smooth Zeiton Quartz");
+        add(AudBlocks.SMOOTH_ZEITON_QUARTZ_SLAB.get(), "Smooth Zeiton Quartz Slab");
+        add(AudBlocks.SMOOTH_ZEITON_QUARTZ_STAIRS.get(), "Smooth Zeiton Quartz Stairs");
+        add(AudBlocks.ZEITON_QUARTZ_PILLAR.get(), "Zeiton Quartz Pillar");
+        add(AudBlocks.CHISELED_ZEITON_QUARTZ_BLOCK.get(), "Chiseled Zeiton Quartz Block");
+        add(AudBlocks.ZEITON_QUARTZ_BRICKS.get(), "Zeiton Quartz Bricks");
 
 
         add(AudItems.FOOD_CUBE.get(), "Food Cube");
