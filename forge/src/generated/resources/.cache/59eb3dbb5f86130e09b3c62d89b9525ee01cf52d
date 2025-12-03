@@ -1,4 +1,4 @@
-// 1.20.1	2025-12-03T14:20:54.9780955	Loot Tables
+// 1.20.1	2025-12-03T20:28:53.4064605	Loot Tables
 ea3815b3201e72fbb3301d39ea4f0586ac3fcb2b data/audreys_additions/loot_tables/blocks/armchair.json
 334aa00249b17fcd52999a39d3828141d9f6f617 data/audreys_additions/loot_tables/blocks/astral_map.json
 49aebf8c6147894f801bbf830dafe4d5ac8ae327 data/audreys_additions/loot_tables/blocks/brachacki_monitor.json
@@ -11,6 +11,7 @@ fa7d78f5810ac14b16067a6b1e2a39225341dd96 data/audreys_additions/loot_tables/bloc
 db963ef929dc35cfdd539b6b3d214bd470d18864 data/audreys_additions/loot_tables/blocks/lightcolumn_left.json
 2761e247d81afc1787933bf9e81cd8e2d15c2f13 data/audreys_additions/loot_tables/blocks/lightcolumn_right.json
 135241e431bfb02ce4f154768c59734e0cac6f8c data/audreys_additions/loot_tables/blocks/liminton_monitor.json
+02df6413410edfbe3f3150a233735386dccc1161 data/audreys_additions/loot_tables/blocks/roundel_overlay.json
 591120ea21e9974003430eda915768f2a12a7727 data/audreys_additions/loot_tables/blocks/smooth_zeiton_quartz.json
 649a2f07e6a913d0d005cb89ce9b0138466d14d8 data/audreys_additions/loot_tables/blocks/smooth_zeiton_quartz_slab.json
 e5f0ad1d557bf81665e333896e1a540f188156f2 data/audreys_additions/loot_tables/blocks/smooth_zeiton_quartz_stairs.json

@@ -9,10 +9,11 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
-import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
+import net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.Nullable;
@@ -111,6 +112,10 @@ public class AudBlocksModelProvider extends BlockStateProvider {
                     continue;
                 }
 
+                if (location.getPath().contains("overlay")) {
+                    continue;
+                }
+
 
                 simpleBlock(value);
             }
@@ -133,7 +138,75 @@ public class AudBlocksModelProvider extends BlockStateProvider {
 
         doorBlockWithRenderType(AudBlocks.EXAMPLE_DOOR.get(), new ResourceLocation(AudreysAdditions.MODID, "block/smooth_zeiton_quartz"),  new ResourceLocation(AudreysAdditions.MODID, "block/smooth_zeiton_quartz"), "cutout");
 
+        vineSupport(AudBlocks.ROUNDEL_OVERLAY.get());
+
     }
+
+    private void vineSupport(Block block) {
+        ResourceLocation key = ForgeRegistries.BLOCKS.getKey(block);
+        assert key != null;
+
+        String name = key.getPath();
+        ResourceLocation texture = modLoc("block/" + name);
+
+        // Derived model: a simple flat plane exactly like vanilla vines
+        ModelFile model = models().withExistingParent(name, new ResourceLocation(AudreysAdditions.MODID, "block/overlay"))
+                .texture("vine", texture)
+                .texture("particle", texture)
+                .renderType("cutout");
+
+        MultiPartBlockStateBuilder multipart = getMultipartBuilder(block);
+
+        // SOUTH — default facing direction
+        multipart.part()
+                .modelFile(model)
+                .rotationX(0)
+                .rotationY(0)
+                .addModel()
+                .condition(BlockStateProperties.NORTH, true);
+
+// WEST
+        multipart.part()
+                .modelFile(model)
+                .rotationX(0)
+                .rotationY(90)
+                .addModel()
+                .condition(BlockStateProperties.EAST, true);
+
+// NORTH
+        multipart.part()
+                .modelFile(model)
+                .rotationX(0)
+                .rotationY(180)
+                .addModel()
+                .condition(BlockStateProperties.SOUTH, true);
+
+// EAST
+        multipart.part()
+                .modelFile(model)
+                .rotationX(0)
+                .rotationY(270)
+                .addModel()
+                .condition(BlockStateProperties.WEST, true);
+
+// UP
+        multipart.part()
+                .modelFile(model)
+                .rotationX(270)
+                .rotationY(0)
+                .addModel()
+                .condition(BlockStateProperties.UP, true);
+
+// DOWN
+        multipart.part()
+                .modelFile(model)
+                .rotationX(90)
+                .rotationY(0)
+                .addModel()
+                .condition(BlockStateProperties.DOWN, true);
+
+    }
+
 
 
     private void autoCubeTopBottom(Block block) {

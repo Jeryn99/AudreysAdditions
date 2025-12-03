@@ -11,6 +11,7 @@ public class ClientUtil {
         BlockRenderLayerMap.INSTANCE.putBlock(AudBlocks.LIMINTON_MONITOR.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(AudBlocks.BRACHACKI_MONITOR.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(AudBlocks.ARMCHAIR.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(AudBlocks.ROUNDEL_OVERLAY.get(), RenderType.cutout());
     }
 
 }

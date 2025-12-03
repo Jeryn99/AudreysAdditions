@@ -96,6 +96,10 @@ public class AudBlocks {
     public static final RegistrySupplier<RotatedPillarBlock> CHISELED_ZEITON_QUARTZ_BLOCK = register("chiseled_zeiton_quartz_block",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.CHISELED_QUARTZ_BLOCK)));
 
+
+    public static final RegistrySupplier<RoundelOverlayBlock> ROUNDEL_OVERLAY = register("roundel_overlay",
+            () -> new RoundelOverlayBlock(BlockBehaviour.Properties.copy(Blocks.VINE)));
+
     /**
      * Registers a Block and BlockItem to the ItemGroup of your choice
      */
