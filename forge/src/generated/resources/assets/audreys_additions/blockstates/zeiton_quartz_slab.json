@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "audreys_additions:block/zeiton_quartz_slab"
+    },
+    "type=double": {
+      "model": "audreys_additions:block/zeiton_quartz_block"
+    },
+    "type=top": {
+      "model": "audreys_additions:block/zeiton_quartz_slab_top"
+    }
+  }
+}

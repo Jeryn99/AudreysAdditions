@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:air"
+          "name": "audreys_additions:smooth_zeiton_quartz_slab"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "audreys_additions:blocks/zeiton_quartz"
+  "random_sequence": "audreys_additions:blocks/smooth_zeiton_quartz_slab"
 }

@@ -9,18 +9,19 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.BedBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BedPart;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import whocraft.tardis_refined.registry.DeferredRegistry;
 import whocraft.tardis_refined.registry.RegistrySupplier;
 
 import java.util.function.Supplier;
+
+import static net.minecraft.world.level.block.Blocks.OAK_PLANKS;
 
 public class AudBlocks {
 
@@ -63,6 +64,38 @@ public class AudBlocks {
 
     public static final RegistrySupplier<Block> SPECIMEN_JAR_ZOMBIE = registerSpecimenJar("specimen_jar_zombie",
             () -> new SpecimenJarBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
+
+    //quartzzz
+    public static final RegistrySupplier<Block> ZEITON_QUARTZ_BLOCK = register("zeiton_quartz_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BLOCK)));
+
+    public static final RegistrySupplier<StairBlock> ZEITON_QUARTZ_STAIRS = register("zeiton_quartz_stairs",
+            () -> new StairBlock(ZEITON_QUARTZ_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.QUARTZ_STAIRS)));
+
+    public static final RegistrySupplier<SlabBlock> ZEITON_QUARTZ_SLAB = register("zeiton_quartz_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_SLAB)));
+
+    public static final RegistrySupplier<SlabBlock> SMOOTH_ZEITON_QUARTZ_SLAB = register("smooth_zeiton_quartz_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_SLAB)));
+
+    public static final RegistrySupplier<Block> SMOOTH_ZEITON_QUARTZ_BLOCK = register("smooth_zeiton_quartz",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SMOOTH_QUARTZ)));
+
+    public static final RegistrySupplier<StairBlock> SMOOTH_ZEITON_QUARTZ_STAIRS = register("smooth_zeiton_quartz_stairs",
+            () -> new StairBlock(SMOOTH_ZEITON_QUARTZ_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.SMOOTH_QUARTZ_STAIRS)));
+
+    public static final RegistrySupplier<Block> ZEITON_QUARTZ_BRICKS = register("zeiton_quartz_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BRICKS)));
+
+    public static final RegistrySupplier<DoorBlock> EXAMPLE_DOOR = register("door",
+            () -> new DoorBlock(BlockBehaviour.Properties.of().mapColor(OAK_PLANKS.defaultMapColor()).instrument(NoteBlockInstrument.BASS).strength(3.0f).ignitedByLava().pushReaction(PushReaction.DESTROY), BlockSetType.OAK));
+
+    public static final RegistrySupplier<RotatedPillarBlock> ZEITON_QUARTZ_PILLAR = register("zeiton_quartz_pillar",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR)));
+
+    public static final RegistrySupplier<RotatedPillarBlock> CHISELED_ZEITON_QUARTZ_BLOCK = register("chiseled_zeiton_quartz_block",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.CHISELED_QUARTZ_BLOCK)));
+
     /**
      * Registers a Block and BlockItem to the ItemGroup of your choice
      */
@@ -72,31 +105,8 @@ public class AudBlocks {
         return RegistrySupplier;
     }
 
-    //quartzzz
-    public static final RegistrySupplier<Block> ZEITON_QUARTZ_BLOCK = registerBlockOnly("zeiton_quartz",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BLOCK)));
 
-    public static final RegistrySupplier<Block> ZEITON_QUARTZ_STAIRS = registerBlockOnly("zeiton_quartz_stairs",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.QUARTZ_STAIRS)));
 
-    public static final RegistrySupplier<Block> ZEITON_QUARTZ_SLAB = registerBlockOnly("zeiton_quartz_slab",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.QUARTZ_SLAB)));
-
-    public static final RegistrySupplier<Block> SMOOTH_ZEITON_QUARTZ_BLOCK = registerBlockOnly("smooth_zeiton_quartz",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SMOOTH_QUARTZ)));
-
-    public static final RegistrySupplier<Block> SMOOTH_ZEITON_QUARTZ_STAIRS = registerBlockOnly("smooth_zeiton_quartz_stairs",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SMOOTH_QUARTZ_STAIRS)));
-
-    public static final RegistrySupplier<Block> ZEITON_QUARTZ_BRICKS = registerBlockOnly("zeiton_quartz_bricks",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BRICKS)));
-
-    // place these two directionally
-    public static final RegistrySupplier<Block> ZEITON_QUARTZ_PILLAR = registerBlockOnly("zeiton_quartz_pillar",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR)));
-
-    public static final RegistrySupplier<Block> CHISELED_ZEITON_QUARTZ_BLOCK = registerBlockOnly("chiseled_zeiton_quartz_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CHISELED_QUARTZ_BLOCK)));
 
 
     /**

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_bottom_right",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "audreys_additions:block/smooth_zeiton_quartz",
+    "top": "audreys_additions:block/smooth_zeiton_quartz"
+  }
+}

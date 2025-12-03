@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "audreys_additions:block/zeiton_quartz_block_bottom",
+    "east": "audreys_additions:block/zeiton_quartz_block_side",
+    "north": "audreys_additions:block/zeiton_quartz_block_side",
+    "particle": "audreys_additions:block/zeiton_quartz_block_side",
+    "south": "audreys_additions:block/zeiton_quartz_block_side",
+    "up": "audreys_additions:block/zeiton_quartz_block_top",
+    "west": "audreys_additions:block/zeiton_quartz_block_side"
+  }
+}
