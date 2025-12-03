@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "audreys_additions:block/zeiton_quartz_pillar_top",
+    "side": "audreys_additions:block/zeiton_quartz_pillar"
+  }
+}

@@ -2,17 +2,14 @@ package dev.jeryn.audreys_additions.forge.data;
 
 import com.google.gson.JsonObject;
 import dev.jeryn.audreys_additions.AudreysAdditions;
-import dev.jeryn.audreys_additions.common.blocks.FoodMachineBlock;
 import dev.jeryn.audreys_additions.common.blocks.MonitorBlock;
 import dev.jeryn.audreys_additions.common.blocks.SpecimenJarBlock;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.models.BlockModelGenerators;
-import net.minecraft.data.models.model.ModelTemplates;
-import net.minecraft.data.models.model.TextureMapping;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -28,8 +25,11 @@ public class AudBlocksModelProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+
         for (Block value : ForgeRegistries.BLOCKS.getValues()) {
+
             @Nullable ResourceLocation location = ForgeRegistries.BLOCKS.getKey(value);
+
             if (location.getNamespace().matches(AudreysAdditions.MODID)) {
 
                 if(value == AudBlocks.LIGHTCOLUMN_RIGHT.get()){
@@ -87,9 +87,90 @@ public class AudBlocksModelProvider extends BlockStateProvider {
                     continue;
                 }
 
+                if (value == AudBlocks.ZEITON_QUARTZ_BLOCK.get()) {
+                    continue;
+                }
+
+                if (value == AudBlocks.ZEITON_QUARTZ_PILLAR.get()) {
+                    continue;
+                }
+
+                if (value == AudBlocks.CHISELED_ZEITON_QUARTZ_BLOCK.get()) {
+                    continue;
+                }
+
+                if (location.getPath().contains("stairs")) {
+                    continue;
+                }
+
+                if (location.getPath().contains("slab")) {
+                    continue;
+                }
+
+                if (location.getPath().contains("door")) {
+                    continue;
+                }
+
+
                 simpleBlock(value);
             }
         }
+
+        stairsBlock(AudBlocks.SMOOTH_ZEITON_QUARTZ_STAIRS.get(), new ResourceLocation(AudreysAdditions.MODID, "block/smooth_zeiton_quartz"));
+        stairsBlock(AudBlocks.ZEITON_QUARTZ_STAIRS.get(), new ResourceLocation(AudreysAdditions.MODID, "block/zeiton_quartz_block_side"));
+
+        autoCubeTopBottom(AudBlocks.ZEITON_QUARTZ_BLOCK.get());
+
+
+        //simpleCubeTopBottom(AudBlocks.ZEITON_QUARTZ_PILLAR.get(), new ResourceLocation(AudreysAdditions.MODID, "block/zeiton_quartz_pillar_top"), new ResourceLocation(AudreysAdditions.MODID, "block/zeiton_quartz_pillar_top"), new ResourceLocation(AudreysAdditions.MODID, "block/zeiton_quartz_pillar"));
+       // simpleCubeTopBottom(AudBlocks.CHISELED_ZEITON_QUARTZ_BLOCK.get(), new ResourceLocation(AudreysAdditions.MODID, "block/chiseled_zeiton_quartz_block_top"), new ResourceLocation(AudreysAdditions.MODID, "block/chiseled_zeiton_quartz_block_top"), new ResourceLocation(AudreysAdditions.MODID, "block/chiseled_zeiton_quartz_block"));
+
+        logBlock(AudBlocks.CHISELED_ZEITON_QUARTZ_BLOCK.get());
+        logBlock(AudBlocks.ZEITON_QUARTZ_PILLAR.get());
+
+        slabBlock(AudBlocks.ZEITON_QUARTZ_SLAB.get(), new ResourceLocation(AudreysAdditions.MODID, "zeiton_quartz_block"),  new ResourceLocation(AudreysAdditions.MODID, "block/zeiton_quartz_block_side"));
+        slabBlock(AudBlocks.SMOOTH_ZEITON_QUARTZ_SLAB.get(), new ResourceLocation(AudreysAdditions.MODID, "smooth_zeiton_quartz"),  new ResourceLocation(AudreysAdditions.MODID, "block/zeiton_quartz_block_side"));
+
+        doorBlockWithRenderType(AudBlocks.EXAMPLE_DOOR.get(), new ResourceLocation(AudreysAdditions.MODID, "block/smooth_zeiton_quartz"),  new ResourceLocation(AudreysAdditions.MODID, "block/smooth_zeiton_quartz"), "cutout");
+
+    }
+
+
+    private void autoCubeTopBottom(Block block) {
+        ResourceLocation key = ForgeRegistries.BLOCKS.getKey(block);
+        assert key != null;
+        String base = key.getPath();
+
+        ResourceLocation top = modLoc("block/" + base + "_top");
+        ResourceLocation bottom = modLoc("block/" + base + "_bottom");
+        ResourceLocation side = modLoc("block/" + base + "_side");
+
+        ModelFile model = models().withExistingParent(base, "block/cube")
+                .texture("particle", side)
+                .texture("north", side)
+                .texture("south", side)
+                .texture("east", side)
+                .texture("west", side)
+                .texture("up", top)
+                .texture("down", bottom);
+
+        simpleBlock(block, model);
+    }
+
+
+    private void simpleCubeTopBottom(Block block, ResourceLocation top, ResourceLocation bottom, ResourceLocation side) {
+        ResourceLocation key = ForgeRegistries.BLOCKS.getKey(block);
+
+        ModelFile model = models().withExistingParent(key.getPath(), "block/cube")
+                .texture("particle", side)
+                .texture("north", side)
+                .texture("south", side)
+                .texture("east", side)
+                .texture("west", side)
+                .texture("up", top)
+                .texture("down", bottom);
+
+        simpleBlock(block, model);
     }
 
 

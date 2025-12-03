@@ -46,6 +46,17 @@ public class AudItemModelProvider extends ItemModelProvider {
         specimenJar(AudBlocks.SPECIMEN_JAR_VEX.getId());
         specimenJar(AudBlocks.SPECIMEN_JAR_WITHERSKELETON.getId());
         specimenJar(AudBlocks.SPECIMEN_JAR_ZOMBIE.getId());
+
+        blockItem(AudBlocks.ZEITON_QUARTZ_BLOCK.getId());
+        blockItem(AudBlocks.ZEITON_QUARTZ_STAIRS.getId());
+        blockItem(AudBlocks.ZEITON_QUARTZ_SLAB.getId());
+        blockItem(AudBlocks.SMOOTH_ZEITON_QUARTZ_SLAB.getId());
+        blockItem(AudBlocks.SMOOTH_ZEITON_QUARTZ_BLOCK.getId());
+        blockItem(AudBlocks.SMOOTH_ZEITON_QUARTZ_STAIRS.getId());
+        blockItem(AudBlocks.ZEITON_QUARTZ_BRICKS.getId());
+        blockItem(AudBlocks.ZEITON_QUARTZ_PILLAR.getId());
+        blockItem(AudBlocks.CHISELED_ZEITON_QUARTZ_BLOCK.getId());
+
     }
 
     public ItemModelBuilder blockItem(ResourceLocation item) {
