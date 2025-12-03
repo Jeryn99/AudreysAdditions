@@ -75,26 +75,26 @@ public class AudBlocks {
     public static final RegistrySupplier<SlabBlock> ZEITON_QUARTZ_SLAB = register("zeiton_quartz_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_SLAB)));
 
-    public static final RegistrySupplier<SlabBlock> SMOOTH_ZEITON_QUARTZ_SLAB = register("smooth_zeiton_quartz_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_SLAB)));
-
     public static final RegistrySupplier<Block> SMOOTH_ZEITON_QUARTZ_BLOCK = register("smooth_zeiton_quartz",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SMOOTH_QUARTZ)));
 
     public static final RegistrySupplier<StairBlock> SMOOTH_ZEITON_QUARTZ_STAIRS = register("smooth_zeiton_quartz_stairs",
             () -> new StairBlock(SMOOTH_ZEITON_QUARTZ_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.SMOOTH_QUARTZ_STAIRS)));
 
+    public static final RegistrySupplier<SlabBlock> SMOOTH_ZEITON_QUARTZ_SLAB = register("smooth_zeiton_quartz_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_SLAB)));
+
     public static final RegistrySupplier<Block> ZEITON_QUARTZ_BRICKS = register("zeiton_quartz_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BRICKS)));
-
-    public static final RegistrySupplier<DoorBlock> EXAMPLE_DOOR = register("door",
-            () -> new DoorBlock(BlockBehaviour.Properties.of().mapColor(OAK_PLANKS.defaultMapColor()).instrument(NoteBlockInstrument.BASS).strength(3.0f).ignitedByLava().pushReaction(PushReaction.DESTROY), BlockSetType.OAK));
-
     public static final RegistrySupplier<RotatedPillarBlock> ZEITON_QUARTZ_PILLAR = register("zeiton_quartz_pillar",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR)));
 
     public static final RegistrySupplier<RotatedPillarBlock> CHISELED_ZEITON_QUARTZ_BLOCK = register("chiseled_zeiton_quartz_block",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.CHISELED_QUARTZ_BLOCK)));
+
+    public static final RegistrySupplier<DoorBlock> EXAMPLE_DOOR = register("door",
+            () -> new DoorBlock(BlockBehaviour.Properties.of().mapColor(OAK_PLANKS.defaultMapColor()).instrument(NoteBlockInstrument.BASS).strength(3.0f).ignitedByLava().pushReaction(PushReaction.DESTROY), BlockSetType.OAK));
+
 
     /**
      * Registers a Block and BlockItem to the ItemGroup of your choice
