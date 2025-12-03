@@ -129,7 +129,7 @@ public class AudBlocksModelProvider extends BlockStateProvider {
         logBlock(AudBlocks.ZEITON_QUARTZ_PILLAR.get());
 
         slabBlock(AudBlocks.ZEITON_QUARTZ_SLAB.get(), new ResourceLocation(AudreysAdditions.MODID, "zeiton_quartz_block"),  new ResourceLocation(AudreysAdditions.MODID, "block/zeiton_quartz_block_side"));
-        slabBlock(AudBlocks.SMOOTH_ZEITON_QUARTZ_SLAB.get(), new ResourceLocation(AudreysAdditions.MODID, "smooth_zeiton_quartz"),  new ResourceLocation(AudreysAdditions.MODID, "block/zeiton_quartz_block_side"));
+        slabBlock(AudBlocks.SMOOTH_ZEITON_QUARTZ_SLAB.get(), new ResourceLocation(AudreysAdditions.MODID, "smooth_zeiton_quartz"),  new ResourceLocation(AudreysAdditions.MODID, "block/zeiton_quartz_block_bottom"));
 
         doorBlockWithRenderType(AudBlocks.EXAMPLE_DOOR.get(), new ResourceLocation(AudreysAdditions.MODID, "block/smooth_zeiton_quartz"),  new ResourceLocation(AudreysAdditions.MODID, "block/smooth_zeiton_quartz"), "cutout");
 
