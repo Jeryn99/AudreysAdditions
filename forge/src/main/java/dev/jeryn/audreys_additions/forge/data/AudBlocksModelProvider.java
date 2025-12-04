@@ -139,7 +139,8 @@ public class AudBlocksModelProvider extends BlockStateProvider {
 
         doorBlockWithRenderType(AudBlocks.EXAMPLE_DOOR.get(), new ResourceLocation(AudreysAdditions.MODID, "block/smooth_zeiton_quartz"),  new ResourceLocation(AudreysAdditions.MODID, "block/smooth_zeiton_quartz"), "cutout");
 
-        vineSupport(AudBlocks.ROUNDEL_OVERLAY.get());
+        vineSupport(AudBlocks.ROUNDEL_OVERLAY_FULL.get());
+        vineSupport(AudBlocks.ROUNDEL_OVERLAY_HALF.get());
 
     }
 

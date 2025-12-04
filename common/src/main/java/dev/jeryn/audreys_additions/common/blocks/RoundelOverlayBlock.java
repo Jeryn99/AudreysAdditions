@@ -58,8 +58,7 @@ public class RoundelOverlayBlock extends Block {
     private final Map<BlockState, VoxelShape> shapesCache;
 
     public RoundelOverlayBlock(BlockBehaviour.Properties properties) {
-        super(properties);
-
+        super(properties.lightLevel(value -> 13));
         this.registerDefaultState(
                 this.stateDefinition.any()
                         .setValue(UP, false)

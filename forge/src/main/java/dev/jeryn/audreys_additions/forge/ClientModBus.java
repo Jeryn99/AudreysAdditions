@@ -59,8 +59,15 @@ public class ClientModBus {
         event.register(
                 (state, world, pos, tintIndex) ->
                         state.getValue(RoundelOverlayBlock.COLOR).getTextColor(),
-                AudBlocks.ROUNDEL_OVERLAY.get()
+                AudBlocks.ROUNDEL_OVERLAY_FULL.get()
         );
+
+        event.register(
+                (state, world, pos, tintIndex) ->
+                        state.getValue(RoundelOverlayBlock.COLOR).getTextColor(),
+                AudBlocks.ROUNDEL_OVERLAY_HALF.get()
+        );
+
 
     }
 

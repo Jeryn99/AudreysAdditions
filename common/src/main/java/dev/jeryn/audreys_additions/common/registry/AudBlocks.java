@@ -93,7 +93,10 @@ public class AudBlocks {
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.CHISELED_QUARTZ_BLOCK)));
 
 
-    public static final RegistrySupplier<RoundelOverlayBlock> ROUNDEL_OVERLAY = register("roundel_overlay",
+    public static final RegistrySupplier<RoundelOverlayBlock> ROUNDEL_OVERLAY_FULL = register("roundel_overlay_full",
+            () -> new RoundelOverlayBlock(BlockBehaviour.Properties.copy(Blocks.VINE)));
+
+    public static final RegistrySupplier<RoundelOverlayBlock> ROUNDEL_OVERLAY_HALF = register("roundel_overlay_half",
             () -> new RoundelOverlayBlock(BlockBehaviour.Properties.copy(Blocks.VINE)));
 
     public static final RegistrySupplier<DoorBlock> EXAMPLE_DOOR = register("example_door",

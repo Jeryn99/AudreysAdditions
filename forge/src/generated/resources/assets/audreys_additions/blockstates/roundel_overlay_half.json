@@ -2,7 +2,7 @@
   "multipart": [
     {
       "apply": {
-        "model": "audreys_additions:block/roundel_overlay"
+        "model": "audreys_additions:block/roundel_overlay_half"
       },
       "when": {
         "north": "true"
@@ -10,7 +10,7 @@
     },
     {
       "apply": {
-        "model": "audreys_additions:block/roundel_overlay",
+        "model": "audreys_additions:block/roundel_overlay_half",
         "y": 90
       },
       "when": {
@@ -19,7 +19,7 @@
     },
     {
       "apply": {
-        "model": "audreys_additions:block/roundel_overlay",
+        "model": "audreys_additions:block/roundel_overlay_half",
         "y": 180
       },
       "when": {
@@ -28,7 +28,7 @@
     },
     {
       "apply": {
-        "model": "audreys_additions:block/roundel_overlay",
+        "model": "audreys_additions:block/roundel_overlay_half",
         "y": 270
       },
       "when": {
@@ -37,7 +37,7 @@
     },
     {
       "apply": {
-        "model": "audreys_additions:block/roundel_overlay",
+        "model": "audreys_additions:block/roundel_overlay_half",
         "x": 270
       },
       "when": {
@@ -46,7 +46,7 @@
     },
     {
       "apply": {
-        "model": "audreys_additions:block/roundel_overlay",
+        "model": "audreys_additions:block/roundel_overlay_half",
         "x": 90
       },
       "when": {

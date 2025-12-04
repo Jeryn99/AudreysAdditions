@@ -46,7 +46,13 @@ public class AudreysAdditionsClientFabric implements ClientModInitializer {
         ColorProviderRegistry.BLOCK.register(
                 (state, world, pos, tintIndex) ->
                         state.getValue(RoundelOverlayBlock.COLOR).getTextColor(),
-                AudBlocks.ROUNDEL_OVERLAY.get()
+                AudBlocks.ROUNDEL_OVERLAY_FULL.get()
+        );
+
+        ColorProviderRegistry.BLOCK.register(
+                (state, world, pos, tintIndex) ->
+                        state.getValue(RoundelOverlayBlock.COLOR).getTextColor(),
+                AudBlocks.ROUNDEL_OVERLAY_HALF.get()
         );
 
 

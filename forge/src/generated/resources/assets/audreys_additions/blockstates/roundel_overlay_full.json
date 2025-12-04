@@ -1,0 +1,57 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "audreys_additions:block/roundel_overlay_full"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "audreys_additions:block/roundel_overlay_full",
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "audreys_additions:block/roundel_overlay_full",
+        "y": 180
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "audreys_additions:block/roundel_overlay_full",
+        "y": 270
+      },
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "audreys_additions:block/roundel_overlay_full",
+        "x": 270
+      },
+      "when": {
+        "up": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "audreys_additions:block/roundel_overlay_full",
+        "x": 90
+      },
+      "when": {
+        "down": "true"
+      }
+    }
+  ]
+}
