@@ -101,6 +101,10 @@ public class AudBlocksModelProvider extends BlockStateProvider {
                     continue;
                 }
 
+                if (value == AudBlocks.TREATED_ZEITON_QUARTZ_BLOCK.get()) {
+                    continue;
+                }
+
                 if (location.getPath().contains("stairs")) {
                     continue;
                 }
@@ -132,6 +136,7 @@ public class AudBlocksModelProvider extends BlockStateProvider {
        // simpleCubeTopBottom(AudBlocks.CHISELED_ZEITON_QUARTZ_BLOCK.get(), new ResourceLocation(AudreysAdditions.MODID, "block/chiseled_zeiton_quartz_block_top"), new ResourceLocation(AudreysAdditions.MODID, "block/chiseled_zeiton_quartz_block_top"), new ResourceLocation(AudreysAdditions.MODID, "block/chiseled_zeiton_quartz_block"));
 
         logBlock(AudBlocks.CHISELED_ZEITON_QUARTZ_BLOCK.get());
+        logBlock(AudBlocks.TREATED_ZEITON_QUARTZ_BLOCK.get());
         logBlock(AudBlocks.ZEITON_QUARTZ_PILLAR.get());
 
         slabBlock(AudBlocks.ZEITON_QUARTZ_SLAB.get(), new ResourceLocation(AudreysAdditions.MODID, "zeiton_quartz_block"),  new ResourceLocation(AudreysAdditions.MODID, "block/zeiton_quartz_block_side"));

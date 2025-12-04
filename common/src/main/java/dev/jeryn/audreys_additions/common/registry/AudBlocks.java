@@ -92,6 +92,9 @@ public class AudBlocks {
     public static final RegistrySupplier<RotatedPillarBlock> CHISELED_ZEITON_QUARTZ_BLOCK = register("chiseled_zeiton_quartz_block",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.CHISELED_QUARTZ_BLOCK)));
 
+    public static final RegistrySupplier<RotatedPillarBlock> TREATED_ZEITON_QUARTZ_BLOCK = register("treated_zeiton_quartz_block",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.CHISELED_QUARTZ_BLOCK)));
+
 
     public static final RegistrySupplier<RoundelOverlayBlock> ROUNDEL_OVERLAY_FULL = registerDyed("roundel_overlay_full",
             () -> new RoundelOverlayBlock(BlockBehaviour.Properties.copy(Blocks.VINE)));
