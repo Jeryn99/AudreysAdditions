@@ -1,12 +1,15 @@
 package dev.jeryn.audreys_additions.common.blocks;
 
 import com.google.common.collect.ImmutableMap;
+import dev.jeryn.audreys_additions.common.blockentity.ChairBlockEntity;
 import dev.jeryn.audreys_additions.common.blockentity.DyeableRoundelBlockEntity;
 import dev.jeryn.audreys_additions.common.blockentity.KnossosChairBlockEntity;
+import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.DyeItem;
@@ -158,6 +161,22 @@ public class RoundelOverlayBlock extends BaseEntityBlock {
             return result.setValue(prop, true);
         }
         return overlay ? result : null;
+    }
+
+    @Override
+    public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
+        if (!level.isClientSide) {
+            if (!player.isCreative() && level.getBlockEntity(pos) instanceof ChairBlockEntity chairBlockEntity) {
+                ItemStack coloredItemBlock = new ItemStack(state.getBlock());
+                coloredItemBlock.setCount(1);
+                coloredItemBlock.getOrCreateTagElement("display").putInt("color", chairBlockEntity.getColour());
+
+                ItemEntity itemEntity = new ItemEntity(level, pos.getX(), pos.getY(), pos.getZ(), coloredItemBlock);
+                level.addFreshEntity(itemEntity);
+            }
+        }
+
+        super.playerWillDestroy(level, pos, state, player);
     }
 
 
