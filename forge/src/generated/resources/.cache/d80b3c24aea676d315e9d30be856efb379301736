@@ -1,4 +1,4 @@
-// 1.20.1	2025-12-04T12:37:28.8056772	Item Models: audreys_additions
+// 1.20.1	2025-12-04T14:51:54.6747303	Item Models: audreys_additions
 ec86cbbda42ea0fe30aae29769f5bfe28e8d2585 assets/audreys_additions/models/item/armchair.json
 f6e05d592446c5826e6b95e73debba09eca89da6 assets/audreys_additions/models/item/astral_map.json
 cc5ee705f2e4dc5845e2cae92da973bae8efad7d assets/audreys_additions/models/item/brachacki_monitor.json
@@ -23,6 +23,7 @@ f02cd8d4df52f94014aa16001183035194d93fc4 assets/audreys_additions/models/item/sm
 68a7f790e5c005d6e3c040ce2e7930eb9e9d318d assets/audreys_additions/models/item/specimen_jar_vex.json
 68a7f790e5c005d6e3c040ce2e7930eb9e9d318d assets/audreys_additions/models/item/specimen_jar_witherskeleton.json
 68a7f790e5c005d6e3c040ce2e7930eb9e9d318d assets/audreys_additions/models/item/specimen_jar_zombie.json
+66c85827afadda450c028ffc2566ea51462c6ac4 assets/audreys_additions/models/item/treated_zeiton_quartz_block.json
 d8993b314ce3d6dcf043ed277365d869c34238a4 assets/audreys_additions/models/item/zeiton_quartz_block.json
 125c92627e7ba31a3499b411604adf965588032c assets/audreys_additions/models/item/zeiton_quartz_bricks.json
 eabdf37057e0823930a97edb8d4b8df2b1ec7dc9 assets/audreys_additions/models/item/zeiton_quartz_pillar.json
