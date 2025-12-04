@@ -5,6 +5,7 @@ import dev.jeryn.audreys_additions.ClientUtil;
 import dev.jeryn.audreys_additions.client.renderers.RenderSpecimenJar;
 import dev.jeryn.audreys_additions.client.renderers.*;
 import dev.jeryn.audreys_additions.common.blockentity.ChairBlockEntity;
+import dev.jeryn.audreys_additions.common.blocks.RoundelOverlayBlock;
 import dev.jeryn.audreys_additions.common.item.DyedItemBlock;
 import dev.jeryn.audreys_additions.common.registry.AudBlockEntities;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
@@ -41,6 +42,12 @@ public class AudreysAdditionsClientFabric implements ClientModInitializer {
             }
             return DyeColor.WHITE.getTextColor();
         }, AudBlocks.ARMCHAIR.get());
+
+        ColorProviderRegistry.BLOCK.register(
+                (state, world, pos, tintIndex) ->
+                        state.getValue(RoundelOverlayBlock.COLOR).getTextColor(),
+                AudBlocks.ROUNDEL_OVERLAY.get()
+        );
 
 
         for (Item item : BuiltInRegistries.ITEM) {

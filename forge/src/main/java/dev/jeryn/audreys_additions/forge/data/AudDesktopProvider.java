@@ -6,6 +6,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.resources.ResourceLocation;
+import org.apache.commons.lang3.text.WordUtils;
 import whocraft.tardis_refined.TardisRefined;
 import whocraft.tardis_refined.common.data.DesktopProvider;
 import whocraft.tardis_refined.common.tardis.themes.DesktopTheme;
@@ -27,56 +28,61 @@ public class AudDesktopProvider extends DesktopProvider {
         addDesktop(new DesktopTheme(
                 new ResourceLocation(AudreysAdditions.MODID, "newbery"),
                 new ResourceLocation(AudreysAdditions.MODID, "desktop/newbery"),
-                TardisRefined.GSON.toJson(Component.literal(MiscHelper.getCleanName(ChatFormatting.YELLOW + "(1976) " + ChatFormatting.BLUE + "Secondary"))
+                TardisRefined.GSON.toJson(Component.literal(getCleanNameButItsMyGo(ChatFormatting.YELLOW + "(1976) " + ChatFormatting.BLUE + "Secondary"))
         )));
-//           TardisRefined.GSON.toJson(Component.literal(MiscHelper.getCleanName(ChatFormatting.BLUE + "Thorn" + ChatFormatting.YELLOW + "ton"))
+//           TardisRefined.GSON.toJson(Component.literal(getCleanNameButItsMyGo(ChatFormatting.BLUE + "Thorn" + ChatFormatting.YELLOW + "ton"))
         addDesktop(new DesktopTheme(
                 new ResourceLocation(AudreysAdditions.MODID, "thornton"),
                 new ResourceLocation(AudreysAdditions.MODID, "desktop/thornton"),
-                TardisRefined.GSON.toJson(Component.literal(MiscHelper.getCleanName(ChatFormatting.YELLOW + "(1983) " + ChatFormatting.BLUE + "Thornton"))
+                TardisRefined.GSON.toJson(Component.literal(getCleanNameButItsMyGo(ChatFormatting.YELLOW + "(1983) " + ChatFormatting.BLUE + "Thornton"))
         )));
 
         addDesktop(new DesktopTheme(
                 new ResourceLocation(AudreysAdditions.MODID, "tremas"),
                 new ResourceLocation(AudreysAdditions.MODID, "desktop/tremas"),
-                TardisRefined.GSON.toJson(Component.literal(MiscHelper.getCleanName(ChatFormatting.YELLOW + "(1984) " + ChatFormatting.BLUE + "Tremas"))
+                TardisRefined.GSON.toJson(Component.literal(getCleanNameButItsMyGo(ChatFormatting.YELLOW + "(1984) " + ChatFormatting.BLUE + "Tremas"))
         )));
 
         addDesktop(new DesktopTheme(
         new ResourceLocation(AudreysAdditions.MODID, "fugitive"),
                 new ResourceLocation(AudreysAdditions.MODID, "desktop/fugitive"),
-                TardisRefined.GSON.toJson(Component.literal(MiscHelper.getCleanName(ChatFormatting.YELLOW + "(2020) " + ChatFormatting.BLUE + "Fugitive"))
+                TardisRefined.GSON.toJson(Component.literal(getCleanNameButItsMyGo(ChatFormatting.YELLOW + "(2020) " + ChatFormatting.BLUE + "Fugitive"))
         )));
 
         addDesktop(new DesktopTheme(
                 new ResourceLocation(AudreysAdditions.MODID, "brachacki"),
                 new ResourceLocation(AudreysAdditions.MODID, "desktop/brachacki"),
-                TardisRefined.GSON.toJson(Component.literal(MiscHelper.getCleanName(ChatFormatting.YELLOW + "(1963) " + ChatFormatting.BLUE + "Brachacki"))
+                TardisRefined.GSON.toJson(Component.literal(getCleanNameButItsMyGo(ChatFormatting.YELLOW + "(1963) " + ChatFormatting.BLUE + "Brachacki"))
         )));
 
         addDesktop(new DesktopTheme(
                 new ResourceLocation(AudreysAdditions.MODID, "rani"),
                 new ResourceLocation(AudreysAdditions.MODID, "desktop/rani"),
-                TardisRefined.GSON.toJson(Component.literal(MiscHelper.getCleanName(ChatFormatting.YELLOW + "(1985) " + ChatFormatting.BLUE + "Rani"))
+                TardisRefined.GSON.toJson(Component.literal(getCleanNameButItsMyGo(ChatFormatting.YELLOW + "(1985) " + ChatFormatting.BLUE + "Rani"))
         )));
 
         addDesktop(new DesktopTheme(
                 new ResourceLocation(AudreysAdditions.MODID, "liminton"),
                 new ResourceLocation(AudreysAdditions.MODID, "desktop/liminton"),
-                TardisRefined.GSON.toJson(Component.literal(MiscHelper.getCleanName(ChatFormatting.YELLOW + "(1973) " + ChatFormatting.BLUE + "Liminton"))
+                TardisRefined.GSON.toJson(Component.literal(getCleanNameButItsMyGo(ChatFormatting.YELLOW + "(1973) " + ChatFormatting.BLUE + "Liminton"))
         )));
 
         addDesktop(new DesktopTheme(
                 new ResourceLocation(AudreysAdditions.MODID, "ruscoe1"),
                 new ResourceLocation(AudreysAdditions.MODID, "desktop/ruscoe1"),
-                TardisRefined.GSON.toJson(Component.literal(MiscHelper.getCleanName(ChatFormatting.YELLOW + "(1975) " + ChatFormatting.BLUE + "Ruscoe I"))
+                TardisRefined.GSON.toJson(Component.literal(getCleanNameButItsMyGo(ChatFormatting.YELLOW + "(1975) " + ChatFormatting.BLUE + "Ruscoe I"))
                 )));
 
         addDesktop(new DesktopTheme(
                 new ResourceLocation(AudreysAdditions.MODID, "primm"),
                 new ResourceLocation(AudreysAdditions.MODID, "desktop/primm"),
-                TardisRefined.GSON.toJson(Component.literal(MiscHelper.getCleanName(ChatFormatting.BLUE + "Primm"))
+                TardisRefined.GSON.toJson(Component.literal(getCleanNameButItsMyGo(ChatFormatting.BLUE + "Primm"))
                 )));
 
+    }
+
+    public static String getCleanNameButItsMyGo(String name) {
+        String noUnderscores = name.replace("_", " ");
+        return noUnderscores;
     }
 }

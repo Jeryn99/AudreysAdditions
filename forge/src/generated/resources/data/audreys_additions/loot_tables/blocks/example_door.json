@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "audreys_additions:door"
+          "name": "audreys_additions:example_door"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "audreys_additions:blocks/door"
+  "random_sequence": "audreys_additions:blocks/example_door"
 }

@@ -92,9 +92,12 @@ public class AudBlocks {
     public static final RegistrySupplier<RotatedPillarBlock> CHISELED_ZEITON_QUARTZ_BLOCK = register("chiseled_zeiton_quartz_block",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.CHISELED_QUARTZ_BLOCK)));
 
-    public static final RegistrySupplier<DoorBlock> EXAMPLE_DOOR = register("door",
-            () -> new DoorBlock(BlockBehaviour.Properties.of().mapColor(OAK_PLANKS.defaultMapColor()).instrument(NoteBlockInstrument.BASS).strength(3.0f).ignitedByLava().pushReaction(PushReaction.DESTROY), BlockSetType.OAK));
 
+    public static final RegistrySupplier<RoundelOverlayBlock> ROUNDEL_OVERLAY = register("roundel_overlay",
+            () -> new RoundelOverlayBlock(BlockBehaviour.Properties.copy(Blocks.VINE)));
+
+    public static final RegistrySupplier<DoorBlock> EXAMPLE_DOOR = register("example_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR), BlockSetType.ACACIA));
 
     /**
      * Registers a Block and BlockItem to the ItemGroup of your choice
