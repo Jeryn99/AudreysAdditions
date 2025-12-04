@@ -1,6 +1,8 @@
 package dev.jeryn.audreys_additions.common.blocks;
 
 import com.google.common.collect.ImmutableMap;
+import dev.jeryn.audreys_additions.common.blockentity.DyeableRoundelBlockEntity;
+import dev.jeryn.audreys_additions.common.blockentity.KnossosChairBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
@@ -14,10 +16,8 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.MultifaceBlock;
-import net.minecraft.world.level.block.PipeBlock;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -33,7 +33,7 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class RoundelOverlayBlock extends Block {
+public class RoundelOverlayBlock extends BaseEntityBlock {
 
     public static final BooleanProperty UP = PipeBlock.UP;
     public static final BooleanProperty DOWN = PipeBlock.DOWN;
@@ -44,9 +44,6 @@ public class RoundelOverlayBlock extends Block {
 
     public static final Map<Direction, BooleanProperty> PROPERTY_BY_DIRECTION =
             PipeBlock.PROPERTY_BY_DIRECTION;
-
-    public static final EnumProperty<DyeColor> COLOR =
-            EnumProperty.create("color", DyeColor.class);
 
     private static final VoxelShape UP_AABB = Block.box(0.0, 15.0, 0.0, 16.0, 16.0, 16.0);
     private static final VoxelShape DOWN_AABB = Block.box(0.0, 0.0, 0.0, 16.0, 1.0, 16.0);
@@ -67,7 +64,6 @@ public class RoundelOverlayBlock extends Block {
                         .setValue(EAST, false)
                         .setValue(SOUTH, false)
                         .setValue(WEST, false)
-                        .setValue(COLOR, DyeColor.WHITE)
         );
 
         this.shapesCache = ImmutableMap.copyOf(
@@ -104,6 +100,7 @@ public class RoundelOverlayBlock extends Block {
         return hasFaces(getUpdatedState(state, level, pos));
     }
 
+
     private boolean hasFaces(BlockState state) {
         return countFaces(state) > 0;
     }
@@ -124,14 +121,7 @@ public class RoundelOverlayBlock extends Block {
         for (Direction dir : PROPERTY_BY_DIRECTION.keySet()) {
             BooleanProperty prop = PROPERTY_BY_DIRECTION.get(dir);
             if (!state.getValue(prop)) continue;
-
             boolean ok = canSupportAtFace(level, pos, dir);
-
-            if (!ok) {
-                BlockState above = level.getBlockState(pos.above());
-                ok = above.is(this) && above.getValue(prop);
-            }
-
             state = state.setValue(prop, ok);
         }
         return state;
@@ -165,32 +155,24 @@ public class RoundelOverlayBlock extends Block {
             if (overlay && existing.getValue(prop)) continue;
             if (!canSupportAtFace(ctx.getLevel(), ctx.getClickedPos(), dir)) continue;
 
-            return result.setValue(prop, true).setValue(COLOR, DyeColor.WHITE);
+            return result.setValue(prop, true);
         }
         return overlay ? result : null;
     }
 
-    @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos,
-                                 Player player, InteractionHand hand, BlockHitResult hit) {
-
-        ItemStack item = player.getItemInHand(hand);
-
-        if (item.getItem() instanceof DyeItem dyeI) {
-            DyeColor dye = dyeI.getDyeColor();
-            if (dye == null) return InteractionResult.PASS;
-
-            if (!level.isClientSide) {
-                level.setBlock(pos, state.setValue(COLOR, dye), 3);
-                if (!player.isCreative()) item.shrink(1);
-            }
-        }
-
-        return InteractionResult.sidedSuccess(level.isClientSide);
-    }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(UP, DOWN, NORTH, EAST, SOUTH, WEST, COLOR);
+        builder.add(UP, DOWN, NORTH, EAST, SOUTH, WEST);
+    }
+
+    @Override
+    public RenderShape getRenderShape(BlockState blockState) {
+        return RenderShape.MODEL;
+    }
+
+    @Override
+    public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+        return new DyeableRoundelBlockEntity(pos, state);
     }
 }

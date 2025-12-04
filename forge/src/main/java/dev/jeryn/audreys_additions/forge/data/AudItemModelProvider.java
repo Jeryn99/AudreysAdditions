@@ -57,6 +57,9 @@ public class AudItemModelProvider extends ItemModelProvider {
         blockItem(AudBlocks.ZEITON_QUARTZ_PILLAR.getId());
         blockItem(AudBlocks.CHISELED_ZEITON_QUARTZ_BLOCK.getId());
 
+        basicItem(AudBlocks.ROUNDEL_OVERLAY_HALF.getId());
+        basicItem(AudBlocks.ROUNDEL_OVERLAY_FULL.getId());
+
     }
 
     public ItemModelBuilder blockItem(ResourceLocation item) {

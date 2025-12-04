@@ -5,6 +5,7 @@ import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.client.renderers.RenderSpecimenJar;
 import dev.jeryn.audreys_additions.client.renderers.*;
 import dev.jeryn.audreys_additions.common.blockentity.ChairBlockEntity;
+import dev.jeryn.audreys_additions.common.blockentity.DyeableBlockEntity;
 import dev.jeryn.audreys_additions.common.blocks.RoundelOverlayBlock;
 import dev.jeryn.audreys_additions.common.item.DyedItemBlock;
 import dev.jeryn.audreys_additions.common.registry.AudBlockEntities;
@@ -48,25 +49,12 @@ public class ClientModBus {
         event.register((blockState, blockAndTintGetter, blockPos, tintIndex) -> {
             if (blockAndTintGetter != null && blockPos != null) {
                 BlockEntity blockEntity = blockAndTintGetter.getBlockEntity(blockPos);
-                if (blockEntity instanceof ChairBlockEntity chairBlockEntity) {
-                    return chairBlockEntity.getColour();
+                if (blockEntity instanceof DyeableBlockEntity dyeableBlockEntity) {
+                    return dyeableBlockEntity.getColour();
                 }
             }
             return DyeColor.RED.getTextColor();
-        }, AudBlocks.ARMCHAIR.get());
-
-
-        event.register(
-                (state, world, pos, tintIndex) ->
-                        state.getValue(RoundelOverlayBlock.COLOR).getTextColor(),
-                AudBlocks.ROUNDEL_OVERLAY_FULL.get()
-        );
-
-        event.register(
-                (state, world, pos, tintIndex) ->
-                        state.getValue(RoundelOverlayBlock.COLOR).getTextColor(),
-                AudBlocks.ROUNDEL_OVERLAY_HALF.get()
-        );
+        }, AudBlocks.ARMCHAIR.get(), AudBlocks.ROUNDEL_OVERLAY_FULL.get(), AudBlocks.ROUNDEL_OVERLAY_HALF.get());
 
 
     }

@@ -5,6 +5,7 @@ import dev.jeryn.audreys_additions.ClientUtil;
 import dev.jeryn.audreys_additions.client.renderers.RenderSpecimenJar;
 import dev.jeryn.audreys_additions.client.renderers.*;
 import dev.jeryn.audreys_additions.common.blockentity.ChairBlockEntity;
+import dev.jeryn.audreys_additions.common.blockentity.DyeableRoundelBlockEntity;
 import dev.jeryn.audreys_additions.common.blocks.RoundelOverlayBlock;
 import dev.jeryn.audreys_additions.common.item.DyedItemBlock;
 import dev.jeryn.audreys_additions.common.registry.AudBlockEntities;
@@ -36,24 +37,12 @@ public class AudreysAdditionsClientFabric implements ClientModInitializer {
         ColorProviderRegistry.BLOCK.register((blockState, blockAndTintGetter, blockPos, tintIndex) -> {
             if (blockAndTintGetter != null && blockPos != null) {
                 BlockEntity blockEntity = blockAndTintGetter.getBlockEntity(blockPos);
-                if (blockEntity instanceof ChairBlockEntity chairBlockEntity) {
+                if (blockEntity instanceof DyeableRoundelBlockEntity chairBlockEntity) {
                     return chairBlockEntity.getColour();
                 }
             }
-            return DyeColor.WHITE.getTextColor();
-        }, AudBlocks.ARMCHAIR.get());
-
-        ColorProviderRegistry.BLOCK.register(
-                (state, world, pos, tintIndex) ->
-                        state.getValue(RoundelOverlayBlock.COLOR).getTextColor(),
-                AudBlocks.ROUNDEL_OVERLAY_FULL.get()
-        );
-
-        ColorProviderRegistry.BLOCK.register(
-                (state, world, pos, tintIndex) ->
-                        state.getValue(RoundelOverlayBlock.COLOR).getTextColor(),
-                AudBlocks.ROUNDEL_OVERLAY_HALF.get()
-        );
+            return blockState.getBlock() == AudBlocks.ARMCHAIR.get() ? DyeColor.RED.getTextColor() : DyeColor.WHITE.getTextColor();
+        }, AudBlocks.ARMCHAIR.get(), AudBlocks.ROUNDEL_OVERLAY_FULL.get(), AudBlocks.ROUNDEL_OVERLAY_HALF.get());
 
 
         for (Item item : BuiltInRegistries.ITEM) {

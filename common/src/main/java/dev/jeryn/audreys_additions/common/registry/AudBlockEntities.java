@@ -34,6 +34,9 @@ public class AudBlockEntities {
                             AudBlocks.SPECIMEN_JAR_ZOMBIE.get()
                     ));
 
+    public static final RegistrySupplier<BlockEntityType<DyeableRoundelBlockEntity>> DYEABLE_ROUNDEL = TILES.register("dyeable_roundel", () -> registerTiles(DyeableRoundelBlockEntity::new, AudBlocks.ROUNDEL_OVERLAY_FULL.get(), AudBlocks.ROUNDEL_OVERLAY_HALF.get()));
+
+
 
     private static <T extends BlockEntity> BlockEntityType<T> registerTiles(BlockEntityType.BlockEntitySupplier<T> tile, Block... validBlock) {
         return BlockEntityType.Builder.of(tile, validBlock).build(null);

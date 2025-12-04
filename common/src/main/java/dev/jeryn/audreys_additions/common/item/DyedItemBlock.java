@@ -1,15 +1,14 @@
 package dev.jeryn.audreys_additions.common.item;
 
-import dev.jeryn.audreys_additions.common.blockentity.ChairBlockEntity;
+import dev.jeryn.audreys_additions.common.blockentity.DyeableBlockEntity;
 import net.minecraft.core.BlockPos;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LayeredCauldronBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -46,15 +45,20 @@ public class DyedItemBlock extends BlockItem implements DyeableLeatherItem {
 
 
     @Override
-    protected boolean placeBlock(BlockPlaceContext blockPlaceContext, BlockState blockState) {
-        boolean superPlace = super.placeBlock(blockPlaceContext, blockState);
+    protected boolean placeBlock(BlockPlaceContext ctx, BlockState state) {
+        Level level = ctx.getLevel();
+        BlockPos pos = ctx.getClickedPos();
+        ItemStack stack = ctx.getItemInHand();
 
-        if(blockPlaceContext.getLevel().getBlockEntity(blockPlaceContext.getClickedPos()) instanceof ChairBlockEntity chairBlockEntity){
-            chairBlockEntity.setColour((getColor(blockPlaceContext.getItemInHand())));
+        boolean placed = super.placeBlock(ctx, state);
+
+        if (placed && level.getBlockEntity(pos) instanceof DyeableBlockEntity chair) {
+            chair.setColour(getColor(stack));
         }
 
-        return superPlace;
+        return placed;
     }
+
 
     /**
      * Adds tooltip info showing the dye color.
