@@ -13,6 +13,7 @@ public class ClientUtil {
         BlockRenderLayerMap.INSTANCE.putBlock(AudBlocks.ARMCHAIR.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(AudBlocks.ROUNDEL_OVERLAY_FULL.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(AudBlocks.ROUNDEL_OVERLAY_HALF.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(AudBlocks.ZEITON_QUARTZ_DOOR.get(), RenderType.translucent());
 
     }
 
