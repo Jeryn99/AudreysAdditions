@@ -44,7 +44,8 @@ public class McGannConsoleModel extends HierarchicalModel implements ConsoleUnit
         boolean powered = globalConsoleBlock == null || globalConsoleBlock.getBlockState().getValue(GlobalConsoleBlock.POWERED);
 
         // Store tick count for later use
-        int tickCount = Minecraft.getInstance().player.tickCount;
+        int playerTicks = Minecraft.getInstance().player.tickCount;
+        float tickCount = playerTicks + Minecraft.getInstance().getFrameTime();
 
         TardisClientData reactions = TardisClientData.getInstance(level.dimension());
         if (globalConsoleBlock != null) {
@@ -52,7 +53,7 @@ public class McGannConsoleModel extends HierarchicalModel implements ConsoleUnit
             if (powered) {
                 if (globalConsoleBlock.getTicksBooting() > 0) {
                     globalConsoleBlock.powerOff.stop();
-                    globalConsoleBlock.powerOn.startIfStopped(tickCount);
+                    globalConsoleBlock.powerOn.startIfStopped((int) tickCount);
 
                     root().getAllParts().forEach(ModelPart::resetPose);
                     this.animate(globalConsoleBlock.powerOn, POWER_ON, tickCount);
@@ -77,7 +78,7 @@ public class McGannConsoleModel extends HierarchicalModel implements ConsoleUnit
                 // Power off animation if not booting
                 if (!globalConsoleBlock.powerOff.isStarted()) {
                     globalConsoleBlock.powerOn.stop();
-                    globalConsoleBlock.powerOff.start(tickCount);
+                    globalConsoleBlock.powerOff.start((int) tickCount);
                 }
                 root().getAllParts().forEach(ModelPart::resetPose);
                 this.animate(globalConsoleBlock.powerOff, POWER_OFF, tickCount);
