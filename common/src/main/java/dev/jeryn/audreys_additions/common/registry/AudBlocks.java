@@ -8,6 +8,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -102,7 +103,7 @@ public class AudBlocks {
     public static final RegistrySupplier<RoundelOverlayBlock> ROUNDEL_OVERLAY_HALF = registerDyed("roundel_overlay_half",
             () -> new RoundelOverlayBlock(BlockBehaviour.Properties.copy(Blocks.VINE)));
 
-    public static final RegistrySupplier<DoorBlock> EXAMPLE_DOOR = register("example_door",
+    public static final RegistrySupplier<DoorBlock> ZEITON_QUARTZ_DOOR = register("zeiton_quartz_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR), BlockSetType.ACACIA));
 
     /**
