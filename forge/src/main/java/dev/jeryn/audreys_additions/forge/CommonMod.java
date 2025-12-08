@@ -23,6 +23,11 @@ public class CommonMod {
             BuiltInRegistries.ITEM.iterator().forEachRemaining(item -> {
                 String namespace = BuiltInRegistries.ITEM.getKey(item).getNamespace();
 
+                if(item instanceof DyedItemBlock dyedItemBlock){
+                    buildEvent.accept(dyedItemBlock.getDefaultInstance());
+                    return;
+                }
+
                 if (!namespace.equals(modNamespace)) {
                     return; // Skip items from other namespaces
                 }
