@@ -2,6 +2,7 @@ package dev.jeryn.audreys_additions.forge.data;
 
 import com.google.gson.JsonObject;
 import dev.jeryn.audreys_additions.AudreysAdditions;
+import dev.jeryn.audreys_additions.common.blocks.HatStandBlock;
 import dev.jeryn.audreys_additions.common.blocks.MonitorBlock;
 import dev.jeryn.audreys_additions.common.blocks.SpecimenJarBlock;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
@@ -56,7 +57,7 @@ public class AudBlocksModelProvider extends BlockStateProvider {
                     continue;
                 }
 
-                if (value == AudBlocks.HAT_STAND.get()) {
+                if (value instanceof HatStandBlock) {
                     simpleBlockParticleOnly(value, new ResourceLocation("block/spruce_planks"));
                     continue;
                 }

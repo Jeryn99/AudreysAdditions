@@ -133,7 +133,12 @@ public class AUDModelRegistry {
     public static ModelLayerLocation CEILING_CANOPY = furniture("ceiling_canopy");
     public static ModelLayerLocation CEILING_CANOPY_HANGING = furniture("ceiling_canopy_hanging");
     public static ModelLayerLocation FOLD_OUT_BED = furniture("fold_out_bed");
-    public static ModelLayerLocation HAT_STAND = furniture("hat_stand");
+    public static ModelLayerLocation HATSTAND_BAMBOO = furniture("hatstand_bamboo");
+    public static ModelLayerLocation HATSTAND_CHERRY = furniture("hatstand_cherry");
+    public static ModelLayerLocation HATSTAND_CRIMSON = furniture("hatstand_crimson");
+    public static ModelLayerLocation HATSTAND_DARK_OAK = furniture("hatstand_dark_oak");
+    public static ModelLayerLocation HATSTAND_MANGROVE = furniture("hatstand_mangrove");
+    public static ModelLayerLocation HATSTAND = furniture("hatstand");
     public static ModelLayerLocation CAT = overlords("cat");
 
     public static ModelLayerLocation SPECIMEN_JAR = furniture("specimen_jar/specimen_jar");

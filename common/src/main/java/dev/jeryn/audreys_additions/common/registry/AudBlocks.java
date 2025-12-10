@@ -99,7 +99,12 @@ public class AudBlocks {
     public static final RegistrySupplier<DoorBlock> ZEITON_QUARTZ_DOOR = register("zeiton_quartz_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR), BlockSetType.ACACIA));
 
-    public static final RegistrySupplier<Block> HAT_STAND = register("hat_stand", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
+    public static final RegistrySupplier<Block> HATSTAND = register("hatstand", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
+    public static final RegistrySupplier<Block> HATSTAND_BAMBOO = register("hatstand_bamboo", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
+    public static final RegistrySupplier<Block> HATSTAND_CHERRY = register("hatstand_cherry", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
+    public static final RegistrySupplier<Block> HATSTAND_CRIMSON = register("hatstand_crimson", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
+    public static final RegistrySupplier<Block> HATSTAND_DARK_OAK = register("hatstand_dark_oak", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
+    public static final RegistrySupplier<Block> HATSTAND_MANGROVE = register("hatstand_mangrove", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
 
     /**
      * Registers a Block and BlockItem to the ItemGroup of your choice

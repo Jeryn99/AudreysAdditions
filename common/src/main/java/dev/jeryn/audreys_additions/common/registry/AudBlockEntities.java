@@ -35,7 +35,7 @@ public class AudBlockEntities {
                     ));
 
     public static final RegistrySupplier<BlockEntityType<DyeableRoundelBlockEntity>> DYEABLE_ROUNDEL = TILES.register("dyeable_roundel", () -> registerTiles(DyeableRoundelBlockEntity::new, AudBlocks.ROUNDEL_OVERLAY_FULL.get(), AudBlocks.ROUNDEL_OVERLAY_HALF.get()));
-    public static final RegistrySupplier<BlockEntityType<HatstandBlockEntity>> HAT_STAND = TILES.register("hat_stand", () -> registerTiles(HatstandBlockEntity::new, AudBlocks.HAT_STAND.get()));
+    public static final RegistrySupplier<BlockEntityType<HatstandBlockEntity>> HAT_STAND = TILES.register("hat_stand", () -> registerTiles(HatstandBlockEntity::new, AudBlocks.HATSTAND_MANGROVE.get(), AudBlocks.HATSTAND_BAMBOO.get(), AudBlocks.HATSTAND_MANGROVE.get(), AudBlocks.HATSTAND_DARK_OAK.get(), AudBlocks.HATSTAND_CRIMSON.get(), AudBlocks.HATSTAND_CHERRY.get(), AudBlocks.HATSTAND.get()));
 
 
 
