@@ -136,7 +136,36 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
 
             poseStack.pushPose();
 
+            // ===== DEBUG START =====
+            hatStandMain.setPositioner(new GenericHatStandModel.Positioner() {
+                @Override
+                public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {
+                    //hello audrey!
+                    //negatives are allowed
+
+                    //rotations:
+                    //X rotation by 90 degress
+                    poseStack.mulPose(Axis.XP.rotationDegrees(90));
+
+                    //Y rotation by 90 degress
+                    poseStack.mulPose(Axis.YP.rotationDegrees(90));
+
+                    //Z rotation by 90 degress
+                    poseStack.mulPose(Axis.ZP.rotationDegrees(90));
+
+                    //scales:
+                    //scale by 1.5F
+                    poseStack.scale(1.5F,1.5F,1.5F);
+
+                    //transform:
+                    //uhh hard to explain, this goes by X Y Z, will move by 1 in each direction, 1 is _kinda_ a full block
+                    poseStack.translate(1,1,1);
+                }
+            });
+            // ===== DEBUG END =====
+
             hatStandMain.getPositioner().positionSlot(i, stack, poseStack);
+
 
             if (stack.getItem() instanceof ArmorItem armorItem) {
                 EquipmentSlot slot = armorItem.getEquipmentSlot();

@@ -7,7 +7,7 @@ import whocraft.tardis_refined.client.model.GenericModel;
 
 public class GenericHatStandModel extends GenericModel {
 
-    private final Positioner positioner;
+    private Positioner positioner;
 
     public GenericHatStandModel(ModelPart root, Positioner positioner) {
         super(root);
@@ -16,6 +16,10 @@ public class GenericHatStandModel extends GenericModel {
 
     public Positioner getPositioner() {
         return positioner;
+    }
+
+    public void setPositioner(Positioner positioner) {
+        this.positioner = positioner;
     }
 
     public interface Positioner {
