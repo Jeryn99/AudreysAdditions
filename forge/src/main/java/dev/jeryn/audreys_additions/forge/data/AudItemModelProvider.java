@@ -1,23 +1,14 @@
 package dev.jeryn.audreys_additions.forge.data;
 
 import dev.jeryn.audreys_additions.AudreysAdditions;
-import dev.jeryn.audreys_additions.common.blocks.SpecimenJarBlock;
-import dev.jeryn.audreys_additions.common.item.SpecimenJarItemBlock;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import dev.jeryn.audreys_additions.common.registry.AudItems;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
-
-import java.util.Map;
-import java.util.function.Predicate;
-import java.util.stream.Stream;
 
 public class AudItemModelProvider extends ItemModelProvider {
 
@@ -57,9 +48,6 @@ public class AudItemModelProvider extends ItemModelProvider {
         blockItem(AudBlocks.ZEITON_QUARTZ_PILLAR.getId());
         blockItem(AudBlocks.CHISELED_ZEITON_QUARTZ_BLOCK.getId());
         blockItem(AudBlocks.TREATED_ZEITON_QUARTZ_BLOCK.getId());
-
-        basicItem(AudBlocks.ROUNDEL_OVERLAY_HALF.getId());
-        basicItem(AudBlocks.ROUNDEL_OVERLAY_FULL.getId());
 
     }
 

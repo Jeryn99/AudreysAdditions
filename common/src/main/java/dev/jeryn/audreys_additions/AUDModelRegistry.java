@@ -133,6 +133,7 @@ public class AUDModelRegistry {
     public static ModelLayerLocation CEILING_CANOPY = furniture("ceiling_canopy");
     public static ModelLayerLocation CEILING_CANOPY_HANGING = furniture("ceiling_canopy_hanging");
     public static ModelLayerLocation FOLD_OUT_BED = furniture("fold_out_bed");
+    public static ModelLayerLocation HAT_STAND = furniture("hat_stand");
     public static ModelLayerLocation CAT = overlords("cat");
 
     public static ModelLayerLocation SPECIMEN_JAR = furniture("specimen_jar/specimen_jar");

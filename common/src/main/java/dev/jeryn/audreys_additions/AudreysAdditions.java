@@ -1,8 +1,7 @@
 package dev.jeryn.audreys_additions;
 
-import dev.jeryn.audreys_additions.common.registry.AudEntities;
-import dev.jeryn.audreys_additions.events.AudreysAdditionsAPIEvents;
 import dev.jeryn.audreys_additions.common.registry.*;
+import dev.jeryn.audreys_additions.events.AudreysAdditionsAPIEvents;
 
 public class AudreysAdditions {
 	public static final String MODID = "audreys_additions";
@@ -11,6 +10,7 @@ public class AudreysAdditions {
 	public static void init() {
 		AudreysAdditionsAPIEvents.init();
 		AudTabs.TABS.registerToModBus();
+		AudMenus.MENUS.registerToModBus();
 		AudItems.ITEMS.registerToModBus();
 		AudBlocks.BLOCKS.registerToModBus();
 		AudBlockEntities.TILES.registerToModBus();

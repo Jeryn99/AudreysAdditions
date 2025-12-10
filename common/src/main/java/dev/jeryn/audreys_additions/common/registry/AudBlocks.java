@@ -7,22 +7,15 @@ import dev.jeryn.audreys_additions.common.item.SpecimenJarItemBlock;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.DyeColor;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
-import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import whocraft.tardis_refined.registry.DeferredRegistry;
 import whocraft.tardis_refined.registry.RegistrySupplier;
 
 import java.util.function.Supplier;
-
-import static net.minecraft.world.level.block.Blocks.OAK_PLANKS;
 
 public class AudBlocks {
 
@@ -105,6 +98,8 @@ public class AudBlocks {
 
     public static final RegistrySupplier<DoorBlock> ZEITON_QUARTZ_DOOR = register("zeiton_quartz_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR), BlockSetType.ACACIA));
+
+    public static final RegistrySupplier<Block> HAT_STAND = register("hat_stand", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
 
     /**
      * Registers a Block and BlockItem to the ItemGroup of your choice

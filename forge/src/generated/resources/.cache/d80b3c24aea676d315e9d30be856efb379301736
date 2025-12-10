@@ -1,4 +1,4 @@
-// 1.20.1	2025-12-04T14:51:54.6747303	Item Models: audreys_additions
+// 1.20.1	2025-12-10T18:56:00.7012113	Item Models: audreys_additions
 ec86cbbda42ea0fe30aae29769f5bfe28e8d2585 assets/audreys_additions/models/item/armchair.json
 f6e05d592446c5826e6b95e73debba09eca89da6 assets/audreys_additions/models/item/astral_map.json
 cc5ee705f2e4dc5845e2cae92da973bae8efad7d assets/audreys_additions/models/item/brachacki_monitor.json
@@ -10,8 +10,6 @@ d849072b1159b0af4a2e198323932fdf4b55334b assets/audreys_additions/models/item/ch
 df8087e22a5a2df22a02fc5f296cbe59495e84f2 assets/audreys_additions/models/item/lightcolumn_left.json
 2f289de7182add4edca74642665cc87daae210bf assets/audreys_additions/models/item/lightcolumn_right.json
 dd97d9fd26d58e040cf1a87bfecca620289ae84d assets/audreys_additions/models/item/liminton_monitor.json
-35220e7ff7816ca59e5d42d785cccb0dac81a740 assets/audreys_additions/models/item/roundel_overlay_full.json
-10627cbe108b8842b47750dadfe4056418780571 assets/audreys_additions/models/item/roundel_overlay_half.json
 34487551126cf07ac1ea1ad0985cda09e8805b32 assets/audreys_additions/models/item/smooth_zeiton_quartz.json
 f27b0332822a6794cbec1e4bbb60e533e3dc4737 assets/audreys_additions/models/item/smooth_zeiton_quartz_slab.json
 f02cd8d4df52f94014aa16001183035194d93fc4 assets/audreys_additions/models/item/smooth_zeiton_quartz_stairs.json

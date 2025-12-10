@@ -70,7 +70,7 @@ public class AUDEnglish extends LanguageProvider {
 
         add(AudItems.FOOD_CUBE.get(), "Food Cube");
 
-
+        add("container.hatstand", "Hat Stand");
 
 
 

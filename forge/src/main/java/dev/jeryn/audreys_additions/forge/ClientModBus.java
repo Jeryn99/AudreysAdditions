@@ -2,11 +2,8 @@ package dev.jeryn.audreys_additions.forge;
 
 import dev.jeryn.audreys_additions.AUDModelRegistry;
 import dev.jeryn.audreys_additions.AudreysAdditions;
-import dev.jeryn.audreys_additions.client.renderers.RenderSpecimenJar;
 import dev.jeryn.audreys_additions.client.renderers.*;
-import dev.jeryn.audreys_additions.common.blockentity.ChairBlockEntity;
 import dev.jeryn.audreys_additions.common.blockentity.DyeableBlockEntity;
-import dev.jeryn.audreys_additions.common.blocks.RoundelOverlayBlock;
 import dev.jeryn.audreys_additions.common.item.DyedItemBlock;
 import dev.jeryn.audreys_additions.common.registry.AudBlockEntities;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
@@ -41,6 +38,7 @@ public class ClientModBus {
         BlockEntityRenderers.register(AudBlockEntities.CEILING_CANOPY.get(), RenderCeilingCanopyBlockEntity::new);
         BlockEntityRenderers.register(AudBlockEntities.FOLD_OUT_BED.get(), RenderFoldOutBedBlockEntity::new);
         BlockEntityRenderers.register(AudBlockEntities.SPECIMEN_JAR.get(), RenderSpecimenJar::new);
+        BlockEntityRenderers.register(AudBlockEntities.HAT_STAND.get(), RenderHatStand::new);
     }
 
     @SubscribeEvent

@@ -10,7 +10,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.SlabBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -53,6 +52,11 @@ public class AudBlocksModelProvider extends BlockStateProvider {
                 }
 
                 if(value == AudBlocks.KNOSSOS_THRONE.get()){
+                    simpleBlockParticleOnly(value, new ResourceLocation("block/spruce_planks"));
+                    continue;
+                }
+
+                if (value == AudBlocks.HAT_STAND.get()) {
                     simpleBlockParticleOnly(value, new ResourceLocation("block/spruce_planks"));
                     continue;
                 }
