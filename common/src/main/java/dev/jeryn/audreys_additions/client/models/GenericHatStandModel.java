@@ -1,7 +1,9 @@
 package dev.jeryn.audreys_additions.client.models;
 
 import com.mojang.blaze3d.vertex.PoseStack;
+import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import whocraft.tardis_refined.client.model.GenericModel;
 
@@ -24,5 +26,6 @@ public class GenericHatStandModel extends GenericModel {
 
     public interface Positioner {
         void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack);
+        void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel);
     }
 }

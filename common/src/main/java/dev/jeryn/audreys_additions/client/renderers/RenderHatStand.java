@@ -54,10 +54,20 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
             public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {
 
             }
+
+            @Override
+            public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+
+            }
         });
         hatStandCherry = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_CHERRY), new GenericHatStandModel.Positioner() {
             @Override
             public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {
+
+            }
+
+            @Override
+            public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
 
             }
         });
@@ -66,10 +76,20 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
             public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {
 
             }
+
+            @Override
+            public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+
+            }
         });
         hatStandDarkOak = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_DARK_OAK), new GenericHatStandModel.Positioner() {
             @Override
             public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {
+
+            }
+
+            @Override
+            public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
 
             }
         });
@@ -78,10 +98,20 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
             public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {
 
             }
+
+            @Override
+            public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+
+            }
         });
         hatstand = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND), new GenericHatStandModel.Positioner() {
             @Override
             public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {
+
+            }
+
+            @Override
+            public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
 
             }
         });
@@ -161,6 +191,12 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
                     //uhh hard to explain, this goes by X Y Z, will move by 1 in each direction, 1 is _kinda_ a full block
                     poseStack.translate(1,1,1);
                 }
+
+                @Override
+                public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+
+                }
+
             });
             // ===== DEBUG END =====
 
