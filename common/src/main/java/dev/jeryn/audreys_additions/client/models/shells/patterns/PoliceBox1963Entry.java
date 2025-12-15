@@ -18,6 +18,9 @@ public class PoliceBox1963Entry extends ShellEntry {
 
         String variantPath = shellPattern.id().getPath();
 
+        if (variantPath.contains("pilot")) {
+            return AUDModelRegistry.policeBoxPilot;
+        }
 
         if (variantPath.contains("massacre")) {
             return AUDModelRegistry.policeBox63Massacre;

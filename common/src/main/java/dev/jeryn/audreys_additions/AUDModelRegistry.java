@@ -17,7 +17,7 @@ public class AUDModelRegistry {
 
 
     // Models
-    public static PoliceBoxModel policeBox03, policeBox66, policeBoxRuth, policeBox73, policeBoxS13, policeBox18, policeBox18_special, policeBox10, policeBox11, policeBox17, policeBoxMemorial, policeBox76, policeBox96, policeBox63, policeBox63Massacre, trakenClock, policeBox83, policeBox87, policeBoxHappinessPatrol, policeBox05, policeBoxTimeWar, policeBox78, policeBox79;
+    public static PoliceBoxModel policeBox03, policeBox66, policeBoxRuth, policeBox73, policeBoxS13, policeBox18, policeBox18_special, policeBox10, policeBox11, policeBox17, policeBoxMemorial, policeBox76, policeBox96, policeBox63, policeBox63Massacre, trakenClock, policeBox83, policeBox87, policeBoxHappinessPatrol, policeBox05, policeBoxTimeWar, policeBox78, policeBox79, policeBoxPilot;
     public static DualInteriorDoorModel policeBox03Door, policeBox66Door, policeBox63Door, policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox11Door, policeBox17Door, policeBox76Door, policeBox96Door, policeBox80Door, policeBox83Door, policeBox05Door;
     public static SingleInteriorDoorModel trakenClockDoor;
     public static DualTexInteriorDoorModel sidratDoor, columnDoor, ironMaidenDoor, ttCapsuleDoor, type40Door, telephoneBoothDoor, raniWardrobeDoor, lakertyanPyramidDoor, cabinetDoor, policeBoxBlackOrchidDoor, policeBoxAAISATDoor;
@@ -74,6 +74,7 @@ public class AUDModelRegistry {
 
     public static ModelLayerLocation POLICEBOX_1963 = shell("policebox_1963");
     public static ModelLayerLocation POLICEBOX_1963_MASSACRE = shell("policebox_1963_massacre");
+    public static ModelLayerLocation POLICEBOX_PILOT = shell("policebox_pilot");
     public static ModelLayerLocation POLICEBOX_1963_DOOR = interiorDoor("policebox_1963_door");
 
     public static ModelLayerLocation POLICEBOX_AAISAT = shell("policebox_aaisat");
@@ -223,6 +224,10 @@ public class AUDModelRegistry {
 
         // Police Box - 1963
         policeBox63 = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_1963), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
+
+        });
+
+        policeBoxPilot = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_PILOT), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
 
         });
 
