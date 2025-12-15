@@ -32,6 +32,7 @@ public class HatstandScreen extends AbstractContainerScreen<HatstandMenu> {
         super.render(guiGraphics, mouseX, mouseY, partialTicks);
 
         for (int i = 0; i < menu.slots.size(); i++) {
+
             int slotX = leftPos + menu.slots.get(i).x;
             int slotY = topPos + menu.slots.get(i).y;
             int greyColor = 0xFF808080;
