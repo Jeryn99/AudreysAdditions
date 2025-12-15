@@ -81,12 +81,10 @@ public class HatstandMenu extends AbstractContainerMenu {
             be.sendUpdates();
         }
 
-        int startX = 80;
-        int y1 = 17;
-        for (int i = 0; i < 4; i++) {
-            addSlot(new Slot(inventoryWrapper, i, startX + i * 18, y1));
-        }
-
+        addSlot(new Slot(inventoryWrapper, 0, 8, 37));
+        addSlot(new Slot(inventoryWrapper, 1, 56, 37));
+        addSlot(new Slot(inventoryWrapper, 2, 104, 37));
+        addSlot(new Slot(inventoryWrapper, 3, 152, 37));
 
         int x = 8;
         int y = 100;
@@ -99,6 +97,8 @@ public class HatstandMenu extends AbstractContainerMenu {
         for (int c = 0; c < 9; c++) {
             addSlot(new Slot(playerInv, c, x + c * 18, y + 58));
         }
+
+
     }
 
     @Override

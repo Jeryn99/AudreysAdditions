@@ -213,7 +213,7 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
             poseStack.pushPose();
 
             // ===== DEBUG START =====
-            hatStandMain.setPositioner(new GenericHatStandModel.Positioner() {
+        /*    hatStandMain.setPositioner(new GenericHatStandModel.Positioner() {
                 @Override
                 public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {      }
 
@@ -222,7 +222,7 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
 
                 }
 
-            });
+            });*/
             // ===== DEBUG END =====
 
             hatStandMain.getPositioner().positionSlot(i, stack, poseStack);
