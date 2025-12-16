@@ -90,12 +90,12 @@ public class HatstandMenu extends AbstractContainerMenu {
         int y = 100;
         for (int r = 0; r < 3; r++) {
             for (int c = 0; c < 9; c++) {
-                addSlot(new Slot(playerInv, c + r * 9 + 9, x + c * 18, y + r * 18));
+                addSlot(new Slot(playerInv, c + r * 9 + 9, x + c * 18, y + r * 18 -2));
             }
         }
 
         for (int c = 0; c < 9; c++) {
-            addSlot(new Slot(playerInv, c, x + c * 18, y + 58));
+            addSlot(new Slot(playerInv, c, x + c * 18, y + 56));
         }
 
 
