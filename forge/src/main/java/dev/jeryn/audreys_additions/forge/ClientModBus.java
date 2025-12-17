@@ -4,10 +4,13 @@ import dev.jeryn.audreys_additions.AUDModelRegistry;
 import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.client.renderers.*;
 import dev.jeryn.audreys_additions.common.blockentity.DyeableBlockEntity;
+import dev.jeryn.audreys_additions.common.blockentity.hatstand.HatstandScreen;
 import dev.jeryn.audreys_additions.common.item.DyedItemBlock;
 import dev.jeryn.audreys_additions.common.registry.AudBlockEntities;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import dev.jeryn.audreys_additions.common.registry.AudEntities;
+import dev.jeryn.audreys_additions.common.registry.AudMenus;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.NoopRenderer;
@@ -39,6 +42,9 @@ public class ClientModBus {
         BlockEntityRenderers.register(AudBlockEntities.FOLD_OUT_BED.get(), RenderFoldOutBedBlockEntity::new);
         BlockEntityRenderers.register(AudBlockEntities.SPECIMEN_JAR.get(), RenderSpecimenJar::new);
         BlockEntityRenderers.register(AudBlockEntities.HAT_STAND.get(), RenderHatStand::new);
+
+        MenuScreens.register(AudMenus.HAT_STAND.get(), HatstandScreen::new);
+
     }
 
     @SubscribeEvent

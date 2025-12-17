@@ -3,6 +3,7 @@ package dev.jeryn.audreys_additions.common.blockentity;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -18,6 +19,11 @@ public abstract class DyeableBlockEntity extends BlockEntity {
 
         colour = AudBlocks.ARMCHAIR.get() == blockState.getBlock() ? DyeColor.RED.getTextColor() : DyeColor.WHITE.getTextColor();
 
+    }
+
+    @Override
+    public ClientboundBlockEntityDataPacket getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
     }
 
 

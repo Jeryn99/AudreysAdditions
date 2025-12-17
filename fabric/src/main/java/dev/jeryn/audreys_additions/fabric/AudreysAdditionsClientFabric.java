@@ -3,8 +3,9 @@ package dev.jeryn.audreys_additions.fabric;
 import dev.jeryn.audreys_additions.AUDModelRegistry;
 import dev.jeryn.audreys_additions.ClientUtil;
 import dev.jeryn.audreys_additions.client.renderers.*;
+import dev.jeryn.audreys_additions.common.blockentity.DyeableBlockEntity;
 import dev.jeryn.audreys_additions.common.blockentity.DyeableRoundelBlockEntity;
-import dev.jeryn.audreys_additions.common.blockentity.HatstandScreen;
+import dev.jeryn.audreys_additions.common.blockentity.hatstand.HatstandScreen;
 import dev.jeryn.audreys_additions.common.item.DyedItemBlock;
 import dev.jeryn.audreys_additions.common.registry.AudBlockEntities;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
@@ -38,7 +39,7 @@ public class AudreysAdditionsClientFabric implements ClientModInitializer {
         ColorProviderRegistry.BLOCK.register((blockState, blockAndTintGetter, blockPos, tintIndex) -> {
             if (blockAndTintGetter != null && blockPos != null) {
                 BlockEntity blockEntity = blockAndTintGetter.getBlockEntity(blockPos);
-                if (blockEntity instanceof DyeableRoundelBlockEntity chairBlockEntity) {
+                if (blockEntity instanceof DyeableBlockEntity chairBlockEntity) {
                     return chairBlockEntity.getColour();
                 }
             }

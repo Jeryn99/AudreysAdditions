@@ -6,7 +6,7 @@ import com.mojang.math.Axis;
 import dev.jeryn.audreys_additions.AUDModelRegistry;
 import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.client.models.GenericHatStandModel;
-import dev.jeryn.audreys_additions.common.blockentity.HatstandBlockEntity;
+import dev.jeryn.audreys_additions.common.blockentity.hatstand.HatstandBlockEntity;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.HumanoidModel;
@@ -25,7 +25,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import whocraft.tardis_refined.client.model.GenericModel;
 
 import java.util.Map;
 import java.util.Objects;

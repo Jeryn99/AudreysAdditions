@@ -91,7 +91,7 @@ public class RaniConsoleModel extends HierarchicalModel implements ConsoleUnit {
 
     @Override
     public ResourceLocation getDefaultTexture() {
-        return new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/brachacki/brachacki.png");
+        return new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/rani/rani.png");
     }
 
     @Override

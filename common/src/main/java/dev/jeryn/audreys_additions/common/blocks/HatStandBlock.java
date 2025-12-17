@@ -1,7 +1,7 @@
 package dev.jeryn.audreys_additions.common.blocks;
 
-import dev.jeryn.audreys_additions.common.blockentity.HatstandBlockEntity;
-import dev.jeryn.audreys_additions.common.blockentity.HatstandMenu;
+import dev.jeryn.audreys_additions.common.blockentity.hatstand.HatstandBlockEntity;
+import dev.jeryn.audreys_additions.common.blockentity.hatstand.HatstandMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;

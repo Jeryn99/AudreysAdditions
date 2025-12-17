@@ -1,6 +1,5 @@
-package dev.jeryn.audreys_additions.common.blockentity;
+package dev.jeryn.audreys_additions.common.blockentity.hatstand;
 
-import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.network.chat.Component;

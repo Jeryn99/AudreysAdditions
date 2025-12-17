@@ -4,6 +4,7 @@ import dev.jeryn.audreys_additions.common.registry.AudBlockEntities;
 import dev.jeryn.audreys_additions.entity.ChairEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
@@ -27,6 +28,10 @@ public class ChairBlockEntity extends DyeableBlockEntity {
         return tag;
     }
 
+    @Override
+    public ClientboundBlockEntityDataPacket getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
 
     public ChairEntity getChairEntity() {
         return chairEntity;

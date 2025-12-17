@@ -91,7 +91,7 @@ public class SilenceConsoleModel extends HierarchicalModel implements ConsoleUni
 
     @Override
     public ResourceLocation getDefaultTexture() {
-        return new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/brachacki/brachacki.png");
+        return new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/silence/silence.png");
     }
 
     @Override

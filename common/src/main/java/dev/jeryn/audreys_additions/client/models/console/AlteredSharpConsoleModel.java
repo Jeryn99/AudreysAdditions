@@ -96,7 +96,7 @@ public class AlteredSharpConsoleModel extends HierarchicalModel implements Conso
 
     @Override
     public ResourceLocation getDefaultTexture() {
-        return new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/altered_sharp/altered_sharp.png");
+        return new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/altered_sharp/season_13.png");
     }
 
     @Override

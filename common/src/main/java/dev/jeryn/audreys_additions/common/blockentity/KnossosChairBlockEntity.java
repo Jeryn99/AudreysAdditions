@@ -3,6 +3,7 @@ package dev.jeryn.audreys_additions.common.blockentity;
 import dev.jeryn.audreys_additions.common.registry.AudBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.Arrays;
@@ -32,6 +33,11 @@ public class KnossosChairBlockEntity extends ChairBlockEntity {
         this.currentVariant = VARIANTS.get(0);
     }
 
+    @Override
+    public ClientboundBlockEntityDataPacket getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
+
 
     public String getCurrentVariant() {
         return currentVariant;
@@ -41,6 +47,7 @@ public class KnossosChairBlockEntity extends ChairBlockEntity {
         int currentIndex = VARIANTS.indexOf(currentVariant);
         int nextIndex = (currentIndex + 1) % VARIANTS.size();
         this.currentVariant = VARIANTS.get(nextIndex);
+        sendUpdates();
         setChanged();
     }
 

@@ -1,4 +1,4 @@
-package dev.jeryn.audreys_additions.common.blockentity;
+package dev.jeryn.audreys_additions.common.blockentity.hatstand;
 
 import dev.jeryn.audreys_additions.common.registry.AudMenus;
 import net.minecraft.network.FriendlyByteBuf;

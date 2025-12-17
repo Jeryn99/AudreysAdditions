@@ -1,7 +1,7 @@
 package dev.jeryn.audreys_additions.common.registry;
 
 import dev.jeryn.audreys_additions.AudreysAdditions;
-import dev.jeryn.audreys_additions.common.blockentity.HatstandMenu;
+import dev.jeryn.audreys_additions.common.blockentity.hatstand.HatstandMenu;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.inventory.MenuType;

@@ -2,6 +2,7 @@ package dev.jeryn.audreys_additions.common.registry;
 
 import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.common.blockentity.*;
+import dev.jeryn.audreys_additions.common.blockentity.hatstand.HatstandBlockEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
