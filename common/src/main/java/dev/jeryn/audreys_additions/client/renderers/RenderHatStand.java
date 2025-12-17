@@ -68,7 +68,53 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
 
             @Override
             public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+                // rotations on Y axis need inverting. positions on X and Y axes need inverting
+                humanoidModel.head.yRot = (float) Math.toRadians(-45);
+                humanoidModel.head.zRot = (float) Math.toRadians(15);
+                humanoidModel.head.x =  -5;
+                humanoidModel.head.z =  -5;
+                humanoidModel.head.xScale = (float)0.75; humanoidModel.head.yScale = (float)0.75; humanoidModel.head.zScale = (float)0.75;
 
+                humanoidModel.body.yRot = (float) Math.toRadians(-47.5);
+                humanoidModel.body.x =  3;
+                humanoidModel.body.y =  -1;
+                humanoidModel.body.z =  -3;
+                humanoidModel.body.xScale = (float)0.75; humanoidModel.body.yScale = (float)0.75; humanoidModel.body.zScale = (float)0.75;
+
+                humanoidModel.leftArm.yRot = (float) Math.toRadians(-72.5);
+                humanoidModel.leftArm.zRot = (float) Math.toRadians(-5);
+                // this position number. why the fuck does the torso position work off of what i had but the arms need to be special??
+                // note: do not set positions to 0 if you're not using them
+                humanoidModel.leftArm.x =  6;
+                humanoidModel.leftArm.xScale = (float)0.75; humanoidModel.leftArm.yScale = (float)0.75; humanoidModel.leftArm.zScale = (float)0.75;
+
+                humanoidModel.rightArm.xRot = (float) Math.toRadians(-5);
+                humanoidModel.rightArm.yRot = (float) Math.toRadians(0);
+                humanoidModel.rightArm.zRot = (float) Math.toRadians(0);
+                // WHAT IS GOING ON. these positions are not off in the same way every time. i am going insane
+                humanoidModel.rightArm.x =  0;
+                humanoidModel.rightArm.z =  -5;
+                humanoidModel.rightArm.xScale = (float)0.75; humanoidModel.rightArm.yScale = (float)0.75; humanoidModel.rightArm.zScale = (float)0.75;
+
+                humanoidModel.leftLeg.xRot = (float) Math.toRadians(0);
+                humanoidModel.leftLeg.yRot = (float) Math.toRadians(47.5);
+                humanoidModel.leftLeg.zRot = (float) Math.toRadians(0);
+                humanoidModel.leftLeg.x =  (float)-3.1;
+                // okay. okay. so whenever i access these positions it is adjusting them to be moving relative to 0 0 0 of the model. not relative to its prior position
+                // dumb. Dumb. nothing i cant adjust for but it means that i shouldve just maintained how i was doing things prior
+                humanoidModel.leftLeg.y =  (float)14.5;
+                humanoidModel.leftLeg.z =  -3;
+                humanoidModel.leftLeg.xScale = (float)0.75; humanoidModel.leftLeg.yScale = (float)0.75; humanoidModel.leftLeg.zScale = (float)0.75;
+                // no i was wrong. there's no easy way for me to preview the scale-down transformation in blockbench while still accessing worldspace coords
+                // this shit is so stupid
+
+                humanoidModel.rightLeg.xRot = (float) Math.toRadians(0);
+                humanoidModel.rightLeg.yRot = (float) Math.toRadians(-20);
+                humanoidModel.rightLeg.zRot = (float) Math.toRadians(0);
+                humanoidModel.rightLeg.x =  (float)-7.9;
+                humanoidModel.rightLeg.y =  (float)14.5;
+                humanoidModel.rightLeg.z =  -5;
+                humanoidModel.rightLeg.xScale = (float)0.75; humanoidModel.rightLeg.yScale = (float)0.75; humanoidModel.rightLeg.zScale = (float)0.75;
             }
         });
         hatStandSpruce = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_SPRUCE), new GenericHatStandModel.Positioner() {
@@ -156,7 +202,53 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
 
             @Override
             public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+                // rotations on Y axis need inverting. positions on X and Y axes need inverting
+                humanoidModel.head.yRot = (float) Math.toRadians(-45);
+                humanoidModel.head.zRot = (float) Math.toRadians(15);
+                humanoidModel.head.x =  -5;
+                humanoidModel.head.z =  -5;
+                humanoidModel.head.xScale = (float)0.75; humanoidModel.head.yScale = (float)0.75; humanoidModel.head.zScale = (float)0.75;
 
+                humanoidModel.body.yRot = (float) Math.toRadians(-47.5);
+                humanoidModel.body.x =  3;
+                humanoidModel.body.y =  -1;
+                humanoidModel.body.z =  -3;
+                humanoidModel.body.xScale = (float)0.75; humanoidModel.body.yScale = (float)0.75; humanoidModel.body.zScale = (float)0.75;
+
+                humanoidModel.leftArm.yRot = (float) Math.toRadians(-72.5);
+                humanoidModel.leftArm.zRot = (float) Math.toRadians(-5);
+                // this position number. why the fuck does the torso position work off of what i had but the arms need to be special??
+                // note: do not set positions to 0 if you're not using them
+                humanoidModel.leftArm.x =  6;
+                humanoidModel.leftArm.xScale = (float)0.75; humanoidModel.leftArm.yScale = (float)0.75; humanoidModel.leftArm.zScale = (float)0.75;
+
+                humanoidModel.rightArm.xRot = (float) Math.toRadians(-5);
+                humanoidModel.rightArm.yRot = (float) Math.toRadians(0);
+                humanoidModel.rightArm.zRot = (float) Math.toRadians(0);
+                // WHAT IS GOING ON. these positions are not off in the same way every time. i am going insane
+                humanoidModel.rightArm.x =  0;
+                humanoidModel.rightArm.z =  -5;
+                humanoidModel.rightArm.xScale = (float)0.75; humanoidModel.rightArm.yScale = (float)0.75; humanoidModel.rightArm.zScale = (float)0.75;
+
+                humanoidModel.leftLeg.xRot = (float) Math.toRadians(0);
+                humanoidModel.leftLeg.yRot = (float) Math.toRadians(47.5);
+                humanoidModel.leftLeg.zRot = (float) Math.toRadians(0);
+                humanoidModel.leftLeg.x =  (float)-3.1;
+                // okay. okay. so whenever i access these positions it is adjusting them to be moving relative to 0 0 0 of the model. not relative to its prior position
+                // dumb. Dumb. nothing i cant adjust for but it means that i shouldve just maintained how i was doing things prior
+                humanoidModel.leftLeg.y =  (float)14.5;
+                humanoidModel.leftLeg.z =  -3;
+                humanoidModel.leftLeg.xScale = (float)0.75; humanoidModel.leftLeg.yScale = (float)0.75; humanoidModel.leftLeg.zScale = (float)0.75;
+                // no i was wrong. there's no easy way for me to preview the scale-down transformation in blockbench while still accessing worldspace coords
+                // this shit is so stupid
+
+                humanoidModel.rightLeg.xRot = (float) Math.toRadians(0);
+                humanoidModel.rightLeg.yRot = (float) Math.toRadians(-20);
+                humanoidModel.rightLeg.zRot = (float) Math.toRadians(0);
+                humanoidModel.rightLeg.x =  (float)-7.9;
+                humanoidModel.rightLeg.y =  (float)14.5;
+                humanoidModel.rightLeg.z =  -5;
+                humanoidModel.rightLeg.xScale = (float)0.75; humanoidModel.rightLeg.yScale = (float)0.75; humanoidModel.rightLeg.zScale = (float)0.75;
             }
         });
         hatStandBamboo = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_BAMBOO), new GenericHatStandModel.Positioner() {
