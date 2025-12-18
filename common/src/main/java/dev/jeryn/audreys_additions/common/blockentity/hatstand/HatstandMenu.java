@@ -8,6 +8,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemStack;
 
 class HatstandInventoryWrapper extends SimpleContainer {
@@ -81,10 +82,10 @@ public class HatstandMenu extends AbstractContainerMenu {
             be.sendUpdates();
         }
 
-        addSlot(new Slot(inventoryWrapper, 0, 8, 37));
-        addSlot(new Slot(inventoryWrapper, 1, 56, 37));
-        addSlot(new Slot(inventoryWrapper, 2, 104, 37));
-        addSlot(new Slot(inventoryWrapper, 3, 152, 37));
+        addSlot(new ArmorSlot(inventoryWrapper, 0, 8, 37));
+        addSlot(new ArmorSlot(inventoryWrapper, 1, 56, 37));
+        addSlot(new ArmorSlot(inventoryWrapper, 2, 104, 37));
+        addSlot(new ArmorSlot(inventoryWrapper, 3, 152, 37));
 
         int x = 8;
         int y = 100;
@@ -142,4 +143,18 @@ public class HatstandMenu extends AbstractContainerMenu {
 
         return result;
     }
+
+
+    public class ArmorSlot extends Slot {
+
+        public ArmorSlot(HatstandInventoryWrapper inventory, int index, int x, int y) {
+            super(inventory, index, x, y);
+        }
+
+        @Override
+        public boolean mayPlace(ItemStack stack) {
+            return stack.getItem() instanceof ArmorItem;
+        }
+    }
+
 }

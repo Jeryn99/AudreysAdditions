@@ -17,7 +17,7 @@ public class HatstandScreen extends AbstractContainerScreen<HatstandMenu> {
     /* ================= DEV SLOT HELPER ================= */
 
     private final List<int[]> helperSlots = new ArrayList<>();
-    private boolean helperMode = true; // set false for release
+    private boolean helperMode = false; // set false for release
     private int[] selectedSlot = null;
 
     /* =================================================== */
