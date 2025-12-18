@@ -32,78 +32,35 @@ import java.util.Objects;
 public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>, BlockEntityRendererProvider<HatstandBlockEntity> {
 
     private static final Map<Block, ResourceLocation> HATSTAND_TEXTURES = Map.of(
-            AudBlocks.HATSTAND_BAMBOO.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_bamboo.png"),
-            AudBlocks.HATSTAND_CHERRY.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_cherry.png"),
-            AudBlocks.HATSTAND_CRIMSON.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_crimson.png"),
+            AudBlocks.HATSTAND_OAK.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_oak.png"),
+            AudBlocks.HATSTAND_SPRUCE.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_spruce.png"),
+            AudBlocks.HATSTAND_BIRCH.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_birch.png"),
+            AudBlocks.HATSTAND_JUNGLE.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_jungle.png"),
+            AudBlocks.HATSTAND_ACACIA.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_acacia.png"),
             AudBlocks.HATSTAND_DARK_OAK.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_dark_oak.png"),
-            AudBlocks.HATSTAND_MANGROVE.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_mangrove.png"),
-            AudBlocks.HATSTAND.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand.png")
+            AudBlocks.HATSTAND_MANGROVE.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_crimson.png"),
+            AudBlocks.HATSTAND_CHERRY.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_mangrove.png"),
+            AudBlocks.HATSTAND_PALE.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_pale.png"),
+            AudBlocks.HATSTAND_BAMBOO.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_bamboo.png"),
+            AudBlocks.HATSTAND_CRIMSON.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_crimson.png"),
+            AudBlocks.HATSTAND_WARPED.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_warped.png")
     );
-    private final GenericHatStandModel hatStandBamboo;
-    private final GenericHatStandModel hatStandCherry;
-    private final GenericHatStandModel hatStandCrimson;
+    private final GenericHatStandModel hatStandOak;
+    private final GenericHatStandModel hatStandSpruce;
+    private final GenericHatStandModel hatStandBirch;
+    private final GenericHatStandModel hatStandJungle;
+    private final GenericHatStandModel hatStandAcacia;
     private final GenericHatStandModel hatStandDarkOak;
     private final GenericHatStandModel hatStandMangrove;
-    private final GenericHatStandModel hatstand;
+    private final GenericHatStandModel hatStandCherry;
+    private final GenericHatStandModel hatStandPale;
+    private final GenericHatStandModel hatStandBamboo;
+    private final GenericHatStandModel hatStandCrimson;
+    private final GenericHatStandModel hatStandWarped;
     private GenericHatStandModel hatStandMain;
 
     public RenderHatStand(Context context) {
-        hatStandBamboo = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_BAMBOO), new GenericHatStandModel.Positioner() {
-            @Override
-            public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {
-
-            }
-
-            @Override
-            public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
-
-            }
-        });
-        hatStandCherry = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_CHERRY), new GenericHatStandModel.Positioner() {
-            @Override
-            public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {
-
-            }
-
-            @Override
-            public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
-
-            }
-        });
-        hatStandCrimson = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_CRIMSON), new GenericHatStandModel.Positioner() {
-            @Override
-            public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {
-
-            }
-
-            @Override
-            public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
-
-            }
-        });
-        hatStandDarkOak = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_DARK_OAK), new GenericHatStandModel.Positioner() {
-            @Override
-            public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {
-
-            }
-
-            @Override
-            public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
-
-            }
-        });
-        hatStandMangrove = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_MANGROVE), new GenericHatStandModel.Positioner() {
-            @Override
-            public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {
-
-            }
-
-            @Override
-            public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
-
-            }
-        });
-        hatstand = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND), new GenericHatStandModel.Positioner() {
+        hatStandOak = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_OAK), new GenericHatStandModel.Positioner() {
             @Override
             public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {
 
@@ -160,15 +117,189 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
                 humanoidModel.rightLeg.xScale = (float)0.75; humanoidModel.rightLeg.yScale = (float)0.75; humanoidModel.rightLeg.zScale = (float)0.75;
             }
         });
+        hatStandSpruce = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_SPRUCE), new GenericHatStandModel.Positioner() {
+            @Override
+            public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {
+
+            }
+
+            @Override
+            public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+
+            }
+        });
+        hatStandBirch = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_BIRCH), new GenericHatStandModel.Positioner() {
+            @Override
+            public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {
+
+            }
+
+            @Override
+            public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+
+            }
+        });
+        hatStandJungle = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_JUNGLE), new GenericHatStandModel.Positioner() {
+            @Override
+            public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {
+
+            }
+
+            @Override
+            public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+
+            }
+        });
+        hatStandAcacia = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_ACACIA), new GenericHatStandModel.Positioner() {
+            @Override
+            public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {
+
+            }
+
+            @Override
+            public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+
+            }
+        });
+        hatStandDarkOak = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_DARK_OAK), new GenericHatStandModel.Positioner() {
+            @Override
+            public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {
+
+            }
+
+            @Override
+            public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+
+            }
+        });
+        hatStandMangrove = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_MANGROVE), new GenericHatStandModel.Positioner() {
+            @Override
+            public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {
+
+            }
+
+            @Override
+            public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+
+            }
+        });
+        hatStandCherry = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_CHERRY), new GenericHatStandModel.Positioner() {
+            @Override
+            public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {
+
+            }
+
+            @Override
+            public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+
+            }
+        });
+        hatStandPale = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_PALE), new GenericHatStandModel.Positioner() {
+            @Override
+            public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {
+
+            }
+
+            @Override
+            public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+                // rotations on Y axis need inverting. positions on X and Y axes need inverting
+                humanoidModel.head.yRot = (float) Math.toRadians(-45);
+                humanoidModel.head.zRot = (float) Math.toRadians(15);
+                humanoidModel.head.x =  -5;
+                humanoidModel.head.z =  -5;
+                humanoidModel.head.xScale = (float)0.75; humanoidModel.head.yScale = (float)0.75; humanoidModel.head.zScale = (float)0.75;
+
+                humanoidModel.body.yRot = (float) Math.toRadians(-47.5);
+                humanoidModel.body.x =  3;
+                humanoidModel.body.y =  -1;
+                humanoidModel.body.z =  -3;
+                humanoidModel.body.xScale = (float)0.75; humanoidModel.body.yScale = (float)0.75; humanoidModel.body.zScale = (float)0.75;
+
+                humanoidModel.leftArm.yRot = (float) Math.toRadians(-72.5);
+                humanoidModel.leftArm.zRot = (float) Math.toRadians(-5);
+                // this position number. why the fuck does the torso position work off of what i had but the arms need to be special??
+                // note: do not set positions to 0 if you're not using them
+                humanoidModel.leftArm.x =  6;
+                humanoidModel.leftArm.xScale = (float)0.75; humanoidModel.leftArm.yScale = (float)0.75; humanoidModel.leftArm.zScale = (float)0.75;
+
+                humanoidModel.rightArm.xRot = (float) Math.toRadians(-5);
+                humanoidModel.rightArm.yRot = (float) Math.toRadians(0);
+                humanoidModel.rightArm.zRot = (float) Math.toRadians(0);
+                // WHAT IS GOING ON. these positions are not off in the same way every time. i am going insane
+                humanoidModel.rightArm.x =  0;
+                humanoidModel.rightArm.z =  -5;
+                humanoidModel.rightArm.xScale = (float)0.75; humanoidModel.rightArm.yScale = (float)0.75; humanoidModel.rightArm.zScale = (float)0.75;
+
+                humanoidModel.leftLeg.xRot = (float) Math.toRadians(0);
+                humanoidModel.leftLeg.yRot = (float) Math.toRadians(47.5);
+                humanoidModel.leftLeg.zRot = (float) Math.toRadians(0);
+                humanoidModel.leftLeg.x =  (float)-3.1;
+                // okay. okay. so whenever i access these positions it is adjusting them to be moving relative to 0 0 0 of the model. not relative to its prior position
+                // dumb. Dumb. nothing i cant adjust for but it means that i shouldve just maintained how i was doing things prior
+                humanoidModel.leftLeg.y =  (float)14.5;
+                humanoidModel.leftLeg.z =  -3;
+                humanoidModel.leftLeg.xScale = (float)0.75; humanoidModel.leftLeg.yScale = (float)0.75; humanoidModel.leftLeg.zScale = (float)0.75;
+                // no i was wrong. there's no easy way for me to preview the scale-down transformation in blockbench while still accessing worldspace coords
+                // this shit is so stupid
+
+                humanoidModel.rightLeg.xRot = (float) Math.toRadians(0);
+                humanoidModel.rightLeg.yRot = (float) Math.toRadians(-20);
+                humanoidModel.rightLeg.zRot = (float) Math.toRadians(0);
+                humanoidModel.rightLeg.x =  (float)-7.9;
+                humanoidModel.rightLeg.y =  (float)14.5;
+                humanoidModel.rightLeg.z =  -5;
+                humanoidModel.rightLeg.xScale = (float)0.75; humanoidModel.rightLeg.yScale = (float)0.75; humanoidModel.rightLeg.zScale = (float)0.75;
+            }
+        });
+        hatStandBamboo = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_BAMBOO), new GenericHatStandModel.Positioner() {
+            @Override
+            public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {
+
+            }
+
+            @Override
+            public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+
+            }
+        });
+        hatStandCrimson = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_CRIMSON), new GenericHatStandModel.Positioner() {
+            @Override
+            public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {
+
+            }
+
+            @Override
+            public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+
+            }
+        });
+        hatStandWarped = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_WARPED), new GenericHatStandModel.Positioner() {
+            @Override
+            public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {
+
+            }
+
+            @Override
+            public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+
+            }
+        });
     }
 
     private GenericHatStandModel getModelForBlock(BlockState state) {
-        if (state.is(AudBlocks.HATSTAND_BAMBOO.get())) return hatStandBamboo;
-        if (state.is(AudBlocks.HATSTAND_CHERRY.get())) return hatStandCherry;
-        if (state.is(AudBlocks.HATSTAND_CRIMSON.get())) return hatStandCrimson;
+        if (state.is(AudBlocks.HATSTAND_OAK.get())) return hatStandOak;
+        if (state.is(AudBlocks.HATSTAND_SPRUCE.get())) return hatStandSpruce;
+        if (state.is(AudBlocks.HATSTAND_BIRCH.get())) return hatStandBirch;
+        if (state.is(AudBlocks.HATSTAND_JUNGLE.get())) return hatStandJungle;
+        if (state.is(AudBlocks.HATSTAND_ACACIA.get())) return hatStandAcacia;
         if (state.is(AudBlocks.HATSTAND_DARK_OAK.get())) return hatStandDarkOak;
         if (state.is(AudBlocks.HATSTAND_MANGROVE.get())) return hatStandMangrove;
-        if (state.is(AudBlocks.HATSTAND.get())) return hatstand;
+        if (state.is(AudBlocks.HATSTAND_CHERRY.get())) return hatStandCherry;
+        if (state.is(AudBlocks.HATSTAND_PALE.get())) return hatStandPale;
+        if (state.is(AudBlocks.HATSTAND_BAMBOO.get())) return hatStandBamboo;
+        if (state.is(AudBlocks.HATSTAND_CRIMSON.get())) return hatStandCrimson;
+        if (state.is(AudBlocks.HATSTAND_WARPED.get())) return hatStandWarped;
+
         return hatStandMain;
     }
 
