@@ -84,6 +84,10 @@ public class AUDEnglish extends LanguageProvider {
         add(AudBlocks.HATSTAND_MANGROVE.get(), "Mangrove Hatstand");
         add(AudBlocks.HATSTAND_WARPED.get(), "Warped Hatstand");
 
+        add(AudBlocks.ROUNDEL_OVERLAY_FULL.get(), "Roundel (Full)");
+        add(AudBlocks.ROUNDEL_OVERLAY_HALF.get(), "Roundel (Half)");
+
+
 
 
     }

@@ -29,14 +29,15 @@ public class AudItemModelProvider extends ItemModelProvider {
         blockItem(AudBlocks.ARMCHAIR.getId());
         basicItem(AudBlocks.ASTRAL_MAP.getId());
         basicItem(AudBlocks.CEILING_CANOPY.getId());
-        specimenJar(AudBlocks.SPECIMEN_JAR_ALLAY.getId());
-        specimenJar(AudBlocks.SPECIMEN_JAR_CREEPER.getId());
-        specimenJar(AudBlocks.SPECIMEN_JAR_DRAGON.getId());
-        specimenJar(AudBlocks.SPECIMEN_JAR_PIGLIN.getId());
-        specimenJar(AudBlocks.SPECIMEN_JAR_SKELETON.getId());
-        specimenJar(AudBlocks.SPECIMEN_JAR_VEX.getId());
-        specimenJar(AudBlocks.SPECIMEN_JAR_WITHERSKELETON.getId());
-        specimenJar(AudBlocks.SPECIMEN_JAR_ZOMBIE.getId());
+        basicItem(AudBlocks.SPECIMEN_JAR.getId());
+        basicItem(AudBlocks.SPECIMEN_JAR_ALLAY.getId());
+        basicItem(AudBlocks.SPECIMEN_JAR_CREEPER.getId());
+        basicItem(AudBlocks.SPECIMEN_JAR_DRAGON.getId());
+        basicItem(AudBlocks.SPECIMEN_JAR_PIGLIN.getId());
+        basicItem(AudBlocks.SPECIMEN_JAR_SKELETON.getId());
+        basicItem(AudBlocks.SPECIMEN_JAR_VEX.getId());
+        basicItem(AudBlocks.SPECIMEN_JAR_WITHERSKELETON.getId());
+        basicItem(AudBlocks.SPECIMEN_JAR_ZOMBIE.getId());
 
         blockItem(AudBlocks.ZEITON_QUARTZ_BLOCK.getId());
         blockItem(AudBlocks.ZEITON_QUARTZ_STAIRS.getId());
@@ -53,10 +54,6 @@ public class AudItemModelProvider extends ItemModelProvider {
 
     public ItemModelBuilder blockItem(ResourceLocation item) {
         return this.getBuilder(item.toString()).parent(new ModelFile.UncheckedModelFile(new ResourceLocation(item.getNamespace(), "block/" + item.getPath())));
-    }
-
-    public ItemModelBuilder specimenJar(ResourceLocation item) {
-        return this.getBuilder(item.toString()).parent(new ModelFile.UncheckedModelFile(new ResourceLocation(item.getNamespace(), "item/" + AudBlocks.SPECIMEN_JAR.getId().getPath())));
     }
 
 }
