@@ -31,20 +31,33 @@ import java.util.Objects;
 
 public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>, BlockEntityRendererProvider<HatstandBlockEntity> {
 
-    private static final Map<Block, ResourceLocation> HATSTAND_TEXTURES = Map.of(
-            AudBlocks.HATSTAND_OAK.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_oak.png"),
-            AudBlocks.HATSTAND_SPRUCE.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_spruce.png"),
-            AudBlocks.HATSTAND_BIRCH.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_birch.png"),
-            AudBlocks.HATSTAND_JUNGLE.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_jungle.png"),
-            AudBlocks.HATSTAND_ACACIA.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_acacia.png"),
-            AudBlocks.HATSTAND_DARK_OAK.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_dark_oak.png"),
-            AudBlocks.HATSTAND_MANGROVE.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_crimson.png"),
-            AudBlocks.HATSTAND_CHERRY.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_mangrove.png"),
-            AudBlocks.HATSTAND_PALE.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_pale.png"),
-            AudBlocks.HATSTAND_BAMBOO.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_bamboo.png"),
-            AudBlocks.HATSTAND_CRIMSON.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_crimson.png"),
-            AudBlocks.HATSTAND_WARPED.get(), new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_warped.png")
+    private static final Map<Block, ResourceLocation> HATSTAND_TEXTURES = Map.ofEntries(
+            Map.entry(AudBlocks.HATSTAND_OAK.get(),
+                    new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_oak.png")),
+            Map.entry(AudBlocks.HATSTAND_SPRUCE.get(),
+                    new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_spruce.png")),
+            Map.entry(AudBlocks.HATSTAND_BIRCH.get(),
+                    new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_birch.png")),
+            Map.entry(AudBlocks.HATSTAND_JUNGLE.get(),
+                    new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_jungle.png")),
+            Map.entry(AudBlocks.HATSTAND_ACACIA.get(),
+                    new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_acacia.png")),
+            Map.entry(AudBlocks.HATSTAND_DARK_OAK.get(),
+                    new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_dark_oak.png")),
+            Map.entry(AudBlocks.HATSTAND_MANGROVE.get(),
+                    new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_mangrove.png")),
+            Map.entry(AudBlocks.HATSTAND_CHERRY.get(),
+                    new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_cherry.png")),
+            Map.entry(AudBlocks.HATSTAND_PALE.get(),
+                    new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_pale.png")),
+            Map.entry(AudBlocks.HATSTAND_BAMBOO.get(),
+                    new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_bamboo.png")),
+            Map.entry(AudBlocks.HATSTAND_CRIMSON.get(),
+                    new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_crimson.png")),
+            Map.entry(AudBlocks.HATSTAND_WARPED.get(),
+                    new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/hat_stand/hatstand_warped.png"))
     );
+
     private final GenericHatStandModel hatStandOak;
     private final GenericHatStandModel hatStandSpruce;
     private final GenericHatStandModel hatStandBirch;

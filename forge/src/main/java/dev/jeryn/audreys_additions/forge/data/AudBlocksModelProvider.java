@@ -126,6 +126,14 @@ public class AudBlocksModelProvider extends BlockStateProvider {
                     continue;
                 }
 
+                if (location.getPath().contains("cabinet")) {
+                    continue;
+                }
+
+                if (location.getPath().contains("hatstand")) {
+                    continue;
+                }
+
 
                 simpleBlock(value);
             }

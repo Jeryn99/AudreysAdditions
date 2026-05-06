@@ -71,7 +71,6 @@ public class AUDEnglish extends LanguageProvider {
         add(AudItems.FOOD_CUBE.get(), "Food Cube");
 
         add("container.hatstand", "Hat Stand");
-        add(AudBlocks.HATSTAND.get(), "Hatstand");
         add(AudBlocks.HATSTAND_BAMBOO.get(), "Bamboo Hatstand");
         add(AudBlocks.HATSTAND_CHERRY.get(), "Cherry Hatstand");
         add(AudBlocks.HATSTAND_CRIMSON.get(), "Crimson Hatstand");

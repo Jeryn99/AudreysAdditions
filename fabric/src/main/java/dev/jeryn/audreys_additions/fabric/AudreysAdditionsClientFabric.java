@@ -4,7 +4,7 @@ import dev.jeryn.audreys_additions.AUDModelRegistry;
 import dev.jeryn.audreys_additions.ClientUtil;
 import dev.jeryn.audreys_additions.client.renderers.*;
 import dev.jeryn.audreys_additions.common.blockentity.DyeableBlockEntity;
-import dev.jeryn.audreys_additions.common.blockentity.DyeableRoundelBlockEntity;
+import dev.jeryn.audreys_additions.common.blockentity.cabinet.CabinetScreen;
 import dev.jeryn.audreys_additions.common.blockentity.hatstand.HatstandScreen;
 import dev.jeryn.audreys_additions.common.item.DyedItemBlock;
 import dev.jeryn.audreys_additions.common.registry.AudBlockEntities;
@@ -35,6 +35,7 @@ public class AudreysAdditionsClientFabric implements ClientModInitializer {
         BlockEntityRendererRegistry.register(AudBlockEntities.FOLD_OUT_BED.get(), RenderFoldOutBedBlockEntity::new);
         BlockEntityRendererRegistry.register(AudBlockEntities.SPECIMEN_JAR.get(), RenderSpecimenJar::new);
         BlockEntityRendererRegistry.register(AudBlockEntities.HAT_STAND.get(), RenderHatStand::new);
+        BlockEntityRendererRegistry.register(AudBlockEntities.CABINET.get(), RenderCabinet::new);
 
         ColorProviderRegistry.BLOCK.register((blockState, blockAndTintGetter, blockPos, tintIndex) -> {
             if (blockAndTintGetter != null && blockPos != null) {
@@ -54,6 +55,7 @@ public class AudreysAdditionsClientFabric implements ClientModInitializer {
         }
 
         MenuScreens.register(AudMenus.HAT_STAND.get(), HatstandScreen::new);
+        MenuScreens.register(AudMenus.CABINET.get(), CabinetScreen::new);
 
     }
 }

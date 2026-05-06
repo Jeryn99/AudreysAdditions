@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "audreys_additions:hatstand"
+          "name": "audreys_additions:hatstand_acacia"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "audreys_additions:blocks/hatstand"
+  "random_sequence": "audreys_additions:blocks/hatstand_acacia"
 }

@@ -147,6 +147,7 @@ public class AUDModelRegistry {
     public static ModelLayerLocation HATSTAND_BAMBOO = furniture("hatstand_bamboo");
     public static ModelLayerLocation HATSTAND_CRIMSON = furniture("hatstand_crimson");
     public static ModelLayerLocation HATSTAND_WARPED = furniture("hatstand_warped");
+    public static ModelLayerLocation CABINET_INV = furniture("tardis_cabinet");
 
 
     public static ModelLayerLocation SPECIMEN_JAR = furniture("specimen_jar/specimen_jar");
