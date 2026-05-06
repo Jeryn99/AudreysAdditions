@@ -71,11 +71,18 @@ public class AUDEnglish extends LanguageProvider {
         add(AudItems.FOOD_CUBE.get(), "Food Cube");
 
         add("container.hatstand", "Hat Stand");
+        add(AudBlocks.HATSTAND_OAK.get(), "Oak Hatstand");
+        add(AudBlocks.HATSTAND_SPRUCE.get(), "Spruce Hatstand");
+        add(AudBlocks.HATSTAND_BIRCH.get(), "Birch Hatstand");
+        add(AudBlocks.HATSTAND_JUNGLE.get(), "Jungle Hatstand");
+        add(AudBlocks.HATSTAND_ACACIA.get(), "Acacia Hatstand");
+        add(AudBlocks.HATSTAND_DARK_OAK.get(), "Dark Oak Hatstand");
         add(AudBlocks.HATSTAND_BAMBOO.get(), "Bamboo Hatstand");
         add(AudBlocks.HATSTAND_CHERRY.get(), "Cherry Hatstand");
+        add(AudBlocks.HATSTAND_PALE.get(), "Pale Hatstand");
         add(AudBlocks.HATSTAND_CRIMSON.get(), "Crimson Hatstand");
-        add(AudBlocks.HATSTAND_DARK_OAK.get(), "Dark Oak Hatstand");
         add(AudBlocks.HATSTAND_MANGROVE.get(), "Mangrove Hatstand");
+        add(AudBlocks.HATSTAND_WARPED.get(), "Warped Hatstand");
 
 
 

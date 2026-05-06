@@ -84,12 +84,12 @@ public class CabinetMenu extends AbstractContainerMenu {
 
         addSlot(new Slot(inventoryWrapper, 0, 68, 27));
         addSlot(new Slot(inventoryWrapper, 1, 92, 27));
-        addSlot(new Slot(inventoryWrapper, 2, 68, 45));
-        addSlot(new Slot(inventoryWrapper, 3, 92, 45));
-        addSlot(new Slot(inventoryWrapper, 4, 92, 64));
-        addSlot(new Slot(inventoryWrapper, 5, 68, 64));
-        addSlot(new Slot(inventoryWrapper, 6, 68, 82));
-        addSlot(new Slot(inventoryWrapper, 7, 92, 82));
+        addSlot(new Slot(inventoryWrapper, 2, 68, 47));
+        addSlot(new Slot(inventoryWrapper, 3, 92, 47));
+        addSlot(new Slot(inventoryWrapper, 4, 92, 67));
+        addSlot(new Slot(inventoryWrapper, 5, 68, 67));
+        addSlot(new Slot(inventoryWrapper, 6, 68, 87));
+        addSlot(new Slot(inventoryWrapper, 7, 92, 87));
 
         int x = 8;
         int y = 116;
