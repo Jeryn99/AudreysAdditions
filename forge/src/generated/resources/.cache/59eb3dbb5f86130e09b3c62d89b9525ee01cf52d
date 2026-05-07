@@ -1,4 +1,4 @@
-// 1.20.1	2026-05-06T19:37:02.6871642	Loot Tables
+// 1.20.1	2026-05-06T20:09:15.0939277	Loot Tables
 ea3815b3201e72fbb3301d39ea4f0586ac3fcb2b data/audreys_additions/loot_tables/blocks/armchair.json
 334aa00249b17fcd52999a39d3828141d9f6f617 data/audreys_additions/loot_tables/blocks/astral_map.json
 49aebf8c6147894f801bbf830dafe4d5ac8ae327 data/audreys_additions/loot_tables/blocks/brachacki_monitor.json
@@ -38,6 +38,7 @@ a3429222b993a0cb6b66aa6fecc848ebae87c4c8 data/audreys_additions/loot_tables/bloc
 93d25aed571f81eec8092fe9ca058d433725f6f5 data/audreys_additions/loot_tables/blocks/specimen_jar_witherskeleton.json
 f3718358fe38f3fb2ba07839dfb86340ab8a1f9f data/audreys_additions/loot_tables/blocks/specimen_jar_zombie.json
 4f05d4fdcb73577bd16b6103cfc82fa52aa37829 data/audreys_additions/loot_tables/blocks/treated_zeiton_quartz_block.json
+23188f8ee9d4a4b326aeba1cecbd6c44d7a12c7a data/audreys_additions/loot_tables/blocks/treated_zeiton_quartz_door.json
 723fd80b8da5bc1948412c0b84c15a6d062b3a8b data/audreys_additions/loot_tables/blocks/zeiton_quartz_block.json
 0317ba7f717a06ed4107a43905fa8643807c922a data/audreys_additions/loot_tables/blocks/zeiton_quartz_bricks.json
 6624b72b6d5af28b56ef339753b1ae1077ccaf1f data/audreys_additions/loot_tables/blocks/zeiton_quartz_door.json

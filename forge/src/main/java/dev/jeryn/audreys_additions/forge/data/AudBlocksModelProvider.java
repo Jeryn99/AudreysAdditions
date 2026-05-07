@@ -155,7 +155,10 @@ public class AudBlocksModelProvider extends BlockStateProvider {
         slabBlock(AudBlocks.ZEITON_QUARTZ_SLAB.get(), new ResourceLocation(AudreysAdditions.MODID, "zeiton_quartz_block"),  new ResourceLocation(AudreysAdditions.MODID, "block/zeiton_quartz_block_side"));
         slabBlock(AudBlocks.SMOOTH_ZEITON_QUARTZ_SLAB.get(), new ResourceLocation(AudreysAdditions.MODID, "smooth_zeiton_quartz"),  new ResourceLocation(AudreysAdditions.MODID, "block/zeiton_quartz_block_bottom"));
 
-        doorBlockWithRenderType(AudBlocks.ZEITON_QUARTZ_DOOR.get(), new ResourceLocation(AudreysAdditions.MODID, "block/zeiton_quartz_door_bottom"),  new ResourceLocation(AudreysAdditions.MODID, "block/zeiton_quartz_door_top"), "translucent");
+        doorBlockWithRenderType(AudBlocks.TREATED_ZEITON_QUARTZ_DOOR.get(), new ResourceLocation(AudreysAdditions.MODID, "block/treated_zeiton_quartz_door_bottom"),  new ResourceLocation(AudreysAdditions.MODID, "block/treated_zeiton_quartz_door_top"), "cutout");
+
+
+        doorBlockWithRenderType(AudBlocks.ZEITON_QUARTZ_DOOR.get(), new ResourceLocation(AudreysAdditions.MODID, "block/zeiton_quartz_door_bottom"),  new ResourceLocation(AudreysAdditions.MODID, "block/zeiton_quartz_door_top"), "cutout");
 
         vineSupport(AudBlocks.ROUNDEL_OVERLAY_FULL.get());
         vineSupport(AudBlocks.ROUNDEL_OVERLAY_HALF.get());

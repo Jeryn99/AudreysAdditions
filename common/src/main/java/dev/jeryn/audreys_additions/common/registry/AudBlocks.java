@@ -96,6 +96,9 @@ public class AudBlocks {
     public static final RegistrySupplier<RoundelOverlayBlock> ROUNDEL_OVERLAY_HALF = registerDyed("roundel_overlay_half",
             () -> new RoundelOverlayBlock(BlockBehaviour.Properties.copy(Blocks.VINE)));
 
+    public static final RegistrySupplier<DoorBlock> TREATED_ZEITON_QUARTZ_DOOR = register("treated_zeiton_quartz_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR), BlockSetType.ACACIA));
+
     public static final RegistrySupplier<DoorBlock> ZEITON_QUARTZ_DOOR = register("zeiton_quartz_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR), BlockSetType.ACACIA));
 
