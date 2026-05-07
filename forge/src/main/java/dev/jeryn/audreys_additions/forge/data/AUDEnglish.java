@@ -64,9 +64,9 @@ public class AUDEnglish extends LanguageProvider {
         add(AudBlocks.SMOOTH_ZEITON_QUARTZ_STAIRS.get(), "Smooth Zeiton Quartz Stairs");
         add(AudBlocks.ZEITON_QUARTZ_PILLAR.get(), "Zeiton Quartz Pillar");
         add(AudBlocks.CHISELED_ZEITON_QUARTZ_BLOCK.get(), "Chiseled Zeiton Quartz Block");
-        add(AudBlocks.TREATED_ZEITON_QUARTZ_BLOCK.get(), "Treated Zeiton Quartz Block");
+        add(AudBlocks.TREATED_CHISELED_ZEITON_QUARTZ_BLOCK.get(), "Treated Chiseled Zeiton Quartz Block");
         add(AudBlocks.ZEITON_QUARTZ_BRICKS.get(), "Zeiton Quartz Bricks");
-
+        add(AudBlocks.TREATED_ZEITON_QUARTZ_BRICKS.get(), "Treated Zeiton Quartz Bricks");
 
         add(AudItems.FOOD_CUBE.get(), "Food Cube");
 

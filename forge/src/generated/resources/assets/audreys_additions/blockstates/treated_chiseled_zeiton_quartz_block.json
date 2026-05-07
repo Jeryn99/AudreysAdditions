@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "audreys_additions:block/treated_chiseled_zeiton_quartz_block_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "audreys_additions:block/treated_chiseled_zeiton_quartz_block"
+    },
+    "axis=z": {
+      "model": "audreys_additions:block/treated_chiseled_zeiton_quartz_block_horizontal",
+      "x": 90
+    }
+  }
+}

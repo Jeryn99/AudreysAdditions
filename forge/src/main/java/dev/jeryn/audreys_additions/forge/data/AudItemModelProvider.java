@@ -48,7 +48,8 @@ public class AudItemModelProvider extends ItemModelProvider {
         blockItem(AudBlocks.ZEITON_QUARTZ_BRICKS.getId());
         blockItem(AudBlocks.ZEITON_QUARTZ_PILLAR.getId());
         blockItem(AudBlocks.CHISELED_ZEITON_QUARTZ_BLOCK.getId());
-        blockItem(AudBlocks.TREATED_ZEITON_QUARTZ_BLOCK.getId());
+        blockItem(AudBlocks.TREATED_CHISELED_ZEITON_QUARTZ_BLOCK.getId());
+        blockItem(AudBlocks.TREATED_ZEITON_QUARTZ_BRICKS.getId());
 
     }
 

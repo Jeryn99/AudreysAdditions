@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "audreys_additions:treated_zeiton_quartz_block"
+          "name": "audreys_additions:treated_chiseled_zeiton_quartz_block"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "audreys_additions:blocks/treated_zeiton_quartz_block"
+  "random_sequence": "audreys_additions:blocks/treated_chiseled_zeiton_quartz_block"
 }

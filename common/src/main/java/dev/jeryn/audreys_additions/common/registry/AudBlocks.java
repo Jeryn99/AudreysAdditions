@@ -80,14 +80,18 @@ public class AudBlocks {
 
     public static final RegistrySupplier<Block> ZEITON_QUARTZ_BRICKS = register("zeiton_quartz_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BRICKS)));
+
     public static final RegistrySupplier<RotatedPillarBlock> ZEITON_QUARTZ_PILLAR = register("zeiton_quartz_pillar",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR)));
 
     public static final RegistrySupplier<RotatedPillarBlock> CHISELED_ZEITON_QUARTZ_BLOCK = register("chiseled_zeiton_quartz_block",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.CHISELED_QUARTZ_BLOCK)));
 
-    public static final RegistrySupplier<RotatedPillarBlock> TREATED_ZEITON_QUARTZ_BLOCK = register("treated_zeiton_quartz_block",
+    public static final RegistrySupplier<RotatedPillarBlock> TREATED_CHISELED_ZEITON_QUARTZ_BLOCK = register("treated_chiseled_zeiton_quartz_block",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.CHISELED_QUARTZ_BLOCK)));
+
+    public static final RegistrySupplier<Block> TREATED_ZEITON_QUARTZ_BRICKS = register("treated_zeiton_quartz_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BRICKS)));
 
 
     public static final RegistrySupplier<RoundelOverlayBlock> ROUNDEL_OVERLAY_FULL = registerDyed("roundel_overlay_full",

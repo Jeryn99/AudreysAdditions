@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/door_top_left",
-  "render_type": "minecraft:translucent",
+  "render_type": "minecraft:cutout",
   "textures": {
     "bottom": "audreys_additions:block/zeiton_quartz_door_bottom",
     "top": "audreys_additions:block/zeiton_quartz_door_top"
