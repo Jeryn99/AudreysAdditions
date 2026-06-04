@@ -9,6 +9,7 @@ import net.minecraft.client.animation.AnimationDefinition;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;
 import whocraft.tardis_refined.TRConfig;
@@ -17,8 +18,6 @@ import whocraft.tardis_refined.client.model.blockentity.console.ConsoleUnit;
 import whocraft.tardis_refined.common.block.console.GlobalConsoleBlock;
 import whocraft.tardis_refined.common.blockentity.console.GlobalConsoleBlockEntity;
 import whocraft.tardis_refined.common.tardis.manager.TardisPilotingManager;
-
-import static net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity.getFuel;
 
 public class BrachackiConsoleModel extends HierarchicalModel implements ConsoleUnit {
 
@@ -34,12 +33,16 @@ public class BrachackiConsoleModel extends HierarchicalModel implements ConsoleU
     private final ModelPart MainLever1;
     private final ModelPart MainLever2;
     private final ModelPart RadNeedle;
+    private final ModelPart Needle1;
+    private final ModelPart Needle2;
 
     public BrachackiConsoleModel(ModelPart root) {
         this.root = root;
         this.MainLever1 = Frame.findPart(this, "MainLever1");
         this.MainLever2 = Frame.findPart(this, "MainLever2");
         this.RadNeedle = Frame.findPart(this, "RadNeedle");
+        this.Needle1 = Frame.findPart(this, "Needle1");
+        this.Needle2 = Frame.findPart(this, "Needle2");
     }
 
     @Override
@@ -101,9 +104,11 @@ public class BrachackiConsoleModel extends HierarchicalModel implements ConsoleU
                 this.animate(globalConsoleBlock.powerOff, POWER_OFF, tickCount);
             }
 
-            this.MainLever1.xRot = 27.5f - (27.5f * ((float) reactions.getThrottleStage() / TardisPilotingManager.MAX_THROTTLE_STAGE));
-            this.MainLever2.xRot = reactions.isHandbrakeEngaged() ? 27.5f : -27.5f;
-        //    this.RadNeedle.zRot = -80f + (reactions.getFuel() * 1.8)
+            this.MainLever1.xRot = (float) Math.toDegrees(27.5f - (27.5f * ((float) reactions.getThrottleStage() / TardisPilotingManager.MAX_THROTTLE_STAGE)));
+            this.MainLever2.xRot = (float) Math.toDegrees(reactions.isHandbrakeEngaged() ? 27.5f : -27.5f);
+            this.RadNeedle.zRot = (float) Math.toDegrees(-80 + Mth.clamp(fuelAmount*1.8f, -80, 80));
+            this.Needle1.yRot = (float) Math.toDegrees(80 - Mth.clamp(reactions.getJourneyProgress()*1.8f,-80,80));
+            this.Needle2.yRot = (float) Math.toDegrees(80 - Mth.clamp(reactions.getJourneyProgress()*1.8f,-80,80));
         }
         // Final render call
         root().render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
