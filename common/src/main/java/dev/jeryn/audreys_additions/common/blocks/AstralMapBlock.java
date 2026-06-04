@@ -74,11 +74,29 @@ public class AstralMapBlock extends Block implements EntityBlock {
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
 
         if (level instanceof ServerLevel serverLevel) {
+
             TardisLevelOperator.get(serverLevel).ifPresent(tardisLevelOperator -> {
-                (new S2COpenMonitor(tardisLevelOperator.getInteriorManager().isWaitingToGenerate(), tardisLevelOperator.getPilotingManager().getCurrentLocation(), tardisLevelOperator.getPilotingManager().getTargetLocation(), tardisLevelOperator.getUpgradeHandler(), tardisLevelOperator.getAestheticHandler().getShellTheme())).send((ServerPlayer) player);
+
+                var piloting = tardisLevelOperator.getPilotingManager();
+
+                double amount = 50;
+
+                if (player.isShiftKeyDown()) {
+                    piloting.removeFuel(amount);
+                } else {
+                    piloting.addFuel(amount);
+                }
+
+                new S2COpenMonitor(
+                        tardisLevelOperator.getInteriorManager().isWaitingToGenerate(),
+                        piloting.getCurrentLocation(),
+                        piloting.getTargetLocation(),
+                        tardisLevelOperator.getUpgradeHandler(),
+                        tardisLevelOperator.getAestheticHandler().getShellTheme()
+                ).send((ServerPlayer) player);
             });
         }
 
-        return super.use(state, level, pos, player, hand, hit);
+        return InteractionResult.SUCCESS;
     }
 }

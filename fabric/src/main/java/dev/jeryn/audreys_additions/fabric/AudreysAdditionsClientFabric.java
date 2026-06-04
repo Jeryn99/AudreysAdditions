@@ -18,9 +18,14 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import whocraft.tardis_refined.client.TardisClientData;
+
+import static whocraft.tardis_refined.registry.TRDimensionTypes.TARDIS;
 
 public class AudreysAdditionsClientFabric implements ClientModInitializer {
     @Override
@@ -38,15 +43,47 @@ public class AudreysAdditionsClientFabric implements ClientModInitializer {
         BlockEntityRendererRegistry.register(AudBlockEntities.CABINET.get(), RenderCabinet::new);
 
         ColorProviderRegistry.BLOCK.register((blockState, blockAndTintGetter, blockPos, tintIndex) -> {
-            if (blockAndTintGetter != null && blockPos != null) {
-                BlockEntity blockEntity = blockAndTintGetter.getBlockEntity(blockPos);
-                if (blockEntity instanceof DyeableBlockEntity chairBlockEntity) {
-                    return chairBlockEntity.getColour();
-                }
-            }
-            return blockState.getBlock() == AudBlocks.ARMCHAIR.get() ? DyeColor.RED.getTextColor() : DyeColor.WHITE.getTextColor();
-        }, AudBlocks.ARMCHAIR.get(), AudBlocks.ROUNDEL_OVERLAY_FULL.get(), AudBlocks.ROUNDEL_OVERLAY_HALF.get());
+                    if (blockAndTintGetter != null && blockPos != null) {
+                        BlockEntity blockEntity = blockAndTintGetter.getBlockEntity(blockPos);
 
+                        if (blockEntity instanceof DyeableBlockEntity chairBlockEntity) {
+
+                            if (blockEntity.getLevel() != null &&
+                                    blockEntity.getLevel().dimensionTypeId() == TARDIS) {
+
+                                ResourceKey<Level> dimKey = blockEntity.getLevel().dimension();
+                                TardisClientData data = TardisClientData.getInstance(dimKey);
+                                double fuel = data.getFuel();
+
+                                int color = chairBlockEntity.getColour();
+
+                                if (fuel < 500) {
+                                    int steps = (int) ((500 - fuel) / 10);
+                                    steps = Math.min(steps, 50);
+
+                                    float factor = 1.0f - (steps * 0.02f);
+                                    factor = Math.max(0.2f, factor);
+
+                                    int r = (int) (((color >> 16) & 0xFF) * factor);
+                                    int g = (int) (((color >> 8) & 0xFF) * factor);
+                                    int b = (int) ((color & 0xFF) * factor);
+
+                                    color = (r << 16) | (g << 8) | b;
+                                }
+                                chairBlockEntity.getLevel().updateNeighborsAt(blockPos, blockState.getBlock());
+                                return color;
+                            }
+
+                            return chairBlockEntity.getColour();
+                        }
+                    }
+
+                    return blockState.getBlock() == AudBlocks.ARMCHAIR.get()
+                            ? DyeColor.RED.getTextColor()
+                            : DyeColor.WHITE.getTextColor();
+                }, AudBlocks.ARMCHAIR.get(),
+                AudBlocks.ROUNDEL_OVERLAY_FULL.get(),
+                AudBlocks.ROUNDEL_OVERLAY_HALF.get());
 
         for (Item item : BuiltInRegistries.ITEM) {
             if(item instanceof DyedItemBlock dyedItemBlock){
