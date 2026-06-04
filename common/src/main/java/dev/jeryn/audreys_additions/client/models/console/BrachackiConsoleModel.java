@@ -16,6 +16,9 @@ import whocraft.tardis_refined.client.TardisClientData;
 import whocraft.tardis_refined.client.model.blockentity.console.ConsoleUnit;
 import whocraft.tardis_refined.common.block.console.GlobalConsoleBlock;
 import whocraft.tardis_refined.common.blockentity.console.GlobalConsoleBlockEntity;
+import whocraft.tardis_refined.common.tardis.manager.TardisPilotingManager;
+
+import static net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity.getFuel;
 
 public class BrachackiConsoleModel extends HierarchicalModel implements ConsoleUnit {
 
@@ -25,10 +28,18 @@ public class BrachackiConsoleModel extends HierarchicalModel implements ConsoleU
     public static final AnimationDefinition POWER_ON = Frame.loadAnimation(new ResourceLocation(AudreysAdditions.MODID, "frame/console/brachacki/power_on.json"));
     public static final AnimationDefinition POWER_OFF = Frame.loadAnimation(new ResourceLocation(AudreysAdditions.MODID, "frame/console/brachacki/power_off.json"));
 
+
+
     private final ModelPart root;
+    private final ModelPart MainLever1;
+    private final ModelPart MainLever2;
+    private final ModelPart RadNeedle;
 
     public BrachackiConsoleModel(ModelPart root) {
         this.root = root;
+        this.MainLever1 = Frame.findPart(this, "MainLever1");
+        this.MainLever2 = Frame.findPart(this, "MainLever2");
+        this.RadNeedle = Frame.findPart(this, "RadNeedle");
     }
 
     @Override
@@ -46,6 +57,9 @@ public class BrachackiConsoleModel extends HierarchicalModel implements ConsoleU
         // Store tick count for later use
         int playerTicks = Minecraft.getInstance().player.tickCount;
         float tickCount = playerTicks + Minecraft.getInstance().getFrameTime();
+
+        double fuelDouble = getFuel();
+        float fuelAmount = (float) fuelDouble ;
 
         TardisClientData reactions = TardisClientData.getInstance(level.dimension());
         if (globalConsoleBlock != null) {
@@ -83,6 +97,10 @@ public class BrachackiConsoleModel extends HierarchicalModel implements ConsoleU
                 root().getAllParts().forEach(ModelPart::resetPose);
                 this.animate(globalConsoleBlock.powerOff, POWER_OFF, tickCount);
             }
+
+            this.MainLever1.xRot = 27.5f - (27.5f * ((float) reactions.getThrottleStage() / TardisPilotingManager.MAX_THROTTLE_STAGE));
+            this.MainLever2.xRot = reactions.isHandbrakeEngaged() ? 27.5f : -27.5f;
+        //    this.RadNeedle.zRot = -80f + (reactions.getFuel() * 1.8)
         }
         // Final render call
         root().render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);

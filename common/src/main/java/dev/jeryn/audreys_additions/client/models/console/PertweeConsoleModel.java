@@ -91,6 +91,7 @@ public class PertweeConsoleModel extends HierarchicalModel implements ConsoleUni
                 root().getAllParts().forEach(ModelPart::resetPose);
                 this.animate(globalConsoleBlock.powerOff, POWER_OFF, tickCount);
             }
+
         }
 
         // Final render call
