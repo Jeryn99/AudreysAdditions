@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:bamboo_block"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "minecraft:smooth_stone_slab"
+    }
+  },
+  "pattern": [
+    "SSS",
+    " B ",
+    "STS"
+  ],
+  "result": {
+    "item": "audreys_additions:hatstand_bamboo"
+  },
+  "show_notification": true
+}

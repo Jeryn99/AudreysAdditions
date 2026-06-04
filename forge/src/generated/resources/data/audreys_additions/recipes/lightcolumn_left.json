@@ -13,9 +13,9 @@
     }
   },
   "pattern": [
-    "   ",
-    "QGL",
-    "   "
+    "  Q",
+    " G ",
+    "L  "
   ],
   "result": {
     "item": "audreys_additions:lightcolumn_left"

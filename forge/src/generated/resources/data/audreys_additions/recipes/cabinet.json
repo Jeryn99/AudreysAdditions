@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "S": {
+      "item": "minecraft:smooth_stone_slab"
+    }
+  },
+  "pattern": [
+    "PPP",
+    "P P",
+    "SSS"
+  ],
+  "result": {
+    "item": "audreys_additions:cabinet"
+  },
+  "show_notification": true
+}

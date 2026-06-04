@@ -22,8 +22,8 @@ public class AudRecipeProvider extends RecipeProvider {
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.BRACHACKI_MONITOR.get()).pattern("QRQ").pattern("QGQ").pattern("QZQ").define('Q', Blocks.QUARTZ_BLOCK).define('G', Blocks.GRAY_STAINED_GLASS).define('R', Blocks.REDSTONE_WIRE).define('Z', TRItemRegistry.ZEITON_INGOT.get()).unlockedBy("has_crafting_table", has(TRBlockRegistry.ASTRAL_MANIPULATOR_BLOCK.get())).save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.LIMINTON_MONITOR.get()).pattern("QRQ").pattern("QGQ").pattern("QZQ").define('Q', Blocks.DARK_OAK_PLANKS).define('G', Blocks.GRAY_STAINED_GLASS).define('R', Blocks.REDSTONE_WIRE).define('Z', TRItemRegistry.ZEITON_INGOT.get()).unlockedBy("has_crafting_table", has(TRBlockRegistry.ASTRAL_MANIPULATOR_BLOCK.get())).save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.CEILING_CANOPY.get()).pattern("QQQ").pattern("CLC").pattern("QQQ").define('Q', Blocks.QUARTZ_BLOCK).define('C', Blocks.CHAIN).define('L', Blocks.REDSTONE_LAMP).unlockedBy("has_crafting_table", has(TRBlockRegistry.ASTRAL_MANIPULATOR_BLOCK.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.LIGHTCOLUMN_RIGHT.get()).pattern("   ").pattern("LGQ").pattern("   ").define('Q', Blocks.QUARTZ_BLOCK).define('G', Blocks.GLASS).define('L', Blocks.REDSTONE_LAMP).unlockedBy("has_crafting_table", has(TRBlockRegistry.ASTRAL_MANIPULATOR_BLOCK.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.LIGHTCOLUMN_LEFT.get()).pattern("   ").pattern("QGL").pattern("   ").define('Q', Blocks.QUARTZ_BLOCK).define('G', Blocks.GLASS).define('L', Blocks.REDSTONE_LAMP).unlockedBy("has_crafting_table", has(TRBlockRegistry.ASTRAL_MANIPULATOR_BLOCK.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.LIGHTCOLUMN_RIGHT.get()).pattern("L  ").pattern(" G ").pattern("  Q").define('Q', Blocks.QUARTZ_BLOCK).define('G', Blocks.GLASS).define('L', Blocks.REDSTONE_LAMP).unlockedBy("has_crafting_table", has(TRBlockRegistry.ASTRAL_MANIPULATOR_BLOCK.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.LIGHTCOLUMN_LEFT.get()).pattern("  Q").pattern(" G ").pattern("L  ").define('Q', Blocks.QUARTZ_BLOCK).define('G', Blocks.GLASS).define('L', Blocks.REDSTONE_LAMP).unlockedBy("has_crafting_table", has(TRBlockRegistry.ASTRAL_MANIPULATOR_BLOCK.get())).save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.FOLD_OUT_BED.get()).pattern("   ").pattern(" RB").pattern("  I").define('B', ItemTags.BEDS).define('R', Blocks.REDSTONE_WIRE).define('I', Items.IRON_INGOT).unlockedBy("has_crafting_table", has(TRBlockRegistry.ASTRAL_MANIPULATOR_BLOCK.get())).save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.KNOSSOS_THRONE.get()).pattern(" P ").pattern(" P ").pattern(" F ").define('P', ItemTags.PLANKS).define('F', ItemTags.FENCES).unlockedBy("has_crafting_table", has(TRBlockRegistry.ASTRAL_MANIPULATOR_BLOCK.get())).save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.ARMCHAIR.get()).pattern(" P ").pattern(" W ").pattern(" F ").define('P', ItemTags.PLANKS).define('W', ItemTags.WOOL).define('F', ItemTags.FENCES).unlockedBy("has_crafting_table", has(TRBlockRegistry.ASTRAL_MANIPULATOR_BLOCK.get())).save(consumer);
@@ -36,6 +36,135 @@ public class AudRecipeProvider extends RecipeProvider {
                 .define('G', Blocks.RED_STAINED_GLASS)
                 .define('S', Blocks.STONE)
                 .unlockedBy("has_glass", has(Blocks.RED_STAINED_GLASS))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.HATSTAND_BIRCH.get())
+                .pattern("SSS")
+                .pattern(" B ")
+                .pattern("STS")
+                .define('S', Items.STICK)
+                .define('B', Blocks.BIRCH_PLANKS)
+                .define('T', Blocks.SMOOTH_STONE_SLAB)
+                .unlockedBy("has_stick", has(Items.STICK))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.HATSTAND_BAMBOO.get())
+                .pattern("SSS")
+                .pattern(" B ")
+                .pattern("STS")
+                .define('S', Items.STICK)
+                .define('B', Blocks.BAMBOO_BLOCK)
+                .define('T', Blocks.SMOOTH_STONE_SLAB)
+                .unlockedBy("has_stick", has(Items.STICK))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.HATSTAND_ACACIA.get())
+                .pattern("SSS")
+                .pattern(" B ")
+                .pattern("STS")
+                .define('S', Items.STICK)
+                .define('B', Blocks.ACACIA_PLANKS)
+                .define('T', Blocks.SMOOTH_STONE_SLAB)
+                .unlockedBy("has_stick", has(Items.STICK))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.HATSTAND_CHERRY.get())
+                .pattern("SSS")
+                .pattern(" B ")
+                .pattern("STS")
+                .define('S', Items.STICK)
+                .define('B', Blocks.CHERRY_PLANKS)
+                .define('T', Blocks.SMOOTH_STONE_SLAB)
+                .unlockedBy("has_stick", has(Items.STICK))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.HATSTAND_CRIMSON.get())
+                .pattern("SSS")
+                .pattern(" B ")
+                .pattern("STS")
+                .define('S', Items.STICK)
+                .define('B', Blocks.CRIMSON_PLANKS)
+                .define('T', Blocks.SMOOTH_STONE_SLAB)
+                .unlockedBy("has_stick", has(Items.STICK))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.HATSTAND_DARK_OAK.get())
+                .pattern("SSS")
+                .pattern(" B ")
+                .pattern("STS")
+                .define('S', Items.STICK)
+                .define('B', Blocks.DARK_OAK_PLANKS)
+                .define('T', Blocks.SMOOTH_STONE_SLAB)
+                .unlockedBy("has_stick", has(Items.STICK))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.HATSTAND_JUNGLE.get())
+                .pattern("SSS")
+                .pattern(" B ")
+                .pattern("STS")
+                .define('S', Items.STICK)
+                .define('B', Blocks.JUNGLE_PLANKS)
+                .define('T', Blocks.SMOOTH_STONE_SLAB)
+                .unlockedBy("has_stick", has(Items.STICK))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.HATSTAND_MANGROVE.get())
+                .pattern("SSS")
+                .pattern(" B ")
+                .pattern("STS")
+                .define('S', Items.STICK)
+                .define('B', Blocks.MANGROVE_PLANKS)
+                .define('T', Blocks.SMOOTH_STONE_SLAB)
+                .unlockedBy("has_stick", has(Items.STICK))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.HATSTAND_OAK.get())
+                .pattern("SSS")
+                .pattern(" B ")
+                .pattern("STS")
+                .define('S', Items.STICK)
+                .define('B', Blocks.OAK_PLANKS)
+                .define('T', Blocks.SMOOTH_STONE_SLAB)
+                .unlockedBy("has_stick", has(Items.STICK))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.HATSTAND_PALE.get())
+                .pattern("SSS")
+                .pattern(" B ")
+                .pattern("STS")
+                .define('S', Items.STICK)
+                .define('B', Blocks.DIORITE)
+                .define('T', Blocks.SMOOTH_STONE_SLAB)
+                .unlockedBy("has_stick", has(Items.STICK))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.HATSTAND_WARPED.get())
+                .pattern("SSS")
+                .pattern(" B ")
+                .pattern("STS")
+                .define('S', Items.STICK)
+                .define('B', Blocks.WARPED_PLANKS)
+                .define('T', Blocks.SMOOTH_STONE_SLAB)
+                .unlockedBy("has_stick", has(Items.STICK))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.HATSTAND_SPRUCE.get())
+                .pattern("SSS")
+                .pattern(" B ")
+                .pattern("STS")
+                .define('S', Items.STICK)
+                .define('B', Blocks.SPRUCE_PLANKS)
+                .define('T', Blocks.SMOOTH_STONE_SLAB)
+                .unlockedBy("has_stick", has(Items.STICK))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.CABINET.get())
+                .pattern("PPP")
+                .pattern("P P")
+                .pattern("SSS")
+                .define('P', ItemTags.PLANKS)
+                .define('S', Blocks.SMOOTH_STONE_SLAB)
+                .unlockedBy("has_planks", has(ItemTags.PLANKS))
                 .save(consumer);
 
 
