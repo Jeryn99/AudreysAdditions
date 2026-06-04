@@ -1,11 +1,13 @@
 package dev.jeryn.audreys_additions.common.blocks;
 
+import dev.jeryn.audreys_additions.common.blockentity.KnossosChairBlockEntity;
 import dev.jeryn.audreys_additions.common.blockentity.cabinet.CabinetBlockEntity;
 import dev.jeryn.audreys_additions.common.blockentity.cabinet.CabinetMenu;
 import dev.jeryn.audreys_additions.common.blockentity.hatstand.HatstandBlockEntity;
 import dev.jeryn.audreys_additions.common.blockentity.hatstand.HatstandMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.MenuProvider;
@@ -13,6 +15,7 @@ import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.EntityBlock;
@@ -23,7 +26,13 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
+import whocraft.tardis_refined.common.util.MiscHelper;
+import whocraft.tardis_refined.common.util.PlayerUtil;
+import whocraft.tardis_refined.registry.TRItemRegistry;
+import whocraft.tardis_refined.registry.TRSoundRegistry;
 
 public class CabinetBlock extends HorizontalDirectionalBlock implements EntityBlock {
 
@@ -53,12 +62,38 @@ public class CabinetBlock extends HorizontalDirectionalBlock implements EntityBl
     }
 
     @Override
-    public InteractionResult use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
-        if (level.isClientSide) {
-            return InteractionResult.SUCCESS;
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        // Only handle main hand interactions
+        if (hand != InteractionHand.MAIN_HAND) {
+            return super.use(state, level, pos, player, hand, hit);
         }
-        player.openMenu(blockState.getMenuProvider(level, blockPos));
-        return InteractionResult.CONSUME;
+
+        // Check if the block at the position is a ChairBlockEntity
+        if (!(level.getBlockEntity(pos) instanceof CabinetBlockEntity cabinetBlock)) {
+            return super.use(state, level, pos, player, hand, hit);
+        }
+
+        // Handle Pattern Manipulator usage
+        if (player.getMainHandItem().getItem() == TRItemRegistry.PATTERN_MANIPULATOR.get()) {
+            if (player.getCooldowns().isOnCooldown(TRItemRegistry.PATTERN_MANIPULATOR.get()))
+                return InteractionResult.CONSUME;
+            cabinetBlock.cycleVariant();
+            PlayerUtil.sendMessage(player, Component.translatable(MiscHelper.getCleanName(cabinetBlock.getCurrentVariant())), true);
+            level.playSound(player, pos, TRSoundRegistry.PATTERN_MANIPULATOR.get(), SoundSource.BLOCKS, 1.0F, 1.0F);
+            player.getCooldowns().addCooldown(TRItemRegistry.PATTERN_MANIPULATOR.get(), 20);
+            return InteractionResult.SUCCESS;
+        } else {
+            if (level.isClientSide) {
+                return InteractionResult.SUCCESS;
+            }
+            player.openMenu(state.getMenuProvider(level, pos));
+            return InteractionResult.CONSUME;
+        }
+    }
+
+    @Override
+    public VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {
+        return super.getShape(blockState, blockGetter, blockPos, collisionContext);
     }
 
     @Override

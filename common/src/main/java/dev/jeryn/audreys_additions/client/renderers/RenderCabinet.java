@@ -32,7 +32,8 @@ public class RenderCabinet implements BlockEntityRenderer<CabinetBlockEntity>, B
         BlockState blockstate = blockEntity.getBlockState();
         poseStack.mulPose(Axis.ZP.rotationDegrees(180));
         poseStack.mulPose(Axis.YP.rotationDegrees(blockstate.getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot()));
-        ResourceLocation texture = new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/cabinet/"+ "cabinet" +".png");
+        String variant = blockEntity.getCurrentVariant();
+        ResourceLocation texture = new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/cabinet/"+ variant +".png");
         cabinet.renderToBuffer(poseStack, bufferSource.getBuffer(RenderType.entityTranslucent(texture)), packedLight, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
         poseStack.popPose();
     }

@@ -11,6 +11,9 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class CabinetBlockEntity extends BlockEntity {
 
     private final SimpleContainer inventory = new SimpleContainer(8) {
@@ -20,13 +23,61 @@ public class CabinetBlockEntity extends BlockEntity {
         }
     };
 
-    public CabinetBlockEntity(BlockPos pos, BlockState state) {
-        super(AudBlockEntities.CABINET.get(), pos, state);
-    }
+    private String currentVariant;
+
+    private static final List<String> VARIANTS = Arrays.asList(
+            "cabinet",
+            "cabinet_acacia",
+            "cabinet_bamboo",
+            "cabinet_birch",
+            "cabinet_cherry",
+            "cabinet_crimson",
+            "cabinet_dark_oak",
+            "cabinet_jungle",
+            "cabinet_mangrove",
+            "cabinet_oak",
+            "cabinet_spruce",
+            "cabinet_warped"
+    );
+
+    public CabinetBlockEntity(BlockPos blockPos, BlockState blockState) {
+        super(AudBlockEntities.CABINET.get(), blockPos, blockState);
+        this.currentVariant = VARIANTS.get(0);
+}
 
     @Override
     public ClientboundBlockEntityDataPacket getUpdatePacket() {
         return ClientboundBlockEntityDataPacket.create(this);
+    }
+
+
+    public String getCurrentVariant() {
+        return currentVariant;
+    }
+
+    public void cycleVariant() {
+        int currentIndex = VARIANTS.indexOf(currentVariant);
+        int nextIndex = (currentIndex + 1) % VARIANTS.size();
+        this.currentVariant = VARIANTS.get(nextIndex);
+        sendUpdates();
+        setChanged();
+    }
+
+    @Override
+    public void saveAdditional(CompoundTag tag) {
+        super.saveAdditional(tag);
+        tag.putString("currentVariant", currentVariant);
+        System.out.println(inventory.createTag());
+        tag.put("items", inventory.createTag());
+    }
+
+    @Override
+    public void load(CompoundTag tag) {
+        super.load(tag);
+        inventory.fromTag(tag.getList("items", Tag.TAG_COMPOUND));
+        if (tag.contains("currentVariant")) {
+            this.currentVariant = tag.getString("currentVariant");
+        }
     }
 
     public void sendUpdates() {
@@ -41,12 +92,6 @@ public class CabinetBlockEntity extends BlockEntity {
         return inventory;
     }
 
-    // --- Save to NBT ---
-    @Override
-    public void load(CompoundTag tag) {
-        super.load(tag);
-        inventory.fromTag(tag.getList("items", Tag.TAG_COMPOUND));
-    }
 
     @Override
     public CompoundTag getUpdateTag() {
@@ -55,10 +100,4 @@ public class CabinetBlockEntity extends BlockEntity {
         return compoundTag;
     }
 
-    @Override
-    public void saveAdditional(CompoundTag tag) {
-        super.saveAdditional(tag);
-        System.out.println(inventory.createTag());
-        tag.put("items", inventory.createTag());
-    }
 }

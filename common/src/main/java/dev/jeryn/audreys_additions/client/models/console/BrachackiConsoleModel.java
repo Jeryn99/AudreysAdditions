@@ -104,11 +104,34 @@ public class BrachackiConsoleModel extends HierarchicalModel implements ConsoleU
                 this.animate(globalConsoleBlock.powerOff, POWER_OFF, tickCount);
             }
 
-            this.MainLever1.xRot = (float) Math.toDegrees(27.5f - (27.5f * ((float) reactions.getThrottleStage() / TardisPilotingManager.MAX_THROTTLE_STAGE)));
-            this.MainLever2.xRot = (float) Math.toDegrees(reactions.isHandbrakeEngaged() ? 27.5f : -27.5f);
-            this.RadNeedle.zRot = (float) Math.toDegrees(-80 + Mth.clamp(fuelAmount*1.8f, -80, 80));
-            this.Needle1.yRot = (float) Math.toDegrees(80 - Mth.clamp(reactions.getJourneyProgress()*1.8f,-80,80));
-            this.Needle2.yRot = (float) Math.toDegrees(80 - Mth.clamp(reactions.getJourneyProgress()*1.8f,-80,80));
+            float progress = Mth.clamp(reactions.getJourneyProgress(), 0.0F, 100.0F);
+            float intermediary = (float)reactions.getFuel()/1000;
+            float fyool = Mth.clamp(intermediary*160 -80,-80,80);
+
+            if(reactions.getThrottleStage() == 0){
+              this.MainLever1.xRot = (float) Math.toRadians(30);
+            }
+            if(reactions.getThrottleStage() == 1){
+                this.MainLever1.xRot = (float) Math.toRadians(20);
+            }
+            if(reactions.getThrottleStage() == 2){
+                this.MainLever1.xRot = (float) Math.toRadians(10);
+            }
+            if(reactions.getThrottleStage() == 3){
+                this.MainLever1.xRot = (float) Math.toRadians(-10);
+            }
+            if(reactions.getThrottleStage() == 4){
+                this.MainLever1.xRot = (float) Math.toRadians(-20);
+            }
+            if(reactions.getThrottleStage() == 5){
+                this.MainLever1.xRot = (float) Math.toRadians(-30);
+            }
+
+            this.MainLever2.xRot = (float) Math.toRadians(reactions.isHandbrakeEngaged() ? 30 : -30);
+            this.RadNeedle.zRot = (float) Math.toRadians(fyool);
+
+            this.Needle1.yRot = (float) Math.toRadians(-80.0F + (progress * 160.0F / 100.0F));
+            this.Needle2.yRot = (float) Math.toRadians(-80.0F + (progress * 160.0F / 100.0F));
         }
         // Final render call
         root().render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
