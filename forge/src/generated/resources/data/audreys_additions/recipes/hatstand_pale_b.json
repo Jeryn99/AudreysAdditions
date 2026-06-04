@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:oak_planks"
+    },
+    "D": {
+      "item": "minecraft:white_dye"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "minecraft:smooth_stone_slab"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "DB ",
+    "STS"
+  ],
+  "result": {
+    "item": "audreys_additions:hatstand_pale"
+  },
+  "show_notification": true
+}

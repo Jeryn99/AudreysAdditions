@@ -46,6 +46,18 @@ public class AudBlocksModelProvider extends BlockStateProvider {
                     continue;
                 }
 
+                if(value == AudBlocks.TREATED_LIGHTCOLUMN_RIGHT.get()){
+                    ResourceLocation leftColumn = new ResourceLocation(AudreysAdditions.MODID, "block/treated_lightcolumn_right");
+                    threeDeeRotating(value, leftColumn);
+                    continue;
+                }
+
+                if(value == AudBlocks.TREATED_LIGHTCOLUMN_LEFT.get()){
+                    ResourceLocation leftColumn = new ResourceLocation(AudreysAdditions.MODID, "block/treated_lightcolumn_left");
+                    threeDeeRotating(value, leftColumn);
+                    continue;
+                }
+
                 if(value == AudBlocks.ARMCHAIR.get()){
                     ResourceLocation armChairModel = new ResourceLocation(AudreysAdditions.MODID, "block/armchair");
                     threeDeeRotating(value, armChairModel);

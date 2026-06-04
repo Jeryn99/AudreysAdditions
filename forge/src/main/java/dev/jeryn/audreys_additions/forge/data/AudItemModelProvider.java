@@ -24,6 +24,8 @@ public class AudItemModelProvider extends ItemModelProvider {
         basicItem(AudBlocks.FOOD_MACHINE.getId());
         basicItem(AudItems.FOOD_CUBE.getId());
         blockItem(AudBlocks.LIGHTCOLUMN_LEFT.getId());
+        blockItem(AudBlocks.TREATED_LIGHTCOLUMN_LEFT.getId());
+        blockItem(AudBlocks.TREATED_LIGHTCOLUMN_RIGHT.getId());
         blockItem(AudBlocks.BRACHACKI_MONITOR.getId());
         blockItem(AudBlocks.LIGHTCOLUMN_RIGHT.getId());
         blockItem(AudBlocks.ARMCHAIR.getId());

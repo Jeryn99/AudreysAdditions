@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "audreys_additions:hatstand_pale"
+        "recipe": "audreys_additions:hatstand_pale_d"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "audreys_additions:hatstand_pale"
+      "audreys_additions:hatstand_pale_d"
     ]
   },
   "sends_telemetry_event": false

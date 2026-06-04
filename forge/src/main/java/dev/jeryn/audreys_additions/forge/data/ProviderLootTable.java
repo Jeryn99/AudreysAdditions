@@ -54,6 +54,16 @@ public class ProviderLootTable extends LootTableProvider {
                     continue;
                 }
 
+                if (block == AudBlocks.TREATED_LIGHTCOLUMN_LEFT.get()) {
+                    this.add(block, (block2) -> this.createSinglePropConditionTable(block2, LightBoxBlock.PART, BedPart.HEAD));
+                    continue;
+                }
+
+                if (block == AudBlocks.TREATED_LIGHTCOLUMN_RIGHT.get()) {
+                    this.add(block, (block2) -> this.createSinglePropConditionTable(block2, LightBoxBlock.PART, BedPart.HEAD));
+                    continue;
+                }
+
                 this.dropSelf(block);
             }
 

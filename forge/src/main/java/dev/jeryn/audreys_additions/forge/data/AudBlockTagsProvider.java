@@ -32,6 +32,8 @@ public class AudBlockTagsProvider extends BlockTagsProvider {
                         AudBlocks.FOOD_MACHINE.get(),
                         AudBlocks.LIGHTCOLUMN_LEFT.get(),
                         AudBlocks.LIGHTCOLUMN_RIGHT.get(),
+                        AudBlocks.TREATED_LIGHTCOLUMN_LEFT.get(),
+                        AudBlocks.TREATED_LIGHTCOLUMN_RIGHT.get(),
                         AudBlocks.ASTRAL_MAP.get(),
                         AudBlocks.CEILING_CANOPY.get(),
                         AudBlocks.BRACHACKI_MONITOR.get(),
