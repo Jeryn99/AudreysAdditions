@@ -8,6 +8,7 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
 import whocraft.tardis_refined.common.tardis.themes.ShellTheme;
+import dev.jeryn.audreys_additions.ModMessages;
 
 public class AUDEnglish extends LanguageProvider {
 
@@ -47,6 +48,8 @@ public class AUDEnglish extends LanguageProvider {
         add(AudBlocks.CEILING_CANOPY.get(), "Ceiling Canopy");
         add(AudBlocks.FOLD_OUT_BED.get(), "Foldout Bed");
 
+        add(ModMessages.TOOLTIP_SPECIMEN_JAR_DESCRIPTION, ChatFormatting.GRAY + "Pickled in time...");
+
         add(AudBlocks.SPECIMEN_JAR.get(), "Specimen Jar");
         add(AudBlocks.SPECIMEN_JAR_ALLAY.get(), "Specimen Jar (" + ChatFormatting.AQUA + "Allay" + ChatFormatting.RESET + ")");
         add(AudBlocks.SPECIMEN_JAR_CREEPER.get(), "Specimen Jar (" + ChatFormatting.GREEN + "Creeper" + ChatFormatting.RESET + ")");
@@ -67,6 +70,10 @@ public class AUDEnglish extends LanguageProvider {
         add(AudBlocks.TREATED_CHISELED_ZEITON_QUARTZ_BLOCK.get(), "Treated Chiseled Zeiton Quartz Block");
         add(AudBlocks.ZEITON_QUARTZ_BRICKS.get(), "Zeiton Quartz Bricks");
         add(AudBlocks.TREATED_ZEITON_QUARTZ_BRICKS.get(), "Treated Zeiton Quartz Bricks");
+        add(AudBlocks.ZEITON_QUARTZ_DOOR.get(), "Zeiton Quartz Door");
+        add(AudBlocks.TREATED_ZEITON_QUARTZ_DOOR.get(), "Treated Zeiton Quartz Door");
+        add(AudBlocks.CABINET.get(), "TARDIS Cabinet");
+
 
         add(AudItems.FOOD_CUBE.get(), "Food Cube");
 

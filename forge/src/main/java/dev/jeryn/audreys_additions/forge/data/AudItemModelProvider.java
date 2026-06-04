@@ -39,6 +39,23 @@ public class AudItemModelProvider extends ItemModelProvider {
         basicItem(AudBlocks.SPECIMEN_JAR_WITHERSKELETON.getId());
         basicItem(AudBlocks.SPECIMEN_JAR_ZOMBIE.getId());
 
+        basicItem(AudBlocks.HATSTAND_ACACIA.getId());
+        basicItem(AudBlocks.HATSTAND_BAMBOO.getId());
+        basicItem(AudBlocks.HATSTAND_BIRCH.getId());
+        basicItem(AudBlocks.HATSTAND_CHERRY.getId());
+        basicItem(AudBlocks.HATSTAND_CRIMSON.getId());
+        basicItem(AudBlocks.HATSTAND_DARK_OAK.getId());
+        basicItem(AudBlocks.HATSTAND_JUNGLE.getId());
+        basicItem(AudBlocks.HATSTAND_MANGROVE.getId());
+        basicItem(AudBlocks.HATSTAND_OAK.getId());
+        basicItem(AudBlocks.HATSTAND_PALE.getId());
+        basicItem(AudBlocks.HATSTAND_SPRUCE.getId());
+        basicItem(AudBlocks.HATSTAND_WARPED.getId());
+        basicItem(AudBlocks.TREATED_ZEITON_QUARTZ_DOOR.getId());
+        basicItem(AudBlocks.ZEITON_QUARTZ_DOOR.getId());
+
+        basicItem(AudBlocks.CABINET.getId());
+
         blockItem(AudBlocks.ZEITON_QUARTZ_BLOCK.getId());
         blockItem(AudBlocks.ZEITON_QUARTZ_STAIRS.getId());
         blockItem(AudBlocks.ZEITON_QUARTZ_SLAB.getId());

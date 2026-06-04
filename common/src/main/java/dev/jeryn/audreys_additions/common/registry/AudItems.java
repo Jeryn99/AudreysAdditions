@@ -4,6 +4,7 @@ import dev.jeryn.audreys_additions.AudreysAdditions;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import whocraft.tardis_refined.registry.DeferredRegistry;
 import whocraft.tardis_refined.registry.RegistrySupplier;
 
@@ -20,6 +21,7 @@ public class AudItems {
     public static List<RegistrySupplier<Item>> TAB_ITEMS = new ArrayList();
 
     public static final RegistrySupplier<Item> FOOD_CUBE = register("food_cube", () -> new Item((new Item.Properties().food(new FoodProperties.Builder().nutrition(1).saturationMod(0.1F).build()))), true);
+
 
 
     private static <T extends Item> RegistrySupplier<T> register(String id, Supplier<T> itemSupplier, boolean addToTab) {

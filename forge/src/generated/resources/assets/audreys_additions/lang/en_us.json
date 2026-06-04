@@ -2,6 +2,7 @@
   "block.audreys_additions.armchair": "Armchair",
   "block.audreys_additions.astral_map": "Astral Map",
   "block.audreys_additions.brachacki_monitor": "Brachacki Monitor",
+  "block.audreys_additions.cabinet": "TARDIS Cabinet",
   "block.audreys_additions.ceiling_canopy": "Ceiling Canopy",
   "block.audreys_additions.chiseled_zeiton_quartz_block": "Chiseled Zeiton Quartz Block",
   "block.audreys_additions.fold_out_bed": "Foldout Bed",
@@ -38,8 +39,10 @@
   "block.audreys_additions.specimen_jar_zombie": "Specimen Jar (§2Zombie§r)",
   "block.audreys_additions.treated_chiseled_zeiton_quartz_block": "Treated Chiseled Zeiton Quartz Block",
   "block.audreys_additions.treated_zeiton_quartz_bricks": "Treated Zeiton Quartz Bricks",
+  "block.audreys_additions.treated_zeiton_quartz_door": "Treated Zeiton Quartz Door",
   "block.audreys_additions.zeiton_quartz_block": "Zeiton Quartz Block",
   "block.audreys_additions.zeiton_quartz_bricks": "Zeiton Quartz Bricks",
+  "block.audreys_additions.zeiton_quartz_door": "Zeiton Quartz Door",
   "block.audreys_additions.zeiton_quartz_pillar": "Zeiton Quartz Pillar",
   "block.audreys_additions.zeiton_quartz_slab": "Zeiton Quartz Slab",
   "block.audreys_additions.zeiton_quartz_stairs": "Zeiton Quartz Stairs",
@@ -62,5 +65,6 @@
   "shell.audreys_additions.sidrat": "§9SIDRAT",
   "shell.audreys_additions.telephone_booth": "§9Telephone Booth",
   "shell.audreys_additions.trakenclock": "§9Traken Clock",
-  "shell.audreys_additions.tt_capsule": "§9TT Capsule"
+  "shell.audreys_additions.tt_capsule": "§9TT Capsule",
+  "tooltip.audreys_additions.specimen_jar_description": "§7Pickled in time..."
 }
