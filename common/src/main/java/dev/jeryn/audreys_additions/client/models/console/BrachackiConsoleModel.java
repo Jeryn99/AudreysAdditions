@@ -58,10 +58,13 @@ public class BrachackiConsoleModel extends HierarchicalModel implements ConsoleU
         int playerTicks = Minecraft.getInstance().player.tickCount;
         float tickCount = playerTicks + Minecraft.getInstance().getFrameTime();
 
-        double fuelDouble = getFuel();
-        float fuelAmount = (float) fuelDouble ;
+
 
         TardisClientData reactions = TardisClientData.getInstance(level.dimension());
+
+        double fuelDouble = reactions.getFuel();
+        float fuelAmount = (float) fuelDouble ;
+     
         if (globalConsoleBlock != null) {
             // Booting logic
             if (powered) {
