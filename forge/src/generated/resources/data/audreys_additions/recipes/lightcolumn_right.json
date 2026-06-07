@@ -9,7 +9,7 @@
       "item": "minecraft:redstone_lamp"
     },
     "Q": {
-      "item": "audreys_additions:zeiton_quartz_block"
+      "tag": "audreys_additions:zeiton_blocks"
     }
   },
   "pattern": [

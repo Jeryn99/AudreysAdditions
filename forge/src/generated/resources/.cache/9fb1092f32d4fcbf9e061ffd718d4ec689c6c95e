@@ -1,4 +1,4 @@
-// 1.20.1	2026-06-04T18:09:58.1091124	Recipes
+// 1.20.1	2026-06-06T18:44:41.0343482	Recipes
 6c2844f05ad2320cbc6d5553485d58ca99107d5f data/audreys_additions/advancements/recipes/decorations/armchair.json
 02b52a9457d3138207efe68c515164a83f1cc475 data/audreys_additions/advancements/recipes/decorations/astral_map.json
 918a413e2bf65d3690e56dd42e9db58f4fd9beb8 data/audreys_additions/advancements/recipes/decorations/brachacki_monitor.json
@@ -58,7 +58,7 @@ f12ee75c027d40d37e73baa6e668b41ce4103f55 data/audreys_additions/recipes/hatstand
 c217cf151ecb6a7837b1870cc3ed4123483864cb data/audreys_additions/recipes/hatstand_warped.json
 b4e6f091b2c1fc062ccf4b7659599824dc274207 data/audreys_additions/recipes/knossos_throne.json
 4fb029c247a4a524de47f8762ea5f25d926507e0 data/audreys_additions/recipes/lightcolumn_left.json
-2b93e7af3eb0536f312faaacd796c6d29edc8f17 data/audreys_additions/recipes/lightcolumn_right.json
+17403464b2cf6e85694f494962c29e6a8cda2eba data/audreys_additions/recipes/lightcolumn_right.json
 4f2981af170badce5f2095f1423d91d1499d9de3 data/audreys_additions/recipes/liminton_monitor.json
 d9fc776b5011555ef3ffd92e2f2c5819cc42e177 data/audreys_additions/recipes/specimen_jar.json
 72efbdb962e7012ae0a01f8570ca17bc456c22e0 data/audreys_additions/recipes/specimen_jar_creeper.json

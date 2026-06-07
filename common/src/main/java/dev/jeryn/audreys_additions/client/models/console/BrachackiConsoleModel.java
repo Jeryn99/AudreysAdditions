@@ -127,7 +127,7 @@ public class BrachackiConsoleModel extends HierarchicalModel implements ConsoleU
                 this.MainLever1.xRot = (float) Math.toRadians(-30);
             }
 
-            this.MainLever2.xRot = (float) Math.toRadians(reactions.isHandbrakeEngaged() ? 30 : -30);
+            this.MainLever2.xRot = (float) Math.toRadians(reactions.isHandbrakeEngaged() ? -30 : 30);
             this.RadNeedle.zRot = (float) Math.toRadians(fyool);
 
             this.Needle1.yRot = (float) Math.toRadians(-80.0F + (progress * 160.0F / 100.0F));

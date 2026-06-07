@@ -106,7 +106,6 @@ public class RoundelOverlayBlock extends BaseEntityBlock {
         level.setBlock(pos, state, 8);
         level.scheduleTick(pos, this, 20);
         level.getChunkSource().updateChunkForced(new ChunkPos(pos.getX(), pos.getZ()), true);
-        System.out.println("updated!");
     }
 
     private boolean hasFaces(BlockState state) {

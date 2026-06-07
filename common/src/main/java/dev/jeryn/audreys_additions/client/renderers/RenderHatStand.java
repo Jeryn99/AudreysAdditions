@@ -138,6 +138,43 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
 
             @Override
             public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+                humanoidModel.head.xRot = (float) Math.toRadians(-42.5);
+                humanoidModel.head.yRot = (float) Math.toRadians(-170);
+                humanoidModel.head.x = (float) 1.5;
+                humanoidModel.head.y = (float) 0.5;
+                humanoidModel.head.z =  -5;
+                humanoidModel.head.xScale = (float)0.75; humanoidModel.head.yScale = (float)0.75; humanoidModel.head.zScale = (float)0.75;
+
+                humanoidModel.leftArm.yRot = (float) Math.toRadians(100);
+                humanoidModel.leftArm.x =  0;
+                humanoidModel.leftArm.y = (float) 2.5;
+                humanoidModel.leftArm.z = (float) 7.5;
+                humanoidModel.leftArm.xScale = (float)0.75; humanoidModel.leftArm.yScale = (float)0.75; humanoidModel.leftArm.zScale = (float)0.75;
+
+                humanoidModel.rightArm.xRot = (float) Math.toRadians(-5);
+                humanoidModel.rightArm.x = (float) 6.5;
+                humanoidModel.rightArm.y = 4;
+                humanoidModel.rightArm.z =  -4;
+                humanoidModel.rightArm.xScale = (float)0.75; humanoidModel.rightArm.yScale = (float)0.75; humanoidModel.rightArm.zScale = (float)0.75;
+
+                humanoidModel.body.xRot = (float) Math.toRadians(-22.5);
+                humanoidModel.body.yRot = (float) Math.toRadians(-47.5);
+                humanoidModel.body.zRot = (float) Math.toRadians(22.5);
+                humanoidModel.body.x =  10;
+                humanoidModel.body.y =  2;
+                humanoidModel.body.xScale = (float)0.75; humanoidModel.body.yScale = (float)0.75; humanoidModel.body.zScale = (float)0.75;
+
+                humanoidModel.leftLeg.yRot = (float) Math.toRadians(47.5);
+                humanoidModel.leftLeg.x = 1;
+                humanoidModel.leftLeg.y =  (float)14.5;
+                humanoidModel.leftLeg.z =  6;
+                humanoidModel.leftLeg.xScale = (float)0.75; humanoidModel.leftLeg.yScale = (float)0.75; humanoidModel.leftLeg.zScale = (float)0.75;
+
+                humanoidModel.rightLeg.yRot = (float) Math.toRadians(5);
+                humanoidModel.rightLeg.x =  -4;
+                humanoidModel.rightLeg.y =  (float)14.5;
+                humanoidModel.rightLeg.z =  -4;
+                humanoidModel.rightLeg.xScale = (float)0.75; humanoidModel.rightLeg.yScale = (float)0.75; humanoidModel.rightLeg.zScale = (float)0.75;
 
             }
         });
@@ -149,7 +186,44 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
 
             @Override
             public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+                humanoidModel.head.xRot = (float) Math.toRadians(-42.5);
+                humanoidModel.head.yRot = (float) Math.toRadians(-170);
+                humanoidModel.head.x = (float) 1.5;
+                humanoidModel.head.y = (float) -2.5;
+                humanoidModel.head.z =  -5;
+                humanoidModel.head.xScale = (float)0.75; humanoidModel.head.yScale = (float)0.75; humanoidModel.head.zScale = (float)0.75;
 
+                humanoidModel.leftArm.yRot = (float) Math.toRadians(100);
+                humanoidModel.leftArm.x =  0;
+                humanoidModel.leftArm.y = (float) -2.5;
+                humanoidModel.leftArm.z = (float) 7.5;
+                humanoidModel.leftArm.xScale = (float)0.75; humanoidModel.leftArm.yScale = (float)0.75; humanoidModel.leftArm.zScale = (float)0.75;
+
+                humanoidModel.rightArm.xRot = (float) Math.toRadians(-5);
+                humanoidModel.rightArm.x = (float) 0.5;
+                humanoidModel.rightArm.y = 4;
+                humanoidModel.rightArm.z = (float) -4.5;
+                humanoidModel.rightArm.xScale = (float)0.75; humanoidModel.rightArm.yScale = (float)0.75; humanoidModel.rightArm.zScale = (float)0.75;
+
+                humanoidModel.body.xRot = (float) Math.toRadians(-22.5);
+                humanoidModel.body.yRot = (float) Math.toRadians(-47.5);
+                humanoidModel.body.zRot = (float) Math.toRadians(22.5);
+                humanoidModel.body.x =  4;
+                humanoidModel.body.y =  5;
+                humanoidModel.body.z = (float) -1.5;
+                humanoidModel.body.xScale = (float)0.75; humanoidModel.body.yScale = (float)0.75; humanoidModel.body.zScale = (float)0.75;
+
+                humanoidModel.leftLeg.yRot = (float) Math.toRadians(47.5);
+                humanoidModel.leftLeg.x = 1;
+                humanoidModel.leftLeg.y =  (float)14.5;
+                humanoidModel.leftLeg.z =  6;
+                humanoidModel.leftLeg.xScale = (float)0.75; humanoidModel.leftLeg.yScale = (float)0.75; humanoidModel.leftLeg.zScale = (float)0.75;
+
+                humanoidModel.rightLeg.yRot = (float) Math.toRadians(5);
+                humanoidModel.rightLeg.x =  -4;
+                humanoidModel.rightLeg.y =  (float)14.5;
+                humanoidModel.rightLeg.z =  -4;
+                humanoidModel.rightLeg.xScale = (float)0.75; humanoidModel.rightLeg.yScale = (float)0.75; humanoidModel.rightLeg.zScale = (float)0.75;
             }
         });
         hatStandJungle = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_JUNGLE), new GenericHatStandModel.Positioner() {
@@ -160,7 +234,41 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
 
             @Override
             public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+                humanoidModel.head.yRot = (float) Math.toRadians(62.5);
+                humanoidModel.head.x = (float) 0.5;
+                humanoidModel.head.y = (float) -2;
+                humanoidModel.head.z =  -1;
+                humanoidModel.head.xScale = (float)0.75; humanoidModel.head.yScale = (float)0.75; humanoidModel.head.zScale = (float)0.75;
 
+                humanoidModel.leftArm.xRot = (float) Math.toRadians(2.5);
+                humanoidModel.leftArm.zRot = (float) Math.toRadians(-2.5);
+                humanoidModel.leftArm.x =  4;
+                humanoidModel.leftArm.y = -1;
+                humanoidModel.leftArm.z = 3;
+                humanoidModel.leftArm.xScale = (float)0.75; humanoidModel.leftArm.yScale = (float)0.75; humanoidModel.leftArm.zScale = (float)0.75;
+
+                humanoidModel.rightArm.zRot = (float) Math.toRadians(22.5);
+                humanoidModel.rightArm.x = -5;
+                humanoidModel.rightArm.y = -1;
+                humanoidModel.rightArm.z = 3;
+                humanoidModel.rightArm.xScale = (float)0.75; humanoidModel.rightArm.yScale = (float)0.75; humanoidModel.rightArm.zScale = (float)0.75;
+
+                humanoidModel.body.xRot = (float) Math.toRadians(-90);
+                humanoidModel.body.yRot = (float) Math.toRadians(17.5);
+                humanoidModel.body.y =  -2;
+                humanoidModel.body.z = (float) 4;
+                humanoidModel.body.xScale = (float)0.75; humanoidModel.body.yScale = (float)0.75; humanoidModel.body.zScale = (float)0.75;
+
+                humanoidModel.leftLeg.zRot = (float) Math.toRadians(-27.5);
+                humanoidModel.leftLeg.x = 4;
+                humanoidModel.leftLeg.y =  (float)14.5;
+                humanoidModel.leftLeg.xScale = (float)0.75; humanoidModel.leftLeg.yScale = (float)0.75; humanoidModel.leftLeg.zScale = (float)0.75;
+
+                humanoidModel.rightLeg.yRot = (float) Math.toRadians(5);
+                humanoidModel.rightLeg.x =  -8;
+                humanoidModel.rightLeg.y =  (float)14.5;
+                humanoidModel.rightLeg.z =  -3;
+                humanoidModel.rightLeg.xScale = (float)0.75; humanoidModel.rightLeg.yScale = (float)0.75; humanoidModel.rightLeg.zScale = (float)0.75;
             }
         });
         hatStandAcacia = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_ACACIA), new GenericHatStandModel.Positioner() {
@@ -171,7 +279,40 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
 
             @Override
             public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+                humanoidModel.head.xRot = (float) Math.toRadians(90);
+                humanoidModel.head.yRot = (float) Math.toRadians(62.5);
+                humanoidModel.head.x = (float) 3.5;
+                humanoidModel.head.y = (float) -1.5;
+                humanoidModel.head.z =  1;
+                humanoidModel.head.xScale = (float)0.75; humanoidModel.head.yScale = (float)0.75; humanoidModel.head.zScale = (float)0.75;
 
+                humanoidModel.body.xRot = (float) Math.toRadians(-30);
+                humanoidModel.body.y =  15;
+                humanoidModel.body.z = -4;
+                humanoidModel.body.xScale = (float)0.75; humanoidModel.body.yScale = (float)0.75; humanoidModel.body.zScale = (float)0.75;
+
+                humanoidModel.leftArm.zRot = (float) Math.toRadians(-17.5);
+                humanoidModel.leftArm.x =  5;
+                humanoidModel.leftArm.y = 17;
+                humanoidModel.leftArm.z = -4;
+                humanoidModel.leftArm.xScale = (float)0.75; humanoidModel.leftArm.yScale = (float)0.75; humanoidModel.leftArm.zScale = (float)0.75;
+
+                humanoidModel.rightArm.x = -4;
+                humanoidModel.rightArm.y = 17;
+                humanoidModel.rightArm.z = -4;
+                humanoidModel.rightArm.xScale = (float)0.75; humanoidModel.rightArm.yScale = (float)0.75; humanoidModel.rightArm.zScale = (float)0.75;
+
+                humanoidModel.leftLeg.zRot = (float) Math.toRadians(-27.5);
+                humanoidModel.leftLeg.x = 4;
+                humanoidModel.leftLeg.y =  (float)14.5;
+                humanoidModel.leftLeg.z =  2;
+                humanoidModel.leftLeg.xScale = (float)0.75; humanoidModel.leftLeg.yScale = (float)0.75; humanoidModel.leftLeg.zScale = (float)0.75;
+
+                humanoidModel.rightLeg.yRot = (float) Math.toRadians(5);
+                humanoidModel.rightLeg.x =  -8;
+                humanoidModel.rightLeg.y =  (float)14.5;
+                humanoidModel.rightLeg.z =  1;
+                humanoidModel.rightLeg.xScale = (float)0.75; humanoidModel.rightLeg.yScale = (float)0.75; humanoidModel.rightLeg.zScale = (float)0.75;
             }
         });
         hatStandDarkOak = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_DARK_OAK), new GenericHatStandModel.Positioner() {
@@ -182,6 +323,42 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
 
             @Override
             public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+                humanoidModel.head.xRot = (float) Math.toRadians(90);
+                humanoidModel.head.yRot = (float) Math.toRadians(-62.5);
+                humanoidModel.head.x = (float) -3.5;
+                humanoidModel.head.y = (float) -11.5;
+                humanoidModel.head.z =  1;
+                humanoidModel.head.xScale = (float)0.75; humanoidModel.head.yScale = (float)0.75; humanoidModel.head.zScale = (float)0.75;
+
+                humanoidModel.body.xRot = (float) Math.toRadians(7.5);
+                humanoidModel.body.y =  1;
+                humanoidModel.body.z = -5;
+                humanoidModel.body.xScale = (float)0.75; humanoidModel.body.yScale = (float)0.75; humanoidModel.body.zScale = (float)0.75;
+
+                humanoidModel.leftArm.xRot = (float) Math.toRadians(-5);
+                humanoidModel.leftArm.x =  4;
+                humanoidModel.leftArm.y = 1;
+                humanoidModel.leftArm.z = -4;
+                humanoidModel.leftArm.xScale = (float)0.75; humanoidModel.leftArm.yScale = (float)0.75; humanoidModel.leftArm.zScale = (float)0.75;
+
+                humanoidModel.rightArm.xRot = (float) Math.toRadians(-5);
+                humanoidModel.rightArm.x = -4;
+                humanoidModel.rightArm.y = 1;
+                humanoidModel.rightArm.z = -4;
+                humanoidModel.rightArm.xScale = (float)0.75; humanoidModel.rightArm.yScale = (float)0.75; humanoidModel.rightArm.zScale = (float)0.75;
+
+                humanoidModel.leftLeg.yRot = (float) Math.toRadians(60);
+                humanoidModel.leftLeg.x = (float)2.5;
+                humanoidModel.leftLeg.y =  (float)7.5;
+                humanoidModel.leftLeg.z =  (float)1.5;
+                humanoidModel.leftLeg.xScale = (float)0.75; humanoidModel.leftLeg.yScale = (float)0.75; humanoidModel.leftLeg.zScale = (float)0.75;
+
+                humanoidModel.rightLeg.yRot = (float) Math.toRadians(-60);
+                humanoidModel.rightLeg.x =  (float)-2.5;
+                humanoidModel.rightLeg.y =  (float)7.5;
+                humanoidModel.rightLeg.z =  (float)1.5;
+                humanoidModel.rightLeg.xScale = (float)0.75; humanoidModel.rightLeg.yScale = (float)0.75; humanoidModel.rightLeg.zScale = (float)0.75;
+
 
             }
         });
@@ -193,7 +370,40 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
 
             @Override
             public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+                humanoidModel.head.xRot = (float) Math.toRadians(-42.5);
+                humanoidModel.head.yRot = (float) Math.toRadians(-170);
+                humanoidModel.head.x = (float) -4.5;
+                humanoidModel.head.y = (float) -5.5;
+                humanoidModel.head.z =  3;
+                humanoidModel.head.xScale = (float)0.75; humanoidModel.head.yScale = (float)0.75; humanoidModel.head.zScale = (float)0.75;
 
+                humanoidModel.body.y =  (float)-3.5;
+                humanoidModel.body.z = 2;
+                humanoidModel.body.xScale = (float)0.75; humanoidModel.body.yScale = (float)0.75; humanoidModel.body.zScale = (float)0.75;
+
+                humanoidModel.leftArm.zRot = (float) Math.toRadians(-22.5);
+                humanoidModel.leftArm.x = 4;
+                humanoidModel.leftArm.y =  (float)-3.5;
+                humanoidModel.leftArm.z = 3;
+                humanoidModel.leftArm.xScale = (float)0.75; humanoidModel.leftArm.yScale = (float)0.75; humanoidModel.leftArm.zScale = (float)0.75;
+
+                humanoidModel.rightArm.zRot = (float) Math.toRadians(22.5);
+                humanoidModel.rightArm.x = -4;
+                humanoidModel.rightArm.y =  (float)-3.5;
+                humanoidModel.rightArm.z = 3;
+                humanoidModel.rightArm.xScale = (float)0.75; humanoidModel.rightArm.yScale = (float)0.75; humanoidModel.rightArm.zScale = (float)0.75;
+
+                humanoidModel.leftLeg.yRot = (float) Math.toRadians(5);
+                humanoidModel.leftLeg.x = 3;
+                humanoidModel.leftLeg.y = (float)12.5;
+                humanoidModel.leftLeg.z = 3;
+                humanoidModel.leftLeg.xScale = (float)0.75; humanoidModel.leftLeg.yScale = (float)0.75; humanoidModel.leftLeg.zScale = (float)0.75;
+
+                humanoidModel.rightLeg.yRot = (float) Math.toRadians(5);
+                humanoidModel.rightLeg.x = -3;
+                humanoidModel.rightLeg.y = (float)12.5;
+                humanoidModel.rightLeg.z = 3;
+                humanoidModel.rightLeg.xScale = (float)0.75; humanoidModel.leftLeg.yScale = (float)0.75; humanoidModel.leftLeg.zScale = (float)0.75;
             }
         });
         hatStandCherry = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_CHERRY), new GenericHatStandModel.Positioner() {
@@ -204,7 +414,42 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
 
             @Override
             public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+                humanoidModel.head.yRot = (float) Math.toRadians(-45);
+                humanoidModel.head.zRot = (float) Math.toRadians(15);
+                humanoidModel.head.x =  -3;
+                humanoidModel.head.z =  -5;
+                humanoidModel.head.xScale = (float)0.75; humanoidModel.head.yScale = (float)0.75; humanoidModel.head.zScale = (float)0.75;
 
+                humanoidModel.leftArm.xRot = (float) Math.toRadians(2.5);
+                humanoidModel.leftArm.zRot = (float) Math.toRadians(-2.5);
+                humanoidModel.leftArm.x =  4;
+                humanoidModel.leftArm.y = 22;
+                humanoidModel.leftArm.z = 3;
+                humanoidModel.leftArm.xScale = (float)0.75; humanoidModel.leftArm.yScale = (float)0.75; humanoidModel.leftArm.zScale = (float)0.75;
+
+                humanoidModel.rightArm.zRot = (float) Math.toRadians(2.5);
+                humanoidModel.rightArm.x = -5;
+                humanoidModel.rightArm.y = 22;
+                humanoidModel.rightArm.z = 3;
+                humanoidModel.rightArm.xScale = (float)0.75; humanoidModel.rightArm.yScale = (float)0.75; humanoidModel.rightArm.zScale = (float)0.75;
+
+                humanoidModel.body.xRot = (float) Math.toRadians(-90);
+                humanoidModel.body.yRot = (float) Math.toRadians(17.5);
+                humanoidModel.body.y =  22;
+                humanoidModel.body.z = (float) 4;
+                humanoidModel.body.xScale = (float)0.75; humanoidModel.body.yScale = (float)0.75; humanoidModel.body.zScale = (float)0.75;
+
+                humanoidModel.leftLeg.yRot = (float) Math.toRadians(47.5);
+                humanoidModel.leftLeg.x = 1;
+                humanoidModel.leftLeg.y =  (float)10.5;
+                humanoidModel.leftLeg.z =  2;
+                humanoidModel.leftLeg.xScale = (float)0.75; humanoidModel.leftLeg.yScale = (float)0.75; humanoidModel.leftLeg.zScale = (float)0.75;
+
+                humanoidModel.rightLeg.yRot = (float) Math.toRadians(5);
+                humanoidModel.rightLeg.x =  5;
+                humanoidModel.rightLeg.y =  (float)14.5;
+                humanoidModel.rightLeg.z =  -4;
+                humanoidModel.rightLeg.xScale = (float)0.75; humanoidModel.rightLeg.yScale = (float)0.75; humanoidModel.rightLeg.zScale = (float)0.75;
             }
         });
         hatStandPale = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_PALE), new GenericHatStandModel.Positioner() {
@@ -215,7 +460,6 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
 
             @Override
             public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
-                // rotations on Y axis need inverting. positions on X and Y axes need inverting
                 humanoidModel.head.yRot = (float) Math.toRadians(-45);
                 humanoidModel.head.zRot = (float) Math.toRadians(15);
                 humanoidModel.head.x =  -5;
@@ -230,15 +474,12 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
 
                 humanoidModel.leftArm.yRot = (float) Math.toRadians(-72.5);
                 humanoidModel.leftArm.zRot = (float) Math.toRadians(-5);
-                // this position number. why the fuck does the torso position work off of what i had but the arms need to be special??
-                // note: do not set positions to 0 if you're not using them
                 humanoidModel.leftArm.x =  6;
                 humanoidModel.leftArm.xScale = (float)0.75; humanoidModel.leftArm.yScale = (float)0.75; humanoidModel.leftArm.zScale = (float)0.75;
 
                 humanoidModel.rightArm.xRot = (float) Math.toRadians(-5);
                 humanoidModel.rightArm.yRot = (float) Math.toRadians(0);
                 humanoidModel.rightArm.zRot = (float) Math.toRadians(0);
-                // WHAT IS GOING ON. these positions are not off in the same way every time. i am going insane
                 humanoidModel.rightArm.x =  0;
                 humanoidModel.rightArm.z =  -5;
                 humanoidModel.rightArm.xScale = (float)0.75; humanoidModel.rightArm.yScale = (float)0.75; humanoidModel.rightArm.zScale = (float)0.75;
@@ -247,13 +488,9 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
                 humanoidModel.leftLeg.yRot = (float) Math.toRadians(47.5);
                 humanoidModel.leftLeg.zRot = (float) Math.toRadians(0);
                 humanoidModel.leftLeg.x =  (float)-3.1;
-                // okay. okay. so whenever i access these positions it is adjusting them to be moving relative to 0 0 0 of the model. not relative to its prior position
-                // dumb. Dumb. nothing i cant adjust for but it means that i shouldve just maintained how i was doing things prior
                 humanoidModel.leftLeg.y =  (float)14.5;
                 humanoidModel.leftLeg.z =  -3;
                 humanoidModel.leftLeg.xScale = (float)0.75; humanoidModel.leftLeg.yScale = (float)0.75; humanoidModel.leftLeg.zScale = (float)0.75;
-                // no i was wrong. there's no easy way for me to preview the scale-down transformation in blockbench while still accessing worldspace coords
-                // this shit is so stupid
 
                 humanoidModel.rightLeg.xRot = (float) Math.toRadians(0);
                 humanoidModel.rightLeg.yRot = (float) Math.toRadians(-20);
@@ -272,6 +509,40 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
 
             @Override
             public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+                humanoidModel.head.yRot = (float) Math.toRadians(-45);
+                humanoidModel.head.zRot = (float) Math.toRadians(-45);
+                humanoidModel.head.x =  1;
+                humanoidModel.head.y =  -17;
+                humanoidModel.head.z =  1;
+                humanoidModel.head.xScale = (float)0.75; humanoidModel.head.yScale = (float)0.75; humanoidModel.head.zScale = (float)0.75;
+
+                humanoidModel.body.xRot = (float) Math.toRadians(-30);
+                humanoidModel.body.y =  13;
+                humanoidModel.body.z = -4;
+                humanoidModel.body.xScale = (float)0.75; humanoidModel.body.yScale = (float)0.75; humanoidModel.body.zScale = (float)0.75;
+
+                humanoidModel.leftArm.zRot = (float) Math.toRadians(-17.5);
+                humanoidModel.leftArm.x =  5;
+                humanoidModel.leftArm.y = 15;
+                humanoidModel.leftArm.z = -4;
+                humanoidModel.leftArm.xScale = (float)0.75; humanoidModel.leftArm.yScale = (float)0.75; humanoidModel.leftArm.zScale = (float)0.75;
+
+                humanoidModel.rightArm.x = -4;
+                humanoidModel.rightArm.y = 15;
+                humanoidModel.rightArm.z = -4;
+                humanoidModel.rightArm.xScale = (float)0.75; humanoidModel.rightArm.yScale = (float)0.75; humanoidModel.rightArm.zScale = (float)0.75;
+
+                humanoidModel.leftLeg.zRot = (float) Math.toRadians(-27.5);
+                humanoidModel.leftLeg.x = 4;
+                humanoidModel.leftLeg.y =  (float)12.5;
+                humanoidModel.leftLeg.z =  2;
+                humanoidModel.leftLeg.xScale = (float)0.75; humanoidModel.leftLeg.yScale = (float)0.75; humanoidModel.leftLeg.zScale = (float)0.75;
+
+                humanoidModel.rightLeg.yRot = (float) Math.toRadians(5);
+                humanoidModel.rightLeg.x =  -10;
+                humanoidModel.rightLeg.y =  (float)14.5;
+                humanoidModel.rightLeg.z =  1;
+                humanoidModel.rightLeg.xScale = (float)0.75; humanoidModel.rightLeg.yScale = (float)0.75; humanoidModel.rightLeg.zScale = (float)0.75;
 
             }
         });
@@ -283,7 +554,43 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
 
             @Override
             public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+                humanoidModel.head.xRot = (float) Math.toRadians(-42.5);
+                humanoidModel.head.yRot = (float) Math.toRadians(-170);
+                humanoidModel.head.x = (float) -5.5;
+                humanoidModel.head.y = (float) -1;
+                humanoidModel.head.z =  4;
+                humanoidModel.head.xScale = (float)0.75; humanoidModel.head.yScale = (float)0.75; humanoidModel.head.zScale = (float)0.75;
 
+                humanoidModel.body.xRot = (float) Math.toRadians(-45);
+                humanoidModel.body.y =  4;
+                humanoidModel.body.z = 4;
+                humanoidModel.body.xScale = (float)0.75; humanoidModel.body.yScale = (float)0.75; humanoidModel.body.zScale = (float)0.75;
+
+                humanoidModel.leftArm.zRot = (float) Math.toRadians(-17.5);
+                humanoidModel.leftArm.x =  6;
+                humanoidModel.leftArm.y = 4;
+                humanoidModel.leftArm.z = 4;
+                humanoidModel.leftArm.xScale = (float)0.75; humanoidModel.leftArm.yScale = (float)0.75; humanoidModel.leftArm.zScale = (float)0.75;
+
+                humanoidModel.rightArm.zRot = (float) Math.toRadians(17.5);
+                humanoidModel.rightArm.x = -6;
+                humanoidModel.rightArm.y = 4;
+                humanoidModel.rightArm.z = 4;
+                humanoidModel.rightArm.xScale = (float)0.75; humanoidModel.rightArm.yScale = (float)0.75; humanoidModel.rightArm.zScale = (float)0.75;
+
+                humanoidModel.leftLeg.xRot = (float) Math.toRadians(-10);
+                humanoidModel.leftLeg.zRot = (float) Math.toRadians(-90);
+                humanoidModel.leftLeg.x = -5;
+                humanoidModel.leftLeg.y =  (float)19.5;
+                humanoidModel.leftLeg.z = (float) 5.5;
+                humanoidModel.leftLeg.xScale = (float)0.75; humanoidModel.leftLeg.yScale = (float)0.75; humanoidModel.leftLeg.zScale = (float)0.75;
+
+                humanoidModel.rightLeg.xRot = (float) Math.toRadians(10);
+                humanoidModel.rightLeg.zRot = (float) Math.toRadians(-90);
+                humanoidModel.rightLeg.x = -5;
+                humanoidModel.rightLeg.y =  (float)15.5;
+                humanoidModel.rightLeg.z = (float) 3.5;
+                humanoidModel.rightLeg.xScale = (float)0.75; humanoidModel.leftLeg.yScale = (float)0.75; humanoidModel.leftLeg.zScale = (float)0.75;
             }
         });
         hatStandWarped = new GenericHatStandModel(context.bakeLayer(AUDModelRegistry.HATSTAND_WARPED), new GenericHatStandModel.Positioner() {
@@ -294,7 +601,43 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
 
             @Override
             public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
+                humanoidModel.head.xRot = (float) Math.toRadians(-42.5);
+                humanoidModel.head.yRot = (float) Math.toRadians(-170);
+                humanoidModel.head.x = (float) 5;
+                humanoidModel.head.y = (float) 3;
+                humanoidModel.head.z = -3;
+                humanoidModel.head.xScale = (float)0.75; humanoidModel.head.yScale = (float)0.75; humanoidModel.head.zScale = (float)0.75;
 
+                humanoidModel.body.xRot = (float) Math.toRadians(-5);
+                humanoidModel.body.yRot = (float) Math.toRadians(90);
+                humanoidModel.body.y = (float) -5;
+                humanoidModel.body.x =  -5;
+                humanoidModel.body.xScale = (float)0.75; humanoidModel.body.yScale = (float)0.75; humanoidModel.body.zScale = (float)0.75;
+
+
+                humanoidModel.leftArm.yRot = (float) Math.toRadians(67.5); //six sevennn
+                humanoidModel.leftArm.x =  -4;
+                humanoidModel.leftArm.y = -6;
+                humanoidModel.leftArm.z = -4;
+                humanoidModel.leftArm.xScale = (float)0.75; humanoidModel.leftArm.yScale = (float)0.75; humanoidModel.leftArm.zScale = (float)0.75;
+
+                humanoidModel.rightArm.yRot = (float) Math.toRadians(-67.5);
+                humanoidModel.rightArm.x =  -3;
+                humanoidModel.rightArm.y = -6;
+                humanoidModel.rightArm.z = 6;
+                humanoidModel.rightArm.xScale = (float)0.75; humanoidModel.rightArm.yScale = (float)0.75; humanoidModel.rightArm.zScale = (float)0.75;
+
+                humanoidModel.leftLeg.yRot = (float) Math.toRadians(47.5);
+                humanoidModel.leftLeg.x = 1;
+                humanoidModel.leftLeg.y =  (float)10.5;
+                humanoidModel.leftLeg.z =  3;
+                humanoidModel.leftLeg.xScale = (float)0.75; humanoidModel.leftLeg.yScale = (float)0.75; humanoidModel.leftLeg.zScale = (float)0.75;
+
+                humanoidModel.rightLeg.yRot = (float) Math.toRadians(5);
+                humanoidModel.rightLeg.x =  6;
+                humanoidModel.rightLeg.y =  (float)14.5;
+                humanoidModel.rightLeg.z =  -5;
+                humanoidModel.rightLeg.xScale = (float)0.75; humanoidModel.rightLeg.yScale = (float)0.75; humanoidModel.rightLeg.zScale = (float)0.75;
             }
         });
     }

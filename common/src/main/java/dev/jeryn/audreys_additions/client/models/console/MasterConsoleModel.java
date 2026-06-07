@@ -9,6 +9,7 @@ import net.minecraft.client.animation.AnimationDefinition;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;
 import whocraft.tardis_refined.TRConfig;
@@ -25,15 +26,25 @@ public class MasterConsoleModel extends HierarchicalModel implements ConsoleUnit
     public static final AnimationDefinition POWER_ON = Frame.loadAnimation(new ResourceLocation(AudreysAdditions.MODID, "frame/console/master/power_on.json"));
     public static final AnimationDefinition POWER_OFF = Frame.loadAnimation(new ResourceLocation(AudreysAdditions.MODID, "frame/console/master/power_off.json"));
 
-    private final ModelPart root, throttle_1, throttle_2, throttle_3, incrementSwitch;
+    private final ModelPart root;
+    private final ModelPart ThrottleSwitch1;
+    private final ModelPart ThrottleSwitch2;
+    private final ModelPart ThrottleSwitch3;
+    private final ModelPart MainLever3;
+    private final ModelPart DematCircy;
+    private final ModelPart MeterArm1;
+    private final ModelPart MeterArm2;
 
     public MasterConsoleModel(ModelPart root) {
         this.root = root;
-        this.throttle_1 = Frame.findPart(this, "ThrottleSwitch1");
-        this.throttle_2 = Frame.findPart(this, "ThrottleSwitch2");
-        this.throttle_3 = Frame.findPart(this, "ThrottleSwitch3");
-        this.incrementSwitch = Frame.findPart(this, "MainLever1");
+        this.ThrottleSwitch1 = Frame.findPart(this, "ThrottleSwitch1");
+        this.ThrottleSwitch2 = Frame.findPart(this, "ThrottleSwitch2");
+        this.ThrottleSwitch3 = Frame.findPart(this, "ThrottleSwitch3");
 
+        this.MainLever3 = Frame.findPart(this, "MainLever3");
+        this.DematCircy = Frame.findPart(this, "DematCircuitHolder");
+        this.MeterArm1 = Frame.findPart(this, "MeterArm1");
+        this.MeterArm2 = Frame.findPart(this, "MeterArm2");
     }
 
     @Override
@@ -54,6 +65,9 @@ public class MasterConsoleModel extends HierarchicalModel implements ConsoleUnit
         TardisClientData reactions = TardisClientData.getInstance(level.dimension());
 
         if (globalConsoleBlock != null) {
+
+            double fuelDouble = reactions.getFuel();
+            float fuelAmount = (float) fuelDouble ;
 
             // Booting logic
             if (powered) {
@@ -90,6 +104,48 @@ public class MasterConsoleModel extends HierarchicalModel implements ConsoleUnit
                 this.animate(globalConsoleBlock.powerOff, POWER_OFF, tickCount);
             }
         }
+
+        float progress = Mth.clamp(reactions.getJourneyProgress(), 0.0F, 100.0F);
+        float intermediary = (float)reactions.getFuel()/1000;
+        float fyool = (float) Mth.clamp(intermediary*3.45-3.45,-3.45,-1);
+
+
+        if(reactions.getThrottleStage() == 0){
+            this.ThrottleSwitch1.xRot = (float) Math.toRadians(0);
+            this.ThrottleSwitch2.xRot = (float) Math.toRadians(0);
+            this.ThrottleSwitch3.xRot = (float) Math.toRadians(0);
+        }
+        if(reactions.getThrottleStage() == 1){
+            this.ThrottleSwitch1.xRot = (float) Math.toRadians(10);
+            this.ThrottleSwitch2.xRot = (float) Math.toRadians(10);
+            this.ThrottleSwitch3.xRot = (float) Math.toRadians(10);
+        }
+        if(reactions.getThrottleStage() == 2){
+            this.ThrottleSwitch1.xRot = (float) Math.toRadians(20);
+            this.ThrottleSwitch2.xRot = (float) Math.toRadians(20);
+            this.ThrottleSwitch3.xRot = (float) Math.toRadians(20);
+        }
+        if(reactions.getThrottleStage() == 3){
+            this.ThrottleSwitch1.xRot = (float) Math.toRadians(30);
+            this.ThrottleSwitch2.xRot = (float) Math.toRadians(30);
+            this.ThrottleSwitch3.xRot = (float) Math.toRadians(30);
+        }
+        if(reactions.getThrottleStage() == 4){
+            this.ThrottleSwitch1.xRot = (float) Math.toRadians(40);
+            this.ThrottleSwitch2.xRot = (float) Math.toRadians(40);
+            this.ThrottleSwitch3.xRot = (float) Math.toRadians(40);
+        }
+        if(reactions.getThrottleStage() == 5){
+            this.ThrottleSwitch1.xRot = (float) Math.toRadians(50);
+            this.ThrottleSwitch2.xRot = (float) Math.toRadians(50);
+            this.ThrottleSwitch3.xRot = (float) Math.toRadians(50);
+        }
+
+        this.MainLever3.xRot = (float) Math.toRadians(reactions.isHandbrakeEngaged() ? -30 : 30);
+        this.DematCircy.y = (fyool);
+
+        this.MeterArm1.yRot = (float) Math.toRadians(-80.0F + (progress * 160.0F / 100.0F));
+        this.MeterArm2.yRot = (float) Math.toRadians(-80.0F + (progress * 160.0F / 100.0F));
         // Final render call
         root().render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
     }

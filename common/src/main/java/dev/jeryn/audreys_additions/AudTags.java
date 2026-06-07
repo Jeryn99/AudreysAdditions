@@ -13,6 +13,9 @@ public class AudTags {
 
     public static TagKey<Item> FUEL_ITEMS = makeItem(AudreysAdditions.MODID, "food_machine_fuel");
 
+    //new, remove if needed
+    public static TagKey<Item> ZEITON_BLOCKS = makeItem(AudreysAdditions.MODID, "zeiton_blocks");
+
 
     private static TagKey<Item> makeItem(String domain, String path) {
         return TagKey.create(Registries.ITEM, new ResourceLocation(domain, path));

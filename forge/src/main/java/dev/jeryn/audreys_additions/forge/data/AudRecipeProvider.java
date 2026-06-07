@@ -1,5 +1,6 @@
 package dev.jeryn.audreys_additions.forge.data;
 
+import dev.jeryn.audreys_additions.AudTags;
 import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import net.minecraft.data.PackOutput;
@@ -29,7 +30,7 @@ public class AudRecipeProvider extends RecipeProvider {
                 .pattern("L  ")
                 .pattern(" G ")
                 .pattern("  Q")
-                .define('Q', (AudBlocks.ZEITON_QUARTZ_BLOCK.get()))
+                .define('Q', (AudTags.ZEITON_BLOCKS))
                 .define('G', Blocks.GLASS)
                 .define('L', Blocks.REDSTONE_LAMP)
                 .unlockedBy("has_crafting_table", has(TRBlockRegistry.ASTRAL_MANIPULATOR_BLOCK.get()))

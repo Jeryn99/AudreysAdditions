@@ -2,6 +2,7 @@ package dev.jeryn.audreys_additions.forge.data;
 
 import dev.jeryn.audreys_additions.AudTags;
 import dev.jeryn.audreys_additions.AudreysAdditions;
+import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
@@ -10,6 +11,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import whocraft.tardis_refined.common.items.ZeitonIngotItem;
 
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
@@ -44,6 +46,7 @@ public class AudItemTagProvider extends ItemTagsProvider {
                 }
             }
 
+
             // Check if the block's path contains "log"
             if (BuiltInRegistries.BLOCK.getKey(block).getPath().contains("log")) {
                 if (block.asItem() != Items.AIR) {
@@ -53,6 +56,15 @@ public class AudItemTagProvider extends ItemTagsProvider {
 
 
         });
-
+        tag(AudTags.ZEITON_BLOCKS).add(AudBlocks.ZEITON_QUARTZ_BLOCK.get().asItem())
+                .add(AudBlocks.ZEITON_QUARTZ_STAIRS.get().asItem())
+                .add(AudBlocks.ZEITON_QUARTZ_SLAB.get().asItem())
+                .add(AudBlocks.SMOOTH_ZEITON_QUARTZ_BLOCK.get().asItem())
+                .add(AudBlocks.SMOOTH_ZEITON_QUARTZ_STAIRS.get().asItem())
+                .add(AudBlocks.SMOOTH_ZEITON_QUARTZ_SLAB.get().asItem())
+                .add(AudBlocks.ZEITON_QUARTZ_BRICKS.get().asItem())
+                .add(AudBlocks.ZEITON_QUARTZ_PILLAR.get().asItem())
+                .add(AudBlocks.CHISELED_ZEITON_QUARTZ_BLOCK.get().asItem())
+                .add(AudBlocks.ZEITON_QUARTZ_DOOR.get().asItem());
     }
 }
