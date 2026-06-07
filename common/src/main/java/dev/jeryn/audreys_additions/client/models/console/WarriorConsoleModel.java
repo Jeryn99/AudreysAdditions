@@ -9,6 +9,7 @@ import net.minecraft.client.animation.AnimationDefinition;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;
 import whocraft.tardis_refined.TRConfig;
@@ -26,9 +27,37 @@ public class WarriorConsoleModel extends HierarchicalModel implements ConsoleUni
     public static final AnimationDefinition POWER_OFF = Frame.loadAnimation(new ResourceLocation(AudreysAdditions.MODID, "frame/console/kelt/power_off.json"));
 
     private final ModelPart root;
+    private final ModelPart Slider1;
+    private final ModelPart Slider4;
+    private final ModelPart Slider5;
+
+    private final ModelPart Flasher1;
+    private final ModelPart Flasher2;
+    private final ModelPart Flasher3;
+    private final ModelPart Flasher4;
+    private final ModelPart Flasher5;
+    private final ModelPart Flasher6;
+    private final ModelPart Flasher7;
+    private final ModelPart Flasher8;
+    private final ModelPart Flasher9;
+
 
     public WarriorConsoleModel(ModelPart root) {
         this.root = root;
+        this.Slider1 = Frame.findPart(this, "Slider1");
+        this.Slider4 = Frame.findPart(this, "Slider4");
+        this.Slider5 = Frame.findPart(this, "Slider5");
+
+        this.Flasher1 = Frame.findPart(this, "Flasher1");
+        this.Flasher2 = Frame.findPart(this, "Flasher2");
+        this.Flasher3 = Frame.findPart(this, "Flasher3");
+        this.Flasher4 = Frame.findPart(this, "Flasher4");
+        this.Flasher5 = Frame.findPart(this, "Flasher5");
+        this.Flasher6 = Frame.findPart(this, "Flasher6");
+        this.Flasher7 = Frame.findPart(this, "Flasher7");
+        this.Flasher8 = Frame.findPart(this, "Flasher8");
+        this.Flasher9 = Frame.findPart(this, "Flasher9");
+
     }
 
     @Override
@@ -49,6 +78,9 @@ public class WarriorConsoleModel extends HierarchicalModel implements ConsoleUni
         float tickCount = playerTicks + Minecraft.getInstance().getFrameTime();
 
         TardisClientData reactions = TardisClientData.getInstance(level.dimension());
+
+        double fuelDouble = reactions.getFuel();
+        float fuelAmount = (float) fuelDouble ;
 
         if (globalConsoleBlock != null) {
             // Booting logic
@@ -86,6 +118,159 @@ public class WarriorConsoleModel extends HierarchicalModel implements ConsoleUni
                 this.animate(globalConsoleBlock.powerOff, POWER_OFF, tickCount);
             }
         }
+
+        this.Flasher1.zScale = 0;
+        this.Flasher2.zScale = 0;
+        this.Flasher3.zScale = 0;
+        this.Flasher4.zScale = 0;
+        this.Flasher5.zScale = 0;
+        this.Flasher6.zScale = 0;
+        this.Flasher7.zScale = 0;
+        this.Flasher8.zScale = 0;
+        this.Flasher9.zScale = 0;
+
+        float progress = Mth.clamp(reactions.getJourneyProgress(), 0.0F, 100.0F);
+        float flee = (reactions.getJourneyProgress()*0.01f);
+
+        float intermediary = (float)reactions.getFuel()/1000;
+
+        if(reactions.getThrottleStage() == 0){
+            this.Slider1.z = (float)0;
+        }
+        if(reactions.getThrottleStage() == 1){
+            this.Slider1.z = (float)0.5;
+        }
+        if(reactions.getThrottleStage() == 2){
+            this.Slider1.z = (float)1;
+        }
+        if(reactions.getThrottleStage() == 3){
+            this.Slider1.z = (float)1.5;
+        }
+        if(reactions.getThrottleStage() == 4){
+            this.Slider1.z = (float)2;
+        }
+        if(reactions.getThrottleStage() == 5){
+            this.Slider1.z = (float)2.5;
+        }
+
+        this.Slider5.z = (reactions.isHandbrakeEngaged()) ? 2.5f : 0.5f;
+
+
+        if (reactions.getFuel()/100 < 0.2f) {
+            this.Flasher1.zScale = 0;
+            this.Flasher2.zScale = 0;
+            this.Flasher3.zScale = 0;
+            this.Flasher4.zScale = 0;
+            this.Flasher5.zScale = 0;
+            this.Flasher6.zScale = 0;
+            this.Flasher7.zScale = 0;
+            this.Flasher8.zScale = 0;
+            this.Flasher9.zScale = 0;
+        }
+        if (reactions.getFuel()/100 >= 1.1f) {
+            this.Flasher1.zScale = 1;
+            this.Flasher2.zScale = 0;
+            this.Flasher3.zScale = 0;
+            this.Flasher4.zScale = 0;
+            this.Flasher5.zScale = 0;
+            this.Flasher6.zScale = 0;
+            this.Flasher7.zScale = 0;
+            this.Flasher8.zScale = 0;
+            this.Flasher9.zScale = 0;
+        }
+        if (reactions.getFuel()/100 >= 2.21f) {
+            this.Flasher1.zScale = 1;
+            this.Flasher2.zScale = 1;
+            this.Flasher3.zScale = 0;
+            this.Flasher4.zScale = 0;
+            this.Flasher5.zScale = 0;
+            this.Flasher6.zScale = 0;
+            this.Flasher7.zScale = 0;
+            this.Flasher8.zScale = 0;
+            this.Flasher9.zScale = 0;
+        }
+        if (reactions.getFuel()/100 >= 3.3f) {
+            this.Flasher1.zScale = 1;
+            this.Flasher2.zScale = 1;
+            this.Flasher3.zScale = 1;
+            this.Flasher4.zScale = 0;
+            this.Flasher5.zScale = 0;
+            this.Flasher6.zScale = 0;
+            this.Flasher7.zScale = 0;
+            this.Flasher8.zScale = 0;
+            this.Flasher9.zScale = 0;
+        }
+        if (reactions.getFuel()/100 >= 4.4f) {
+            this.Flasher1.zScale = 1;
+            this.Flasher2.zScale = 1;
+            this.Flasher3.zScale = 1;
+            this.Flasher4.zScale = 1;
+            this.Flasher5.zScale = 0;
+            this.Flasher6.zScale = 0;
+            this.Flasher7.zScale = 0;
+            this.Flasher8.zScale = 0;
+            this.Flasher9.zScale = 0;
+        }
+        if (reactions.getFuel()/100 >= 5.5f) {
+            this.Flasher1.zScale = 1;
+            this.Flasher2.zScale = 1;
+            this.Flasher3.zScale = 1;
+            this.Flasher4.zScale = 1;
+            this.Flasher5.zScale = 1;
+            this.Flasher6.zScale = 0;
+            this.Flasher7.zScale = 0;
+            this.Flasher8.zScale = 0;
+            this.Flasher9.zScale = 0;
+        }
+        if (reactions.getFuel()/100 >= 6.6f) {
+            this.Flasher1.zScale = 1;
+            this.Flasher2.zScale = 1;
+            this.Flasher3.zScale = 1;
+            this.Flasher4.zScale = 1;
+            this.Flasher5.zScale = 1;
+            this.Flasher6.zScale = 1;
+            this.Flasher7.zScale = 0;
+            this.Flasher8.zScale = 0;
+            this.Flasher9.zScale = 0;
+        }
+        if (reactions.getFuel()/100 >= 7.7f) {
+            this.Flasher1.zScale = 1;
+            this.Flasher2.zScale = 1;
+            this.Flasher3.zScale = 1;
+            this.Flasher4.zScale = 1;
+            this.Flasher5.zScale = 1;
+            this.Flasher6.zScale = 1;
+            this.Flasher7.zScale = 1;
+            this.Flasher8.zScale = 0;
+            this.Flasher9.zScale = 0;
+        }
+        if (reactions.getFuel()/100 >= 8.8f) {
+            this.Flasher1.zScale = 1;
+            this.Flasher2.zScale = 1;
+            this.Flasher3.zScale = 1;
+            this.Flasher4.zScale = 1;
+            this.Flasher5.zScale = 1;
+            this.Flasher6.zScale = 1;
+            this.Flasher7.zScale = 1;
+            this.Flasher8.zScale = 1;
+            this.Flasher9.zScale = 0;
+        }
+        if (reactions.getFuel()/100 >= 9.9f) {
+            this.Flasher1.zScale = 1;
+            this.Flasher2.zScale = 1;
+            this.Flasher3.zScale = 1;
+            this.Flasher4.zScale = 1;
+            this.Flasher5.zScale = 1;
+            this.Flasher6.zScale = 1;
+            this.Flasher7.zScale = 1;
+            this.Flasher8.zScale = 1;
+            this.Flasher9.zScale = 1;
+        }
+
+
+
+        this.Slider4.z = (float) (flee*2.5);
+
         // Final render call
         root().render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
     }

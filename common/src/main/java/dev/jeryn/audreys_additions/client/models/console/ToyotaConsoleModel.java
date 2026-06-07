@@ -9,6 +9,7 @@ import net.minecraft.client.animation.AnimationDefinition;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;
 import whocraft.tardis_refined.TRConfig;
@@ -16,6 +17,7 @@ import whocraft.tardis_refined.client.TardisClientData;
 import whocraft.tardis_refined.client.model.blockentity.console.ConsoleUnit;
 import whocraft.tardis_refined.common.block.console.GlobalConsoleBlock;
 import whocraft.tardis_refined.common.blockentity.console.GlobalConsoleBlockEntity;
+import whocraft.tardis_refined.common.tardis.manager.TardisPilotingManager;
 
 public class ToyotaConsoleModel extends HierarchicalModel implements ConsoleUnit {
 
@@ -26,9 +28,31 @@ public class ToyotaConsoleModel extends HierarchicalModel implements ConsoleUnit
     public static final AnimationDefinition POWER_OFF = Frame.loadAnimation(new ResourceLocation(AudreysAdditions.MODID, "frame/console/toyota/power_off.json"));
 
     private final ModelPart root;
+    private final ModelPart Throttle;
+    private final ModelPart Handbrake;
+    private final ModelPart HandbrakeLights;
+    private final ModelPart Slider1;
+    private final ModelPart Slider2;
+    private final ModelPart Slider3;
+    private final ModelPart Slider4;
+    private final ModelPart Panel1Lever1;
+    private final ModelPart Panel1Lever2;
+    private final ModelPart Panel1Lever3;
+    private final ModelPart Panel1Lever4;
 
     public ToyotaConsoleModel(ModelPart root) {
         this.root = root;
+        this.Throttle = Frame.findPart(this, "Throttle");
+        this.Handbrake = Frame.findPart(this, "Handbrake");
+        this.HandbrakeLights = Frame.findPart(this, "HandbrakeLights");
+        this.Slider1 = Frame.findPart(this, "Slider1");
+        this.Slider2 = Frame.findPart(this, "Slider2");
+        this.Slider3 = Frame.findPart(this, "Slider3");
+        this.Slider4 = Frame.findPart(this, "Slider4");
+        this.Panel1Lever1 = Frame.findPart(this, "Panel1Lever1");
+        this.Panel1Lever2 = Frame.findPart(this, "Panel1Lever2");
+        this.Panel1Lever3 = Frame.findPart(this, "Panel1Lever3");
+        this.Panel1Lever4 = Frame.findPart(this, "Panel1Lever4");
     }
 
     @Override
@@ -49,6 +73,9 @@ public class ToyotaConsoleModel extends HierarchicalModel implements ConsoleUnit
         float tickCount = playerTicks + Minecraft.getInstance().getFrameTime();
 
         TardisClientData reactions = TardisClientData.getInstance(level.dimension());
+
+        double fuelDouble = reactions.getFuel();
+        float fuelAmount = (float) fuelDouble ;
 
         if (globalConsoleBlock != null) {
 
@@ -87,6 +114,44 @@ public class ToyotaConsoleModel extends HierarchicalModel implements ConsoleUnit
                 this.animate(globalConsoleBlock.powerOff, POWER_OFF, tickCount);
             }
         }
+
+        float progress = Mth.clamp(reactions.getJourneyProgress(), 0.0F, 100.0F);
+        float intermediary = (float)reactions.getFuel()/1000;
+        float fyool = Mth.clamp(intermediary*2 +6.5f,6.5f,8.5f);
+
+        if(reactions.getThrottleStage() == 0){
+            this.Throttle.xRot = (float) Math.toRadians(-60);
+        }
+        if(reactions.getThrottleStage() == 1){
+            this.Throttle.xRot = (float) Math.toRadians(-35);
+        }
+        if(reactions.getThrottleStage() == 2){
+            this.Throttle.xRot = (float) Math.toRadians(-15);
+        }
+        if(reactions.getThrottleStage() == 3){
+            this.Throttle.xRot = (float) Math.toRadians(15);
+        }
+        if(reactions.getThrottleStage() == 4){
+            this.Throttle.xRot = (float) Math.toRadians(35);
+        }
+        if(reactions.getThrottleStage() == 5){
+            this.Throttle.xRot = (float) Math.toRadians(60);
+        }
+
+        this.Handbrake.yRot = (float) Math.toRadians(reactions.isHandbrakeEngaged() ? -45 : 135);
+        this.HandbrakeLights.xScale = (float) (reactions.isHandbrakeEngaged() ? 1 : 0 );
+        this.HandbrakeLights.yScale = (float) (reactions.isHandbrakeEngaged() ? 1 : 0 );
+        this.HandbrakeLights.zScale = (float) (reactions.isHandbrakeEngaged() ? 1 : 0 );
+
+        this.Slider1.z = (float)(fyool);
+        this.Slider2.z = (float)(fyool);
+        this.Slider3.z = (float)(fyool);
+        this.Slider4.z = (float)(fyool);
+
+        this.Panel1Lever1.xRot = (float) Math.toRadians(progress*-1 / 2);
+        this.Panel1Lever2.xRot = (float) Math.toRadians(progress*-1 / 2+2);
+        this.Panel1Lever3.xRot = (float) Math.toRadians(progress*-1 / 2);
+        this.Panel1Lever4.xRot = (float) Math.toRadians(progress*-1 / 2+4);
 
         // Final render call
         root().render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);

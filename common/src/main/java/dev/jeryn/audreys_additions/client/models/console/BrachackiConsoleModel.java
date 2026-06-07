@@ -27,8 +27,6 @@ public class BrachackiConsoleModel extends HierarchicalModel implements ConsoleU
     public static final AnimationDefinition POWER_ON = Frame.loadAnimation(new ResourceLocation(AudreysAdditions.MODID, "frame/console/brachacki/power_on.json"));
     public static final AnimationDefinition POWER_OFF = Frame.loadAnimation(new ResourceLocation(AudreysAdditions.MODID, "frame/console/brachacki/power_off.json"));
 
-
-
     private final ModelPart root;
     private final ModelPart MainLever1;
     private final ModelPart MainLever2;
