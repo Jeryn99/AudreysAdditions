@@ -26,9 +26,28 @@ public class McGannConsoleModel extends HierarchicalModel implements ConsoleUnit
     public static final AnimationDefinition POWER_OFF = Frame.loadAnimation(new ResourceLocation(AudreysAdditions.MODID, "frame/console/mcgann/power_off.json"));
 
     private final ModelPart root;
+    private final ModelPart BrakeAngler;
+    private final ModelPart RoofSlider;
+    private final ModelPart RoofLight1;
+    private final ModelPart RoofLight2;
+    private final ModelPart RoofLight3;
+    private final ModelPart RoofLight4;
+    private final ModelPart LightAngler;
+    private final ModelPart GlowLeft;
+    private final ModelPart GlowRight;
+
 
     public McGannConsoleModel(ModelPart root) {
         this.root = root;
+        this.BrakeAngler = Frame.findPart(this, "BrakeAngler");
+        this.RoofSlider = Frame.findPart(this, "RoofSlider");
+        this.RoofLight1 = Frame.findPart(this, "RoofLight1");
+        this.RoofLight2 = Frame.findPart(this, "RoofLight2");
+        this.RoofLight3 = Frame.findPart(this, "RoofLight3");
+        this.RoofLight4 = Frame.findPart(this, "RoofLight4");
+        this.LightAngler = Frame.findPart(this, "LightAngler");
+        this.GlowLeft = Frame.findPart(this, "GlowLeft");
+        this.GlowRight = Frame.findPart(this, "GlowRight");
     }
 
     @Override
@@ -49,6 +68,10 @@ public class McGannConsoleModel extends HierarchicalModel implements ConsoleUnit
 
         TardisClientData reactions = TardisClientData.getInstance(level.dimension());
         if (globalConsoleBlock != null) {
+
+            double fuelDouble = reactions.getFuel();
+            float fuelAmount = (float) fuelDouble ;
+
             // Booting logic
             if (powered) {
                 if (globalConsoleBlock.getTicksBooting() > 0) {
@@ -84,6 +107,88 @@ public class McGannConsoleModel extends HierarchicalModel implements ConsoleUnit
                 this.animate(globalConsoleBlock.powerOff, POWER_OFF, tickCount);
             }
         }
+
+
+        float intermediary = (float)reactions.getFuel()/1000;
+
+        float rotty = intermediary*-25;
+
+        if(reactions.getThrottleStage() == 0){
+            this.RoofSlider.zRot = (float) Math.toRadians(-40);
+            this.RoofLight1.xScale = 0;
+            this.RoofLight1.zScale = 0;
+            this.RoofLight2.xScale = 0;
+            this.RoofLight2.zScale = 0;
+            this.RoofLight3.xScale = 0;
+            this.RoofLight3.zScale = 0;
+            this.RoofLight4.xScale = 0;
+            this.RoofLight4.zScale = 0;
+        }
+        if(reactions.getThrottleStage() == 1){
+            this.RoofSlider.zRot = (float) Math.toRadians(-25);
+            this.RoofLight1.xScale = 1;
+            this.RoofLight1.zScale = 1;
+            this.RoofLight2.xScale = 0;
+            this.RoofLight2.zScale = 0;
+            this.RoofLight3.xScale = 0;
+            this.RoofLight3.zScale = 0;
+            this.RoofLight4.xScale = 0;
+            this.RoofLight4.zScale = 0;
+        }
+        if(reactions.getThrottleStage() == 2){
+            this.RoofSlider.zRot = (float) Math.toRadians(-10);
+            this.RoofLight1.xScale = 1;
+            this.RoofLight1.zScale = 1;
+            this.RoofLight2.xScale = 1;
+            this.RoofLight2.zScale = 1;
+            this.RoofLight3.xScale = 0;
+            this.RoofLight3.zScale = 0;
+            this.RoofLight4.xScale = 0;
+            this.RoofLight4.zScale = 0;
+        }
+        if(reactions.getThrottleStage() == 3){
+            this.RoofSlider.zRot = (float) Math.toRadians(10);
+            this.RoofLight1.xScale = 1;
+            this.RoofLight1.zScale = 1;
+            this.RoofLight2.xScale = 1;
+            this.RoofLight2.zScale = 1;
+            this.RoofLight3.xScale = 1;
+            this.RoofLight3.zScale = 1;
+            this.RoofLight4.xScale = 0;
+            this.RoofLight4.zScale = 0;
+        }
+        if(reactions.getThrottleStage() == 4){
+            this.RoofSlider.zRot = (float) Math.toRadians(25);
+            this.RoofLight1.xScale = 1;
+            this.RoofLight1.zScale = 1;
+            this.RoofLight2.xScale = 1;
+            this.RoofLight2.zScale = 1;
+            this.RoofLight3.xScale = 1;
+            this.RoofLight3.zScale = 1;
+            this.RoofLight4.xScale = 1;
+            this.RoofLight4.zScale = 1;
+        }
+        if(reactions.getThrottleStage() == 5){
+            this.RoofSlider.zRot = (float) Math.toRadians(40);
+            this.RoofLight1.xScale = 1;
+            this.RoofLight1.zScale = 1;
+            this.RoofLight2.xScale = 1;
+            this.RoofLight2.zScale = 1;
+            this.RoofLight3.xScale = 1;
+            this.RoofLight3.zScale = 1;
+            this.RoofLight4.xScale = 1;
+            this.RoofLight4.zScale = 1;
+        }
+
+        this.BrakeAngler.xRot = (float) Math.toRadians(reactions.isHandbrakeEngaged() ? 30 : -30);
+
+        System.out.println(rotty);
+        this.LightAngler.xRot = (float) Math.toRadians(rotty-1);
+        this.GlowLeft.xScale = intermediary;
+        this.GlowLeft.yScale = intermediary;
+        this.GlowRight.xScale = intermediary;
+        this.GlowRight.yScale = intermediary;
+
         // Final render call
         root().render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
     }

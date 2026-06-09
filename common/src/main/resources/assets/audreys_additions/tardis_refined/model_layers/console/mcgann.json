@@ -1260,23 +1260,21 @@
 				{
 					"name": "BrakeAngler",
 					"parent": "PanelFormer1",
-					"pivot": [3.25, 14.5, -9],
-					"rotation": [-30, 0, 0]
+					"pivot": [3.25, 14.5, -8.75]
 				},
 				{
 					"name": "BrakePositioner",
 					"parent": "BrakeAngler",
-					"pivot": [3.25, 14.5, -9],
-					"rotation": [-20, 0, 0]
+					"pivot": [3.25, 14.5, -8.75]
 				},
 				{
 					"name": "BrakeRot",
 					"parent": "BrakePositioner",
-					"pivot": [3.25, 14.5, -9],
+					"pivot": [3.25, 14.5, -8.75],
 					"rotation": [0, -45, 0],
 					"cubes": [
 						{
-							"origin": [2.75, 14, -9.5],
+							"origin": [2.75, 14, -9.25],
 							"size": [1, 4, 1],
 							"uv": {
 								"north": {"uv": [0, 130], "uv_size": [2, 8]},
@@ -1403,7 +1401,7 @@
 				{
 					"name": "GlowLeft",
 					"parent": "LightAngler",
-					"pivot": [0, 14.5, -5],
+					"pivot": [-2.25, 14, -7.1],
 					"cubes": [
 						{
 							"origin": [-3, 13.5, -7.1],
@@ -1417,7 +1415,7 @@
 				{
 					"name": "GlowRight",
 					"parent": "LightAngler",
-					"pivot": [4.5, 14.5, -5],
+					"pivot": [2.25, 14, -7.1],
 					"cubes": [
 						{
 							"origin": [1.5, 13.5, -7.1],
@@ -1942,7 +1940,6 @@
 					"name": "RoofSlider",
 					"parent": "PanelFormer5",
 					"pivot": [0, 12.5, -7.75],
-					"rotation": [0, 0, 40],
 					"cubes": [
 						{
 							"origin": [-0.5, 16, -8.25],
