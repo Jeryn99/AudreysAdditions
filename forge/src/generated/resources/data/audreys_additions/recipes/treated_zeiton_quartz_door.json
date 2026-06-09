@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:quartz"
+    }
+  },
+  "pattern": [
+    "BB ",
+    "BB ",
+    "BB "
+  ],
+  "result": {
+    "count": 3,
+    "item": "audreys_additions:treated_zeiton_quartz_door"
+  },
+  "show_notification": true
+}

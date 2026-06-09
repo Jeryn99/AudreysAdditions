@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "audreys_additions:smooth_zeiton_quartz"
+    }
+  },
+  "pattern": [
+    "B  ",
+    "BB ",
+    "BBB"
+  ],
+  "result": {
+    "count": 4,
+    "item": "audreys_additions:smooth_zeiton_quartz_stairs"
+  },
+  "show_notification": true
+}

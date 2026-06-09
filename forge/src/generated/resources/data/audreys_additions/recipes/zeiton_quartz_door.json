@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "audreys_additions:zeiton_quartz_block"
+    }
+  },
+  "pattern": [
+    "BB ",
+    "BB ",
+    "BB "
+  ],
+  "result": {
+    "count": 3,
+    "item": "audreys_additions:zeiton_quartz_door"
+  },
+  "show_notification": true
+}

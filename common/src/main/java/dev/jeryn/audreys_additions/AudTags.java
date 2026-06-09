@@ -16,6 +16,8 @@ public class AudTags {
     //new, remove if needed
     public static TagKey<Item> ZEITON_BLOCKS = makeItem(AudreysAdditions.MODID, "zeiton_blocks");
 
+    public static TagKey<Item> NON_STAIR_ZEITON_BLOCKS = makeItem(AudreysAdditions.MODID, "non_stair_zeiton_blocks");
+
 
     private static TagKey<Item> makeItem(String domain, String path) {
         return TagKey.create(Registries.ITEM, new ResourceLocation(domain, path));

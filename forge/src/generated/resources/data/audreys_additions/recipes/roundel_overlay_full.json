@@ -2,23 +2,24 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "D": {
+      "item": "minecraft:glowstone_dust"
+    },
     "G": {
       "item": "minecraft:glass"
     },
-    "L": {
-      "item": "minecraft:redstone_lamp"
-    },
-    "Q": {
-      "tag": "audreys_additions:zeiton_blocks"
+    "Z": {
+      "item": "tardis_refined:zeiton_nugget"
     }
   },
   "pattern": [
-    "  Q",
     " G ",
-    "L  "
+    "DZG",
+    " D "
   ],
   "result": {
-    "item": "audreys_additions:lightcolumn_left"
+    "count": 16,
+    "item": "audreys_additions:roundel_overlay_full"
   },
   "show_notification": true
 }

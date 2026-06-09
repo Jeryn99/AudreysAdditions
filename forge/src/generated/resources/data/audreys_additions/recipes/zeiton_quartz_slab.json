@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "tag": "audreys_additions:non_stair_zeiton_blocks"
+    }
+  },
+  "pattern": [
+    "BBB"
+  ],
+  "result": {
+    "count": 6,
+    "item": "audreys_additions:zeiton_quartz_slab"
+  },
+  "show_notification": true
+}

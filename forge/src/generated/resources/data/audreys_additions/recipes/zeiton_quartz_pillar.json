@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "audreys_additions:zeiton_quartz_block"
+    }
+  },
+  "pattern": [
+    " S ",
+    " S "
+  ],
+  "result": {
+    "item": "audreys_additions:zeiton_quartz_pillar"
+  },
+  "show_notification": true
+}

@@ -37,7 +37,7 @@ public class AudRecipeProvider extends RecipeProvider {
                 .define('L', Blocks.REDSTONE_LAMP)
                 .unlockedBy("has_crafting_table", has(TRBlockRegistry.ASTRAL_MANIPULATOR_BLOCK.get()))
                 .save(consumer);
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.LIGHTCOLUMN_LEFT.get()).pattern("  Q").pattern(" G ").pattern("L  ").define('Q', (AudBlocks.ZEITON_QUARTZ_BLOCK.get())).define('G', Blocks.GLASS).define('L', Blocks.REDSTONE_LAMP).unlockedBy("has_crafting_table", has(TRBlockRegistry.ASTRAL_MANIPULATOR_BLOCK.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.LIGHTCOLUMN_LEFT.get()).pattern("  Q").pattern(" G ").pattern("L  ").define('Q', (AudTags.ZEITON_BLOCKS)).define('G', Blocks.GLASS).define('L', Blocks.REDSTONE_LAMP).unlockedBy("has_crafting_table", has(TRBlockRegistry.ASTRAL_MANIPULATOR_BLOCK.get())).save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.TREATED_LIGHTCOLUMN_RIGHT.get()).pattern("L  ").pattern(" G ").pattern("  Q").define('Q', Blocks.QUARTZ_BLOCK).define('G', Blocks.GLASS).define('L', Blocks.REDSTONE_LAMP).unlockedBy("has_crafting_table", has(TRBlockRegistry.ASTRAL_MANIPULATOR_BLOCK.get())).save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.TREATED_LIGHTCOLUMN_LEFT.get()).pattern("  Q").pattern(" G ").pattern("L  ").define('Q', Blocks.QUARTZ_BLOCK).define('G', Blocks.GLASS).define('L', Blocks.REDSTONE_LAMP).unlockedBy("has_crafting_table", has(TRBlockRegistry.ASTRAL_MANIPULATOR_BLOCK.get())).save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.FOLD_OUT_BED.get()).pattern("   ").pattern(" RB").pattern("  I").define('B', ItemTags.BEDS).define('R', Blocks.REDSTONE_WIRE).define('I', Items.IRON_INGOT).unlockedBy("has_crafting_table", has(TRBlockRegistry.ASTRAL_MANIPULATOR_BLOCK.get())).save(consumer);
@@ -53,6 +53,88 @@ public class AudRecipeProvider extends RecipeProvider {
                 .define('S', Blocks.STONE)
                 .unlockedBy("has_glass", has(Blocks.RED_STAINED_GLASS))
                 .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.CHISELED_ZEITON_QUARTZ_BLOCK.get())
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('S', AudBlocks.ZEITON_QUARTZ_SLAB.get())
+                .unlockedBy("has_zeiton_quartz", has(AudBlocks.ZEITON_QUARTZ_BLOCK.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.ZEITON_QUARTZ_PILLAR.get())
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('S', AudBlocks.ZEITON_QUARTZ_BLOCK.get())
+                .unlockedBy("has_zeiton_quartz", has(AudBlocks.ZEITON_QUARTZ_BLOCK.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.ZEITON_QUARTZ_SLAB.get(), 6)
+                .pattern("BBB")
+                .define('B', AudTags.NON_STAIR_ZEITON_BLOCKS)
+                .unlockedBy("has_zeiton_quartz", has(AudBlocks.ZEITON_QUARTZ_BLOCK.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.SMOOTH_ZEITON_QUARTZ_SLAB.get(), 6)
+                .pattern("BBB")
+                .define('B', AudBlocks.SMOOTH_ZEITON_QUARTZ_BLOCK.get())
+                .unlockedBy("has_zeiton_quartz", has(AudBlocks.ZEITON_QUARTZ_BLOCK.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.ZEITON_QUARTZ_BRICKS.get(), 4)
+                .pattern("BB ")
+                .pattern("BB ")
+                .define('B', AudBlocks.ZEITON_QUARTZ_BLOCK.get())
+                .unlockedBy("has_zeiton_quartz", has(AudBlocks.ZEITON_QUARTZ_BLOCK.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.ZEITON_QUARTZ_STAIRS.get(), 4)
+                .pattern("B  ")
+                .pattern("BB ")
+                .pattern("BBB")
+                .define('B', AudBlocks.ZEITON_QUARTZ_BLOCK.get())
+                .unlockedBy("has_zeiton_quartz", has(AudBlocks.ZEITON_QUARTZ_BLOCK.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.SMOOTH_ZEITON_QUARTZ_STAIRS.get(), 4)
+                .pattern("B  ")
+                .pattern("BB ")
+                .pattern("BBB")
+                .define('B', AudBlocks.SMOOTH_ZEITON_QUARTZ_BLOCK.get())
+                .unlockedBy("has_zeiton_quartz", has(AudBlocks.ZEITON_QUARTZ_BLOCK.get()))
+                .save(consumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.ZEITON_QUARTZ_DOOR.get(), 3)
+                .pattern("BB ")
+                .pattern("BB ")
+                .pattern("BB ")
+                .define('B', AudBlocks.ZEITON_QUARTZ_BLOCK.get())
+                .unlockedBy("has_zeiton_quartz", has(AudBlocks.ZEITON_QUARTZ_BLOCK.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.TREATED_ZEITON_QUARTZ_DOOR.get(), 3)
+                .pattern("BB ")
+                .pattern("BB ")
+                .pattern("BB ")
+                .define('B', Items.QUARTZ)
+                .unlockedBy("has_quartz", has(Items.QUARTZ))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.ROUNDEL_OVERLAY_FULL.get(), 16)
+                .pattern(" G ")
+                .pattern("DZG")
+                .pattern(" D ")
+                .define('G', Blocks.GLASS)
+                .define('D', Items.GLOWSTONE_DUST)
+                .define('Z', TRItemRegistry.ZEITON_NUGGET.get())
+                .unlockedBy("has_zeiton", has(TRItemRegistry.ZEITON_INGOT.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, AudBlocks.ROUNDEL_OVERLAY_HALF.get())
+                .requires(AudBlocks.ROUNDEL_OVERLAY_FULL.get())
+                .unlockedBy("has_zeiton", has(TRItemRegistry.ZEITON_INGOT.get()))
+                .save(consumer);
+
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.HATSTAND_BIRCH.get())
                 .pattern("SSS")

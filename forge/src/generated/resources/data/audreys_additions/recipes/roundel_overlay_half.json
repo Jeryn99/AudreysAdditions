@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "audreys_additions:roundel_overlay_full"
+    }
+  ],
+  "result": {
+    "item": "audreys_additions:roundel_overlay_half"
+  }
+}

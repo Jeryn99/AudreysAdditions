@@ -1035,7 +1035,6 @@
 					"name": "MainLever2",
 					"parent": "PanelONE",
 					"pivot": [-1.15, 14.95, -15.2375],
-					"rotation": [-25, 0, 0],
 					"cubes": [
 						{
 							"origin": [-1.725, 16.675, -15.8125],
@@ -1054,7 +1053,6 @@
 					"name": "MainLever3",
 					"parent": "PanelONE",
 					"pivot": [1.15, 14.95, -15.2375],
-					"rotation": [-25, 0, 0],
 					"cubes": [
 						{
 							"origin": [0.575, 16.675, -15.8125],
@@ -1065,6 +1063,34 @@
 								"south": {"uv": [32, 126], "uv_size": [2, 2]},
 								"west": {"uv": [32, 126], "uv_size": [2, 2]},
 								"up": {"uv": [42, 128], "uv_size": [-2, -2]}
+							}
+						}
+					]
+				},
+				{
+					"name": "Lighty2",
+					"parent": "PanelONE",
+					"pivot": [3.45, 16.1, -15.525],
+					"cubes": [
+						{
+							"origin": [2.875, 15.065, -16.1],
+							"size": [1.15, 1.15, 1.15],
+							"uv": {
+								"up": {"uv": [6, 133], "uv_size": [-2, -2]}
+							}
+						}
+					]
+				},
+				{
+					"name": "Lighty1",
+					"parent": "PanelONE",
+					"pivot": [-3.45, 16.1, -15.525],
+					"cubes": [
+						{
+							"origin": [-4.025, 15.065, -16.1],
+							"size": [1.15, 1.15, 1.15],
+							"uv": {
+								"up": {"uv": [4, 133], "uv_size": [2, -2]}
 							}
 						}
 					]
@@ -1574,7 +1600,6 @@
 					"name": "MainLever1",
 					"parent": "PanelSIX",
 					"pivot": [0, 14.95, -14.6625],
-					"rotation": [-25, 0, 0],
 					"cubes": [
 						{
 							"origin": [-0.575, 16.675, -15.2375],

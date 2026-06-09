@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "audreys_additions:smooth_zeiton_quartz"
+    }
+  },
+  "pattern": [
+    "BBB"
+  ],
+  "result": {
+    "count": 6,
+    "item": "audreys_additions:smooth_zeiton_quartz_slab"
+  },
+  "show_notification": true
+}
