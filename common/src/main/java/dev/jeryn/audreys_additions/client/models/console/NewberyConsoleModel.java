@@ -9,6 +9,7 @@ import net.minecraft.client.animation.AnimationDefinition;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;
 import whocraft.tardis_refined.TRConfig;
@@ -26,9 +27,15 @@ public class NewberyConsoleModel extends HierarchicalModel implements ConsoleUni
     public static final AnimationDefinition POWER_OFF = Frame.loadAnimation(new ResourceLocation(AudreysAdditions.MODID, "frame/console/newbery/power_off.json"));
 
     private final ModelPart root;
+    private final ModelPart FuelReflector;
+    private final ModelPart Throttle;
+    private final ModelPart Handbrake;
 
     public NewberyConsoleModel(ModelPart root) {
         this.root = root;
+        this.FuelReflector = Frame.findPart(this, "FuelReflector");
+        this.Throttle = Frame.findPart(this, "Throttle");
+        this.Handbrake = Frame.findPart(this, "Handbrake");
     }
 
     @Override
@@ -52,6 +59,9 @@ public class NewberyConsoleModel extends HierarchicalModel implements ConsoleUni
         TardisClientData reactions = TardisClientData.getInstance(level.dimension());
 
         if (globalConsoleBlock != null) {
+
+            double fuelDouble = reactions.getFuel();
+            float fuelAmount = (float) fuelDouble ;
 
             // Booting logic
             if (powered) {
@@ -88,6 +98,33 @@ public class NewberyConsoleModel extends HierarchicalModel implements ConsoleUni
                 this.animate(globalConsoleBlock.powerOff, POWER_OFF, tickCount);
             }
         }
+
+        float intermediary = (float)reactions.getFuel()/1000;
+
+        float fyool = Mth.clamp(intermediary, 0.1f,1);
+
+        if(reactions.getThrottleStage() == 0){
+            this.Throttle.y = (float) -0.25;
+        }
+        if(reactions.getThrottleStage() == 1){
+            this.Throttle.y = (float) -0.5;
+        }
+        if(reactions.getThrottleStage() == 2){
+            this.Throttle.y = (float) -0.75;
+        }
+        if(reactions.getThrottleStage() == 3){
+            this.Throttle.y = (float) -1;
+        }
+        if(reactions.getThrottleStage() == 4){
+            this.Throttle.y = (float) -1.25;
+        }
+        if(reactions.getThrottleStage() == 5){
+            this.Throttle.y = (float) -1.5;
+        }
+
+        this.Handbrake.x = reactions.isHandbrakeEngaged() ? (float) 1.25 : (float) 2.75;
+
+        this.FuelReflector.yScale = fyool;
 
         // Final render call
         root().render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);

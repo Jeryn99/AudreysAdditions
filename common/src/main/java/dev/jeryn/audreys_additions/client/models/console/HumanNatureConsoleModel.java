@@ -228,7 +228,6 @@ public class HumanNatureConsoleModel extends HierarchicalModel implements Consol
 
         this.BrakeAngler.xRot = (float) Math.toRadians(reactions.isHandbrakeEngaged() ? 30 : -30);
 
-        System.out.println(rotty);
         this.LightAngler.xRot = (float) Math.toRadians(rotty-1);
         this.GlowLeft.xScale = intermediary;
         this.GlowLeft.yScale = intermediary;
