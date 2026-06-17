@@ -1,17 +1,23 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "building",
+  "category": "misc",
   "key": {
-    "#": {
+    "B": {
       "item": "minecraft:acacia_planks"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "minecraft:smooth_stone_slab"
     }
   },
   "pattern": [
-    "##",
-    "##"
+    "SSS",
+    " B ",
+    "STS"
   ],
   "result": {
-    "count": 4,
     "item": "audreys_additions:hatstand_acacia"
   },
   "show_notification": true

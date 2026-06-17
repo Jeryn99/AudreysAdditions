@@ -5,16 +5,23 @@ import dev.jeryn.audreys_additions.AudreysAdditions;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.data.recipes.packs.VanillaRecipeProvider;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.util.datafix.fixes.FurnaceRecipeFix;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.CookingBookCategory;
+import net.minecraft.world.item.crafting.SmeltingRecipe;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import whocraft.tardis_refined.registry.TRBlockRegistry;
 import whocraft.tardis_refined.registry.TRItemRegistry;
 
+
+import java.util.List;
 import java.util.function.Consumer;
 
 public class AudRecipeProvider extends RecipeProvider {
@@ -53,6 +60,9 @@ public class AudRecipeProvider extends RecipeProvider {
                 .define('S', Blocks.STONE)
                 .unlockedBy("has_glass", has(Blocks.RED_STAINED_GLASS))
                 .save(consumer);
+
+        VanillaRecipeProvider.cut(consumer, RecipeCategory.BUILDING_BLOCKS, AudBlocks.HATSTAND_ACACIA.get(), Blocks.ACACIA_PLANKS);
+
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.CHISELED_ZEITON_QUARTZ_BLOCK.get())
                 .pattern(" S ")
@@ -164,7 +174,7 @@ public class AudRecipeProvider extends RecipeProvider {
                 .define('B', Blocks.ACACIA_PLANKS)
                 .define('T', Blocks.SMOOTH_STONE_SLAB)
                 .unlockedBy("has_stick", has(Items.STICK))
-                .save(consumer);
+                .save(consumer, new ResourceLocation(AudreysAdditions.MODID, "hatstand_acacia_crafting"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.HATSTAND_CHERRY.get())
                 .pattern("SSS")
