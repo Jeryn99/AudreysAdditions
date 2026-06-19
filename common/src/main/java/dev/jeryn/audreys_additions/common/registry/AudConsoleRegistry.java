@@ -23,7 +23,7 @@ public class AudConsoleRegistry {
     public static final RegistrySupplier<ConsoleTheme> SILENCE = registerConsoleTheme("silence", new SilenceConsoleTheme());
     public static final RegistrySupplier<ConsoleTheme> RANI = registerConsoleTheme("rani", new RaniConsoleTheme());
     public static final RegistrySupplier<ConsoleTheme> ALTERED_SHARP = registerConsoleTheme("altered_sharp", new AlteredSharpConsoleTheme());
-    public static final RegistrySupplier<ConsoleTheme> CHRONOTIS = registerConsoleTheme("chronotis", new ChronotisConsoleTheme());
+   // public static final RegistrySupplier<ConsoleTheme> CHRONOTIS = registerConsoleTheme("chronotis", new ChronotisConsoleTheme());
 
 
     private static RegistrySupplier<ConsoleTheme> registerConsoleTheme(String id, ConsoleThemeDetails themeDetails) {
