@@ -9,6 +9,7 @@ import net.minecraft.client.animation.AnimationDefinition;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;
 import whocraft.tardis_refined.TRConfig;
@@ -26,9 +27,13 @@ public class SilenceConsoleModel extends HierarchicalModel implements ConsoleUni
     public static final AnimationDefinition POWER_OFF = Frame.loadAnimation(new ResourceLocation(AudreysAdditions.MODID, "frame/console/silence/power_off.json"));
 
     private final ModelPart root;
+    private final ModelPart Lightning;
+    private final ModelPart FuelThingy;
 
     public SilenceConsoleModel(ModelPart root) {
         this.root = root;
+        this.Lightning = Frame.findPart(this, "Lightning");
+        this.FuelThingy = Frame.findPart(this, "FuelThingy");
     }
 
     @Override
@@ -49,6 +54,10 @@ public class SilenceConsoleModel extends HierarchicalModel implements ConsoleUni
 
         TardisClientData reactions = TardisClientData.getInstance(level.dimension());
         if (globalConsoleBlock != null) {
+
+            double fuelDouble = reactions.getFuel();
+            float fuelAmount = (float) fuelDouble ;
+
             // Booting logic
             if (powered) {
                 if (globalConsoleBlock.getTicksBooting() > 0) {
@@ -84,6 +93,43 @@ public class SilenceConsoleModel extends HierarchicalModel implements ConsoleUni
                 this.animate(globalConsoleBlock.powerOff, POWER_OFF, tickCount);
             }
         }
+
+        float intermediary = (float)reactions.getFuel()/1000;
+
+
+        if(reactions.getThrottleStage() == 0){
+            this.Lightning.xScale = 0;
+            this.Lightning.yScale = 0;
+            this.Lightning.zScale = 0;
+        }
+        if(reactions.getThrottleStage() == 1){
+            this.Lightning.xScale = 0.2f;
+            this.Lightning.yScale = 0.2f;
+            this.Lightning.zScale = 0.2f;
+        }
+        if(reactions.getThrottleStage() == 2){
+            this.Lightning.xScale = 0.4f;
+            this.Lightning.yScale = 0.4f;
+            this.Lightning.zScale = 0.4f;
+        }
+        if(reactions.getThrottleStage() == 3){
+            this.Lightning.xScale = 0.6f;
+            this.Lightning.yScale = 0.6f;
+            this.Lightning.zScale = 0.6f;
+        }
+        if(reactions.getThrottleStage() == 4){
+            this.Lightning.xScale = 0.8f;
+            this.Lightning.yScale = 0.8f;
+            this.Lightning.zScale = 0.8f;
+        }
+        if(reactions.getThrottleStage() == 5){
+            this.Lightning.xScale = 1;
+            this.Lightning.yScale = 1;
+            this.Lightning.zScale = 1;
+        }
+        this.FuelThingy.xScale = (intermediary);
+        this.FuelThingy.yScale = (intermediary);
+
         // Final render call
         root().render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
     }
