@@ -28,11 +28,29 @@ public class SilenceConsoleModel extends HierarchicalModel implements ConsoleUni
 
     private final ModelPart root;
     private final ModelPart Lightning;
+    private final ModelPart L1S1;
+    private final ModelPart L1S2;
+    private final ModelPart L1S3;
+    private final ModelPart L2S1;
+    private final ModelPart L2S2;
+    private final ModelPart L2S3;
+    private final ModelPart L3S1;
+    private final ModelPart L3S2;
+    private final ModelPart L3S3;
     private final ModelPart FuelThingy;
 
     public SilenceConsoleModel(ModelPart root) {
         this.root = root;
         this.Lightning = Frame.findPart(this, "Lightning");
+        this.L1S1 = Frame.findPart(this, "L1S1");
+        this.L1S2 = Frame.findPart(this, "L1S2");
+        this.L1S3 = Frame.findPart(this, "L1S3");
+        this.L2S1 = Frame.findPart(this, "L2S1");
+        this.L2S2 = Frame.findPart(this, "L2S2");
+        this.L2S3 = Frame.findPart(this, "L2S3");
+        this.L3S1 = Frame.findPart(this, "L3S1");
+        this.L3S2 = Frame.findPart(this, "L3S2");
+        this.L3S3 = Frame.findPart(this, "L3S3");
         this.FuelThingy = Frame.findPart(this, "FuelThingy");
     }
 
@@ -96,36 +114,215 @@ public class SilenceConsoleModel extends HierarchicalModel implements ConsoleUni
 
         float intermediary = (float)reactions.getFuel()/1000;
 
-
         if(reactions.getThrottleStage() == 0){
             this.Lightning.xScale = 0;
             this.Lightning.yScale = 0;
             this.Lightning.zScale = 0;
         }
         if(reactions.getThrottleStage() == 1){
-            this.Lightning.xScale = 0.2f;
-            this.Lightning.yScale = 0.2f;
-            this.Lightning.zScale = 0.2f;
+            this.Lightning.xScale = 0.75f;
+            this.Lightning.yScale = 0.75f;
+            this.Lightning.zScale = 0.75f;
+
+            this.L1S1.xScale = 1;
+            this.L1S1.yScale = 1;
+            this.L1S1.zScale = 1;
+
+            this.L1S2.xScale = 0;
+            this.L1S2.yScale = 0;
+            this.L1S2.zScale = 0;
+
+            this.L1S3.xScale = 0;
+            this.L1S3.yScale = 0;
+            this.L1S3.zScale = 0;
+
+            this.L2S1.xScale = 1;
+            this.L2S1.yScale = 1;
+            this.L2S1.zScale = 1;
+
+            this.L2S2.xScale = 0;
+            this.L2S2.yScale = 0;
+            this.L2S2.zScale = 0;
+
+            this.L2S3.xScale = 0;
+            this.L2S3.yScale = 0;
+            this.L2S3.zScale = 0;
+
+            this.L3S1.xScale = 1;
+            this.L3S1.yScale = 1;
+            this.L3S1.zScale = 1;
+
+            this.L3S2.xScale = 0;
+            this.L3S2.yScale = 0;
+            this.L3S2.zScale = 0;
+
+            this.L3S3.xScale = 0;
+            this.L3S3.yScale = 0;
+            this.L3S3.zScale = 0;
         }
         if(reactions.getThrottleStage() == 2){
-            this.Lightning.xScale = 0.4f;
-            this.Lightning.yScale = 0.4f;
-            this.Lightning.zScale = 0.4f;
+            this.Lightning.xScale = 1;
+            this.Lightning.yScale = 1;
+            this.Lightning.zScale = 1;
+
+            this.L1S1.xScale = 1;
+            this.L1S1.yScale = 1;
+            this.L1S1.zScale = 1;
+
+            this.L1S2.xScale = 0;
+            this.L1S2.yScale = 0;
+            this.L1S2.zScale = 0;
+
+            this.L1S3.xScale = 0;
+            this.L1S3.yScale = 0;
+            this.L1S3.zScale = 0;
+
+            this.L2S1.xScale = 1;
+            this.L2S1.yScale = 1;
+            this.L2S1.zScale = 1;
+
+            this.L2S2.xScale = 0;
+            this.L2S2.yScale = 0;
+            this.L2S2.zScale = 0;
+
+            this.L2S3.xScale = 0;
+            this.L2S3.yScale = 0;
+            this.L2S3.zScale = 0;
+
+            this.L3S1.xScale = 1;
+            this.L3S1.yScale = 1;
+            this.L3S1.zScale = 1;
+
+            this.L3S2.xScale = 0;
+            this.L3S2.yScale = 0;
+            this.L3S2.zScale = 0;
+
+            this.L3S3.xScale = 0;
+            this.L3S3.yScale = 0;
+            this.L3S3.zScale = 0;
         }
         if(reactions.getThrottleStage() == 3){
-            this.Lightning.xScale = 0.6f;
-            this.Lightning.yScale = 0.6f;
-            this.Lightning.zScale = 0.6f;
+            this.Lightning.xScale = 0.75f;
+            this.Lightning.yScale = 0.75f;
+            this.Lightning.zScale = 0.75f;
+
+            this.L1S1.xScale = 0;
+            this.L1S1.yScale = 0;
+            this.L1S1.zScale = 0;
+
+            this.L1S2.xScale = 1;
+            this.L1S2.yScale = 1;
+            this.L1S2.zScale = 1;
+
+            this.L1S3.xScale = 0;
+            this.L1S3.yScale = 0;
+            this.L1S3.zScale = 0;
+
+            this.L2S1.xScale = 0;
+            this.L2S1.yScale = 0;
+            this.L2S1.zScale = 0;
+
+            this.L2S2.xScale = 1;
+            this.L2S2.yScale = 1;
+            this.L2S2.zScale = 1;
+
+            this.L2S3.xScale = 0;
+            this.L2S3.yScale = 0;
+            this.L2S3.zScale = 0;
+
+            this.L3S1.xScale = 0;
+            this.L3S1.yScale = 0;
+            this.L3S1.zScale = 0;
+
+            this.L3S2.xScale = 1;
+            this.L3S2.yScale = 1;
+            this.L3S2.zScale = 1;
+
+            this.L3S3.xScale = 0;
+            this.L3S3.yScale = 0;
+            this.L3S3.zScale = 0;
         }
         if(reactions.getThrottleStage() == 4){
-            this.Lightning.xScale = 0.8f;
-            this.Lightning.yScale = 0.8f;
-            this.Lightning.zScale = 0.8f;
+            this.Lightning.xScale = 1;
+            this.Lightning.yScale = 1;
+            this.Lightning.zScale = 1;
+
+            this.L1S1.xScale = 0;
+            this.L1S1.yScale = 0;
+            this.L1S1.zScale = 0;
+
+            this.L1S2.xScale = 1;
+            this.L1S2.yScale = 1;
+            this.L1S2.zScale = 1;
+
+            this.L1S3.xScale = 0;
+            this.L1S3.yScale = 0;
+            this.L1S3.zScale = 0;
+
+            this.L2S1.xScale = 0;
+            this.L2S1.yScale = 0;
+            this.L2S1.zScale = 0;
+
+            this.L2S2.xScale = 1;
+            this.L2S2.yScale = 1;
+            this.L2S2.zScale = 1;
+
+            this.L2S3.xScale = 0;
+            this.L2S3.yScale = 0;
+            this.L2S3.zScale = 0;
+
+            this.L3S1.xScale = 0;
+            this.L3S1.yScale = 0;
+            this.L3S1.zScale = 0;
+
+            this.L3S2.xScale = 1;
+            this.L3S2.yScale = 1;
+            this.L3S2.zScale = 1;
+
+            this.L3S3.xScale = 0;
+            this.L3S3.yScale = 0;
+            this.L3S3.zScale = 0;
         }
         if(reactions.getThrottleStage() == 5){
             this.Lightning.xScale = 1;
             this.Lightning.yScale = 1;
             this.Lightning.zScale = 1;
+
+            this.L1S1.xScale = 0;
+            this.L1S1.yScale = 0;
+            this.L1S1.zScale = 0;
+
+            this.L1S2.xScale = 0;
+            this.L1S2.yScale = 0;
+            this.L1S2.zScale = 0;
+
+            this.L1S3.xScale = 1;
+            this.L1S3.yScale = 1;
+            this.L1S3.zScale = 1;
+
+            this.L2S1.xScale = 0;
+            this.L2S1.yScale = 0;
+            this.L2S1.zScale = 0;
+
+            this.L2S2.xScale = 0;
+            this.L2S2.yScale = 0;
+            this.L2S2.zScale = 0;
+
+            this.L2S3.xScale = 1;
+            this.L2S3.yScale = 1;
+            this.L2S3.zScale = 1;
+
+            this.L3S1.xScale = 0;
+            this.L3S1.yScale = 0;
+            this.L3S1.zScale = 0;
+
+            this.L3S2.xScale = 0;
+            this.L3S2.yScale = 0;
+            this.L3S2.zScale = 0;
+
+            this.L3S3.xScale = 1;
+            this.L3S3.yScale = 1;
+            this.L3S3.zScale = 1;
         }
         this.FuelThingy.xScale = (intermediary);
         this.FuelThingy.yScale = (intermediary);
