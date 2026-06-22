@@ -69,11 +69,6 @@ public class AudBlocksModelProvider extends BlockStateProvider {
                     continue;
                 }
 
-                if (value instanceof HatStandBlock) {
-                    simpleBlockParticleOnly(value, new ResourceLocation("block/spruce_planks"));
-                    continue;
-                }
-
                 if(value == AudBlocks.FOLD_OUT_BED.get()){
                     simpleBlockParticleOnly(value, new ResourceLocation("block/black_wool"));
                     continue;
@@ -138,14 +133,70 @@ public class AudBlocksModelProvider extends BlockStateProvider {
                     continue;
                 }
 
-                if (location.getPath().contains("cabinet")) {
+                if (value == AudBlocks.CABINET.get()) {
+                    simpleBlockParticleOnly(value, new ResourceLocation("block/diorite"));
                     continue;
                 }
 
-                if (location.getPath().contains("hatstand")) {
+                if (value == AudBlocks.HATSTAND_ACACIA.get()) {
+                    simpleBlockParticleOnly(value, new ResourceLocation("block/acacia_planks"));
                     continue;
                 }
 
+                if (value == AudBlocks.HATSTAND_BAMBOO.get()) {
+                    simpleBlockParticleOnly(value, new ResourceLocation("block/bamboo_planks"));
+                    continue;
+                }
+
+                if (value == AudBlocks.HATSTAND_BIRCH.get()) {
+                    simpleBlockParticleOnly(value, new ResourceLocation("block/birch_planks"));
+                    continue;
+                }
+
+                if (value == AudBlocks.HATSTAND_CHERRY.get()) {
+                    simpleBlockParticleOnly(value, new ResourceLocation("block/cherry_planks"));
+                    continue;
+                }
+
+                if (value == AudBlocks.HATSTAND_CRIMSON.get()) {
+                    simpleBlockParticleOnly(value, new ResourceLocation("block/crimson_planks"));
+                    continue;
+                }
+
+                if (value == AudBlocks.HATSTAND_DARK_OAK.get()) {
+                    simpleBlockParticleOnly(value, new ResourceLocation("block/dark_oak_planks"));
+                    continue;
+                }
+
+                if (value == AudBlocks.HATSTAND_JUNGLE.get()) {
+                    simpleBlockParticleOnly(value, new ResourceLocation("block/jungle_planks"));
+                    continue;
+                }
+
+                if (value == AudBlocks.HATSTAND_MANGROVE.get()) {
+                    simpleBlockParticleOnly(value, new ResourceLocation("block/mangrove_planks"));
+                    continue;
+                }
+
+                if (value == AudBlocks.HATSTAND_OAK.get()) {
+                    simpleBlockParticleOnly(value, new ResourceLocation("block/oak_planks"));
+                    continue;
+                }
+
+                if (value == AudBlocks.HATSTAND_PALE.get()) {
+                    simpleBlockParticleOnly(value, new ResourceLocation("block/diorite"));
+                    continue;
+                }
+
+                if (value == AudBlocks.HATSTAND_SPRUCE.get()) {
+                    simpleBlockParticleOnly(value, new ResourceLocation("block/spruce_planks"));
+                    continue;
+                }
+
+                if (value == AudBlocks.HATSTAND_WARPED.get()) {
+                    simpleBlockParticleOnly(value, new ResourceLocation("block/warped_planks"));
+                    continue;
+                }
 
                 simpleBlock(value);
             }

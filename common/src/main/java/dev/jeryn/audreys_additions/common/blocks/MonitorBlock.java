@@ -34,19 +34,20 @@ public class MonitorBlock extends HorizontalDirectionalBlock implements SimpleWa
     public static final BooleanProperty WATERLOGGED;
 
     public MonitorBlock(BlockBehaviour.Properties properties) {
-        super(properties);
+        super(properties.noOcclusion());
         this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false));
     }
 
     protected static final VoxelShape AABB = Shapes.or(
-            Block.box(5.0, 0.0, 5.0, 11.0, 7.0, 11.0),
-            Block.box(6.0, 7.0, 6.0, 10.0, 9.0, 10.0)
+            Block.box(1.0, 1.0, 1.0, 15.0, 15.0, 15.0)
     );
 
     protected static final VoxelShape BRACHACKI_MONITOR_NORTH = makeShape();
     protected static final VoxelShape BRACHACKI_MONITOR_EAST = rotateShape(Direction.NORTH, Direction.EAST, BRACHACKI_MONITOR_NORTH);
     protected static final VoxelShape BRACHACKI_MONITOR_SOUTH = rotateShape(Direction.NORTH, Direction.SOUTH, BRACHACKI_MONITOR_NORTH);
     protected static final VoxelShape BRACHACKI_MONITOR_WEST = rotateShape(Direction.NORTH, Direction.WEST, BRACHACKI_MONITOR_NORTH);
+
+    protected static final VoxelShape LIMINTON_MONITOR = AABB;
 
     public static VoxelShape makeShape(){
         VoxelShape shape = Shapes.empty();
@@ -76,6 +77,13 @@ public class MonitorBlock extends HorizontalDirectionalBlock implements SimpleWa
                 default -> BRACHACKI_MONITOR_SOUTH;
             };
         }
+
+        if (blockState.getBlock() == AudBlocks.LIMINTON_MONITOR.get()) {
+            blockState.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            return AABB;
+        }
+
+
 
         return super.getShape(blockState, blockGetter, blockPos, collisionContext);
     }

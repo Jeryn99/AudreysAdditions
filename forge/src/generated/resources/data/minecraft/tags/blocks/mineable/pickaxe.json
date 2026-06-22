@@ -9,6 +9,18 @@
     "audreys_additions:astral_map",
     "audreys_additions:ceiling_canopy",
     "audreys_additions:brachacki_monitor",
-    "audreys_additions:fold_out_bed"
+    "audreys_additions:fold_out_bed",
+    "audreys_additions:zeiton_quartz_block",
+    "audreys_additions:zeiton_quartz_stairs",
+    "audreys_additions:zeiton_quartz_slab",
+    "audreys_additions:zeiton_quartz_door",
+    "audreys_additions:zeiton_quartz_pillar",
+    "audreys_additions:zeiton_quartz_bricks",
+    "audreys_additions:chiseled_zeiton_quartz_block",
+    "audreys_additions:smooth_zeiton_quartz",
+    "audreys_additions:smooth_zeiton_quartz_stairs",
+    "audreys_additions:smooth_zeiton_quartz_slab",
+    "audreys_additions:treated_zeiton_quartz_bricks",
+    "audreys_additions:treated_chiseled_zeiton_quartz_block"
   ]
 }

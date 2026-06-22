@@ -23,7 +23,13 @@ public class AudBlocks {
 
     public static final RegistrySupplier<Block> KNOSSOS_THRONE = register("knossos_throne", () -> new KnossosChairBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
     public static final RegistrySupplier<Block> LIMINTON_MONITOR = register("liminton_monitor", () -> new MonitorBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
-    public static final RegistrySupplier<Block> FOOD_MACHINE = register("food_machine", () -> new FoodMachineBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
+    public static final RegistrySupplier<Block> FOOD_MACHINE = register("food_machine", () -> new FoodMachineBlock(BlockBehaviour.Properties.of()
+            .sound(SoundType.METAL)
+            .strength(5)
+            .explosionResistance(6)
+            .noOcclusion()
+            .pushReaction(PushReaction.IGNORE)));
+
     public static final RegistrySupplier<Block> LIGHTCOLUMN_LEFT = register("lightcolumn_left", () -> new LightBoxBlock(BlockBehaviour.Properties.copy(Blocks.GLOWSTONE).noOcclusion()));
     public static final RegistrySupplier<Block> LIGHTCOLUMN_RIGHT = register("lightcolumn_right", () -> new LightBoxBlock(BlockBehaviour.Properties.copy(Blocks.GLOWSTONE).noOcclusion()));
     public static final RegistrySupplier<Block> TREATED_LIGHTCOLUMN_LEFT = register("treated_lightcolumn_left", () -> new LightBoxBlock(BlockBehaviour.Properties.copy(Blocks.GLOWSTONE).noOcclusion()));
@@ -97,10 +103,10 @@ public class AudBlocks {
 
 
     public static final RegistrySupplier<RoundelOverlayBlock> ROUNDEL_OVERLAY_FULL = registerDyed("roundel_overlay_full",
-            () -> new RoundelOverlayBlock(BlockBehaviour.Properties.copy(Blocks.VINE)));
+            () -> new RoundelOverlayBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE)));
 
     public static final RegistrySupplier<RoundelOverlayBlock> ROUNDEL_OVERLAY_HALF = registerDyed("roundel_overlay_half",
-            () -> new RoundelOverlayBlock(BlockBehaviour.Properties.copy(Blocks.VINE)));
+            () -> new RoundelOverlayBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE)));
 
     public static final RegistrySupplier<DoorBlock> TREATED_ZEITON_QUARTZ_DOOR = register("treated_zeiton_quartz_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR), BlockSetType.ACACIA));
@@ -115,7 +121,7 @@ public class AudBlocks {
     public static final RegistrySupplier<Block> HATSTAND_ACACIA = register("hatstand_acacia", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
     public static final RegistrySupplier<Block> HATSTAND_DARK_OAK = register("hatstand_dark_oak", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
     public static final RegistrySupplier<Block> HATSTAND_MANGROVE = register("hatstand_mangrove", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
-    public static final RegistrySupplier<Block> HATSTAND_CHERRY = register("hatstand_cherry", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
+    public static final RegistrySupplier<Block> HATSTAND_CHERRY = register("hatstand_cherry", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR).noOcclusion()));
     public static final RegistrySupplier<Block> HATSTAND_PALE = register("hatstand_pale", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
     public static final RegistrySupplier<Block> HATSTAND_BAMBOO = register("hatstand_bamboo", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
     public static final RegistrySupplier<Block> HATSTAND_CRIMSON = register("hatstand_crimson", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));

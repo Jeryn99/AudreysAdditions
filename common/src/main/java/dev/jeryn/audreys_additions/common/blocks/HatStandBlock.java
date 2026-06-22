@@ -2,7 +2,9 @@ package dev.jeryn.audreys_additions.common.blocks;
 
 import dev.jeryn.audreys_additions.common.blockentity.hatstand.HatstandBlockEntity;
 import dev.jeryn.audreys_additions.common.blockentity.hatstand.HatstandMenu;
+import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -28,7 +30,6 @@ public class HatStandBlock extends HorizontalDirectionalBlock implements EntityB
     public HatStandBlock(Properties properties) {
         super(properties);
     }
-
 
     @Override
     public @Nullable BlockState getStateForPlacement(BlockPlaceContext blockPlaceContext) {
