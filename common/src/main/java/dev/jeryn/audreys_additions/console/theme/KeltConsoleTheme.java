@@ -6,10 +6,12 @@ import whocraft.tardis_refined.common.tardis.control.ControlSpecification;
 import whocraft.tardis_refined.common.tardis.themes.console.ConsoleThemeDetails;
 import whocraft.tardis_refined.registry.TRControlRegistry;
 
+import whocraft.tardis_refined.patterns.ConsolePattern;
+
 public class KeltConsoleTheme extends ConsoleThemeDetails {
 
     @Override
-    public ControlSpecification[] getControlSpecification() {
+    public ControlSpecification[] getControlSpecification(ConsolePattern consolePattern) {
         return new ControlSpecification[]{
                 new ControlSpecification(TRControlRegistry.DOOR_TOGGLE.get(), new Vector3f(-0.27f, 0.51f, -0.91f), EntityDimensions.scalable(0.07f, 0.07f)),
                 new ControlSpecification(TRControlRegistry.READOUT.get(), new Vector3f(0.66f, 0.58f, -0.42f), EntityDimensions.scalable(0.14f, 0.14f)),
@@ -48,3 +50,4 @@ public class KeltConsoleTheme extends ConsoleThemeDetails {
 
 
 }
+

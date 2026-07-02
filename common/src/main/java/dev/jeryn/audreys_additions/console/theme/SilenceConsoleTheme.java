@@ -6,10 +6,12 @@ import whocraft.tardis_refined.common.tardis.control.ControlSpecification;
 import whocraft.tardis_refined.common.tardis.themes.console.ConsoleThemeDetails;
 import whocraft.tardis_refined.registry.TRControlRegistry;
 
+import whocraft.tardis_refined.patterns.ConsolePattern;
+
 public class SilenceConsoleTheme extends ConsoleThemeDetails {
 
     @Override
-    public ControlSpecification[] getControlSpecification() {
+    public ControlSpecification[] getControlSpecification(ConsolePattern consolePattern) {
         return new ControlSpecification[] {
                 new ControlSpecification(TRControlRegistry.THROTTLE, new Vector3f(-0.04375f, 0.6875f, -1.1375f), EntityDimensions.scalable(0.1875f, 0.1875f)),
                 new ControlSpecification(TRControlRegistry.X, new Vector3f(0.190625f, 0.75f, -0.95f), EntityDimensions.scalable(0.0625f, 0.0625f)),
@@ -33,3 +35,4 @@ public class SilenceConsoleTheme extends ConsoleThemeDetails {
 
 
 }
+

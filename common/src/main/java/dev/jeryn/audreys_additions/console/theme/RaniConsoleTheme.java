@@ -6,10 +6,12 @@ import whocraft.tardis_refined.common.tardis.control.ControlSpecification;
 import whocraft.tardis_refined.common.tardis.themes.console.ConsoleThemeDetails;
 import whocraft.tardis_refined.registry.TRControlRegistry;
 
+import whocraft.tardis_refined.patterns.ConsolePattern;
+
 public class RaniConsoleTheme extends ConsoleThemeDetails {
 
     @Override
-    public ControlSpecification[] getControlSpecification() {
+    public ControlSpecification[] getControlSpecification(ConsolePattern consolePattern) {
         return new ControlSpecification[] {
                 new ControlSpecification(TRControlRegistry.THROTTLE, new Vector3f(-0.075f, 0.3125f, 0.7375f), EntityDimensions.scalable(0.25f, 0.25f)),
                 new ControlSpecification(TRControlRegistry.X, new Vector3f(-0.012499999999999997f, 0.5f, -0.7f), EntityDimensions.scalable(0.125f, 0.125f)),
@@ -32,3 +34,4 @@ public class RaniConsoleTheme extends ConsoleThemeDetails {
 
 
 }
+

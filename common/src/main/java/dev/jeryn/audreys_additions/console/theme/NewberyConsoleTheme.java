@@ -6,10 +6,12 @@ import whocraft.tardis_refined.common.tardis.control.ControlSpecification;
 import whocraft.tardis_refined.common.tardis.themes.console.ConsoleThemeDetails;
 import whocraft.tardis_refined.registry.TRControlRegistry;
 
+import whocraft.tardis_refined.patterns.ConsolePattern;
+
 public class NewberyConsoleTheme extends ConsoleThemeDetails {
 
     @Override
-    public ControlSpecification[] getControlSpecification() {
+    public ControlSpecification[] getControlSpecification(ConsolePattern consolePattern) {
         return new ControlSpecification[] {
                 new ControlSpecification(TRControlRegistry.THROTTLE, new Vector3f(0.315625f, 0.46875f, -0.325f), EntityDimensions.scalable(0.0625f, 0.0625f)),
                 new ControlSpecification(TRControlRegistry.X, new Vector3f(0.35625f, 0.5718749999999999f, -0.06874999999999999f), EntityDimensions.scalable(0.03125f, 0.03125f)),
@@ -29,3 +31,4 @@ public class NewberyConsoleTheme extends ConsoleThemeDetails {
         };
     }
 }
+

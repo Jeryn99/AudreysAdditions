@@ -6,10 +6,12 @@ import whocraft.tardis_refined.common.tardis.control.ControlSpecification;
 import whocraft.tardis_refined.common.tardis.themes.console.ConsoleThemeDetails;
 import whocraft.tardis_refined.registry.TRControlRegistry;
 
+import whocraft.tardis_refined.patterns.ConsolePattern;
+
 public class ToyotaConsoleTheme extends ConsoleThemeDetails {
 
     @Override
-    public ControlSpecification[] getControlSpecification() {
+    public ControlSpecification[] getControlSpecification(ConsolePattern consolePattern) {
         return new ControlSpecification[] {
                 new ControlSpecification(TRControlRegistry.THROTTLE, new Vector3f(0.2375f, 0.6875f, 0.925f), EntityDimensions.scalable(0.25f, 0.25f)),
                 new ControlSpecification(TRControlRegistry.HANDBRAKE, new Vector3f(-0.3875f, 0.5625f, 0.9875f), EntityDimensions.scalable(0.1875f, 0.1875f)),
@@ -39,3 +41,4 @@ public class ToyotaConsoleTheme extends ConsoleThemeDetails {
 
 
 }
+

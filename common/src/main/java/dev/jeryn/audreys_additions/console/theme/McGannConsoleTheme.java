@@ -6,9 +6,11 @@ import whocraft.tardis_refined.common.tardis.control.ControlSpecification;
 import whocraft.tardis_refined.common.tardis.themes.console.ConsoleThemeDetails;
 import whocraft.tardis_refined.registry.TRControlRegistry;
 
+import whocraft.tardis_refined.patterns.ConsolePattern;
+
 public class McGannConsoleTheme extends ConsoleThemeDetails {
     @Override
-    public ControlSpecification[] getControlSpecification() {
+    public ControlSpecification[] getControlSpecification(ConsolePattern consolePattern) {
         return new ControlSpecification[] {
                 new ControlSpecification(TRControlRegistry.READOUT.get(), new Vector3f(-0.04f, 0.50f, -0.64f), EntityDimensions.scalable(0.19f, 0.19f)),
                 new ControlSpecification(TRControlRegistry.THROTTLE.get(), new Vector3f(-0.51f, 0.53f, 0.24f), EntityDimensions.scalable(0.19f, 0.19f)),
@@ -34,3 +36,4 @@ public class McGannConsoleTheme extends ConsoleThemeDetails {
 
 
 }
+

@@ -6,10 +6,12 @@ import whocraft.tardis_refined.common.tardis.control.ControlSpecification;
 import whocraft.tardis_refined.common.tardis.themes.console.ConsoleThemeDetails;
 import whocraft.tardis_refined.registry.TRControlRegistry;
 
+import whocraft.tardis_refined.patterns.ConsolePattern;
+
 public class ChronotisConsoleTheme extends ConsoleThemeDetails {
 
     @Override
-    public ControlSpecification[] getControlSpecification() {
+    public ControlSpecification[] getControlSpecification(ConsolePattern consolePattern) {
         return new ControlSpecification[] {
                 new ControlSpecification(TRControlRegistry.THROTTLE, new Vector3f(0.20625f, 0.75f, -0.7f), EntityDimensions.scalable(0.0625f, 0.0625f)),
                 new ControlSpecification(TRControlRegistry.X, new Vector3f(-0.012499999999999997f, 1.359375f, -0.559375f), EntityDimensions.scalable(0.0625f, 0.0625f)),
@@ -32,3 +34,4 @@ public class ChronotisConsoleTheme extends ConsoleThemeDetails {
 
 
 }
+

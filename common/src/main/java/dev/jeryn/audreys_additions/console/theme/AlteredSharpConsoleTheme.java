@@ -6,10 +6,12 @@ import whocraft.tardis_refined.common.tardis.control.ControlSpecification;
 import whocraft.tardis_refined.common.tardis.themes.console.ConsoleThemeDetails;
 import whocraft.tardis_refined.registry.TRControlRegistry;
 
+import whocraft.tardis_refined.patterns.ConsolePattern;
+
 public class AlteredSharpConsoleTheme extends ConsoleThemeDetails {
 
     @Override
-    public ControlSpecification[] getControlSpecification() {
+    public ControlSpecification[] getControlSpecification(ConsolePattern consolePattern) {
         return new ControlSpecification[] {
                 new ControlSpecification(TRControlRegistry.THROTTLE, new Vector3f(0.06796875f, 0.578125f, -0.9921874999999998f), EntityDimensions.scalable(0.10781249999999998f, 0.10781249999999987f)),
                 new ControlSpecification(TRControlRegistry.HANDBRAKE, new Vector3f(-0.07578124999999998f, 0.578125f, -0.9921874999999998f), EntityDimensions.scalable(0.10781249999999998f, 0.10781249999999987f)),
@@ -58,3 +60,4 @@ public class AlteredSharpConsoleTheme extends ConsoleThemeDetails {
 
 
 }
+

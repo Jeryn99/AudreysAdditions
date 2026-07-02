@@ -6,10 +6,12 @@ import whocraft.tardis_refined.common.tardis.control.ControlSpecification;
 import whocraft.tardis_refined.common.tardis.themes.console.ConsoleThemeDetails;
 import whocraft.tardis_refined.registry.TRControlRegistry;
 
+import whocraft.tardis_refined.patterns.ConsolePattern;
+
 public class PertweeConsoleTheme extends ConsoleThemeDetails {
 
     @Override
-    public ControlSpecification[] getControlSpecification() {
+    public ControlSpecification[] getControlSpecification(ConsolePattern consolePattern) {
         return new ControlSpecification[] {
                 new ControlSpecification(TRControlRegistry.DOOR_TOGGLE.get(), new Vector3f(0.76f, 0.58f, 0.44f), EntityDimensions.scalable(0.07f, 0.07f)),
                 new ControlSpecification(TRControlRegistry.THROTTLE.get(), new Vector3f(0.16f, 0.67f, -0.70f), EntityDimensions.scalable(0.07f, 0.07f)),
@@ -54,3 +56,4 @@ public class PertweeConsoleTheme extends ConsoleThemeDetails {
 
 
 }
+
