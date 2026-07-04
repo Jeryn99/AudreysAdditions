@@ -69,34 +69,4 @@ public class AstralMapBlock extends Block implements EntityBlock {
     public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new AstralMapBlockEntity(pos, state);
     }
-
-    @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-
-        if (level instanceof ServerLevel serverLevel) {
-
-            TardisLevelOperator.get(serverLevel).ifPresent(tardisLevelOperator -> {
-
-                var piloting = tardisLevelOperator.getPilotingManager();
-
-                double amount = 50;
-
-                if (player.isShiftKeyDown()) {
-                    piloting.removeFuel(amount);
-                } else {
-                    piloting.addFuel(amount);
-                }
-
-                new S2COpenMonitor(
-                        tardisLevelOperator.getInteriorManager().isWaitingToGenerate(),
-                        piloting.getCurrentLocation(),
-                        piloting.getTargetLocation(),
-                        tardisLevelOperator.getUpgradeHandler(),
-                        tardisLevelOperator.getAestheticHandler().getShellTheme()
-                ).send((ServerPlayer) player);
-            });
-        }
-
-        return InteractionResult.SUCCESS;
-    }
 }

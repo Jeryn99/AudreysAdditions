@@ -22,6 +22,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import whocraft.tardis_refined.client.TardisClientData;
 
@@ -46,7 +47,7 @@ public class AudreysAdditionsClientFabric implements ClientModInitializer {
                     if (blockAndTintGetter != null && blockPos != null) {
                         BlockEntity blockEntity = blockAndTintGetter.getBlockEntity(blockPos);
 
-                        if (blockEntity instanceof DyeableBlockEntity chairBlockEntity) {
+                        if (blockEntity instanceof DyeableBlockEntity dyeableBlockEntity) {
 
                             if (blockEntity.getLevel() != null &&
                                     blockEntity.getLevel().dimensionTypeId() == TARDIS) {
@@ -55,7 +56,7 @@ public class AudreysAdditionsClientFabric implements ClientModInitializer {
                                 TardisClientData data = TardisClientData.getInstance(dimKey);
                                 double fuel = data.getFuel();
 
-                                int color = chairBlockEntity.getColour();
+                                int color = dyeableBlockEntity.getColour();
 
                                 if (fuel < 500) {
                                     int steps = (int) ((500 - fuel) / 10);
@@ -70,11 +71,13 @@ public class AudreysAdditionsClientFabric implements ClientModInitializer {
 
                                     color = (r << 16) | (g << 8) | b;
                                 }
-                                chairBlockEntity.getLevel().updateNeighborsAt(blockPos, blockState.getBlock());
+                                // client-side, same old/new state is fine — this still forces a chunk rebuild
+                                dyeableBlockEntity.getLevel().sendBlockUpdated(blockPos, blockState, blockState, Block.UPDATE_CLIENTS);
+                                dyeableBlockEntity.getLevel().updateNeighborsAt(blockPos, blockState.getBlock());
                                 return color;
                             }
 
-                            return chairBlockEntity.getColour();
+                            return dyeableBlockEntity.getColour();
                         }
                     }
 
