@@ -95,9 +95,6 @@ public class CabinetBlock extends HorizontalDirectionalBlock implements EntityBl
             player.getCooldowns().addCooldown(TRItemRegistry.PATTERN_MANIPULATOR.get(), 20);
             return InteractionResult.SUCCESS;
         } else {
-                if (level.isClientSide) {
-                    return InteractionResult.SUCCESS;
-                }
 
                 if (player.isShiftKeyDown()) {
                     cabinetBlock.setOpen(false);
@@ -110,6 +107,10 @@ public class CabinetBlock extends HorizontalDirectionalBlock implements EntityBl
                     level.playSound(player, pos, SoundEvents.WOODEN_TRAPDOOR_OPEN, SoundSource.BLOCKS, 1.0F, 1.0F);
                     return InteractionResult.SUCCESS;
                 }
+
+            if (level.isClientSide) {
+                return InteractionResult.SUCCESS;
+            }
 
                 player.openMenu(state.getMenuProvider(level, pos));
                 return InteractionResult.CONSUME;
