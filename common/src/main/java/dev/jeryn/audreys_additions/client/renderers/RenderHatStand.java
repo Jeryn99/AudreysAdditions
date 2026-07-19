@@ -19,9 +19,7 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.ItemDisplayContext;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -688,39 +686,33 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
         var itemRenderer = Minecraft.getInstance().getItemRenderer();
         var entityModels = Minecraft.getInstance().getEntityModels();
 
-        // Armor models
-        HumanoidModel<LivingEntity> innerModel = new HumanoidModel<>(entityModels.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR));
-        HumanoidModel<LivingEntity> outerModel = new HumanoidModel<>(entityModels.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR));
+        HumanoidModel<LivingEntity> innerModel =
+                new HumanoidModel<>(entityModels.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR));
+
+        HumanoidModel<LivingEntity> outerModel =
+                new HumanoidModel<>(entityModels.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR));
 
         for (int i = 0; i < 4; i++) {
             ItemStack stack = blockEntity.getInventory().getItem(i);
+
             if (stack.isEmpty()) continue;
 
             poseStack.pushPose();
 
-            // ===== DEBUG START =====
-        /*    hatStandMain.setPositioner(new GenericHatStandModel.Positioner() {
-                @Override
-                public void positionSlot(int slotIndex, ItemStack stack, PoseStack poseStack) {      }
-
-                @Override
-                public void animateArmor(int slotIndex, ItemStack stack, PoseStack poseStack, HumanoidModel<LivingEntity> humanoidModel) {
-
-                }
-
-            });*/
-            // ===== DEBUG END =====
-
             hatStandMain.getPositioner().positionSlot(i, stack, poseStack);
 
-
             if (stack.getItem() instanceof ArmorItem armorItem) {
-                EquipmentSlot slot = armorItem.getEquipmentSlot();
-                HumanoidModel<LivingEntity> armorModel = slot == EquipmentSlot.LEGS ? innerModel : outerModel;
 
-                new HumanoidModel<>(entityModels.bakeLayer(ModelLayers.PLAYER)).copyPropertiesTo(armorModel);
+                EquipmentSlot slot = armorItem.getEquipmentSlot();
+                HumanoidModel<LivingEntity> armorModel =
+                        slot == EquipmentSlot.LEGS ? innerModel : outerModel;
+
+                new HumanoidModel<>(entityModels.bakeLayer(ModelLayers.PLAYER))
+                        .copyPropertiesTo(armorModel);
+
                 armorModel.young = false;
                 armorModel.setAllVisible(false);
+
                 switch (slot) {
                     case HEAD -> {
                         armorModel.head.visible = true;
@@ -741,15 +733,92 @@ public class RenderHatStand implements BlockEntityRenderer<HatstandBlockEntity>,
                         armorModel.rightLeg.visible = true;
                     }
                 }
-                hatStandMain.getPositioner().animateArmor(i, stack, poseStack, armorModel);
-                VertexConsumer buffer = bufferSource.getBuffer(RenderType.armorCutoutNoCull(
-                        new ResourceLocation("minecraft", "textures/models/armor/" + armorItem.getMaterial().getName() + "_layer_" + (slot == EquipmentSlot.LEGS ? 2 : 1) + ".png")
-                ));
-                armorModel.renderToBuffer(poseStack, buffer, packedLight, packedOverlay, 1f, 1f, 1f, 1f);
+
+                hatStandMain.getPositioner()
+                        .animateArmor(i, stack, poseStack, armorModel);
+
+                String layer = slot == EquipmentSlot.LEGS ? "2" : "1";
+
+                ResourceLocation texture = new ResourceLocation(
+                        "minecraft",
+                        "textures/models/armor/"
+                                + armorItem.getMaterial().getName()
+                                + "_layer_" + layer + ".png"
+                );
+
+                if (armorItem.getMaterial() == ArmorMaterials.LEATHER && armorItem instanceof DyeableLeatherItem dyeableLeatherItem) {
+
+                    int color = dyeableLeatherItem.getColor(stack);
+
+                    float r = ((color >> 16) & 255) / 255.0F;
+                    float g = ((color >> 8) & 255) / 255.0F;
+                    float b = (color & 255) / 255.0F;
+
+                    // dyed leather base
+                    armorModel.renderToBuffer(
+                            poseStack,
+                            bufferSource.getBuffer(
+                                    RenderType.armorCutoutNoCull(texture)
+                            ),
+                            packedLight,
+                            packedOverlay,
+                            r,
+                            g,
+                            b,
+                            1.0F
+                    );
+
+                    // leather overlay (buttons/stitching)
+                    ResourceLocation overlay = new ResourceLocation(
+                            "minecraft",
+                            "textures/models/armor/"
+                                    + armorItem.getMaterial().getName()
+                                    + "_layer_" + layer + "_overlay.png"
+                    );
+
+                    armorModel.renderToBuffer(
+                            poseStack,
+                            bufferSource.getBuffer(
+                                    RenderType.armorCutoutNoCull(overlay)
+                            ),
+                            packedLight,
+                            packedOverlay,
+                            1.0F,
+                            1.0F,
+                            1.0F,
+                            1.0F
+                    );
+
+                } else {
+
+                    armorModel.renderToBuffer(
+                            poseStack,
+                            bufferSource.getBuffer(
+                                    RenderType.armorCutoutNoCull(texture)
+                            ),
+                            packedLight,
+                            packedOverlay,
+                            1.0F,
+                            1.0F,
+                            1.0F,
+                            1.0F
+                    );
+                }
 
             } else {
+
                 poseStack.mulPose(Axis.XP.rotationDegrees(180));
-                itemRenderer.renderStatic(stack, i == 0 ? ItemDisplayContext.HEAD : ItemDisplayContext.GROUND, packedLight, packedOverlay, poseStack, bufferSource, blockEntity.getLevel(), i);
+
+                itemRenderer.renderStatic(
+                        stack,
+                        i == 0 ? ItemDisplayContext.HEAD : ItemDisplayContext.GROUND,
+                        packedLight,
+                        packedOverlay,
+                        poseStack,
+                        bufferSource,
+                        blockEntity.getLevel(),
+                        i
+                );
             }
 
             poseStack.popPose();

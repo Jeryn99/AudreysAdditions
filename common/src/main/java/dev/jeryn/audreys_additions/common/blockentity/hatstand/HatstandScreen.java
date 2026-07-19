@@ -42,22 +42,14 @@ public class HatstandScreen extends AbstractContainerScreen<HatstandMenu> {
     public void render(GuiGraphics g, int mouseX, int mouseY, float partialTicks) {
         super.render(g, mouseX, mouseY, partialTicks);
 
-        // Existing menu slots (grey)
-        for (var slot : menu.slots) {
-            int x = leftPos + slot.x;
-            int y = topPos + slot.y;
-            g.fill(x, y, x + 16, y + 16, 0xFF808080);
-        }
-
-        // Helper slots
         if (helperMode) {
             for (int[] slot : helperSlots) {
                 int x = leftPos + slot[0];
                 int y = topPos + slot[1];
 
                 int color = (slot == selectedSlot)
-                        ? 0xA000FF00 // green = selected
-                        : 0x80FF0000; // red = unselected
+                        ? 0xA000FF00
+                        : 0x80FF0000;
 
                 g.fill(x, y, x + 16, y + 16, color);
             }

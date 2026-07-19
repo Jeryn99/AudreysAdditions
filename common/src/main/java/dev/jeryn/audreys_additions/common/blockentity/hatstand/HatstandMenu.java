@@ -1,12 +1,17 @@
 package dev.jeryn.audreys_additions.common.blockentity.hatstand;
 
+import com.mojang.datafixers.util.Pair;
 import dev.jeryn.audreys_additions.common.registry.AudMenus;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerLevelAccess;
+import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemStack;
@@ -47,6 +52,15 @@ public class HatstandMenu extends AbstractContainerMenu {
     public static final int INV_START = 4;
 
     public static final int HOTBAR_END = 40;
+    private static final ResourceLocation BLOCK_ATLAS = InventoryMenu.BLOCK_ATLAS;
+    private static final ResourceLocation EMPTY_HELMET =
+            InventoryMenu.EMPTY_ARMOR_SLOT_HELMET;
+    private static final ResourceLocation EMPTY_CHEST =
+            InventoryMenu.EMPTY_ARMOR_SLOT_CHESTPLATE;
+    private static final ResourceLocation EMPTY_LEGS =
+            InventoryMenu.EMPTY_ARMOR_SLOT_LEGGINGS;
+    private static final ResourceLocation EMPTY_BOOTS =
+            InventoryMenu.EMPTY_ARMOR_SLOT_BOOTS;
 
     private final ContainerLevelAccess access;
     private final HatstandInventoryWrapper inventoryWrapper;
@@ -82,10 +96,10 @@ public class HatstandMenu extends AbstractContainerMenu {
             be.sendUpdates();
         }
 
-        addSlot(new ArmorSlot(inventoryWrapper, 0, 8, 37));
-        addSlot(new ArmorSlot(inventoryWrapper, 1, 56, 37));
-        addSlot(new ArmorSlot(inventoryWrapper, 2, 104, 37));
-        addSlot(new ArmorSlot(inventoryWrapper, 3, 152, 37));
+        addSlot(new ArmorSlot(inventoryWrapper, 0, 8, 37, EquipmentSlot.HEAD));
+        addSlot(new ArmorSlot(inventoryWrapper, 1, 56, 37, EquipmentSlot.CHEST));
+        addSlot(new ArmorSlot(inventoryWrapper, 2, 104, 37, EquipmentSlot.LEGS));
+        addSlot(new ArmorSlot(inventoryWrapper, 3, 152, 37, EquipmentSlot.FEET));
 
         int x = 8;
         int y = 100;
@@ -146,14 +160,31 @@ public class HatstandMenu extends AbstractContainerMenu {
 
 
     public class ArmorSlot extends Slot {
+        private final EquipmentSlot equipmentSlot;
 
-        public ArmorSlot(HatstandInventoryWrapper inventory, int index, int x, int y) {
-            super(inventory, index, x, y);
+        public ArmorSlot(Container container, int index, int x, int y, EquipmentSlot slot) {
+            super(container, index, x, y);
+            this.equipmentSlot = slot;
+        }
+        @Override
+        public boolean mayPlace(ItemStack stack) {
+            return stack.getItem() instanceof ArmorItem armorItem
+                    && armorItem.getEquipmentSlot() == equipmentSlot;
+        }
+        @Override
+        public int getMaxStackSize() {
+            return 1;
         }
 
         @Override
-        public boolean mayPlace(ItemStack stack) {
-            return stack.getItem() instanceof ArmorItem;
+        public com.mojang.datafixers.util.Pair<ResourceLocation, ResourceLocation> getNoItemIcon() {
+            return switch (equipmentSlot) {
+                case HEAD -> Pair.of(InventoryMenu.BLOCK_ATLAS, InventoryMenu.EMPTY_ARMOR_SLOT_HELMET);
+                case CHEST -> Pair.of(InventoryMenu.BLOCK_ATLAS, InventoryMenu.EMPTY_ARMOR_SLOT_CHESTPLATE);
+                case LEGS -> Pair.of(InventoryMenu.BLOCK_ATLAS, InventoryMenu.EMPTY_ARMOR_SLOT_LEGGINGS);
+                case FEET -> Pair.of(InventoryMenu.BLOCK_ATLAS, InventoryMenu.EMPTY_ARMOR_SLOT_BOOTS);
+                default -> null;
+            };
         }
     }
 

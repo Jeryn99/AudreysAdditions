@@ -1,10 +1,7 @@
 package dev.jeryn.audreys_additions.common.blocks;
 
-import dev.jeryn.audreys_additions.common.blockentity.KnossosChairBlockEntity;
 import dev.jeryn.audreys_additions.common.blockentity.cabinet.CabinetBlockEntity;
 import dev.jeryn.audreys_additions.common.blockentity.cabinet.CabinetMenu;
-import dev.jeryn.audreys_additions.common.blockentity.hatstand.HatstandBlockEntity;
-import dev.jeryn.audreys_additions.common.blockentity.hatstand.HatstandMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
