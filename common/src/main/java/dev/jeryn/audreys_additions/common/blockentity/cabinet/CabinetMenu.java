@@ -76,7 +76,7 @@ public class CabinetMenu extends AbstractContainerMenu {
 
         this.inventoryWrapper = new CabinetInvWrapper(be);
         if (be != null) {
-            for (int i = 0; i < 4; i++) {
+            for (int i = 0; i < 8; i++) {
                 inventoryWrapper.setItem(i, be.getInventory().getItem(i));
             }
             be.sendUpdates();

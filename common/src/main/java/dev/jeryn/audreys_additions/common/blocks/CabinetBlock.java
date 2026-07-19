@@ -8,6 +8,7 @@ import dev.jeryn.audreys_additions.common.blockentity.hatstand.HatstandMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.*;
 import net.minecraft.world.entity.LivingEntity;
@@ -103,11 +104,13 @@ public class CabinetBlock extends HorizontalDirectionalBlock implements EntityBl
 
                 if (player.isShiftKeyDown()) {
                     cabinetBlock.setOpen(false);
+                    level.playSound(player, pos, SoundEvents.WOODEN_TRAPDOOR_CLOSE, SoundSource.BLOCKS, 1.0F, 1.0F);
                     return InteractionResult.SUCCESS;
                 }
 
                 if (!cabinetBlock.isOpen()) {
                     cabinetBlock.setOpen(true);
+                    level.playSound(player, pos, SoundEvents.WOODEN_TRAPDOOR_OPEN, SoundSource.BLOCKS, 1.0F, 1.0F);
                     return InteractionResult.SUCCESS;
                 }
 

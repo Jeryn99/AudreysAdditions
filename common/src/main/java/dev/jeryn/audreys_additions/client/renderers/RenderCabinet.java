@@ -34,14 +34,14 @@ public class RenderCabinet implements BlockEntityRenderer<CabinetBlockEntity>, B
     }
 
     private static final float[][] SLOT_POSITIONS = {
-            {0.25f, 0.75f, 0.2f},
-            {0.50f, 0.75f, 0.2f},
-            {0.75f, 0.75f, 0.2f},
-            {0.25f, 0.45f, 0.2f},
-            {0.50f, 0.45f, 0.2f},
-            {0.75f, 0.45f, 0.2f},
-            {0.25f, 0.15f, 0.2f},
-            {0.50f, 0.15f, 0.2f}
+            {0.234375f, 1.828125f, 0.078125f},
+            {-0.234375f, 1.828125f, 0.078125f},
+            {0.234375f, 1.359375f, 0.078125f},
+            {-0.234375f, 1.359375f, 0.078125f},
+            {0.234375f, 0.890625f, 0.078125f},
+            {-0.234375f, 0.890625f, 0.078125f},
+            {0.234375f, 0.421875f, 0.078125f},
+            {-0.234375f, 0.421875f, 0.078125f}
     };
 
     @Override
@@ -56,8 +56,8 @@ public class RenderCabinet implements BlockEntityRenderer<CabinetBlockEntity>, B
         ResourceLocation texture = new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/cabinet/"+ variant +".png");
         float openProgress = blockEntity.isOpen() ? 1.0F : 0.0F;
 
-        leftDoor.yRot = (float)Math.toRadians(-90 * openProgress);
-        rightDoor.yRot = (float)Math.toRadians(90 * openProgress);
+        leftDoor.yRot = (float)Math.toRadians(90 * openProgress);
+        rightDoor.yRot = (float)Math.toRadians(-90 * openProgress);
         cabinet.renderToBuffer(poseStack, bufferSource.getBuffer(RenderType.entityTranslucent(texture)), packedLight, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
 
         if (blockEntity.isOpen()) {
@@ -70,12 +70,12 @@ public class RenderCabinet implements BlockEntityRenderer<CabinetBlockEntity>, B
                     poseStack.pushPose();
 
                     poseStack.translate(
-                            SLOT_POSITIONS[i][0],
-                            SLOT_POSITIONS[i][1],
-                            SLOT_POSITIONS[i][2]
+                            SLOT_POSITIONS[i][0]*-1,
+                            (SLOT_POSITIONS[i][1]*-1)+1.5f,
+                            (SLOT_POSITIONS[i][2]*-1)+0.125f
                     );
 
-                    poseStack.scale(0.5F,0.5F,0.5F);
+                    poseStack.scale(-0.325F,-0.325F,0.325F);
 
                     renderItem(
                             poseStack,
