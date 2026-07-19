@@ -6,14 +6,14 @@ import dev.jeryn.audreys_additions.common.blockentity.cabinet.CabinetMenu;
 import dev.jeryn.audreys_additions.common.blockentity.hatstand.HatstandBlockEntity;
 import dev.jeryn.audreys_additions.common.blockentity.hatstand.HatstandMenu;
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.MenuProvider;
-import net.minecraft.world.SimpleMenuProvider;
+import net.minecraft.world.*;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.ContainerLevelAccess;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -57,6 +57,20 @@ public class CabinetBlock extends HorizontalDirectionalBlock implements EntityBl
     }
 
     @Override
+    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
+        if (!state.is(newState.getBlock())) {
+            BlockEntity blockEntity = level.getBlockEntity(pos);
+
+            if (blockEntity instanceof CabinetBlockEntity cabinet) {
+                Containers.dropContents(level, pos, cabinet.getInventory());
+                level.updateNeighbourForOutputSignal(pos, this);
+            }
+
+            super.onRemove(state, level, pos, newState, isMoving);
+        }
+    }
+
+    @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
         return new CabinetBlockEntity(blockPos, blockState);
     }
@@ -83,11 +97,49 @@ public class CabinetBlock extends HorizontalDirectionalBlock implements EntityBl
             player.getCooldowns().addCooldown(TRItemRegistry.PATTERN_MANIPULATOR.get(), 20);
             return InteractionResult.SUCCESS;
         } else {
-            if (level.isClientSide) {
-                return InteractionResult.SUCCESS;
-            }
-            player.openMenu(state.getMenuProvider(level, pos));
-            return InteractionResult.CONSUME;
+                if (level.isClientSide) {
+                    return InteractionResult.SUCCESS;
+                }
+
+                if (player.isShiftKeyDown()) {
+                    cabinetBlock.setOpen(false);
+                    return InteractionResult.SUCCESS;
+                }
+
+                if (!cabinetBlock.isOpen()) {
+                    cabinetBlock.setOpen(true);
+                    return InteractionResult.SUCCESS;
+                }
+
+                player.openMenu(state.getMenuProvider(level, pos));
+                return InteractionResult.CONSUME;
+        }
+    }
+
+    @Override
+    public ItemStack getCloneItemStack(BlockGetter level, BlockPos pos, BlockState state) {
+        ItemStack stack = new ItemStack(this);
+
+        BlockEntity blockEntity = level.getBlockEntity(pos);
+
+        if (blockEntity instanceof CabinetBlockEntity cabinet) {
+            CompoundTag tag = new CompoundTag();
+
+            cabinet.saveAdditional(tag);
+
+            stack.setTag(tag);
+        }
+
+        return stack;
+    }
+
+    @Override
+    public void setPlacedBy(Level level, BlockPos pos, BlockState state, LivingEntity entity, ItemStack stack) {
+        super.setPlacedBy(level, pos, state, entity, stack);
+
+        if (stack.hasTag() && level.getBlockEntity(pos) instanceof CabinetBlockEntity cabinet) {
+            cabinet.load(stack.getTag());
+            cabinet.setChanged();
         }
     }
 

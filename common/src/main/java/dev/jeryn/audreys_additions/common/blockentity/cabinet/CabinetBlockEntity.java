@@ -51,6 +51,23 @@ public class CabinetBlockEntity extends BlockEntity {
     }
 
 
+    private boolean open = false;
+
+    public boolean isOpen() {
+        return open;
+    }
+
+    public void setOpen(boolean open) {
+        this.open = open;
+        sendUpdates();
+    }
+
+    public void toggleOpen() {
+        this.open = !this.open;
+        sendUpdates();
+    }
+
+
     public String getCurrentVariant() {
         return currentVariant;
     }
@@ -66,18 +83,26 @@ public class CabinetBlockEntity extends BlockEntity {
     @Override
     public void saveAdditional(CompoundTag tag) {
         super.saveAdditional(tag);
+
         tag.putString("currentVariant", currentVariant);
-        System.out.println(inventory.createTag());
+        tag.putBoolean("open", open);
         tag.put("items", inventory.createTag());
     }
+
+
+
 
     @Override
     public void load(CompoundTag tag) {
         super.load(tag);
+
         inventory.fromTag(tag.getList("items", Tag.TAG_COMPOUND));
+
         if (tag.contains("currentVariant")) {
-            this.currentVariant = tag.getString("currentVariant");
+            currentVariant = tag.getString("currentVariant");
         }
+
+        open = tag.getBoolean("open");
     }
 
     public void sendUpdates() {
@@ -91,6 +116,7 @@ public class CabinetBlockEntity extends BlockEntity {
     public SimpleContainer getInventory() {
         return inventory;
     }
+
 
 
     @Override
