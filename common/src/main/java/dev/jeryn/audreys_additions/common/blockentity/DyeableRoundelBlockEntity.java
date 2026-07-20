@@ -12,6 +12,14 @@ public class DyeableRoundelBlockEntity extends DyeableBlockEntity {
     }
 
     @Override
+    public CompoundTag getUpdateTag() {
+        CompoundTag tag = new CompoundTag();
+        saveAdditional(tag);
+        return tag;
+    }
+
+
+    @Override
     public void saveAdditional(CompoundTag tag) {
         super.saveAdditional(tag);
         saveDye(tag);
