@@ -86,8 +86,8 @@ public class CabinetMenu extends AbstractContainerMenu {
         addSlot(new Slot(inventoryWrapper, 1, 92, 27));
         addSlot(new Slot(inventoryWrapper, 2, 68, 47));
         addSlot(new Slot(inventoryWrapper, 3, 92, 47));
-        addSlot(new Slot(inventoryWrapper, 4, 92, 67));
-        addSlot(new Slot(inventoryWrapper, 5, 68, 67));
+        addSlot(new Slot(inventoryWrapper, 4, 68, 67));
+        addSlot(new Slot(inventoryWrapper, 5, 92, 67));
         addSlot(new Slot(inventoryWrapper, 6, 68, 87));
         addSlot(new Slot(inventoryWrapper, 7, 92, 87));
 

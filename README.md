@@ -16,7 +16,6 @@ This addon introduces a variety of shell options, custom-modelled blocks, consol
 - **Rani Interior (1985)**
 - **Fugitive Interior (2020)**
 - **Primm Interior (Custom, designed by FuzzyLeo)**
-- **Seascape Interior (Custom)**
 
 ### Console Units  
 - **Brachacki Console (1963)** *
@@ -32,25 +31,25 @@ This addon introduces a variety of shell options, custom-modelled blocks, consol
 - **Rani Console (1985)**
 * Variants: Crimson, End, Keltic, Nether, White
 - **Silence Time-Ship (2010)**
+* Variant: Rainbow Obsidian
 - **Toyota Console (2012)** *  
 * Variants: Blue, Missy
-- **Seascape Console (Custom**)
 
 ### Shells  
 - **Police Box (1963)** *
-* Variant: Massacre
+* Variants: Pilot, Massacre, Adventure
 - **Police Box (1966)** *
 * Variants: Season 5, Season 6, Season 10, Season 13, Ruth
 - **Police Box (1976)** *
 * Variants: Season 16, Season 17, Black Orchid
 - **Police Box (1980)** *
-* Variants: Season 20, Season 22, Season 24, Happiness Patrol
+* Variants: Season 20, Season 22, Season 24, Happiness Patrol, Dimensional
 - **Police Box (1996)** *
 * Variant: Shalka
 - **Police Box (2005)** *
-* Variants: Red, Time War
+* Variant: Time War
 - **Police Box (2010)** *
-* Variants: Series 7, Series 10, Memorial
+* Variants: Adverts, Series 7, Series 10, Memorial
 - **Police Box (2018)** *  
 * Variants: Blue, Barbie, Proms
 - **SIDRAT** *  
@@ -65,6 +64,7 @@ This addon introduces a variety of shell options, custom-modelled blocks, consol
 - **Sandstone Column** *
 * Variant: Red Sandstone
 - **Lakertyan Pyramid**
+* Variant: Warforge
 - **Traken Clock** *
 * Variants: Each wood type
 - **Grandfather Clock** *
@@ -83,7 +83,8 @@ This addon introduces a variety of shell options, custom-modelled blocks, consol
 - **Foldout Beds**  
 - **Light Columns (Left & Right)**
 - **Specimen Jar**
-- **Hatstand**
+- **Hatstands**
 - **TARDIS Cabinet**
+- **Zeiton Quartz**
 
   (*Currently has variants)  
