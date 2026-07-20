@@ -27,6 +27,14 @@ public abstract class DyeableBlockEntity extends BlockEntity {
     }
 
 
+    @Override
+    public CompoundTag getUpdateTag() {
+        CompoundTag tag = new CompoundTag();
+        saveAdditional(tag);
+        return tag;
+    }
+
+
     public int getColour() {
         return colour;
     }

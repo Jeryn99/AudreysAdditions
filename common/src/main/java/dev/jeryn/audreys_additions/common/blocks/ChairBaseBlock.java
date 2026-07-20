@@ -2,6 +2,7 @@ package dev.jeryn.audreys_additions.common.blocks;
 
 import dev.jeryn.audreys_additions.common.blockentity.ChairBlockEntity;
 import dev.jeryn.audreys_additions.common.blockentity.KnossosChairBlockEntity;
+import dev.jeryn.audreys_additions.common.item.DyedItemBlock;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import dev.jeryn.audreys_additions.common.registry.AudEntities;
 import dev.jeryn.audreys_additions.entity.ChairEntity;
@@ -101,7 +102,9 @@ public class ChairBaseBlock extends HorizontalDirectionalBlock implements Entity
         ItemStack stack = new ItemStack(this);
 
         if (level.getBlockEntity(pos) instanceof ChairBlockEntity chairBlockEntity) {
-            stack.getOrCreateTagElement("display").putInt("color", chairBlockEntity.getColour());
+            if(stack.getItem() instanceof DyedItemBlock dyedItemBlock){
+                dyedItemBlock.setColor(stack, chairBlockEntity.getColour());
+            }
         }
 
         return stack;
