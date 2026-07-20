@@ -172,10 +172,16 @@ public class HatStandTopBlock extends HorizontalDirectionalBlock {
                                  Player player, InteractionHand hand, BlockHitResult hit) {
 
         BlockPos bottom = pos.below();
+        BlockState bottomState = level.getBlockState(bottom);
 
-        if (level.getBlockState(bottom).getBlock() instanceof HatStandBlock) {
-            return level.getBlockState(bottom)
-                    .use(level, player, hand, hit);
+        // BlockState#use(Level, Player, InteractionHand, BlockHitResult) derives its BlockPos
+        // from hit.getBlockPos(), which is still the position the player actually clicked (the
+        // top half). That fed the wrong position into HatStandBlock#use()'s getMenuProvider(),
+        // so the menu looked up a block entity at the top half (which has none) instead of the
+        // bottom half, crashing with an NPE in ContainerLevelAccess. Calling the Block directly
+        // with the correct bottom position avoids that.
+        if (bottomState.getBlock() instanceof HatStandBlock hatStandBlock) {
+            return hatStandBlock.use(bottomState, level, bottom, player, hand, hit);
         }
 
         return InteractionResult.PASS;

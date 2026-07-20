@@ -59,12 +59,24 @@ public class HatStandBlock extends HorizontalDirectionalBlock implements EntityB
 
         super.setPlacedBy(level, pos, state, entity, stack);
 
+        if (level.isClientSide) {
+            return;
+        }
+
         BlockPos top = pos.above();
 
-        if (level.getBlockState(top).canBeReplaced()) {
+        if (!level.isInWorldBounds(top)) {
+            return;
+        }
+
+        BlockState topState = level.getBlockState(top);
+
+        if (topState.canBeReplaced()) {
             level.setBlock(
                     top,
-                    AudBlocks.HATSTAND_TOP.get().defaultBlockState(),
+                    AudBlocks.HATSTAND_TOP.get()
+                            .defaultBlockState()
+                            .setValue(FACING, state.getValue(FACING)),
                     Block.UPDATE_ALL
             );
         }

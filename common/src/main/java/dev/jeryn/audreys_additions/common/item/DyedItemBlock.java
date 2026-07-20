@@ -3,6 +3,8 @@ package dev.jeryn.audreys_additions.common.item;
 import dev.jeryn.audreys_additions.common.blockentity.DyeableBlockEntity;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.*;
@@ -27,6 +29,15 @@ public class DyedItemBlock extends BlockItem implements DyeableLeatherItem {
         ItemStack defaultInstance = super.getDefaultInstance();
         setColor(defaultInstance, getBlock() == AudBlocks.ARMCHAIR.get() ? DyeColor.RED.getTextColor() : DyeColor.WHITE.getTextColor());
         return defaultInstance;
+    }
+
+    @Override
+    public int getColor(ItemStack stack) {
+        CompoundTag tag = stack.getTagElement("display");
+        if (tag != null && tag.contains("color", Tag.TAG_INT)) {
+            return tag.getInt("color");
+        }
+        return getBlock() == AudBlocks.ARMCHAIR.get() ? DyeColor.RED.getTextColor() : DyeColor.WHITE.getTextColor();
     }
 
 

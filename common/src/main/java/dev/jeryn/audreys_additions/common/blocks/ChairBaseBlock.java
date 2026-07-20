@@ -97,6 +97,17 @@ public class ChairBaseBlock extends HorizontalDirectionalBlock implements Entity
     }
 
     @Override
+    public ItemStack getCloneItemStack(BlockGetter level, BlockPos pos, BlockState state) {
+        ItemStack stack = new ItemStack(this);
+
+        if (level.getBlockEntity(pos) instanceof ChairBlockEntity chairBlockEntity) {
+            stack.getOrCreateTagElement("display").putInt("color", chairBlockEntity.getColour());
+        }
+
+        return stack;
+    }
+
+    @Override
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
         if (level.getBlockEntity(pos) instanceof KnossosChairBlockEntity knossosChairBlockEntity) {
             if (knossosChairBlockEntity.getChairEntity() != null) {

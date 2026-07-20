@@ -39,6 +39,11 @@ public class ProviderLootTable extends LootTableProvider {
                     continue;
                 }
 
+                if (block == AudBlocks.ROUNDEL_OVERLAY_FULL.get() || block == AudBlocks.ROUNDEL_OVERLAY_HALF.get()) {
+                    this.add(block, noDrop());
+                    continue;
+                }
+
                 if (block == AudBlocks.FOLD_OUT_BED.get()) {
                     this.add(block, (block2) -> this.createSinglePropConditionTable(block2, BedBlock.PART, BedPart.HEAD));
                     continue;

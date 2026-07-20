@@ -1,8 +1,8 @@
 package dev.jeryn.audreys_additions.common.blocks;
 
 import com.google.common.collect.ImmutableMap;
-import dev.jeryn.audreys_additions.common.blockentity.ChairBlockEntity;
 import dev.jeryn.audreys_additions.common.blockentity.DyeableRoundelBlockEntity;
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -11,6 +11,8 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -170,17 +172,35 @@ public class RoundelOverlayBlock extends BaseEntityBlock {
     @Override
     public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
         if (!level.isClientSide) {
-            if (!player.isCreative() && level.getBlockEntity(pos) instanceof ChairBlockEntity chairBlockEntity) {
+            boolean silkTouch = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, player.getMainHandItem()) > 0;
+
+            if ((player.isCreative() || silkTouch) && level.getBlockEntity(pos) instanceof DyeableRoundelBlockEntity roundelBlockEntity) {
                 ItemStack coloredItemBlock = new ItemStack(state.getBlock());
                 coloredItemBlock.setCount(1);
-                coloredItemBlock.getOrCreateTagElement("display").putInt("color", chairBlockEntity.getColour());
+                coloredItemBlock.getOrCreateTagElement("display").putInt("color", roundelBlockEntity.getColour());
 
-                ItemEntity itemEntity = new ItemEntity(level, pos.getX(), pos.getY(), pos.getZ(), coloredItemBlock);
-                level.addFreshEntity(itemEntity);
+                if (!player.isCreative()) {
+                    ItemEntity itemEntity = new ItemEntity(level, pos.getX(), pos.getY(), pos.getZ(), coloredItemBlock);
+                    level.addFreshEntity(itemEntity);
+                }
             }
         }
 
         super.playerWillDestroy(level, pos, state, player);
+    }
+
+    @Override
+    public ItemStack getCloneItemStack(BlockGetter level, BlockPos pos, BlockState state) {
+        ItemStack stack = new ItemStack(this);
+
+        Minecraft minecraft = Minecraft.getInstance();
+        boolean includeData = minecraft.player != null && minecraft.player.isShiftKeyDown();
+
+        if (includeData && level.getBlockEntity(pos) instanceof DyeableRoundelBlockEntity roundelBlockEntity) {
+            stack.getOrCreateTagElement("display").putInt("color", roundelBlockEntity.getColour());
+        }
+
+        return stack;
     }
 
 

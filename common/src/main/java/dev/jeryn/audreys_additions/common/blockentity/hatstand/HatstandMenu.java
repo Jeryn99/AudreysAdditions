@@ -15,6 +15,9 @@ import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.entity.BlockEntity;
+
+import java.util.Optional;
 
 class HatstandInventoryWrapper extends SimpleContainer {
     private final HatstandBlockEntity blockEntity;
@@ -79,14 +82,17 @@ public class HatstandMenu extends AbstractContainerMenu {
         super(AudMenus.HAT_STAND.get(), id);
         this.access = access;
 
+        // ContainerLevelAccess#evaluate wraps the getter's result in Optional.of(...), which
+        // throws an NPE if the getter itself returns null (e.g. no block entity at pos, or it's
+        // not a HatstandBlockEntity). Wrapping the lookup in an Optional ourselves keeps the
+        // value the getter returns non-null, so it never trips that landmine.
         be = access.evaluate(
                 (level, pos) -> {
-                    var entity = level.getBlockEntity(pos);
-                    if (entity instanceof HatstandBlockEntity h) return h;
-                    return null;
+                    BlockEntity entity = level.getBlockEntity(pos);
+                    return Optional.ofNullable(entity instanceof HatstandBlockEntity h ? h : null);
                 },
-                null
-        );
+                Optional.<HatstandBlockEntity>empty()
+        ).orElse(null);
 
         this.inventoryWrapper = new HatstandInventoryWrapper(be);
         if (be != null) {

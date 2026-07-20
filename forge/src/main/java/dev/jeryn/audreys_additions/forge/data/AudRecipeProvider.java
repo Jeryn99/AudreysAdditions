@@ -14,6 +14,7 @@ import net.minecraft.util.datafix.fixes.FurnaceRecipeFix;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CookingBookCategory;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.SmeltingRecipe;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
@@ -129,6 +130,46 @@ public class AudRecipeProvider extends RecipeProvider {
                 .define('B', Items.QUARTZ)
                 .unlockedBy("has_quartz", has(Items.QUARTZ))
                 .save(consumer);
+
+        // Smelting example
+         SimpleCookingRecipeBuilder.smelting(
+                        Ingredient.of(AudBlocks.ZEITON_QUARTZ_BLOCK.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        AudBlocks.SMOOTH_ZEITON_QUARTZ_BLOCK.get(),
+                        0.1f,
+                        200)
+                .unlockedBy("has_zeiton_quartz", has(AudBlocks.ZEITON_QUARTZ_BLOCK.get()))
+                .save(consumer);
+
+        // Stonecutting example
+        SingleItemRecipeBuilder.stonecutting(
+                        Ingredient.of(AudBlocks.ZEITON_QUARTZ_BLOCK.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        AudBlocks.ZEITON_QUARTZ_SLAB.get(),
+                        2)
+                .unlockedBy("has_zeiton_quartz", has(AudBlocks.ZEITON_QUARTZ_BLOCK.get()))
+                .save(consumer, new ResourceLocation(AudreysAdditions.MODID, "zeiton_quartz_slab_from_stonecutting"));
+
+        SingleItemRecipeBuilder.stonecutting(
+                        Ingredient.of(AudBlocks.ZEITON_QUARTZ_BLOCK.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        AudBlocks.ZEITON_QUARTZ_STAIRS.get())
+                .unlockedBy("has_zeiton_quartz", has(AudBlocks.ZEITON_QUARTZ_BLOCK.get()))
+                .save(consumer, new ResourceLocation(AudreysAdditions.MODID, "zeiton_quartz_stairs_from_stonecutting"));
+
+        SingleItemRecipeBuilder.stonecutting(
+                        Ingredient.of(AudBlocks.ZEITON_QUARTZ_BLOCK.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        AudBlocks.ZEITON_QUARTZ_BRICKS.get())
+                .unlockedBy("has_zeiton_quartz", has(AudBlocks.ZEITON_QUARTZ_BLOCK.get()))
+                .save(consumer, new ResourceLocation(AudreysAdditions.MODID, "zeiton_quartz_bricks_from_stonecutting"));
+
+        SingleItemRecipeBuilder.stonecutting(
+                        Ingredient.of(AudBlocks.ZEITON_QUARTZ_BLOCK.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        AudBlocks.ZEITON_QUARTZ_PILLAR.get())
+                .unlockedBy("has_zeiton_quartz", has(AudBlocks.ZEITON_QUARTZ_BLOCK.get()))
+                .save(consumer, new ResourceLocation(AudreysAdditions.MODID, "zeiton_quartz_pillar_from_stonecutting"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.ROUNDEL_OVERLAY_FULL.get(), 16)
                 .pattern(" G ")

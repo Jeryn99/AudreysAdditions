@@ -41,12 +41,6 @@ public class FoldOutBedBlock extends BedBlock implements EntityBlock {
             boolean isFolding = !foldOutBedBlockEntity.isFolding();
             foldOutBedBlockEntity.setFolding(isFolding);
             level.playSound(null, player.getX(), player.getY(), player.getZ(), AudSounds.SIDRAT.get(), SoundSource.BLOCKS, 1, 1F);
-
-            if (isFolding) {
-                foldOutBedBlockEntity.FOLDING.start(player.tickCount);
-            } else {
-                foldOutBedBlockEntity.UNFOLDING.start(player.tickCount);
-            }
             return InteractionResult.SUCCESS;
         }
 
