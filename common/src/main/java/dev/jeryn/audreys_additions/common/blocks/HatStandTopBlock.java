@@ -28,7 +28,7 @@ import static dev.jeryn.audreys_additions.common.blocks.MonitorBlock.rotateShape
 public class HatStandTopBlock extends HorizontalDirectionalBlock {
 
     public HatStandTopBlock(Properties properties) {
-        super(properties);
+        super(properties.noParticlesOnBreak());
     }
 
     @Override
