@@ -11,13 +11,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.client.model.generators.ConfiguredModel;
-import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder;
+import net.minecraftforge.client.model.generators.*;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.Nullable;
+import whocraft.tardis_refined.TardisRefined;
 
 public class AudBlocksModelProvider extends BlockStateProvider {
 
@@ -98,6 +96,11 @@ public class AudBlocksModelProvider extends BlockStateProvider {
                 if(value instanceof SpecimenJarBlock specimenJarBlock){
                     ResourceLocation specimenJarBlockModel = new ResourceLocation("block/red_stained_glass");
                     simpleBlockParticleOnly(value, specimenJarBlockModel);
+                    continue;
+                }
+
+                if(value == AudBlocks.HATSTAND_TOP.get()){
+                    emptyBlockState(value);
                     continue;
                 }
 
@@ -227,6 +230,12 @@ public class AudBlocksModelProvider extends BlockStateProvider {
         vineSupport(AudBlocks.ROUNDEL_OVERLAY_HALF.get());
 
     }
+
+    public JsonObject emptyBlockState(Block block) {
+        VariantBlockStateBuilder builder = getVariantBuilder(block).forAllStates(blockState -> ConfiguredModel.builder().modelFile(models().getExistingFile(new ResourceLocation(AudreysAdditions.MODID, "block/empty"))).build());
+        return builder.toJson();
+    }
+
 
     private void vineSupport(Block block) {
         ResourceLocation key = ForgeRegistries.BLOCKS.getKey(block);
