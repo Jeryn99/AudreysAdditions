@@ -198,4 +198,9 @@ public class HatStandTopBlock extends HorizontalDirectionalBlock {
 
         super.playerWillDestroy(level, blockPos, blockState, player);
     }
+
+    @Override
+    protected void spawnDestroyParticles(Level level, Player player, BlockPos blockPos, BlockState blockState) {
+    // NO!!!!!    super.spawnDestroyParticles(level, player, blockPos, blockState);
+    }
 }

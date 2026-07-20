@@ -207,13 +207,12 @@ public class AudBlocksModelProvider extends BlockStateProvider {
 
         autoCubeTopBottom(AudBlocks.ZEITON_QUARTZ_BLOCK.get());
 
-
-        //simpleCubeTopBottom(AudBlocks.ZEITON_QUARTZ_PILLAR.get(), new ResourceLocation(AudreysAdditions.MODID, "block/zeiton_quartz_pillar_top"), new ResourceLocation(AudreysAdditions.MODID, "block/zeiton_quartz_pillar_top"), new ResourceLocation(AudreysAdditions.MODID, "block/zeiton_quartz_pillar"));
-       // simpleCubeTopBottom(AudBlocks.CHISELED_ZEITON_QUARTZ_BLOCK.get(), new ResourceLocation(AudreysAdditions.MODID, "block/chiseled_zeiton_quartz_block_top"), new ResourceLocation(AudreysAdditions.MODID, "block/chiseled_zeiton_quartz_block_top"), new ResourceLocation(AudreysAdditions.MODID, "block/chiseled_zeiton_quartz_block"));
-
         logBlock(AudBlocks.CHISELED_ZEITON_QUARTZ_BLOCK.get());
         logBlock(AudBlocks.TREATED_CHISELED_ZEITON_QUARTZ_BLOCK.get());
         logBlock(AudBlocks.ZEITON_QUARTZ_PILLAR.get());
+
+        autoCubeTopBottom(AudBlocks.ZEITON_QUARTZ_BRICKS.get());
+        autoCubeTopBottom(AudBlocks.TREATED_ZEITON_QUARTZ_BRICKS.get());
 
         slabBlock(AudBlocks.ZEITON_QUARTZ_SLAB.get(), new ResourceLocation(AudreysAdditions.MODID, "zeiton_quartz_block"),  new ResourceLocation(AudreysAdditions.MODID, "block/zeiton_quartz_block_side"));
         slabBlock(AudBlocks.SMOOTH_ZEITON_QUARTZ_SLAB.get(), new ResourceLocation(AudreysAdditions.MODID, "smooth_zeiton_quartz"),  new ResourceLocation(AudreysAdditions.MODID, "block/zeiton_quartz_block_bottom"));
@@ -301,7 +300,7 @@ public class AudBlocksModelProvider extends BlockStateProvider {
         String base = key.getPath();
 
         ResourceLocation top = modLoc("block/" + base + "_top");
-        ResourceLocation bottom = modLoc("block/" + base + "_bottom");
+        ResourceLocation bottom = modLoc("block/" + base + "_top");
         ResourceLocation side = modLoc("block/" + base + "_side");
 
         ModelFile model = models().withExistingParent(base, "block/cube")
