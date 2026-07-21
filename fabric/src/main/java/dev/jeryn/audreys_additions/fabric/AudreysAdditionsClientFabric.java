@@ -49,7 +49,8 @@ public class AudreysAdditionsClientFabric implements ClientModInitializer {
 
                         if (blockEntity instanceof DyeableBlockEntity dyeableBlockEntity) {
 
-                            if (blockEntity.getLevel() != null &&
+                            if (blockState.getBlock() != AudBlocks.ARMCHAIR.get() &&
+                                    blockEntity.getLevel() != null &&
                                     blockEntity.getLevel().dimensionTypeId() == TARDIS) {
 
                                 ResourceKey<Level> dimKey = blockEntity.getLevel().dimension();
