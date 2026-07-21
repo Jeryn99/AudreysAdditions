@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "audreys_additions:zeiton_quartz_bricks"
+    }
+  ],
+  "result": {
+    "item": "audreys_additions:treated_zeiton_quartz_bricks"
+  }
+}

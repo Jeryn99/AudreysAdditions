@@ -65,13 +65,19 @@ public class AudItemTagProvider extends ItemTagsProvider {
                 .add(AudBlocks.ZEITON_QUARTZ_BRICKS.get().asItem())
                 .add(AudBlocks.ZEITON_QUARTZ_PILLAR.get().asItem())
                 .add(AudBlocks.CHISELED_ZEITON_QUARTZ_BLOCK.get().asItem())
-                .add(AudBlocks.ZEITON_QUARTZ_DOOR.get().asItem());
+                .add(AudBlocks.ZEITON_QUARTZ_DOOR.get().asItem())
+                .add(AudBlocks.TREATED_ZEITON_QUARTZ_BRICKS.get().asItem())
+                .add(AudBlocks.TREATED_ZEITON_QUARTZ_DOOR.get().asItem())
+                .add(AudBlocks.TREATED_CHISELED_ZEITON_QUARTZ_BLOCK.get().asItem());
 
         tag(AudTags.NON_STAIR_ZEITON_BLOCKS).add(AudBlocks.ZEITON_QUARTZ_BLOCK.get().asItem())
                 .add(AudBlocks.SMOOTH_ZEITON_QUARTZ_BLOCK.get().asItem())
                 .add(AudBlocks.ZEITON_QUARTZ_BRICKS.get().asItem())
                 .add(AudBlocks.ZEITON_QUARTZ_PILLAR.get().asItem())
                 .add(AudBlocks.CHISELED_ZEITON_QUARTZ_BLOCK.get().asItem())
-                .add(AudBlocks.ZEITON_QUARTZ_DOOR.get().asItem());
+                .add(AudBlocks.ZEITON_QUARTZ_DOOR.get().asItem())
+                .add(AudBlocks.TREATED_ZEITON_QUARTZ_BRICKS.get().asItem())
+                .add(AudBlocks.TREATED_ZEITON_QUARTZ_DOOR.get().asItem())
+                .add(AudBlocks.TREATED_CHISELED_ZEITON_QUARTZ_BLOCK.get().asItem());
     }
 }

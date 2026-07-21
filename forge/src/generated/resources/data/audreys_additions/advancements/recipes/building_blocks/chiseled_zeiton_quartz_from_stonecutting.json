@@ -3,16 +3,16 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "audreys_additions:roundel_overlay_half"
+        "recipe": "audreys_additions:chiseled_zeiton_quartz_from_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "has_zeiton": {
+    "has_zeiton_quartz": {
       "conditions": {
         "items": [
           {
             "items": [
-              "tardis_refined:zeiton_ingot"
+              "audreys_additions:zeiton_quartz_block"
             ]
           }
         ]
@@ -22,13 +22,13 @@
   },
   "requirements": [
     [
-      "has_zeiton",
+      "has_zeiton_quartz",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "audreys_additions:roundel_overlay_half"
+      "audreys_additions:chiseled_zeiton_quartz_from_stonecutting"
     ]
   },
   "sends_telemetry_event": false

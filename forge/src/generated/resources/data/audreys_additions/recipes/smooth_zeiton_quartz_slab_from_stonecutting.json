@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "count": 1,
+  "count": 2,
   "ingredient": {
     "tag": "audreys_additions:zeiton_blocks"
   },
-  "result": "audreys_additions:zeiton_quartz_bricks"
+  "result": "audreys_additions:smooth_zeiton_quartz_slab"
 }

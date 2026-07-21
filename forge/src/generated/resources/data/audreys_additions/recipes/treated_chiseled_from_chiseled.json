@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "audreys_additions:chiseled_zeiton_quartz_block"
+    }
+  ],
+  "result": {
+    "item": "audreys_additions:treated_chiseled_zeiton_quartz_block"
+  }
+}

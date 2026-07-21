@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "count": 1,
   "ingredient": {
-    "item": "audreys_additions:zeiton_quartz_block"
+    "tag": "audreys_additions:zeiton_blocks"
   },
   "result": "audreys_additions:zeiton_quartz_pillar"
 }
