@@ -51,6 +51,9 @@ public abstract class DyeableBlockEntity extends BlockEntity {
     public void loadDye(CompoundTag tag) {
         if (tag.contains("DyeColour")) {
             this.colour = tag.getInt("DyeColour");
+            if (level != null && level.isClientSide) {
+                level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 8);
+            }
         }
     }
 
