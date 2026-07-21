@@ -108,6 +108,14 @@ public class AudBlocksModelProvider extends BlockStateProvider {
                     continue;
                 }
 
+                if (value == AudBlocks.ZEITON_QUARTZ_BRICKS.get()) {
+                    continue;
+                }
+
+                if (value == AudBlocks.TREATED_ZEITON_QUARTZ_BRICKS.get()) {
+                    continue;
+                }
+
                 if (value == AudBlocks.ZEITON_QUARTZ_PILLAR.get()) {
                     continue;
                 }
@@ -309,7 +317,7 @@ public class AudBlocksModelProvider extends BlockStateProvider {
         String base = key.getPath();
 
         ResourceLocation top = modLoc("block/" + base + "_top");
-        ResourceLocation bottom = modLoc("block/" + base + "_top");
+        ResourceLocation bottom = modLoc("block/" + base + "_bottom");
         ResourceLocation side = modLoc("block/" + base + "_side");
 
         ModelFile model = models().withExistingParent(base, "block/cube")

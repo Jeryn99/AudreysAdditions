@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "audreys_additions:block/treated_zeiton_quartz_bricks"
+    "down": "audreys_additions:block/treated_zeiton_quartz_bricks_bottom",
+    "east": "audreys_additions:block/treated_zeiton_quartz_bricks_side",
+    "north": "audreys_additions:block/treated_zeiton_quartz_bricks_side",
+    "particle": "audreys_additions:block/treated_zeiton_quartz_bricks_side",
+    "south": "audreys_additions:block/treated_zeiton_quartz_bricks_side",
+    "up": "audreys_additions:block/treated_zeiton_quartz_bricks_top",
+    "west": "audreys_additions:block/treated_zeiton_quartz_bricks_side"
   }
 }
