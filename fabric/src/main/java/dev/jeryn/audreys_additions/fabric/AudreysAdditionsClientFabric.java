@@ -4,6 +4,7 @@ import dev.jeryn.audreys_additions.AUDModelRegistry;
 import dev.jeryn.audreys_additions.ClientUtil;
 import dev.jeryn.audreys_additions.client.renderers.*;
 import dev.jeryn.audreys_additions.common.blockentity.DyeableBlockEntity;
+import dev.jeryn.audreys_additions.common.util.TardisFuelUtil;
 import dev.jeryn.audreys_additions.common.blockentity.cabinet.CabinetScreen;
 import dev.jeryn.audreys_additions.common.blockentity.hatstand.HatstandScreen;
 import dev.jeryn.audreys_additions.common.item.DyedItemBlock;
@@ -58,14 +59,9 @@ public class AudreysAdditionsClientFabric implements ClientModInitializer {
                                 double fuel = data.getFuel();
 
                                 int color = dyeableBlockEntity.getColour();
+                                float factor = TardisFuelUtil.getDarkenFactor(fuel);
 
-                                if (fuel < 500) {
-                                    int steps = (int) ((500 - fuel) / 10);
-                                    steps = Math.min(steps, 50);
-
-                                    float factor = 1.0f - (steps * 0.02f);
-                                    factor = Math.max(0.2f, factor);
-
+                                if (factor < 1.0f) {
                                     int r = (int) (((color >> 16) & 0xFF) * factor);
                                     int g = (int) (((color >> 8) & 0xFF) * factor);
                                     int b = (int) ((color & 0xFF) * factor);

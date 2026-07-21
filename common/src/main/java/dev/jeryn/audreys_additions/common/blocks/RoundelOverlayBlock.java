@@ -20,14 +20,20 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Map;
+import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import dev.jeryn.audreys_additions.common.util.TardisFuelUtil;
+import whocraft.tardis_refined.common.capability.tardis.TardisLevelOperator;
+
+import static whocraft.tardis_refined.registry.TRDimensionTypes.TARDIS;
 
 public class RoundelOverlayBlock extends BaseEntityBlock {
 
@@ -41,6 +47,11 @@ public class RoundelOverlayBlock extends BaseEntityBlock {
     public static final Map<Direction, BooleanProperty> PROPERTY_BY_DIRECTION =
             PipeBlock.PROPERTY_BY_DIRECTION;
 
+    public static final IntegerProperty DARKNESS_BAND = IntegerProperty.create("darkness_band", 0, 5);
+    private static final int MAX_DARKNESS_BAND = 5;
+    private static final int BASE_LIGHT_LEVEL = 13;
+    private static final int LIGHT_LEVEL_STEP = 2;
+
     private static final VoxelShape UP_AABB = Block.box(0.0, 15.0, 0.0, 16.0, 16.0, 16.0);
     private static final VoxelShape DOWN_AABB = Block.box(0.0, 0.0, 0.0, 16.0, 1.0, 16.0);
     private static final VoxelShape WEST_AABB = Block.box(0.0, 0.0, 0.0, 1.0, 16.0, 16.0);
@@ -51,7 +62,7 @@ public class RoundelOverlayBlock extends BaseEntityBlock {
     private final Map<BlockState, VoxelShape> shapesCache;
 
     public RoundelOverlayBlock(BlockBehaviour.Properties properties) {
-        super(properties.lightLevel(value -> 13));
+        super(properties.lightLevel(state -> BASE_LIGHT_LEVEL - state.getValue(DARKNESS_BAND) * LIGHT_LEVEL_STEP));
         this.registerDefaultState(
                 this.stateDefinition.any()
                         .setValue(UP, false)
@@ -60,6 +71,7 @@ public class RoundelOverlayBlock extends BaseEntityBlock {
                         .setValue(EAST, false)
                         .setValue(SOUTH, false)
                         .setValue(WEST, false)
+                        .setValue(DARKNESS_BAND, 0)
         );
 
         this.shapesCache = ImmutableMap.copyOf(
@@ -103,9 +115,26 @@ public class RoundelOverlayBlock extends BaseEntityBlock {
 
     @Override
     public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        level.sendBlockUpdated(pos, state, state, 8);
-        level.updateNeighborsAt(pos, state.getBlock());
-        level.setBlock(pos, state, 8);
+        BlockState toPlace = state;
+
+        if (level.dimensionTypeId() == TARDIS) {
+            Optional<TardisLevelOperator> operator = TardisLevelOperator.get(level);
+            if (operator.isPresent()) {
+                double fuel = operator.get().getPilotingManager().getFuel();
+                float factor = TardisFuelUtil.getDarkenFactor(fuel);
+
+                int band = Math.round((1.0f - factor) / 0.16f);
+                band = Math.min(MAX_DARKNESS_BAND, Math.max(0, band));
+
+                if (state.getValue(DARKNESS_BAND) != band) {
+                    toPlace = state.setValue(DARKNESS_BAND, band);
+                }
+            }
+        }
+
+        level.sendBlockUpdated(pos, state, toPlace, 8);
+        level.updateNeighborsAt(pos, toPlace.getBlock());
+        level.setBlock(pos, toPlace, 8);
         level.scheduleTick(pos, this, 20);
         level.getChunkSource().updateChunkForced(new ChunkPos(pos.getX(), pos.getZ()), true);
     }
@@ -206,7 +235,7 @@ public class RoundelOverlayBlock extends BaseEntityBlock {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(UP, DOWN, NORTH, EAST, SOUTH, WEST);
+        builder.add(UP, DOWN, NORTH, EAST, SOUTH, WEST, DARKNESS_BAND);
     }
 
     @Override
