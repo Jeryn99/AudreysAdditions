@@ -104,6 +104,11 @@ public class AudBlocksModelProvider extends BlockStateProvider {
                     continue;
                 }
 
+                if(value == AudBlocks.CABINET_TOP.get()){
+                    emptyBlockState(value);
+                    continue;
+                }
+
                 if (value == AudBlocks.ZEITON_QUARTZ_BLOCK.get()) {
                     continue;
                 }

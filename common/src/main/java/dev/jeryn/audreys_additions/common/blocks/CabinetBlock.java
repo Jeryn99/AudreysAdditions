@@ -2,7 +2,9 @@ package dev.jeryn.audreys_additions.common.blocks;
 
 import dev.jeryn.audreys_additions.common.blockentity.cabinet.CabinetBlockEntity;
 import dev.jeryn.audreys_additions.common.blockentity.cabinet.CabinetMenu;
+import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
@@ -23,6 +25,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -34,14 +37,63 @@ import whocraft.tardis_refined.registry.TRSoundRegistry;
 
 public class CabinetBlock extends HorizontalDirectionalBlock implements EntityBlock {
 
+    public static final BooleanProperty TOP =
+            BooleanProperty.create("top");
+
     public CabinetBlock(Properties properties) {
         super(properties);
+        this.registerDefaultState(
+                this.stateDefinition.any()
+                        .setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH)
+                        .setValue(TOP, true)
+        );
+
     }
+
+ //   public CabinetBlock(Properties properties) {
+ //       super(properties);
+  //  }
 
 
     @Override
     public @Nullable BlockState getStateForPlacement(BlockPlaceContext blockPlaceContext) {
         return super.getStateForPlacement(blockPlaceContext).setValue(BlockStateProperties.HORIZONTAL_FACING, blockPlaceContext.getHorizontalDirection());
+    }
+
+    @Override
+    public void setPlacedBy(Level level, BlockPos pos, BlockState state,
+                            LivingEntity entity, ItemStack stack) {
+
+        super.setPlacedBy(level, pos, state, entity, stack);
+
+        if (stack.hasTag() && level.getBlockEntity(pos) instanceof CabinetBlockEntity cabinet) {
+            cabinet.load(stack.getTag());
+            cabinet.setChanged();
+        }
+
+        if (level.isClientSide) {
+            return;
+        }
+
+        BlockPos top = pos.above();
+
+        if (!level.isInWorldBounds(top)) {
+            return;
+        }
+
+
+
+        BlockState topState = level.getBlockState(top);
+
+        if (topState.canBeReplaced()) {
+            level.setBlock(
+                    top,
+                    AudBlocks.CABINET_TOP.get()
+                            .defaultBlockState()
+                            .setValue(FACING, state.getValue(FACING)),
+                    Block.UPDATE_ALL
+            );
+        }
     }
 
     @Override
@@ -51,12 +103,19 @@ public class CabinetBlock extends HorizontalDirectionalBlock implements EntityBl
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(TOP);
         builder.add(BlockStateProperties.HORIZONTAL_FACING);
     }
 
     @Override
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
         if (!state.is(newState.getBlock())) {
+
+            BlockPos top = pos.above();
+
+            if (level.getBlockState(top).is(AudBlocks.CABINET_TOP.get())) {
+                level.destroyBlock(top, false);
+            }
             BlockEntity blockEntity = level.getBlockEntity(pos);
 
             if (blockEntity instanceof CabinetBlockEntity cabinet) {
@@ -132,16 +191,6 @@ public class CabinetBlock extends HorizontalDirectionalBlock implements EntityBl
         }
 
         return stack;
-    }
-
-    @Override
-    public void setPlacedBy(Level level, BlockPos pos, BlockState state, LivingEntity entity, ItemStack stack) {
-        super.setPlacedBy(level, pos, state, entity, stack);
-
-        if (stack.hasTag() && level.getBlockEntity(pos) instanceof CabinetBlockEntity cabinet) {
-            cabinet.load(stack.getTag());
-            cabinet.setChanged();
-        }
     }
 
     @Override

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "audreys_additions:block/empty"
+    },
+    "facing=north": {
+      "model": "audreys_additions:block/empty"
+    },
+    "facing=south": {
+      "model": "audreys_additions:block/empty"
+    },
+    "facing=west": {
+      "model": "audreys_additions:block/empty"
+    }
+  }
+}
