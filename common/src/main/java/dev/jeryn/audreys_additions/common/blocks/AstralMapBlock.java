@@ -44,8 +44,7 @@ public class AstralMapBlock extends Block implements EntityBlock {
     public AstralMapBlock(Properties properties) {
         super(properties);
     }
-
-   
+    
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
@@ -68,5 +67,17 @@ public class AstralMapBlock extends Block implements EntityBlock {
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new AstralMapBlockEntity(pos, state);
+    }
+
+    @Override
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+
+        if (level instanceof ServerLevel serverLevel) {
+            TardisLevelOperator.get(serverLevel).ifPresent(tardisLevelOperator -> {
+                (new S2COpenMonitor(tardisLevelOperator.getInteriorManager().isWaitingToGenerate(), tardisLevelOperator.getPilotingManager().getCurrentLocation(), tardisLevelOperator.getPilotingManager().getTargetLocation(), tardisLevelOperator.getUpgradeHandler(), tardisLevelOperator.getAestheticHandler().getShellTheme())).send((ServerPlayer) player);
+            });
+        }
+
+        return super.use(state, level, pos, player, hand, hit);
     }
 }
