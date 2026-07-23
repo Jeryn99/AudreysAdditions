@@ -5,6 +5,8 @@ import net.minecraft.util.StringRepresentable;
 public enum CeilingCanopyVariants implements StringRepresentable {
     NORMAL("normal"),
     NORMAL_HANGING("normal_hanging"),
+    ZEITON("zeiton"),
+    ZEITON_HANGING("zeiton_hanging"),
     STONE("stone"),
     STONE_HANGING("stone_hanging"),
     TREMAS("tremas"),

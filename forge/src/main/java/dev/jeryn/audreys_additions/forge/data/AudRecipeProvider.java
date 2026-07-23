@@ -62,6 +62,15 @@ public class AudRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_glass", has(Blocks.RED_STAINED_GLASS))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.ZEITON_QUARTZ_BLOCK.get(), 4)
+                .pattern(" G ")
+                .pattern("GSG")
+                .pattern(" G ")
+                .define('G', Items.QUARTZ)
+                .define('S', TRItemRegistry.ZEITON_INGOT.get())
+                .unlockedBy("has_zeiton", has(TRItemRegistry.ZEITON_INGOT.get()))
+                .save(consumer);
+
         VanillaRecipeProvider.cut(consumer, RecipeCategory.BUILDING_BLOCKS, AudBlocks.HATSTAND_ACACIA.get(), Blocks.ACACIA_PLANKS);
 
 
