@@ -3,9 +3,11 @@ package dev.jeryn.audreys_additions.common.blockentity.cabinet;
 import dev.jeryn.audreys_additions.common.registry.AudBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.SimpleContainer;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -20,6 +22,12 @@ public class CabinetBlockEntity extends BlockEntity {
         @Override
         public boolean stillValid(Player player) {
             return true;
+        }
+
+        @Override
+        public void setChanged() {
+            super.setChanged();
+            sendUpdates();
         }
     };
 
@@ -86,7 +94,18 @@ public class CabinetBlockEntity extends BlockEntity {
 
         tag.putString("currentVariant", currentVariant);
         tag.putBoolean("open", open);
-        tag.put("items", inventory.createTag());
+
+       ListTag items = new ListTag();
+        for (int i = 0; i < inventory.getContainerSize(); i++) {
+            ItemStack stack = inventory.getItem(i);
+            if (!stack.isEmpty()) {
+                CompoundTag itemTag = new CompoundTag();
+                itemTag.putByte("Slot", (byte) i);
+                stack.save(itemTag);
+                items.add(itemTag);
+            }
+        }
+        tag.put("items", items);
     }
 
 
@@ -96,7 +115,15 @@ public class CabinetBlockEntity extends BlockEntity {
     public void load(CompoundTag tag) {
         super.load(tag);
 
-        inventory.fromTag(tag.getList("items", Tag.TAG_COMPOUND));
+        inventory.clearContent();
+        ListTag items = tag.getList("items", Tag.TAG_COMPOUND);
+        for (int i = 0; i < items.size(); i++) {
+            CompoundTag itemTag = items.getCompound(i);
+            int slot = itemTag.getByte("Slot") & 255;
+            if (slot >= 0 && slot < inventory.getContainerSize()) {
+                inventory.setItem(slot, ItemStack.of(itemTag));
+            }
+        }
 
         if (tag.contains("currentVariant")) {
             currentVariant = tag.getString("currentVariant");

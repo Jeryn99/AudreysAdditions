@@ -63,6 +63,7 @@ public class RenderCabinet implements BlockEntityRenderer<CabinetBlockEntity>, B
         if (blockEntity.isOpen()) {
             SimpleContainer inventory = blockEntity.getInventory();
 
+
             for(int i = 0; i < inventory.getContainerSize(); i++) {
                 ItemStack stack = inventory.getItem(i);
 
