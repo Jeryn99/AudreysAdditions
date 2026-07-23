@@ -71,7 +71,7 @@ public class AudRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_zeiton", has(TRItemRegistry.ZEITON_INGOT.get()))
                 .save(consumer);
 
-        VanillaRecipeProvider.cut(consumer, RecipeCategory.BUILDING_BLOCKS, AudBlocks.HATSTAND_ACACIA.get(), Blocks.ACACIA_PLANKS);
+       // VanillaRecipeProvider.cut(consumer, RecipeCategory.BUILDING_BLOCKS, AudBlocks.HATSTAND_ACACIA.get(), Blocks.ACACIA_PLANKS);
 
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AudBlocks.CHISELED_ZEITON_QUARTZ_BLOCK.get())
