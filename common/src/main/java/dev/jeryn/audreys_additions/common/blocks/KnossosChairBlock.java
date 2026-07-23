@@ -1,7 +1,10 @@
 package dev.jeryn.audreys_additions.common.blocks;
 
+import dev.jeryn.audreys_additions.common.blockentity.DyeableRoundelBlockEntity;
 import dev.jeryn.audreys_additions.common.blockentity.KnossosChairBlockEntity;
+import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import dev.jeryn.audreys_additions.common.registry.AudEntities;
+import dev.jeryn.audreys_additions.common.registry.AudItems;
 import dev.jeryn.audreys_additions.entity.ChairEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -9,8 +12,12 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -56,6 +63,11 @@ public class KnossosChairBlock extends ChairBaseBlock{
         return state.setValue(ROTATION, mirror.mirror(state.getValue(ROTATION), 16));
     }
 
+
+    @Override
+    public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
+        super.playerWillDestroy(level, pos, state, player);
+    }
    
 
 
