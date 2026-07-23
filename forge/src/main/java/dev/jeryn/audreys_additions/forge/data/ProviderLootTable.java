@@ -1,7 +1,6 @@
 package dev.jeryn.audreys_additions.forge.data;
 
 import dev.jeryn.audreys_additions.AudreysAdditions;
-import dev.jeryn.audreys_additions.common.blocks.LightBoxBlock;
 import dev.jeryn.audreys_additions.common.registry.AudBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -50,22 +49,22 @@ public class ProviderLootTable extends LootTableProvider {
                 }
 
                 if (block == AudBlocks.LIGHTCOLUMN_LEFT.get()) {
-                    this.add(block, (block2) -> this.createSinglePropConditionTable(block2, LightBoxBlock.PART, BedPart.HEAD));
+                    this.add(block, BlockLootSubProvider::createSilkTouchOnlyTable);
                     continue;
                 }
 
                 if (block == AudBlocks.LIGHTCOLUMN_RIGHT.get()) {
-                    this.add(block, (block2) -> this.createSinglePropConditionTable(block2, LightBoxBlock.PART, BedPart.HEAD));
+                    this.add(block, BlockLootSubProvider::createSilkTouchOnlyTable);
                     continue;
                 }
 
                 if (block == AudBlocks.TREATED_LIGHTCOLUMN_LEFT.get()) {
-                    this.add(block, (block2) -> this.createSinglePropConditionTable(block2, LightBoxBlock.PART, BedPart.HEAD));
+                    this.add(block, BlockLootSubProvider::createSilkTouchOnlyTable);
                     continue;
                 }
 
                 if (block == AudBlocks.TREATED_LIGHTCOLUMN_RIGHT.get()) {
-                    this.add(block, (block2) -> this.createSinglePropConditionTable(block2, LightBoxBlock.PART, BedPart.HEAD));
+                    this.add(block, BlockLootSubProvider::createSilkTouchOnlyTable);
                     continue;
                 }
 
