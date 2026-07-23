@@ -80,6 +80,12 @@ public class AudDesktopProvider extends DesktopProvider {
                 )));
 
         addDesktop(new DesktopTheme(
+                new ResourceLocation(AudreysAdditions.MODID, "ruscoe2"),
+                new ResourceLocation(AudreysAdditions.MODID, "desktop/ruscoe2"),
+                TardisRefined.GSON.toJson(Component.literal(getCleanNameButItsMyGo(ChatFormatting.YELLOW + "(1980) " + ChatFormatting.BLUE + "Ruscoe II"))
+                )));
+
+        addDesktop(new DesktopTheme(
                 new ResourceLocation(AudreysAdditions.MODID, "primm"),
                 new ResourceLocation(AudreysAdditions.MODID, "desktop/primm"),
                 TardisRefined.GSON.toJson(Component.literal(getCleanNameButItsMyGo(ChatFormatting.BLUE + "Primm"))
