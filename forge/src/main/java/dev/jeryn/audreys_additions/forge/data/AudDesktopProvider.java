@@ -28,7 +28,7 @@ public class AudDesktopProvider extends DesktopProvider {
         addDesktop(new DesktopTheme(
                 new ResourceLocation(AudreysAdditions.MODID, "newbery"),
                 new ResourceLocation(AudreysAdditions.MODID, "desktop/newbery"),
-                TardisRefined.GSON.toJson(Component.literal(getCleanNameButItsMyGo(ChatFormatting.YELLOW + "(1976) " + ChatFormatting.BLUE + "Secondary"))
+                TardisRefined.GSON.toJson(Component.literal(getCleanNameButItsMyGo(ChatFormatting.YELLOW + "(1976) " + ChatFormatting.BLUE + "Newbery I"))
         )));
 //           TardisRefined.GSON.toJson(Component.literal(getCleanNameButItsMyGo(ChatFormatting.BLUE + "Thorn" + ChatFormatting.YELLOW + "ton"))
         addDesktop(new DesktopTheme(
@@ -36,6 +36,12 @@ public class AudDesktopProvider extends DesktopProvider {
                 new ResourceLocation(AudreysAdditions.MODID, "desktop/thornton"),
                 TardisRefined.GSON.toJson(Component.literal(getCleanNameButItsMyGo(ChatFormatting.YELLOW + "(1983) " + ChatFormatting.BLUE + "Thornton"))
         )));
+
+        addDesktop(new DesktopTheme(
+                new ResourceLocation(AudreysAdditions.MODID, "newbery2"),
+                new ResourceLocation(AudreysAdditions.MODID, "desktop/newbery2"),
+                TardisRefined.GSON.toJson(Component.literal(getCleanNameButItsMyGo(ChatFormatting.YELLOW + "(1977) " + ChatFormatting.BLUE + "Newbery II"))
+                )));
 
         addDesktop(new DesktopTheme(
                 new ResourceLocation(AudreysAdditions.MODID, "tremas"),
@@ -71,6 +77,12 @@ public class AudDesktopProvider extends DesktopProvider {
                 new ResourceLocation(AudreysAdditions.MODID, "ruscoe1"),
                 new ResourceLocation(AudreysAdditions.MODID, "desktop/ruscoe1"),
                 TardisRefined.GSON.toJson(Component.literal(getCleanNameButItsMyGo(ChatFormatting.YELLOW + "(1975) " + ChatFormatting.BLUE + "Ruscoe I"))
+                )));
+
+        addDesktop(new DesktopTheme(
+                new ResourceLocation(AudreysAdditions.MODID, "ruscoe2"),
+                new ResourceLocation(AudreysAdditions.MODID, "desktop/ruscoe2"),
+                TardisRefined.GSON.toJson(Component.literal(getCleanNameButItsMyGo(ChatFormatting.YELLOW + "(1980) " + ChatFormatting.BLUE + "Ruscoe II"))
                 )));
 
         addDesktop(new DesktopTheme(

@@ -30,6 +30,10 @@ This addon introduces a variety of shell options, custom-modelled blocks, consol
 * Variants: Master, Rani, Warrior, Yellowed
 - **Rani Console (1985)**
 * Variants: Crimson, End, Keltic, Nether, White
+- **Hudolin Console (1996)**
+* Variants: Each wood type
+- **Human Nature Console (2003)**
+* Variant: Catless
 - **Silence Time-Ship (2010)**
 * Variant: Rainbow Obsidian
 - **Toyota Console (2012)** *  
@@ -73,18 +77,37 @@ This addon introduces a variety of shell options, custom-modelled blocks, consol
 * Variants: Each wood type
 
 ### Blocks/Items  
-- **Food Machine & Food Cubes**  
-- **Knossos Throne**  
+- **Food Machine & Food Cubes**
+* Fueled with organic blocks and items, the Food Machine will spit out reliable but weak Food Cubes!
+- **Knossos Throne**
+* Variants: Each wood type
 - **Dyeable Armchair**  
 - **Astral Map**  
 - **Ceiling Canopy**  
-* Variants: Stone, Tremas
+* Variants: Zeiton, Stone, Tremas
 - **Brachacki & Liminton Monitors**  
-- **Foldout Beds**  
+- **Fold-out Beds**  
 - **Light Columns (Left & Right)**
 - **Specimen Jar**
+* With Allay, Creeper, Dragon, Skeleton, Piglin, Vex, Wither Skeleton, and Zombie variants
+* A decorative block for scientific research, when crafted with a mob skull you can display an infantile version of the mob, pickled in time like a gherkin in a jar.. A certain rogue Time Lady's desktop may provide some containers to start.
+* If you're feeling more cruel, you can also capture Vexes or Allays in the wild for study.
 - **Hatstands**
+* Drape your clothes and armor on this decorational block, with unique designs for each wood variant!
 - **TARDIS Cabinet**
-- **Zeiton Quartz**
+* Variants: Each wood type
+* * Straight from the Toymaker's domain, a storage block capable of displaying up to 8 item stacks, decorate your spaces with an array of wooden TARDIS-styled Cabinets!
+- **Dyeable Roundels (Full and Half)**
+* What are the round things? A dyeable, decorative block to give your spaces that Gallifreyan flair! In the TARDIS, they dim as your power lowers, so keep her fueled to ensure she looks her best!
 
+- **Zeiton Quartz (+Stairs, Slab)**
+- **Smooth Zeiton Quartz (+Stairs, Slab)**
+- **Zeiton Quartz Bricks**
+- **Zeiton Quartz Pillar**
+- **Chiseled Zeiton Quartz**
+- **Zeiton Quartz Door**
+- **Treated Light Column (Left and Right)**
+- - **Treated Zeiton Quartz Bricks**
+- **Treated Chiseled Zeiton Quartz**
+- **Treated Zeiton Quartz Door**
   (*Currently has variants)  

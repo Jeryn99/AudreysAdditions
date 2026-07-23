@@ -52,14 +52,12 @@ public class HatstandBlockEntity extends BlockEntity {
     public CompoundTag getUpdateTag() {
         CompoundTag compoundTag = new CompoundTag();
         saveAdditional(compoundTag);
-        System.out.println(compoundTag);
         return compoundTag;
     }
 
     @Override
     public void saveAdditional(CompoundTag tag) {
         super.saveAdditional(tag);
-        System.out.println(inventory.createTag());
         tag.put("clothing", inventory.createTag());
     }
 }

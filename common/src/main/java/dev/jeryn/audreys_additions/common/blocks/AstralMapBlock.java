@@ -44,7 +44,7 @@ public class AstralMapBlock extends Block implements EntityBlock {
     public AstralMapBlock(Properties properties) {
         super(properties);
     }
-    
+
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {

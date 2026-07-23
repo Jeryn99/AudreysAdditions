@@ -10,6 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.BedBlock;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import whocraft.tardis_refined.registry.TRBlockRegistry;
@@ -35,6 +36,16 @@ public class ProviderLootTable extends LootTableProvider {
 
                 if (block == AudBlocks.ARMCHAIR.get()) {
                     this.add(block, noDrop());
+                    continue;
+                }
+
+                if (block == AudBlocks.TREATED_ZEITON_QUARTZ_DOOR.get()) {
+                    this.add(block, this::createDoorTable);
+                    continue;
+                }
+
+                if (block == AudBlocks.ZEITON_QUARTZ_DOOR.get()) {
+                    this.add(block, this::createDoorTable);
                     continue;
                 }
 

@@ -126,6 +126,12 @@ public class MonitorBlock extends HorizontalDirectionalBlock implements SimpleWa
         builder.add(WATERLOGGED, FACING);
     }
 
+
+    @Override
+    public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
+        super.playerWillDestroy(level, pos, state, player);
+    }
+
     @Override
     public boolean isPathfindable(BlockState state, BlockGetter level, BlockPos pos, PathComputationType type) {
         return false;

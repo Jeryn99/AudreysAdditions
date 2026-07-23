@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:quartz"
+    },
+    "S": {
+      "item": "tardis_refined:zeiton_ingot"
+    }
+  },
+  "pattern": [
+    " G ",
+    "GSG",
+    " G "
+  ],
+  "result": {
+    "count": 4,
+    "item": "audreys_additions:zeiton_quartz_block"
+  },
+  "show_notification": true
+}
