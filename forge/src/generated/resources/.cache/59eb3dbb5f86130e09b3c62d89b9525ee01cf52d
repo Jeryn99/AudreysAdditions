@@ -1,8 +1,9 @@
-// 1.20.1	2026-07-20T20:28:40.8712506	Loot Tables
+// 1.20.1	2026-07-23T05:00:33.875881	Loot Tables
 ea3815b3201e72fbb3301d39ea4f0586ac3fcb2b data/audreys_additions/loot_tables/blocks/armchair.json
 334aa00249b17fcd52999a39d3828141d9f6f617 data/audreys_additions/loot_tables/blocks/astral_map.json
 49aebf8c6147894f801bbf830dafe4d5ac8ae327 data/audreys_additions/loot_tables/blocks/brachacki_monitor.json
 e095c00779307421cb3cfc9e1b32e3d61b061176 data/audreys_additions/loot_tables/blocks/cabinet.json
+13a7992c0e69d5caa7aa7b6abf1905bac85852eb data/audreys_additions/loot_tables/blocks/cabinet_top.json
 8562f9590fd72d1cc15d080306a3f3246048b71d data/audreys_additions/loot_tables/blocks/ceiling_canopy.json
 5c8fde9a7f7496f151d65fad7795536ab91c33ac data/audreys_additions/loot_tables/blocks/chiseled_zeiton_quartz_block.json
 fb43913cb7b627d875728d8d9393dc8a0f0d078b data/audreys_additions/loot_tables/blocks/fold_out_bed.json

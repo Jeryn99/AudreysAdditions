@@ -128,6 +128,7 @@ public class AudBlocks {
     public static final RegistrySupplier<Block> HATSTAND_WARPED = register("hatstand_warped", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
     public static final RegistrySupplier<Block> HATSTAND_TOP = registerBlockOnly("hatstand_top", () -> new HatStandTopBlock(BlockBehaviour.Properties.copy(HATSTAND_ACACIA.get())));
     public static final RegistrySupplier<Block> CABINET = register("cabinet", () -> new CabinetBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
+    public static final RegistrySupplier<Block> CABINET_TOP = registerBlockOnly("cabinet_top", () -> new CabinetTopBlock(BlockBehaviour.Properties.copy(CABINET.get())));
     /**
      * Registers a Block and BlockItem to the ItemGroup of your choice
      */
