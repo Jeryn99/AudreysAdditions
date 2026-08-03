@@ -113,6 +113,16 @@ public class AUDPatterns extends ShellPatternProvider {
 
         quickAdd(AudShellRegistry.IRON_MAIDEN.getId(), "iron_maiden", false);
 
+
+        quickAdd(AudShellRegistry.JADE_PAGODA.getId(), "default", true);
+        quickAdd(AudShellRegistry.JADE_PAGODA.getId(), "andesite", true);
+        quickAdd(AudShellRegistry.JADE_PAGODA.getId(), "mossy", true);
+        quickAdd(AudShellRegistry.JADE_PAGODA.getId(), "lapis", true);
+        quickAdd(AudShellRegistry.JADE_PAGODA.getId(), "sandstone", true);
+        quickAdd(AudShellRegistry.JADE_PAGODA.getId(), "gold", true);
+        quickAdd(AudShellRegistry.JADE_PAGODA.getId(), "diamond", true);
+        quickAdd(AudShellRegistry.JADE_PAGODA.getId(), "emerald", true);
+
         quickAdd(AudShellRegistry.TT_CAPSULE.getId(), "tt_capsule", false);
         quickAdd(AudShellRegistry.TT_CAPSULE.getId(), "type_40", false);
 

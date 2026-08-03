@@ -28,6 +28,7 @@ public class AudShellRegistry {
     public static final RegistrySupplier<ShellTheme> RANI_WARDROBE = registerShellTheme("rani_wardrobe");
     public static final RegistrySupplier<ShellTheme> LAKERTYAN_PYRAMID = registerShellTheme("pyramid");
     public static final RegistrySupplier<ShellTheme> CABINET = registerShellTheme("cabinet");
+    public static final RegistrySupplier<ShellTheme> JADE_PAGODA = registerShellTheme("jade_pagoda");
 
 
     private static RegistrySupplier<ShellTheme> registerShellTheme(String id) {
