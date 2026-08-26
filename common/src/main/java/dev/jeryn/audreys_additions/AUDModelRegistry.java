@@ -255,13 +255,9 @@ public class AUDModelRegistry {
 
         // Police Box - 2018
         policeBox18 = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_2018), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
-            poseStack.scale(0.7F, 0.7F, 0.7F);
-            poseStack.translate(0F, 0.7F, 0F);
         });
 
         policeBox18_special = new PoliceBoxModel(entityModels.bakeLayer(POLICEBOX_2018_SPECIAL), (entity, open, isBaseModel, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha) -> {
-            poseStack.scale(0.7F, 0.7F, 0.7F);
-            poseStack.translate(0F, 0.7F, 0F);
         });
 
         policeBox18Door = new DualInteriorDoorModel(entityModels.bakeLayer(POLICEBOX_2018_DOOR), -275.0F, false, true);
