@@ -125,19 +125,19 @@ public class AudBlocks {
     public static final RegistrySupplier<DoorBlock> ZEITON_QUARTZ_DOOR = register("zeiton_quartz_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR), BlockSetType.ACACIA));
 
-    public static final RegistrySupplier<Block> HATSTAND_OAK = register("hatstand_oak", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
-    public static final RegistrySupplier<Block> HATSTAND_SPRUCE = register("hatstand_spruce", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
-    public static final RegistrySupplier<Block> HATSTAND_BIRCH = register("hatstand_birch", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
-    public static final RegistrySupplier<Block> HATSTAND_JUNGLE = register("hatstand_jungle", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
-    public static final RegistrySupplier<Block> HATSTAND_ACACIA = register("hatstand_acacia", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
-    public static final RegistrySupplier<Block> HATSTAND_DARK_OAK = register("hatstand_dark_oak", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
-    public static final RegistrySupplier<Block> HATSTAND_MANGROVE = register("hatstand_mangrove", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
-    public static final RegistrySupplier<Block> HATSTAND_CHERRY = register("hatstand_cherry", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR).noOcclusion()));
-    public static final RegistrySupplier<Block> HATSTAND_PALE = register("hatstand_pale", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
-    public static final RegistrySupplier<Block> HATSTAND_BAMBOO = register("hatstand_bamboo", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
-    public static final RegistrySupplier<Block> HATSTAND_CRIMSON = register("hatstand_crimson", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
-    public static final RegistrySupplier<Block> HATSTAND_WARPED = register("hatstand_warped", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
-    public static final RegistrySupplier<Block> HATSTAND_TOP = registerBlockOnly("hatstand_top", () -> new HatStandTopBlock(BlockBehaviour.Properties.copy(HATSTAND_ACACIA.get())));
+    public static final RegistrySupplier<Block> HATSTAND_OAK = register("hatstand_oak", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR).isSuffocating((blockState, blockGetter, blockPos) -> false)));
+    public static final RegistrySupplier<Block> HATSTAND_SPRUCE = register("hatstand_spruce", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR).isSuffocating((blockState, blockGetter, blockPos) -> false)));
+    public static final RegistrySupplier<Block> HATSTAND_BIRCH = register("hatstand_birch", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR).isSuffocating((blockState, blockGetter, blockPos) -> false)));
+    public static final RegistrySupplier<Block> HATSTAND_JUNGLE = register("hatstand_jungle", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR).isSuffocating((blockState, blockGetter, blockPos) -> false)));
+    public static final RegistrySupplier<Block> HATSTAND_ACACIA = register("hatstand_acacia", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR).isSuffocating((blockState, blockGetter, blockPos) -> false)));
+    public static final RegistrySupplier<Block> HATSTAND_DARK_OAK = register("hatstand_dark_oak", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR).isSuffocating((blockState, blockGetter, blockPos) -> false)));
+    public static final RegistrySupplier<Block> HATSTAND_MANGROVE = register("hatstand_mangrove", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR).isSuffocating((blockState, blockGetter, blockPos) -> false)));
+    public static final RegistrySupplier<Block> HATSTAND_CHERRY = register("hatstand_cherry", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR).noOcclusion().isSuffocating((blockState, blockGetter, blockPos) -> false)));
+    public static final RegistrySupplier<Block> HATSTAND_PALE = register("hatstand_pale", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR).isSuffocating((blockState, blockGetter, blockPos) -> false)));
+    public static final RegistrySupplier<Block> HATSTAND_BAMBOO = register("hatstand_bamboo", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR).isSuffocating((blockState, blockGetter, blockPos) -> false)));
+    public static final RegistrySupplier<Block> HATSTAND_CRIMSON = register("hatstand_crimson", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR).isSuffocating((blockState, blockGetter, blockPos) -> false)));
+    public static final RegistrySupplier<Block> HATSTAND_WARPED = register("hatstand_warped", () -> new HatStandBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR).isSuffocating((blockState, blockGetter, blockPos) -> false)));
+    public static final RegistrySupplier<Block> HATSTAND_TOP = registerBlockOnly("hatstand_top", () -> new HatStandTopBlock(BlockBehaviour.Properties.copy(HATSTAND_ACACIA.get()).isSuffocating((blockState, blockGetter, blockPos) -> false)));
     public static final RegistrySupplier<Block> CABINET = register("cabinet", () -> new CabinetBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR)));
     public static final RegistrySupplier<Block> CABINET_TOP = registerBlockOnly("cabinet_top", () -> new CabinetTopBlock(BlockBehaviour.Properties.copy(CABINET.get())));
     /**
