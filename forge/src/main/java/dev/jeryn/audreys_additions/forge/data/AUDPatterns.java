@@ -97,6 +97,8 @@ public class AUDPatterns extends ShellPatternProvider {
         quickAdd(AudShellRegistry.LAKERTYAN_PYRAMID.getId(), "default", true);
         quickAdd(AudShellRegistry.LAKERTYAN_PYRAMID.getId(), "warforge", true);
 
+        quickAdd(AudShellRegistry.POLICEBOX.getId(), "default", true);
+        quickAdd(AudShellRegistry.POLICEBOX.getId(), "skaro", true);
 
         quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "default", false);
         quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "acacia", false);
