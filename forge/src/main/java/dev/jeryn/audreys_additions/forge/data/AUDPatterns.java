@@ -100,6 +100,8 @@ public class AUDPatterns extends ShellPatternProvider {
         quickAdd(AudShellRegistry.POLICEBOX.getId(), "default", true);
         quickAdd(AudShellRegistry.POLICEBOX.getId(), "skaro", true);
 
+        quickAdd(AudShellRegistry.FRENCH_CABINET.getId(), "default", false);
+
         quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "default", false);
         quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "acacia", false);
         quickAdd(AudShellRegistry.TRAKENCLOCK.getId(), "bamboo", false);

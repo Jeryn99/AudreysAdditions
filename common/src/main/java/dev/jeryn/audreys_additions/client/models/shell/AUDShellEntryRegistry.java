@@ -29,6 +29,7 @@ public class AUDShellEntryRegistry {
         ShellModelCollection.registerShellEntry(AudShellRegistry.LAKERTYAN_PYRAMID.get(), AUDModelRegistry.lakertyanPyramid, AUDModelRegistry.lakertyanPyramidDoor);
         ShellModelCollection.registerShellEntry(AudShellRegistry.CABINET.get(), AUDModelRegistry.cabinet, AUDModelRegistry.cabinetDoor);
         ShellModelCollection.registerShellEntry(AudShellRegistry.JADE_PAGODA.get(), AUDModelRegistry.jadePagoda, AUDModelRegistry.jadePagodaDoor);
+        ShellModelCollection.registerShellEntry(AudShellRegistry.FRENCH_CABINET.get(), AUDModelRegistry.frenchCabinet, AUDModelRegistry.frenchCabinetDoor);
 
     }
 }

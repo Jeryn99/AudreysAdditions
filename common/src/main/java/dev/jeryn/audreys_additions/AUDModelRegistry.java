@@ -20,8 +20,8 @@ public class AUDModelRegistry {
     public static PoliceBoxModel policeBox03, policeBox66, policeBoxRuth, policeBox73, policeBoxS13, policeBox18, policeBox18_special, policeBox10, policeBox11, policeBox17, policeBoxMemorial, policeBox76, policeBox96, policeBox63, policeBox63Massacre, trakenClock, policeBox83, policeBox87, policeBoxHappinessPatrol, policeBox05, policeBoxTimeWar, policeBox78, policeBox79, policeBoxPilot;
     public static DualInteriorDoorModel policeBox03Door, policeBox66Door, policeBox63Door, policeBox18Door, policeBox18Door_special, policeBox10Door, policeBox11Door, policeBox17Door, policeBox76Door, policeBox96Door, policeBox80Door, policeBox83Door, policeBox05Door;
     public static SingleInteriorDoorModel trakenClockDoor;
-    public static DualTexInteriorDoorModel sidratDoor, columnDoor, ironMaidenDoor, ttCapsuleDoor, type40Door, telephoneBoothDoor, raniWardrobeDoor, lakertyanPyramidDoor, cabinetDoor, policeBoxBlackOrchidDoor, policeBoxAAISATDoor, jadePagodaDoor, policeBoxDoor;
-    public static SidratModel sidrat, column, ironMaiden, ttCapsule, type40, telephoneBooth, policeBox80, raniWardrobe, lakertyanPyramid, cabinet, policeBoxBlackOrchid, policeBoxAAISAT, jadePagoda, policeBox;
+    public static DualTexInteriorDoorModel sidratDoor, columnDoor, ironMaidenDoor, ttCapsuleDoor, type40Door, telephoneBoothDoor, raniWardrobeDoor, lakertyanPyramidDoor, cabinetDoor, policeBoxBlackOrchidDoor, policeBoxAAISATDoor, jadePagodaDoor, policeBoxDoor, frenchCabinetDoor;
+    public static SidratModel sidrat, column, ironMaiden, ttCapsule, type40, telephoneBooth, policeBox80, raniWardrobe, lakertyanPyramid, cabinet, policeBoxBlackOrchid, policeBoxAAISAT, jadePagoda, policeBox, frenchCabinet;
     public static TrakenClockModel grandfatherClock;
     public static TrakenClockInteriorDoorModel grandfatherClockDoor;
 
@@ -116,6 +116,9 @@ public class AUDModelRegistry {
     public static ModelLayerLocation POLICEBOX = shell("policebox");
     public static ModelLayerLocation POLICEBOX_DOOR = interiorDoor("policebox_door");
 
+    public static ModelLayerLocation FRENCH_CABINET = shell("french_cabinet");
+    public static ModelLayerLocation FRENCH_CABINET_DOOR = interiorDoor("french_cabinet_door");
+
     public static ModelLayerLocation PERTWEE_CONSOLE = console("pertwee");
     public static ModelLayerLocation NEWBERY_CONSOLE = console("newbery");
     public static ModelLayerLocation MASTER_CONSOLE = console("master");
@@ -133,6 +136,7 @@ public class AUDModelRegistry {
     public static ModelLayerLocation SEASON_16_CONSOLE = console("season_16");
     public static ModelLayerLocation SEASON_20_CONSOLE = console("season_20");
     public static ModelLayerLocation MEMORY_CONSOLE = console("memory");
+    public static ModelLayerLocation CORAL_CONSOLE = console("coral");
   //  public static ModelLayerLocation CHRONOTIS_CONSOLE = console("chronotis");
 
 
@@ -311,6 +315,9 @@ public class AUDModelRegistry {
 
         policeBox = new SidratModel(entityModels.bakeLayer(POLICEBOX));
         policeBoxDoor = new DualTexInteriorDoorModel(entityModels.bakeLayer(POLICEBOX_DOOR));
+
+        frenchCabinet = new SidratModel(entityModels.bakeLayer(FRENCH_CABINET));
+        frenchCabinetDoor = new DualTexInteriorDoorModel(entityModels.bakeLayer(FRENCH_CABINET_DOOR));
 
 
         // TARDIS Cabinet
