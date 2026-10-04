@@ -19,7 +19,7 @@ public class PoliceBox2010Entry extends ShellEntry {
         String variantPath = shellPattern.id().getPath();
 
 
-        if (variantPath.contains("series_7")) {
+        if (variantPath.contains("series_7") || variantPath.contains("scorched"))  {
             return AUDModelRegistry.policeBox11;
         }
 

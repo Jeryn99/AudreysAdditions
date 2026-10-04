@@ -1,0 +1,1108 @@
+{
+  "patterns": [
+    {
+      "id": "audreys_additions:chronotis",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Chronotis\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/chronotis/chronotis.png"
+      }
+    },
+    {
+      "id": "audreys_additions:chronotis_acacia",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Chronotis Acacia\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/chronotis/chronotis_acacia.png"
+      }
+    },
+    {
+      "id": "audreys_additions:chronotis_bamboo",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Chronotis Bamboo\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/chronotis/chronotis_bamboo.png"
+      }
+    },
+    {
+      "id": "audreys_additions:chronotis_birch",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Chronotis Birch\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/chronotis/chronotis_birch.png"
+      }
+    },
+    {
+      "id": "audreys_additions:chronotis_cherry",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Chronotis Cherry\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/chronotis/chronotis_cherry.png"
+      }
+    },
+    {
+      "id": "audreys_additions:chronotis_crimson",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Chronotis Crimson\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/chronotis/chronotis_crimson.png"
+      }
+    },
+    {
+      "id": "audreys_additions:chronotis_jungle",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Chronotis Jungle\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/chronotis/chronotis_jungle.png"
+      }
+    },
+    {
+      "id": "audreys_additions:chronotis_mangrove",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Chronotis Mangrove\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/chronotis/chronotis_mangrove.png"
+      }
+    },
+    {
+      "id": "audreys_additions:chronotis_oak",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Chronotis Oak\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/chronotis/chronotis_oak.png"
+      }
+    },
+    {
+      "id": "audreys_additions:chronotis_pale",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Chronotis Pale\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/chronotis/chronotis_pale.png"
+      }
+    },
+    {
+      "id": "audreys_additions:chronotis_spruce",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Chronotis Spruce\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/chronotis/chronotis_spruce.png"
+      }
+    },
+    {
+      "id": "audreys_additions:chronotis_warped",
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Chronotis Warped\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:generic_console": {
+            "left_click": {
+              "pitch": 0.95,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            },
+            "right_click": {
+              "pitch": 1.1,
+              "sound_event": {
+                "sound_id": "minecraft:block.stone_button.click_on"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:handbrake_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_disable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.5,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          },
+          "tardis_refined:throttle_enable": {
+            "left_click": {
+              "pitch": 1.0,
+              "sound_event": {
+                "sound_id": "minecraft:intentionally_empty"
+              },
+              "volume": 0.0
+            },
+            "right_click": {
+              "pitch": 0.6,
+              "sound_event": {
+                "sound_id": "minecraft:block.lever.click"
+              },
+              "volume": 1.0
+            }
+          }
+        }
+      },
+      "texture_definition": {
+        "emissive": false,
+        "texture": "audreys_additions:textures/blockentity/console/chronotis/chronotis_warped.png"
+      }
+    }
+  ]
+}

@@ -9,6 +9,7 @@ import net.minecraft.client.animation.AnimationDefinition;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;
 import whocraft.tardis_refined.TRConfig;
@@ -26,9 +27,15 @@ public class ChronotisConsoleModel extends HierarchicalModel implements ConsoleU
     public static final AnimationDefinition POWER_OFF = Frame.loadAnimation(new ResourceLocation(AudreysAdditions.MODID, "frame/console/chronotis/power_off.json"));
 
     private final ModelPart root;
+    private final ModelPart Throttle;
+    private final ModelPart FuelLever;
+    private final ModelPart Handbrake;
 
     public ChronotisConsoleModel(ModelPart root) {
         this.root = root;
+        this.Throttle = Frame.findPart(this, "Slidey4");
+        this.FuelLever = Frame.findPart(this, "Slidey3");
+        this.Handbrake = Frame.findPart(this, "HandbrakeSticky");
     }
 
     @Override
@@ -85,6 +92,32 @@ public class ChronotisConsoleModel extends HierarchicalModel implements ConsoleU
                 root().getAllParts().forEach(ModelPart::resetPose);
                 this.animate(globalConsoleBlock.powerOff, POWER_OFF, tickCount);
             }
+
+            float intermediary = (float)reactions.getFuel()/1000;
+            float fyool = (float) Mth.clamp(intermediary*5.5, 0, 5.5);
+
+            if(reactions.getThrottleStage() == 0){
+                this.Throttle.y = (float)4;
+            }
+            if(reactions.getThrottleStage() == 1){
+                this.Throttle.y = (float)3.5;
+            }
+            if(reactions.getThrottleStage() == 2){
+                this.Throttle.y = (float)3;
+            }
+            if(reactions.getThrottleStage() == 3){
+                this.Throttle.y = (float)2.5;
+            }
+            if(reactions.getThrottleStage() == 4){
+                this.Throttle.y = (float)2;
+            }
+            if(reactions.getThrottleStage() == 5){
+                this.Throttle.y = (float)1.5;
+            }
+
+                this.Handbrake.z = (float) (reactions.isHandbrakeEngaged() ? -12.5 : -4.5);
+
+                this.FuelLever.y = (7f-fyool);
         }
         // Final render call
         root().render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
