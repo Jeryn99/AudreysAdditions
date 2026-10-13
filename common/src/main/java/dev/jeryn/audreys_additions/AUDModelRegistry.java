@@ -137,6 +137,7 @@ public class AUDModelRegistry {
     public static ModelLayerLocation SEASON_20_CONSOLE = console("season_20");
     public static ModelLayerLocation MEMORY_CONSOLE = console("memory");
     public static ModelLayerLocation CORAL_CONSOLE = console("coral");
+    public static ModelLayerLocation CORAL_MASTER_CONSOLE = console("coral_master");
     public static ModelLayerLocation CHRONOTIS_CONSOLE = console("chronotis");
 
 

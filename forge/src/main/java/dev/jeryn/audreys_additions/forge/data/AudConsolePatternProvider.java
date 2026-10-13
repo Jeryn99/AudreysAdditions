@@ -80,6 +80,8 @@ public class AudConsolePatternProvider extends ConsolePatternProvider {
         addPatternToDatagen(AudConsoleRegistry.CORAL.getId(), createWithDefaultSound("coral_blue", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/coral/coral_blue.png"), false)));
         addPatternToDatagen(AudConsoleRegistry.CORAL.getId(), createWithDefaultSound("time_war", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/coral/war.png"), false)));
         addPatternToDatagen(AudConsoleRegistry.CORAL.getId(), createWithDefaultSound("paradox_machine", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/coral/paradox_machine.png"), false)));
+        addPatternToDatagen(AudConsoleRegistry.CORAL.getId(), createWithDefaultSound("war_master", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/coral/coral_master.png"), false)));
+
 
         addPatternToDatagen(AudConsoleRegistry.CHRONOTIS.getId(), createWithDefaultSound("chronotis", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/chronotis/chronotis.png"), false)));
         addPatternToDatagen(AudConsoleRegistry.CHRONOTIS.getId(), createWithDefaultSound("chronotis_acacia", new PatternTexture(new ResourceLocation(AudreysAdditions.MODID, "textures/blockentity/console/chronotis/chronotis_acacia.png"), false)));
