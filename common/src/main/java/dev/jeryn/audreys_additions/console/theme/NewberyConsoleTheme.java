@@ -21,11 +21,12 @@ public class NewberyConsoleTheme extends ConsoleThemeDetails {
                 new ControlSpecification(TRControlRegistry.ROTATE, new Vector3f(0.2625f, 0.5718749999999999f, -0.23125f), EntityDimensions.scalable(0.03125000000000003f, 0.03125f)),
                 new ControlSpecification(TRControlRegistry.RANDOM, new Vector3f(-0.278125f, 0.5f, -0.23125f), EntityDimensions.scalable(0.09375f, 0.09375f)),
                 new ControlSpecification(TRControlRegistry.DOOR_TOGGLE, new Vector3f(-0.346875f, 0.53125f, -0.0625f), EntityDimensions.scalable(0.0625f, 0.0625f)),
-                new ControlSpecification(TRControlRegistry.MONITOR, new Vector3f(-0.340625f, 0.453125f, 0.20625f), EntityDimensions.scalable(0.09375f, 0.09375f)),
-                new ControlSpecification(TRControlRegistry.DIMENSION, new Vector3f(-0.41875f, 0.484375f, 0.09375f), EntityDimensions.scalable(0.0625f, 0.0625f)),
-                new ControlSpecification(TRControlRegistry.FAST_RETURN, new Vector3f(-0.340625f, 0.53125f, 0.096875f), EntityDimensions.scalable(0.0625f, 0.0625f)),
+                new ControlSpecification(TRControlRegistry.MONITOR, new Vector3f(-0.28125f, 0.5f, 0.109375f), EntityDimensions.scalable(0.09375f, 0.09375f)),
+                new ControlSpecification(TRControlRegistry.MONITOR, new Vector3f(-0.21875f, 0.5f, 0.203125f), EntityDimensions.scalable(0.09375f, 0.09375f)),
+                new ControlSpecification(TRControlRegistry.DIMENSION, new Vector3f(-0.4f, 0.46875f, 0.125f), EntityDimensions.scalable(0.03125f, 0.03125f)),
+                new ControlSpecification(TRControlRegistry.FAST_RETURN, new Vector3f(-0.365625f, 0.46875f, 0.209375f), EntityDimensions.scalable(0.0625f, 0.0625f)),
                 new ControlSpecification(TRControlRegistry.READOUT, new Vector3f(-0.075f, 0.46875f, 0.39375f), EntityDimensions.scalable(0.0625f, 0.0625f)),
-                new ControlSpecification(TRControlRegistry.HANDBRAKE, new Vector3f(-0.29375f, 0.421875f, 0.3f), EntityDimensions.scalable(0.125f, 0.125f)),
+                new ControlSpecification(TRControlRegistry.HANDBRAKE, new Vector3f(-0.303125f, 0.46875f, 0.284375f), EntityDimensions.scalable(0.03125f, 0.03125f)),
                 new ControlSpecification(TRControlRegistry.FUEL, new Vector3f(-0.10625f, 0.46875f, -0.35625f), EntityDimensions.scalable(0.0625f, 0.0625f)),
                 new ControlSpecification(TRControlRegistry.THROTTLE, new Vector3f(0.284375f, 0.515625f, -0.29375f), EntityDimensions.scalable(0.0625f, 0.0625f))
         };

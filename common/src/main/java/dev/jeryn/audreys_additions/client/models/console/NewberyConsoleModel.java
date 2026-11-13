@@ -122,7 +122,7 @@ public class NewberyConsoleModel extends HierarchicalModel implements ConsoleUni
             this.Throttle.y = (float) -1.5;
         }
 
-        this.Handbrake.x = reactions.isHandbrakeEngaged() ? (float) 1.25 : (float) 2.75;
+        this.Handbrake.yRot = reactions.isHandbrakeEngaged() ? 45 : 0;
 
         this.FuelReflector.yScale = fyool;
 
